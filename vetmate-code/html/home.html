@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetMate - Início</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Institucional</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato e Sac</a></li>
+            </ul>
+        </div>
+        <div class="login-button">
+            <button><a href="#">Área Restrita</a></button>
+        </div>
+
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="../imagens/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="login-button">
+            <button><a href="#">Área Restrita</a></button>
+        </div>
+    </div>
+
+
+    <div class="carrossel">
+        <div class="slides">
+            <img src="../imagens/8455128.png" alt="Cinco cães" class="slide active">
+            <img src="../imagens/8455128.png" alt="Camaleão (pet exótico)" class="slide">
+            <img src="../imagens/8455128.png" alt="Gato" class="slide">
+        </div>
+
+        <div class="carrossel-setas">
+            <img src="../imagens/seta-esquerda.svg" alt="Seta para esquerda" class="seta-esquerda">
+            <img src="../imagens/seta-direita.svg" alt="Seta para direita" class="seta-direita">
+        </div>
+
+        <div class="conteudo-carrossel">
+            <h1>O parceiro ideal na <br> saúde de seu pet!</h1>
+        </div>
+        
+    </div>
+
+    <script src="../js/script-home.js"></script>
+
+    <div class="bg-branco">
+        <header class="quem-somos">
+
+            <h1 class="h1-quemsomos">QUEM SOMOS</h1>
+            <div class="container">
+                <div class="texto">
+                    <p class="p-quem-somos">Nós somos a <span>VetMate</span>, uma plataforma digital que conecta você e
+                        seu pet aos
+                        <span>melhores cuidados veterinários</span>. Entendemos que <span>cada animal é único</span>,
+                        com suas próprias necessidades e características. Por isso, desenvolvemos um <span>sistema
+                            inteligente</span> que leva em conta o perfil do seu pet e suas preferências para encontrar
+                        a clínica veterinária ideal para você.
+                    </p>
+                </div>
+                <div class="imagem-cachorro">
+                    <img src="../imagens/retangulo-cachorro.png" alt="Cachorro com sorriso maroto">
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="bg-verde">
+        <h1 class="h1-branco">NOSSOS SERVIÇOS</h1>
+
+        <p class="p-1">A VetMate, atua em parceria com você! Te auxiliando na <br> saúde dos seus pets e na busca
+            por
+            clínicas veterinárias.</p>
+
+        <section class="caixinha">
+            <article class="servicos">
+                <div class="itens-servicos">
+                    <h3 class="servicos-h3">BUSCADOR DE CLÍNICAS</h3>
+                    <img src="../imagens/Line 1.svg" alt="Linha gradiente">
+                    <p>Encontramos as <br> melhores clínicas de <br> acordo com sua <br>região
+                        e perfil!</p>
+                </div>
+            </article>
+            <article class="servicos">
+                <div class="itens-servicos">
+                    <h3 class="h-3">ACOMPANHAMENTO DE SAÚDE PARA PETS</h3>
+                    <img src="../imagens/Line 1.svg" alt="Linha gradiente">
+                    <p class="p-caixa">Oferecemos <br> prontuário veterinário <br> para seu pet, com todas <br>
+                        informações necessárias!</p>
+                </div>
+            </article>
+    </div>
+    </section>
+    <div class="bg-branco2">
+        <h1>CADASTRE SEUS PETS!</h1>
+
+        <p class="p-2">Estamos prontos para <span>facilitar o cuidado dos seus pets</span>!<br> Acompanhe consultas,
+            exames, vacinas e muito mais, <br> além
+            disso, <span>busque novas clínicas</span> que possam se <br> encaixar melhor em sua <span>realidade e
+                perfil</span>.</p>
+
+        <button class="button-1">CADASTRAR</button>
+    </div>
+
+    <footer>
+
+        <div id="container-footer">
+            <div id="footer_contacts">
+                <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+                <p>Sua parceira ideal.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="x">
+                        <i class="fa-brands fa-x-twitter"></i></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="linkedin">
+                        <i class="fa-brands fa-linkedin"></i></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3 class="footer-h3">Navegue</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Institucional</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato e Sac</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Área Restrita</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3 class="footer-h3">Contato</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Email</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Whatsapp</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Telefone</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3 class="footer-h3">Subscribe</h3>
+
+                <p>
+                    Se inscreva em nossa newsletter para <br> receber todas as atualizações!
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2024 | Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
