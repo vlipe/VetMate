@@ -1,3 +1,7 @@
+/*Fonte "Cocon" para títulos. */
+
+@import url('https://fonts.cdnfonts.com/css/cocon');
+
 * {
     color: white;
     padding: 0;
@@ -158,6 +162,8 @@ header {
 /* Página do Contato e SAC: */
 
 h1 {
+    font-family: "Cocon", sans-serif;
+    margin-bottom: 5px;
     margin-top: 3.5%;
     font-size: 55px;
     font-weight: 650;
@@ -292,10 +298,11 @@ form button[type="submit"]:hover {
 }
 
 h2 {
+    font-family: "Cocon", sans-serif;
     margin-top: 8vh;
     text-align: center;
     color: #003536;
-    font-size: 4.5rem;
+    font-size: 10vh;
     font-weight: 700;
     margin-bottom: 2vh;
 }
@@ -332,6 +339,7 @@ h2 {
 /* Ícone da caixinha verde. */
 
 .faq-icone {
+    padding-left: 1vh;
     align-self: center;
 }
 
@@ -340,8 +348,8 @@ h2 {
 }
 
 .faq-texto {
-    font-size: 1.3vw;
-    margin-left: 5vh;
+    font-size: 2.7vh;
+    margin-left: 3vh;
 }
 
 /* Parágrafo explicativo. */
@@ -364,8 +372,10 @@ h2 {
 }
 
 .interacao-prompt p {
-    font-size: 1.3rem;
+    font-size: 3vh;
+    font-weight: 410;
 }
+
 
 /* Formatação dos modáis (pop-ups). */
 
@@ -395,16 +405,16 @@ h2 {
     font-weight: 610;
     font-size: 1.1rem;
     display: inline-flex;
-    margin-bottom: 15px;
+    margin-bottom: 2.5vh;
 }
 
 .titulo-pergunta img {
-    max-width: 60px;
+    max-width: 4rem;
     margin-right: 20px;
 }
 
 .modal-content p {
-    line-height: 1.6;
+    font-size: 1.1rem;
     color: #003536;
     font-weight: 500;
 }
