@@ -168,7 +168,6 @@
     position: relative;
     overflow: hidden;
     align-items: center;
-    min-height: 800px;
     background-size: cover;
     background-position: center;
     margin-top: -10%;
@@ -202,21 +201,20 @@
 
 .carrossel h1 {
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: 'Cocon', sans-serif;
     z-index: 2;
     padding-bottom: 0;
 }
 
-.conteudo-carrossel {
+.texto-um-carrossel {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -15%;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 27%;
+    top: 30%;
+    width: 45%;
     z-index: 2;
     pointer-events: none;
 }
@@ -345,7 +343,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .servicos-h3 {
@@ -365,6 +362,88 @@
     font-weight: 405;
     color: #003536;
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .bg-branco2 {
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .p-2 {
+        font-size: 18px;
+    }
+
+    .button-1 {
+        width: 300px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .servicos {
+        width: 80%;
+        min-height: 30vh;
+        margin-bottom: 20px;
+    }
+
+    .servicos-h3 {
+        font-size: 28px;
+    }
+
+    .itens-servicos img {
+        width: 25vh;
+        height: 3vh;
+    }
+
+    .servicos p {
+        font-size: 2vh;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bg-branco2 {
+        margin-top: 8%;
+        margin-bottom: 18%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .p-2 {
+        font-size: 20px;
+    }
+
+    .button-1 {
+        width: 400px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .servicos {
+        width: 60%;
+        min-height: 35vh;
+        margin-bottom: 20px;
+    }
+
+    .servicos-h3 {
+        font-size: 32px;
+    }
+
+    .itens-servicos img {
+        width: 30vh;
+        height: 4vh;
+    }
+
+    .servicos p {
+        font-size: 2.3vh;
+    }
 }
 
 /* Página de cadastro. */
@@ -416,6 +495,88 @@ span {
     background-color: rgb(0, 97, 99);
     box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
+
+/* Página de cadastro responsiva para dispositivos móveis (celular). */
+
+@media (max-width: 767px) {
+    .bg-branco2 {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .p-2 {
+        font-size: 18px;
+        padding-top: 3vh;
+    }
+
+    .button-1 {
+        width: 80%;
+        height: 60px;
+        font-size: 18px;
+        margin-top: 4rem;
+        position: relative;
+        transform: none;
+    }
+}
+
+/* Página de cadastro responsiva para tablets. */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .bg-branco2 {
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .p-2 {
+        font-size: 20px;
+        padding-top: 4vh;
+    }
+
+    .button-1 {
+        width: 60%;
+        height: 70px;
+        font-size: 20px;
+        margin-top: 4rem;
+        position: relative;
+        transform: none;
+    }
+}
+
+/* Página de cadastro responsiva para desktops. */
+
+@media (min-width: 1024px) {
+    .bg-branco2 {
+        margin-top: 6%;
+        margin-bottom: 15%;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .p-2 {
+        font-size: 24px;
+        padding-top: 5vh;
+    }
+
+    .button-1 {
+        width: 490px;
+        height: 85px;
+        font-size: 22px;
+        margin-top: 6rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 /* Rodapé do site. */
 
@@ -551,4 +712,4 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
     }
-}
+}   
