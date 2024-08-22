@@ -267,47 +267,58 @@
     font-family: 'Cocon', sans-serif;
 }
 
-/* Página "Quem Somos" */
+/* Página "Quem Somos". */
 
-.p-quem-somos {
-    text-align: end;
-    font-size: 22px;
-    color: #003536;
-}
-
-.texto {
-    padding-top: 18vh;
+.bg-branco {
+    background-color: white;
+    padding: 20px;
 }
 
 .quem-somos {
-    padding: 20px 0;
+    text-align: center;
 }
 
-.quem-somos .container {
+.h1-quemsomos {
+    font-size: 5.5rem;
+    color: #003536;
+    margin-bottom: 20px;
+}
+
+.container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.quem-somos .texto {
-    flex: 3;
-    padding-right: 50px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.quem-somos .imagem-cachorro {
+.texto {
     flex: 1;
+    max-width: 400px;
 }
 
-.imagem img {
-    max-width: 100%;
+.p-quem-somos {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    text-align: end;
+}
+
+.p-quem-somos span {
+    font-weight: 600;
+    color: #003536; 
+}
+
+.imagem-cachorro {
+    flex: 1;
+    max-width: 400px;
+}
+
+.imagem-cachorro img {
+    width: 100%;
     height: auto;
-    flex: 1;
+    border-radius: 20px;
 }
 
 .caixinha {
@@ -323,8 +334,6 @@
     font-size: 24px;
     margin-bottom: 5%;
 }
-
-
 
 /* Página de "Serviços". */
 
