@@ -13,7 +13,7 @@ header {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 6rem;
+    padding: 2% 5%;
 }
 
 .logo {
@@ -172,15 +172,32 @@ header {
     margin-bottom: 3%;
 }
 
-.carrosel {
-    height: 342px;
-    width: 922px;
-    margin: auto;
-    border-radius: 30px;
-    background-color: #003536;
+.monitor {
     display: grid;
-    place-items: center;
+    grid-template-areas: "../imagens/tela-computador.png";
     margin-bottom: 3%;
+}
+
+.monitor img {
+    grid-area: monitor;
+    width: 900px;
+    z-index: 4;
+}
+
+.tela {
+    grid-area: tela;
+    width: 900px;
+    height: 600px;
+    z-index: 2;
+    border-radius: 25px;
+}
+
+.tela-1 {
+    grid-area: tela-1;
+    width: 900px;
+    height: 600px;
+    z-index: 3;
+    border-radius: 25px;
 }
 
 #h1-2 {
@@ -365,6 +382,7 @@ header {
     box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
+
 .container-form {
     background-color: white;
     width: 500px;
@@ -412,6 +430,7 @@ header {
 
 .container-form .btn-login {
     background-color: #003536;
+    text-decoration: none;
     color: white;
     display: flex;
     justify-content: center;
@@ -430,6 +449,10 @@ header {
     cursor: pointer;
 }
 
+#link-area-restrita-login {
+    text-decoration: none;
+    color: white;
+}
 
 .container-form .btn-login:hover {
     background-color: rgb(0, 97, 99);
@@ -442,9 +465,20 @@ header {
     cursor: pointer;
 }
 
+.container-form .cadastro-link-link-link {
+    color: #1778f2;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
 .form-container .cadastro-link {
     align-self: center;
     font-weight: 500;
+}
+
+.grupo-texto-cadastro {
+    margin-bottom: 5px;
 }
 
 .form-container .cadastro-link-link {
@@ -476,7 +510,7 @@ footer {
     background-color: #003536;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    padding: 3rem 5%;
 }
 
 #footer_contacts img {
