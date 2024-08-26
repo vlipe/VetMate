@@ -11,7 +11,7 @@ body {
 
 .container {
 
-    background-image: url(img/banner-6.png);
+    background-image: url(../imagens/banner-6.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
