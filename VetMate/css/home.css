@@ -170,53 +170,113 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-    margin-top: -10%;
-    text-align: center;
     box-shadow: 0px 15px 20px #0035365f;
+    margin-top: -10%;
 }
 
 .slides {
-    width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .slide {
     flex-shrink: 0;
-    width: 100%;
-    height: 100%;
     display: none;
-    transition: transform 0.5s ease-in-out;
-    z-index: 1;
 }
 
 .slide.active {
-    display: block;
+    display: contents;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 110vh;
+    object-fit: cover;
 }
 
 .carrossel img {
     flex-shrink: 0;
-    transition: transform 0.5s ease-in-out;
 }
 
-.carrossel h1 {
-    color: white;
-    font-size: 4rem;
-    font-family: 'Cocon', sans-serif;
-    z-index: 2;
-    padding-bottom: 0;
-}
-
-.texto-um-carrossel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.texto-um-carrossel h1 {
     position: absolute;
-    left: 27%;
     top: 30%;
-    width: 45%;
-    z-index: 2;
-    pointer-events: none;
+    left: 30%;
+    color: white;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.texto-dois-carrossel h1 {
+    font-size: 70px;
+    position: absolute;
+    text-align: right;
+    top: 35%;
+    left: 50%;
+    width: 40%;
+    color: white;
+}
+
+.texto-tres-carrossel h1 {
+    font-size: 70px;
+    position: absolute;
+    text-align: left;
+    color: white;
+    width: 40%;
+    top: 30%;
+    left: 10%;
+}
+
+.btn-cadastrar {
+    background-color: #ffffff;
+    color: #003536;
+    width: 380px;
+    height: 85px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.638);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
+}
+
+.btn-agendar {
+    background-color: #ffffff;
+    color: #003536;
+    width: 380px;
+    height: 85px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.638);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    cursor: pointer;
+}
+
+.btn-agendar:hover {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
+}
+
+a {
+    color: #003536;
+    text-decoration: none;
 }
 
 .carrossel-setas {
@@ -307,7 +367,7 @@
 
 .p-quem-somos span {
     font-weight: 600;
-    color: #003536; 
+    color: #003536;
 }
 
 .imagem-cachorro {
@@ -721,4 +781,4 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
     }
-}   
+}
