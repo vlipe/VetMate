@@ -23,6 +23,4 @@ function prevSlide() {
 
 document.querySelector('.seta-esquerda').addEventListener('click', prevSlide);
 document.querySelector('.seta-direita').addEventListener('click', nextSlide);
-
-// Iniciar com o primeiro slide ativo
 showSlide(currentSlideIndex);

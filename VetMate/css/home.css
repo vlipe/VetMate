@@ -209,18 +209,24 @@
     margin: 0 auto;
 }
 
+
+.texto-tres-carrossel {
+    display: block;
+
+}
+
 .texto-dois-carrossel h1 {
-    font-size: 70px;
+    font-size: 65px;
     position: absolute;
     text-align: right;
-    top: 35%;
+    top: 30%;
     left: 50%;
     width: 40%;
     color: white;
 }
 
 .texto-tres-carrossel h1 {
-    font-size: 70px;
+    font-size: 65px;
     position: absolute;
     text-align: left;
     color: white;
@@ -242,8 +248,8 @@
     font-style: normal;
     font-size: 22px;
     position: absolute;
-    top: 70%;
-    left: 70%;
+    top: 65%;
+    left: 65%;
     cursor: pointer;
 }
 

@@ -17,29 +17,30 @@ body {
     background-position: center;
     height: 49vw;
     width: auto;
-   margin: 0 auto;
-box-shadow: 0 0 1em 0.5em rgb(113, 100, 100);
-    justify-content: center; 
+    margin: 0 auto;
+    box-shadow: 0 0 1em 0.5em rgb(113, 100, 100);
+    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    
+
 }
 
 .container h1 {
 
+    font-family: "Cocon", sans-serif;
     color: #ffffff;
     font-weight: 600;
     font-size: 4vw;
     display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 0;
-   position: absolute; 
-   left: 35%;
-   top: 40%;
-   transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    left: 35%;
+    top: 40%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -47,8 +48,7 @@ box-shadow: 0 0 1em 0.5em rgb(113, 100, 100);
     color: #003536;
     font-weight: 700;
     font-size: 5vw;
-
-
+    font-family: "Cocon", sans-serif;
 }
 
 .container-2 {
@@ -66,6 +66,7 @@ box-shadow: 0 0 1em 0.5em rgb(113, 100, 100);
     overflow: hidden;
     max-width: 100%;
 }
+
 .slides {
 
     display: flex;
@@ -73,8 +74,8 @@ box-shadow: 0 0 1em 0.5em rgb(113, 100, 100);
     width: 400%;
     margin: 0 auto;
     flex-direction: row;
-padding-top: 1%;
-transition: margin-left 0.5s ease;
+    padding-top: 1%;
+    transition: margin-left 0.5s ease;
 
 }
 
@@ -93,7 +94,7 @@ transition: margin-left 0.5s ease;
     box-shadow: 1em 1em 1em 1em #a1979784;
     width: 57%;
     height: auto;
-    display: block; 
+    display: block;
     display: flex;
     margin: 0 auto;
 
@@ -104,7 +105,7 @@ transition: margin-left 0.5s ease;
 }
 
 #radio2:checked~.first {
-    margin-left: -25%;  
+    margin-left: -25%;
 }
 
 .depo {
@@ -114,8 +115,8 @@ transition: margin-left 0.5s ease;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 auto; 
-    
+    margin: 0 auto;
+
 }
 
 .depo h1 {
@@ -125,51 +126,38 @@ transition: margin-left 0.5s ease;
     font-size: 5vw;
 }
 
-/*Página de comentarios. */
-
-
-
-
-
+/* Página de comentarios. */
 
 .faq {
-background: none;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 3vh 7vh;
-padding: 5%;
-width: auto;
-height: auto;
-flex-direction: row row;
-align-items: center;
+    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vh 7vh;
+    padding: 5%;
+    width: auto;
+    height: auto;
+    flex-direction: row row;
+    align-items: center;
 }
 
-/* Caixinha verde de comentarios e animações do mesmo. */
+/* Caixinha verde de comentários e animações. */
 
 .faq-item {
-background: linear-gradient(49deg, #003536, #00999C);
-border-radius: 20px;
-padding: 4%;
-max-width: 75vh;
-max-height: 20%;
-color: white;
-cursor: pointer;
-transition: transform 0.4s;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
-
-
-
-.faq-item:hover {
-transform: translateY(-20.5px);
-font-size: 1.3rem;
+    background: linear-gradient(49deg, #003536, #00999C);
+    border-radius: 20px;
+    padding: 4%;
+    max-width: 75vh;
+    max-height: 20%;
+    color: white;
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .faq-texto {
-font-size: 1.3vw;
-margin: 0 auto;
+    font-size: 1.3vw;
+    margin: 0 auto;
 }
