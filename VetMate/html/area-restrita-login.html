@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador</title>
-    <link rel="stylesheet" href="../css/buscador.css">
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/area-restrita-login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-    
+
     <header>
 
         <nav class="nav-bar">
@@ -95,145 +97,48 @@
 
     </header>
 
-    <div class="container-buscador">
-
-        <h3>Insira o nome da clínica palavras-chave:</h3>
-
-        <div class="grupo-input-nome">
-            <input type="text" id="nome" name="nome" placeholder="Insira o nome da clínica ou palavras-chave">
-        </div>
+    <main>
 
 
-        <h3>Selecione a área de atuação:</h3>
 
-        <div class="escolhas-buscador">
+        <div class="section-1">
 
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Consultas</label>
+            <div class="itens-left-top">
+                <h1 id="h1-1">Seja bem vindo (a) <br> à Area Restrita!</h1>
+                <p id="p-1">Agradecemos por se cadastrar em nossa plataforma. Agora você terá acesso a diversos benefícios exclusivos, continue navegando para descobrir tudo o que preparamos para você!
+                </p>
             </div>
 
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Exames</label>
-            </div>
-
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Vacinas</label>
-            </div>
+            <img id="img-right-top" src="../imagens/area-restrita-login-pessoa-cachorro.png" alt="">
 
         </div>
 
-        <div class="grupo-inputs-1">
+        <h1 id="h1-2">Principais Ferramentas</h1>
 
-            <h3>Selecione o raio de distância:</h3>
+        <p id="p1-2">Confira todas as ferramentas e funções da VetMate!</p>
 
-            <div class="input-distancia">
-
-                <div class="container-slider-distancia">
-                    <input type="range" min="0" max="100" value="25" class="slider-distancia" id="myRange">
-                    <p class="slider-distancia-valores">25km</p>
-                </div>
-
+        <div class="section-2">
+            <div class="card">
+                <h3 class="card-h3">Buscador de Clínicas</h3>
+                <p class="card-p">Encontre as melhores clínicas veterinárias <br> de acordo com a sua realidade!</p>
+                <div class="card-img"><img src="" alt=""></div>
+                <a href="buscador.html"><button class="card-button">Acessar</button></a>
             </div>
-
-            <h3>Selecione o custo estimado:</h3>
-
-            <div class="input-custo">
-
-                <div class="input-custo-valores">
-                    <div>R$ <span id="first">500</span></div> -
-                    <div>R$ <span id="second">5 000</span></div>
-                </div>
-                <small class="input-custo-previa">
-                    Faixa de Preço:
-                    <div>R$ <span id="third">4 500</span></div>
-                </small>
-
-                <div class="container-input-custo">
-                    <div data-range="#third" data-value-1="#second" data-value-0="#first" class="slider">
-                        <label class="label-min-value">1</label>
-                        <label class="label-max-value">10 000</label>
-                    </div>
-                    <div class="rangeslider">
-                        <input class="min input-ranges" name="range_1" type="range" min="1" max="10000" value="500">
-                        <input class="max input-ranges" name="range_1" type="range" min="1" max="10000" value="5000">
-                    </div>
-                </div>
-
+            <div class="card">
+                <h3 class="card-h3">Saúde dos Pets</h3>
+                <p class="card-p">Acompanhe vacinas, remédios, consultas <br> e exames dos seus animais!</p>
+                <div class="card-img"><img src="" alt=""></div>
+                <a href="acompnhamento-saude.html"><button class="card-button">Acessar</button></a>
             </div>
-
-        </div>
-
-        <h3>Selecione uma espécie:</h3>
-
-        <div class="escolhas-especie">
-
-            <div class="radio-inputs">
-
-                <label>
-
-                    <input class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-cao.webp" alt=""> </span>
-
-                        <span class="radio-label">Cão</span>
-                    </span>
-
-                </label>
-
-                <label>
-
-                    <input checked="" class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-gato.webp" alt=""> </span>
-
-                        <span class="radio-label">Gato</span>
-
-                    </span>
-
-                </label>
-
-                <label>
-
-                    <input class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-coelho.webp" alt=""> </span>
-
-                        <span class="radio-label">Silvestre</span>
-
-                    </span>
-
-                </label>
+            <div class="card">
+                <h3 class="card-h3">Perfil Personalizado</h3>
+                <p class="card-p">Altere ou complemente suas <br> informações de cadastro!</p>
+                <div class="card-img"><img src="" alt=""></div>
+                <a href="perfil.html"><button class="card-button">Acessar</button></a>
             </div>
         </div>
 
-        <h3>Selecione uma especialidade:</h3>
-
-        <div class="select-especialidade">
-
-            <div class="select">
-
-                <input type="text" id="searchInput" placeholder="Pesquise uma especialidade">
-                <ul id="resultList"></ul>
-
-            </div>
-
-        </div>
-
-        <a  href="resultado.html"><button class="btn-enviar">Buscar clínicas</button></a>
-
-    </div>
+    </main>
 
     <footer>
 
@@ -318,6 +223,6 @@
 
 </body>
 
-<script src="../js/buscador.js"></script>
+<script src="../js/script.js"></script>
 
 </html>
