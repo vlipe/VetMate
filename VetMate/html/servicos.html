@@ -16,10 +16,43 @@
     <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
 </head>
 
-<body>
-    <header></header>
+<body>   
+    
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Institucional</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato e Sac</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Área Restrita</a></button>
+            </div>
 
-    <div class="container">
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Área Restrita</a></button>
+            </div>
+        </div>
+    </header>
+
+<main>
+ <div class="container">
         <h1>Descubra nossas <br>atuações, metas<br>e muito mais!</h1>
     </div>
 
@@ -39,14 +72,14 @@
 
 
                 <div class="slide first">
-                     <h1>O melhor buscador de clínicas de veterinárias</h1>
+                     
                     <img src="../imagens/img carrossel servicos 1.png" alt="computador mostrando a aba de buscador de clinicas">
-                   
+                   <h1>O melhor buscador<br> de clínicas de veterinárias</h1>
                 </div>
                 <div class="slide">
-                     <h1>Acompanhe consultas,<br>exames,<br>vacinas e <br>muito mais!</h1>
+                     
                      <img src="../imagens/img carrossel servicos 2.png" alt="computador mostrando a aba de acompanhamento de saúde">
-                   
+                   <h1>Acompanhe consultas,<br>exames,<br>vacinas e <br>muito mais!</h1>
                 </div>
 
                 <div class="navegation-auto">
@@ -66,7 +99,7 @@
 
 
     </div>
-
+</main>
 
 
 
@@ -103,6 +136,88 @@
     </section>
 </div>
 </div>
+
+<footer>
+
+    <div id="container-footer">
+        <div id="footer_contacts">
+            <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+            <p>Sua parceira ideal.</p>
+
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="x">
+                    <i class="fa-brands fa-x-twitter"></i></i>
+                </a>
+
+                <a href="#" class="footer-link" id="linkedin">
+                    <i class="fa-brands fa-linkedin"></i></i>
+                </a>
+            </div>
+        </div>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Navegue</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Home</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Institucional</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Serviços</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Contato e Sac</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Área Restrita</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Contato</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Email</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Whatsapp</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Telefone</a>
+            </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Subscribe</h3>
+
+            <p>
+                Se inscreva em nossa newsletter para <br> receber todas as atualizações!
+            </p>
+
+            <div id="input_group">
+                <input type="email" id="email">
+                <button>
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2024 | Todos os direitos reservados.
+    </div>
+
+</footer>
+
 </body>
 
 </html>
