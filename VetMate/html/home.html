@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetMate - Início</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>VetMate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,124 +17,126 @@
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <div class="logo">
-            <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
-        </div>
-        <div class="nav-list">
+
+    <header>
+
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Institucional</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato e Sac</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Área Restrita</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Institucional</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato e SAC</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
             </ul>
-        </div>
-        <div class="login-button">
-            <button><a href="#">Área Restrita</a></button>
-        </div>
 
-        <div class="mobile-menu-icon">
-            <button onclick="menuShow()"><img class="icon" src="../imagens/menu.svg" alt=""></button>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <ul>
-            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-        </ul>
-
-        <div class="login-button">
-            <button><a href="#">Área Restrita</a></button>
-        </div>
-    </div>
-
-    <div class="carrossel">
-        <div class="slides">
-            <div class="slide">
-                <img src="../imagens/8455128.png" alt="Cinco cães">
-                <div class="texto-um-carrossel">
-                    <h1>O parceiro ideal na saúde de seu pet!</h1>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="../imagens/banner-2.png" alt="Camaleão (pet exótico)">
-                <div class="texto-dois-carrossel">
-                    <h1>Aqui todos são aceitos! Cadastre seu pet exótico.</h1>
-                    <button class="btn-cadastrar"><a href="../html/area-restrita.html">CADASTRAR</a></button>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="../imagens/banner-3.png" alt="Gato">
-                <div class="texto-tres-carrossel">
-                    <h1>Agende todas as vacinas e exames do seu filhote!</h1>
-                    <button class="btn-agendar">AGENDAR</button>
-                </div>
+            <div class="login-button">
+                <button><a href="#">Área Restrita</a></button>
             </div>
         </div>
-        <div class="carrossel-setas">
-            <img src="../imagens/seta-esquerda.svg" alt="Seta para esquerda" class="seta-esquerda">
-            <img src="../imagens/seta-direita.svg" alt="Seta para direita" class="seta-direita">
-        </div>
-    </div>
-    
-    <script src="../js/script-home.js"></script>
 
-    <div class="bg-branco">
-        <header class="quem-somos">
+    </header>
 
-            <h1 class="h1-quemsomos">QUEM SOMOS</h1>
-            <div class="container">
-                <div class="texto">
-                    <p class="p-quem-somos">Nós somos a <span>VetMate</span>, uma plataforma digital que conecta você e
-                        seu pet aos
-                        <span>melhores cuidados veterinários</span>. Entendemos que <span>cada animal é único</span>,
-                        com suas próprias necessidades e características. Por isso, desenvolvemos um <span>sistema
-                            inteligente</span> que leva em conta o perfil do seu pet e suas preferências para encontrar
-                        a clínica veterinária ideal para você.
-                    </p>
+    <main>
+        <div class="carrossel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="../imagens/8455128.png" alt="Cinco cães">
+                    <div class="texto-um-carrossel">
+                        <h1>O parceiro ideal na saúde de seu pet!</h1>
+                    </div>
                 </div>
-                <div class="imagem-cachorro">
-                    <img src="../imagens/retangulo-cachorro.png" alt="Cachorro com sorriso maroto">
+                <div class="slide">
+                    <img src="../imagens/banner-2.png" alt="Camaleão (pet exótico)">
+                    <div class="texto-dois-carrossel">
+                        <h1>Aqui todos são aceitos! Cadastre seu pet exótico.</h1>
+                        <button class="btn-cadastrar"><a href="../html/area-restrita.html">CADASTRAR</a></button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../imagens/banner-3.png" alt="Gato">
+                    <div class="texto-tres-carrossel">
+                        <h1>Agende todas as vacinas e exames do seu filhote!</h1>
+                        <button class="btn-agendar">AGENDAR</button>
+                    </div>
                 </div>
             </div>
-        </header>
-    </div>
+            <div class="carrossel-setas">
+                <img src="../imagens/seta-esquerda.svg" alt="Seta para esquerda" class="seta-esquerda">
+                <img src="../imagens/seta-direita.svg" alt="Seta para direita" class="seta-direita">
+            </div>
+        </div>
 
-    <div class="bg-verde">
-        <h1 class="h1-branco">NOSSOS SERVIÇOS</h1>
+        <script src="../js/script-home.js"></script>
 
-        <p class="p-1">A VetMate, atua em parceria com você! Te auxiliando na <br> saúde dos seus pets e na busca
-            por
-            clínicas veterinárias.</p>
 
-        <section class="caixinha">
-            <article class="servicos">
-                <div class="itens-servicos">
-                    <h3 class="servicos-h3">BUSCADOR DE CLÍNICAS</h3>
-                    <img src="../imagens/Line 1.svg" alt="Linha gradiente">
-                    <p>Encontramos as <br> melhores clínicas de <br> acordo com sua <br>região
-                        e perfil!</p>
-                </div>
-            </article>
-            <article class="servicos">
-                <div class="itens-servicos">
-                    <h3 class="servicos-h3">PRONTUÁRIO PARA PETS</h3>
-                    <img src="../imagens/Line 1.svg" alt="Linha gradiente">
-                    <p class="p-caixa">Oferecemos <br> acompanhamento ou prontuário veterinário <br> para seu pet!</p>
-                </div>
-            </article>
-    </div>
-    </section>
-    <div class="bg-branco2">
-        <h1>CADASTRE SEU PET!</h1>
 
-        <p class="p-2">Estamos prontos para <span>facilitar o cuidado de seu pet</span>!<br> Acompanhe consultas,
-            exames, vacinas e muito mais, <br> além
-            disso, <span>busque novas clínicas</span> que possam se <br> encaixar melhor em sua <span>realidade e
-                perfil</span>.</p>
 
-        <button class="button-1">CADASTRAR</button>
-    </div>
+        <h1 class="h1-quemsomos">QUEM SOMOS</h1>
+
+        <div class="section-2">
+            <img id="dog-image" src="../imagens/retangulo-cachorro.png" alt="">
+            <p id="p-2">Nós somos a VetMate, uma plataforma digital que conecta você e seu pet aos melhores cuidados
+                veterinários. Desenvolvemos um sistema inteligente que
+                leva em conta o perfil do seu pet e suas preferências para encontrar a clínica veterinária ideal para
+                você.</p>
+        </div>
+
+
+        <div class="bg-verde">
+            <h1 class="h1-branco">NOSSOS SERVIÇOS</h1>
+
+            <p class="p-1">A VetMate atua em parceria com você! Te auxiliando na saúde dos seus pets e na busca
+                por
+                clínicas veterinárias.</p>
+
+            <section class="caixinha">
+                <article class="servicos">
+                    <div class="itens-servicos">
+                        <h3 class="servicos-h3">BUSCADOR DE CLÍNICAS</h3>
+                        <img src="../imagens/Line 1.svg" alt="Linha gradiente">
+                        <p>Encontramos as melhores clínicas de acordo com sua região
+                            e perfil!</p>
+                    </div>
+                </article>
+                <article class="servicos">
+                    <div class="itens-servicos">
+                        <h3 class="servicos-h3">PRONTUÁRIO PARA PETS</h3>
+                        <img src="../imagens/Line 1.svg" alt="Linha gradiente">
+                        <p class="p-caixa">Oferecemos acompanhamento ou prontuário veterinário para seu pet!
+                        </p>
+                    </div>
+                </article>
+        </div>
+        </section>
+        <div class="bg-branco2">
+            <h1>CADASTRE SEU PET!</h1>
+
+            <p class="p-2">Estamos prontos para <span>facilitar o cuidado de seu pet</span>! Acompanhe consultas,
+                exames, vacinas e muito mais, além
+                disso, <span>busque novas clínicas</span> que possam se encaixar melhor em sua <span>realidade e
+                    perfil</span>.</p>
+
+            <button class="button-1">CADASTRAR</button>
+        </div>
+
+    </main>
 
     <footer>
 

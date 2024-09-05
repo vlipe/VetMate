@@ -8,15 +8,17 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Barra de navegação do usuário */
+header {
+    background-color: #00353600;
+    box-shadow: 0px 2px 10px #003536;
+    margin-bottom: 6%;
+}
 
 .nav-bar {
     display: flex;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
-    position: relative;
-    z-index: 10;
+    justify-content: space-between;
+    padding: 2% 5%;
+    z-index: 50;
 }
 
 .logo {
@@ -33,12 +35,11 @@
 .nav-list {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-left: auto;
 }
 
 .nav-list ul {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
 
@@ -96,19 +97,13 @@
     color: white;
 }
 
-.mobile-menu {
-    display: none;
-}
-
 .mobile-menu-icon {
     display: none;
 }
 
-.mobile-menu.open {
-    display: block;
+.mobile-menu {
+    display: none;
 }
-
-/* Barra de navegação responsiva (dispositivos móveis). */
 
 @media screen and (max-width: 730px) {
     .nav-bar {
@@ -159,19 +154,23 @@
     }
 }
 
+
 /* Carrossel de imagens. */
 
 .carrossel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: relative;
+    /* Pode ser relative, mas não precisa ser absolute */
+    width: 100%;
+    height: 100%;
+    display: flex;
     overflow: hidden;
     align-items: center;
     background-size: cover;
     background-position: center;
     box-shadow: 0px 15px 20px #0035365f;
-    margin-top: -10%;
+    margin-top: -17%;
+    margin-bottom: 6%;
+    z-index: 1;
 }
 
 .slides {
@@ -197,26 +196,28 @@
 
 .carrossel img {
     flex-shrink: 0;
+    z-index: 1;
+}
+
+.texto-um-carrossel {
+    z-index: 99;
 }
 
 .texto-um-carrossel h1 {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    color: white;
+    display: grid;
+    place-items: center;
     text-align: center;
-    width: 40%;
-    margin: 0 auto;
+    font-size: 2rem;
+    color: white;
 }
 
 
 .texto-tres-carrossel {
     display: block;
-
 }
 
 .texto-dois-carrossel h1 {
-    font-size: 65px;
+    font-size: 3.7rem;
     position: absolute;
     text-align: right;
     top: 30%;
@@ -226,7 +227,7 @@
 }
 
 .texto-tres-carrossel h1 {
-    font-size: 65px;
+    font-size: 3.7rem;
     position: absolute;
     text-align: left;
     color: white;
@@ -247,10 +248,8 @@
     font-weight: 600;
     font-style: normal;
     font-size: 22px;
-    position: absolute;
-    top: 65%;
-    left: 65%;
     cursor: pointer;
+    position: relative;
 }
 
 .btn-cadastrar:hover {
@@ -277,7 +276,7 @@
 }
 
 .btn-agendar:hover {
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.638);
 }
 
 a {
@@ -324,67 +323,135 @@ a {
     background-color: #003536;
     padding-top: 5%;
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
 }
 
-.h1-branco {
-    color: white;
-    font-size: 65px;
-    font-family: 'Cocon', sans-serif;
-}
+
 
 /* Página "Quem Somos". */
 
-.bg-branco {
-    background-color: white;
-    padding: 20px;
-}
 
 .quem-somos {
     text-align: center;
 }
 
 .h1-quemsomos {
-    font-size: 5.5rem;
+    font-size: 5rem;
+    text-align: center;
     color: #003536;
     margin-bottom: 20px;
 }
 
-.container {
+.section-2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex-direction: row-reverse;
+    margin: 0rem 6rem;
+    margin-bottom: 4rem;
 }
 
-.texto {
-    flex: 1;
-    max-width: 400px;
+#dog-image {
+    height: 100%;
+    width: 35%;
 }
 
-.p-quem-somos {
-    font-size: 20px;
-    color: #333;
-    line-height: 1.6;
-    text-align: end;
-}
-
-.p-quem-somos span {
-    font-weight: 600;
+#p-2 {
     color: #003536;
+    display: grid;
+    place-items: right;
+    width: 50%;
+    word-wrap: break-word;
+    font-weight: 400;
+    text-align: right;
+    font-size: 1.6rem;
 }
 
-.imagem-cachorro {
-    flex: 1;
-    max-width: 400px;
+@media (max-width: 768px) {
+
+    .h1-quemsomos {
+        font-size: 3rem;
+        word-wrap: break-word;
+        text-align: center;
+        color: #003536;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-2 {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0rem 4rem;
+        margin-bottom: 4rem;
+    }
+
+    #dog-image {
+        height: 100%;
+        width: 45%;
+    }
+
+    #p-2 {
+        color: #003536;
+        width: 80%;
+        word-wrap: break-word;
+        font-weight: 400;
+        text-align: right;
+        font-size: 1rem;
+    }
 }
 
-.imagem-cachorro img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .h1-quemsomos {
+        font-size: 3.5rem;
+        text-align: center;
+        color: #003536;
+        margin-bottom: 20px;
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0rem 6rem;
+        margin-bottom: 2rem;
+    }
+
+    #dog-image {
+        height: 100%;
+        width: 40%;
+    }
+
+    #p-2 {
+        color: #003536;
+        display: grid;
+        place-items: right;
+        width: 50%;
+        word-wrap: break-word;
+        font-weight: 400;
+        text-align: right;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Página de "Serviços". */
+
+/* Caixinha explicativa do diferencial do projeto. */
+
+.h1-branco {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Cocon', sans-serif;
+}
+
+.p-1 {
+    margin: 0 auto;
+    padding-top: 5vh;
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 5%;
+    width: 60%;
+    word-wrap: break-word;
 }
 
 .caixinha {
@@ -394,94 +461,166 @@ a {
     gap: 10vw;
 }
 
-.p-1 {
-    padding-top: 5vh;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 5%;
-}
-
-/* Página de "Serviços". */
-
-/* Caixinha explicativa do diferencial do projeto. */
-
 .servicos {
     background: linear-gradient(520deg, #ffffff, #ababab 80%);
     border-radius: 15px;
-    padding: 2vh;
-    width: 40vh;
-    min-height: 40vh;
+    padding: 2.5vh;
+    width: 22vw;
+    height: 22vw;
     color: #003536;
-    cursor: default;
-    transition: transform 0.4s;
     display: flex;
-    flex-direction: column;
+    cursor: default;
     justify-content: center;
     align-items: center;
 }
 
 .servicos-h3 {
-    font-size: 34px;
+    padding: 0.5vh;
+    font-size: 2rem;
     color: #003536;
 }
 
 .itens-servicos img {
-    width: 35vh;
-    height: 5vh;
-    position: static;
+    width: 15vw;
+    height: auto;
 }
 
-
 .servicos p {
-    font-size: 2.5vh;
+    padding-top: 2vh;
+    margin: 0 auto;
+    width: 80%;
+    word-wrap: break-word;
+    font-size: 1.2rem;
     font-weight: 405;
     color: #003536;
     text-align: center;
 }
 
-
-@media (max-width: 768px) {
-    .bg-branco2 {
-        margin-top: 10%;
-        margin-bottom: 20%;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .h1-branco {
+        margin: 0 auto;
+        margin-top: 5%;
+        color: white;
+        font-size: 4rem;
+        font-family: 'Cocon', sans-serif;
     }
-
-    h1 {
-        font-size: 40px;
+    
+    .p-1 {
+        margin: 0 auto;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+        width: 60%;
+        word-wrap: break-word;
     }
-
-    .p-2 {
-        font-size: 18px;
+    
+    .caixinha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
     }
-
-    .button-1 {
-        width: 300px;
-        height: 60px;
-        font-size: 18px;
-    }
-
+    
     .servicos {
-        width: 80%;
-        min-height: 30vh;
-        margin-bottom: 20px;
+        background: linear-gradient(520deg, #ffffff, #ababab 80%);
+        border-radius: 15px;
+        padding: 2.5vh;
+        width: 30vw;
+        height: 30vw;
+        color: #003536;
+        display: flex;
+        cursor: default;
+        justify-content: center;
+        align-items: center;
     }
-
+    
     .servicos-h3 {
-        font-size: 28px;
+        padding: 0.5vh;
+        font-size: 2.2rem;
+        color: #003536;
     }
-
+    
     .itens-servicos img {
-        width: 25vh;
-        height: 3vh;
+        width: 20vw;
+        height: auto;
     }
-
+    
     .servicos p {
-        font-size: 2vh;
+        padding-top: 2vh;
+        margin: 0 auto;
+        width: 90%;
+        word-wrap: break-word;
+        font-size: 1.2rem;
+        font-weight: 405;
+        color: #003536;
+        text-align: center;
     }
 }
 
+@media (max-width: 768px){
 
-@media (min-width: 769px) and (max-width: 1024px) {
+    .h1-branco {
+        margin: 0 auto;
+        width: 80%;
+        color: white;
+        font-size: 4rem;
+        font-family: 'Cocon', sans-serif;
+        word-wrap: break-word;
+    }
+    
+    .p-1 {
+        margin: 0 auto;
+        padding-top: 5vh;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 8%;
+        width: 80%;
+        word-wrap: break-word;
+    }
+    
+    .caixinha {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .servicos {
+        background: linear-gradient(520deg, #ffffff, #ababab 80%);
+        border-radius: 15px;
+        padding: 2vh;
+        width: 55vw;
+        height: 55vw;
+        color: #003536;
+        display: flex;
+        cursor: default;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .servicos-h3 {
+        padding: 0.5vh;
+        font-size: 2.2rem;
+        color: #003536;
+    }
+    
+    .itens-servicos img {
+        width: 30vw;
+        height: auto;
+    }
+    
+    .servicos p {
+        padding-top: 2vh;
+        margin: 0 auto;
+        width: 90%;
+        word-wrap: break-word;
+        font-size: 1.2rem;
+        font-weight: 405;
+        color: #003536;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .bg-branco2 {
         margin-top: 8%;
         margin-bottom: 18%;
@@ -501,24 +640,6 @@ a {
         font-size: 20px;
     }
 
-    .servicos {
-        width: 60%;
-        min-height: 35vh;
-        margin-bottom: 20px;
-    }
-
-    .servicos-h3 {
-        font-size: 32px;
-    }
-
-    .itens-servicos img {
-        width: 30vh;
-        height: 4vh;
-    }
-
-    .servicos p {
-        font-size: 2.3vh;
-    }
 }
 
 /* Página de cadastro. */
@@ -536,8 +657,11 @@ h1 {
 }
 
 .p-2 {
-    padding-top: 5vh;
-    font-size: 24px;
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 4vh;
+    font-size: 1.7rem;
+    word-wrap: break-word;
     color: #003536;
 }
 
@@ -545,8 +669,6 @@ span {
     color: #003536;
     font-weight: 600;
 }
-
-/* Botão de cadastro. */
 
 .button-1 {
     margin-top: 6rem;
@@ -573,18 +695,23 @@ span {
 
 /* Página de cadastro responsiva para dispositivos móveis (celular). */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .bg-branco2 {
         margin-top: 20%;
         margin-bottom: 20%;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 3.5rem;
+        margin: 0 auto;
+        width: 75%;
+        word-wrap: break-word;
     }
 
     .p-2 {
-        font-size: 18px;
+        width: 80%;
+        font-size: 1.4rem;
+        word-wrap: break-word;
         padding-top: 3vh;
     }
 
@@ -598,20 +725,24 @@ span {
     }
 }
 
-/* Página de cadastro responsiva para tablets. */
+/* Página de cadastro responsiva para tablets maiores ou notebooks pequenos. */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+
     .bg-branco2 {
         margin-top: 10%;
         margin-bottom: 15%;
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 4rem;
+
     }
 
     .p-2 {
-        font-size: 20px;
+        width: 70%;
+        font-size: 1.5rem;
+        word-wrap: break-word;
         padding-top: 4vh;
     }
 
@@ -622,33 +753,6 @@ span {
         margin-top: 4rem;
         position: relative;
         transform: none;
-    }
-}
-
-/* Página de cadastro responsiva para desktops. */
-
-@media (min-width: 1024px) {
-    .bg-branco2 {
-        margin-top: 6%;
-        margin-bottom: 15%;
-    }
-
-    h1 {
-        font-size: 65px;
-    }
-
-    .p-2 {
-        font-size: 24px;
-        padding-top: 5vh;
-    }
-
-    .button-1 {
-        width: 490px;
-        height: 85px;
-        font-size: 22px;
-        margin-top: 6rem;
-        position: absolute;
-        transform: translate(-50%, -50%);
     }
 }
 
