@@ -154,7 +154,13 @@ body {
     display: block;
     margin: 0 auto;
     font-family: "Poppins", sans-serif;
+}
 
+body .comentarios {
+    display: flex;
+align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -287,42 +293,68 @@ body {
     font-size: 5vw;
 }
 
-/* Página de comentarios. */
+/*carrosel dos depoimentos*/
 
-.faq {
-    background: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3vh 7vh;
-    padding: 5%;
-    width: auto;
-    height: auto;
-    flex-direction: row row;
-    align-items: center;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Caixinha verde de comentários e animações. */
 
-.faq-item {
-    background: linear-gradient(49deg, #003536, #00999C);
-    border-radius: 20px;
-    padding: 4%;
-    max-width: 75vh;
-    max-height: 20%;
-    color: white;
-    transition: transform 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+
+.depoimentos{
+width: 100%;
+padding: 50px 20px;
+
+max-width: 900px;
+
 }
 
-.faq-texto {
-    font-size: 1.3vw;
+.depoimentos-container{
+    display: flex;
+    width: 400%;
     margin: 0 auto;
+    flex-direction: row;
+    padding-top: 1%;
+    transition: margin-left 0.5s ease;
 }
 
+.depoimentos p.depoi-txt{
+font-weight: 300;
+margin-bottom: 40px;
+
+}
+
+.slideD .person{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slideD .person img{
+width: 80px;
+height: 80px;
+}
+
+.slideD .person p.nome-person{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.slideD .person p.func-person{
+font-size: 14px;
+
+}
+
+
+
+
+
+/*rodapé*/
 footer {
     width: 100%;
     color: white;
