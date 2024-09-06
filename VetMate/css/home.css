@@ -229,7 +229,11 @@ main{
     position: relative;
 }
 
-.carousel .list .item .buttons button:nth-child(1){
+.carousel .list .item .buttons .btn-cadastrar:hover{
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
+}
+
+.carousel .list .item .buttons .btn-agendar:hover{
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
 }
 
@@ -292,6 +296,9 @@ main{
     z-index: 100;
     display: flex;
     align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    padding: 0 5vw;
 }
 
 .arrows button {
@@ -299,32 +306,29 @@ main{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: #fff;
     border: none;
-    color: #fff;
+    color: #003536;
     font-family: monospace;
     font-weight: bold;
 }
 
 .arrows button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee4;
+    color: #003536;
 }
 
 .arrows button#prev {
-    margin-left: 5vw;
+    margin-left: 0;
 }
 
 .arrows button#next {
-    margin-left: 83vw; 
+    margin-left: 0; 
 }
 
-/* animation */
 .carousel .list .item:nth-child(1) {
     z-index: 1;
 }
-
-/* prev click */
 
 .carousel.prev .list .item:nth-child(2) {
     z-index: 2;
@@ -341,11 +345,43 @@ main{
     pointer-events: cursor;
 }
 
-@media screen and (max-width: 678px) {
-    .carousel .list .item .content {
-        padding-right: 0;
-    }
+@media (min-width: 800px) and (max-width: 1340px) {
+
+header {
+    background-color: #00353600;
+    margin-bottom: -14vw;
+    position: relative;
+    z-index: 1001;
 }
+}
+
+@media (max-width: 800px) {
+
+    header {
+        background-color: #00353600;
+        margin-bottom: -22vw;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .carousel .list .item:nth-child(2) .content{
+        transform: translateX(-25%);
+        width: 90%;
+    }
+
+    .carousel .list .item:nth-child(2) .title{
+        font-size: 3rem;
+    }
+
+    .carousel .list .item:nth-child(2) .buttons {
+        margin-right: 25%; 
+    }
+
+    .carousel .list .item:nth-child(2) .title{
+        font-size: 3rem;
+    }
+
+    }
 
 .bg-branco {
     text-align: center;
@@ -687,7 +723,7 @@ main{
 
 h1 {
     color: #003536;
-    font-size: 65px;
+    font-size: 5rem;
     font-family: 'Cocon', sans-serif;
 }
 
