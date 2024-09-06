@@ -197,7 +197,7 @@ main{
 }
 
 .carousel .list .item .title {
-    font-size: 5em;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 1.3em;
     font-family: "Cocon", sans-serif;
@@ -316,7 +316,7 @@ main{
 }
 
 .arrows button#next {
-    margin-left: 85vw; 
+    margin-left: 83vw; 
 }
 
 /* animation */
@@ -483,7 +483,7 @@ main{
     margin: 0 auto;
     padding-top: 5vh;
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 5%;
     width: 60%;
     word-wrap: break-word;
@@ -543,7 +543,7 @@ main{
     .p-1 {
         margin: 0 auto;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 5%;
         width: 60%;
         word-wrap: break-word;
@@ -695,7 +695,7 @@ h1 {
     margin: 0 auto;
     width: 60%;
     padding-top: 4vh;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     word-wrap: break-word;
     color: #003536;
 }
