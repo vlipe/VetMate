@@ -14,3 +14,4 @@ count = 1;
 document.getElementById("radio"+count).checked = true;
 
 }
+
