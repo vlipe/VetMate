@@ -16,8 +16,8 @@
     <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
 </head>
 
-<body>   
-    
+<body>
+
     <header>
         <nav class="nav-bar">
             <div class="logo">
@@ -51,172 +51,180 @@
         </div>
     </header>
 
-<main>
- <div class="container">
-        <h1>Descubra nossas <br>atuações, metas<br>e muito mais!</h1>
-    </div>
-
-
-
-
-    <div class="container-2">
-        <h1>NOSSOS SERVIÇOS</h1>
-
-        <div class="slider">
-            <div class="slides" id="img">
-
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-
-
-
-
-                <div class="slide first">
-                     
-                    <img src="../imagens/img carrossel servicos 1.png" alt="computador mostrando a aba de buscador de clinicas">
-                   <h1>O melhor buscador<br> de clínicas de veterinárias</h1>
-                </div>
-                <div class="slide">
-                     
-                     <img src="../imagens/img carrossel servicos 2.png" alt="computador mostrando a aba de acompanhamento de saúde">
-                   <h1>Acompanhe consultas,<br>exames,<br>vacinas e <br>muito mais!</h1>
-                </div>
-
-                <div class="navegation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                </div>
-            </div>
-
-            <div class="manual-navegation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-
-
-            </div>
+    <main>
+        <div class="container">
+            <h1>Descubra nossas <br>atuações, metas<br>e muito mais!</h1>
         </div>
-        <script src="../js/servicos.js"></script>
 
 
-    </div>
-</main>
+
+
+        <div class="container-2">
+            <h1>NOSSOS SERVIÇOS</h1>
+
+            <div class="slider">
+                <div class="slides" id="img">
+
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+
+
+
+
+                    <div class="slide first">
+
+                        <img src="../imagens/img carrossel servicos 1.png"
+                            alt="computador mostrando a aba de buscador de clinicas">
+                        <h1>O melhor buscador<br> de clínicas de veterinárias</h1>
+                    </div>
+                    <div class="slide">
+
+                        <img src="../imagens/img carrossel servicos 2.png"
+                            alt="computador mostrando a aba de acompanhamento de saúde">
+                        <h1>Acompanhe consultas,<br>exames,<br>vacinas e <br>muito mais!</h1>
+                    </div>
+
+                    <div class="navegation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                    </div>
+                </div>
+
+                <div class="manual-navegation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+
+
+                </div>
+            </div>
+            <script src="../js/servicos.js"></script>
+
+
+        </div>
+    </main>
 
 
 
     <div class="depo">
         <h1>DEPOIMENTOS</h1>
-    
 
-    <section class="faq">
-        <article class="faq-item" onclick="openModal('modal-1'); toggle()">
-
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
-        <article class="faq-item" onclick="openModal('modal-2'); toggle()">
-
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
-        <article class="faq-item" onclick="openModal('modal-3'); toggle()">
+        <div class="carousel-container">
+            <!-- Botão de Anterior -->
+            <button class="nav-button prev" id="prevButton">&#10094;</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <div class="comment">
+                        <div class="person">
+                            <img src="../imagens/foto-iconepessoa-comentarios.png" alt="Foto do usuário"class="responsive-img">
+                            <p>Luiz</p>
+                        </div>
+                        <p>Comentário 1: Ótimo produto!</p>
+                    </div>
+                    <div class="comment">
+                        <div class="person">
+                            <img src="../imagens/foto-iconepessoa-comentarios.png" alt="Foto do usuário" class="responsive-img">
+                            <p>Luiz</p>
+                        </div>
+                        <p>Comentário 2: Atendimento excelente.</p>
+                    </div>
+                    <div class="comment">
+                        <div class="person">
+                            <img src="../imagens/foto-iconepessoa-comentarios.png" alt="Foto do usuário"  class="responsive-img">
+                            <p>Luiz</p>
+                        </div>
+                        <p>Comentário 3: Muito satisfeito com a compra.</p>
+                    </div>
+                    <!-- Adicione os outros comentários aqui -->
+                </div>
+            </div>
+            
+            <!-- Botão de Próximo -->
+            <button class="nav-button next" id="nextButton">&#10095;</button>
+        </div>
         
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
-        <article class="faq-item" onclick="openModal('modal-3'); toggle()">
-        
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
+    <script src="../js/servicos-depoimentos.js"></script>
 
-        <article class="faq-item" onclick="openModal('modal-3'); toggle()">
-        
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
-        <article class="faq-item" onclick="openModal('modal-3'); toggle()">
-        
-            <p class="faq-texto">Body text for a post. Since it’s a social app,<br> sometimes it’s a hot take, and sometimes it’s a <br> question.</p>
-        </article>
-    </section>
-</div>
-</div>
+    <footer>
 
-<footer>
+        <div id="container-footer">
+            <div id="footer_contacts">
+                <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+                <p>Sua parceira ideal.</p>
 
-    <div id="container-footer">
-        <div id="footer_contacts">
-            <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
-            <p>Sua parceira ideal.</p>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-            <div id="footer_social_media">
-                <a href="#" class="footer-link" id="instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                    <a href="#" class="footer-link" id="x">
+                        <i class="fa-brands fa-x-twitter"></i></i>
+                    </a>
 
-                <a href="#" class="footer-link" id="x">
-                    <i class="fa-brands fa-x-twitter"></i></i>
-                </a>
+                    <a href="#" class="footer-link" id="linkedin">
+                        <i class="fa-brands fa-linkedin"></i></i>
+                    </a>
+                </div>
+            </div>
 
-                <a href="#" class="footer-link" id="linkedin">
-                    <i class="fa-brands fa-linkedin"></i></i>
-                </a>
+            <ul class="footer-list">
+                <li>
+                    <h3>Navegue</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Institucional</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato e Sac</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Área Restrita</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Contato</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Email</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Whatsapp</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Telefone</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Subscribe</h3>
+
+                <p>
+                    Se inscreva em nossa newsletter para <br> receber todas as atualizações!
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <ul class="footer-list">
-            <li>
-                <h3>Navegue</h3>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Home</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Institucional</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Serviços</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Contato e Sac</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Área Restrita</a>
-            </li>
-        </ul>
-
-        <ul class="footer-list">
-            <li>
-                <h3>Contato</h3>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Email</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Whatsapp</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Telefone</a>
-            </li>
-        </ul>
-
-        <div id="footer_subscribe">
-            <h3>Subscribe</h3>
-
-            <p>
-                Se inscreva em nossa newsletter para <br> receber todas as atualizações!
-            </p>
-
-            <div id="input_group">
-                <input type="email" id="email">
-                <button>
-                    <i class="fa-regular fa-envelope"></i>
-                </button>
-            </div>
+        <div id="footer_copyright">
+            &#169
+            2024 | Todos os direitos reservados.
         </div>
-    </div>
 
-    <div id="footer_copyright">
-        &#169
-        2024 | Todos os direitos reservados.
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 

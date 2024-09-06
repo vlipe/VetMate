@@ -154,7 +154,13 @@ body {
     display: block;
     margin: 0 auto;
     font-family: "Poppins", sans-serif;
+}
 
+body .comentarios {
+    display: flex;
+align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -287,45 +293,84 @@ body {
     font-size: 5vw;
 }
 
-/* Página de comentarios. */
-
-.faq {
-    background: none;
+/*carrosel dos depoimentos*/
+body .carousel-container {
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 3vh 7vh;
-    padding: 5%;
-    width: auto;
-    height: auto;
-    flex-direction: row row;
     align-items: center;
+    height: 30vh;
+    margin: 0;
+    background:linear-gradient(49deg, #003536, #03787a);
+    border-radius: 50px;
+    margin-bottom: 5%;
 }
 
-/* Caixinha verde de comentários e animações. */
-
-.faq-item {
-    background: linear-gradient(49deg, #003536, #00999C);
-    border-radius: 20px;
-    padding: 4%;
-    max-width: 75vh;
-    max-height: 20%;
-    color: white;
-    transition: transform 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carousel-wrapper {
     overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
 }
 
-.faq-texto {
-    font-size: 1.3vw;
-    margin: 0 auto;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
+.comment {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto no topo */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+    padding: 20px;
+    flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+    border-radius: 10px;
+    justify-content: center; /* Centraliza a div */
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person img {
+    width: 50px;
+    border-radius: 50%; /* Para deixar a imagem redonda */
+}
+
+.nav-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 5px;
+    flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .comment {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/*rodapé*/
 footer {
     width: 100%;
     color: white;
+    display: flex;
+    
 }
 
 .footer-link {
@@ -450,3 +495,135 @@ footer {
         padding: 3rem 2rem;
     }
 }
+
+/*responsividade*/
+
+/* Estilos para desktop (acima de 1024px) */
+@media screen and (min-width: 1024px) {
+    .nav-bar {
+        padding: 2% 15%; /* Diminuir a largura do padding em telas grandes */
+    }
+    
+    .container h1 {
+        font-size: 3vw; /* Ajusta o tamanho da fonte no banner */
+    }
+
+    .slides img {
+        width: 50%; /* Reduz as imagens do carrossel em telas maiores */
+    }
+
+    .depo h1 {
+        font-size: 3vw; /* Ajusta a fonte dos depoimentos */
+    }
+}
+
+/* Estilos para tablets (entre 481px e 1024px) */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .nav-bar {
+        padding: 2% 10%; /* Ajuste da barra de navegação */
+    }
+    
+    .container h1 {
+        font-size: 3.5vw; /* Ajusta o título no banner */
+    }
+    
+    .slides img {
+        width: 55%; /* Imagens do carrossel em tablets */
+    }
+
+    .depo h1 {
+        font-size: 4.5vw;
+    }
+
+    #footer_social_media {
+        gap: 1.5rem;
+    }
+}
+
+/* Estilos para mobile (até 480px) */
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        padding: 1rem 2rem; /* Diminui o padding da navbar em telas pequenas */
+    }
+
+    .logo img {
+        width: 60px; /* Ajusta o tamanho do logo */
+    }
+
+    .container h1 {
+        font-size: 5vw; /* Maior flexibilidade no texto principal */
+    }
+
+    .slides img {
+        width: 80%; /* Aumenta o tamanho do carrossel em mobile */
+    }
+
+    .mobile-menu ul {
+        padding: 0; /* Remove padding adicional */
+    }
+
+    .carousel-container {
+        height: auto; /* Deixa o carrossel com altura flexível */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #footer_contacts img {
+        width: 80px; /* Ajusta o tamanho do logo no rodapé */
+    }
+
+    #footer_subscribe p {
+        font-size: 0.9rem; /* Texto menor no rodapé */
+    }
+}
+
+
+
+/* Ajuste o tamanho das caixas de comentários para telas menores */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        height: auto; /* Ajuste automático da altura */
+        padding: 20px;
+    }
+
+    .comment {
+        flex-direction: column; /* Empilhar imagem e texto verticalmente em telas menores */
+        align-items: center; 
+        gap: 15px; /* Espaçamento entre a imagem e o texto */
+        font-size: 16px;
+    }
+
+    .person img {
+        width: 40px; /* Reduzir o tamanho da imagem da pessoa */
+    }
+
+    .carousel {
+        display: flex;
+        transform: translateX(0); /* Assegura que o carrossel fique visível em telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-container {
+        padding: 10px;
+    }
+
+    .comment {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .person img {
+        width: 35px;
+    }
+
+    .nav-button {
+        padding: 5px; /* Ajuste o tamanho dos botões de navegação */
+    }
+}
+
+
