@@ -1,26 +1,34 @@
-const slides = document.querySelectorAll('.slide');
-let currentSlideIndex = 0;
+const carousel = document.querySelector('.carousel');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const items = document.querySelectorAll('.carousel .list .item');
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        if (i === index) {
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
-    });
+let activeIndex = 0; 
+
+function showItem(index) {
+    items.forEach(item => item.style.display = 'none');
+
+    items[index].style.display = 'block';
+
+    if (index > activeIndex) {
+        carousel.classList.add('next');
+        carousel.classList.remove('prev');
+    } else {
+        carousel.classList.add('prev');
+        carousel.classList.remove('next');
+    }
+
+    activeIndex = index;
 }
 
-function nextSlide() {
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    showSlide(currentSlideIndex);
-}
+showItem(activeIndex);
 
-function prevSlide() {
-    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-    showSlide(currentSlideIndex);
-}
+prevButton.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + items.length) % items.length;
+    showItem(activeIndex);
+});
 
-document.querySelector('.seta-esquerda').addEventListener('click', prevSlide);
-document.querySelector('.seta-direita').addEventListener('click', nextSlide);
-showSlide(currentSlideIndex);
+nextButton.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % items.length;
+    showItem(activeIndex);
+});

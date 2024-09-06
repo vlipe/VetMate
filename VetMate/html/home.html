@@ -54,34 +54,46 @@
     </header>
 
     <main>
-        <div class="carrossel">
-            <div class="slides">
-                <div class="slide">
-                    <img src="../imagens/8455128.png" alt="Cinco cães">
-                    <div class="texto-um-carrossel">
-                        <h1>O parceiro ideal na saúde de seu pet!</h1>
+            <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="../imagens/8455128.png">
+                <div class="content">
+                    <div class="title">O parceiro ideal na saúde de seu pet!</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../imagens/banner-2.png">
+                <div class="content">
+
+                    <div class="title">Aqui todos são aceitos! Cadastre seu pet exótico.</div>
+                    
+                    <div class="buttons">
+                        <button class="btn-cadastrar">CADASTRAR</button>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="../imagens/banner-2.png" alt="Camaleão (pet exótico)">
-                    <div class="texto-dois-carrossel">
-                        <h1>Aqui todos são aceitos! Cadastre seu pet exótico.</h1>
-                        <button class="btn-cadastrar"><a href="../html/area-restrita.html">CADASTRAR</a></button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../imagens/banner-3.png" alt="Gato">
-                    <div class="texto-tres-carrossel">
-                        <h1>Agende todas as vacinas e exames do seu filhote!</h1>
+            </div>
+            <div class="item">
+                <img src="../imagens/banner-3.png">
+                <div class="content">
+
+                    <div class="title">Agende todas as vacinas e exames do seu filhote!</div>
+
+                    <div class="buttons">
                         <button class="btn-agendar">AGENDAR</button>
                     </div>
                 </div>
             </div>
-            <div class="carrossel-setas">
-                <img src="../imagens/seta-esquerda.svg" alt="Seta para esquerda" class="seta-esquerda">
-                <img src="../imagens/seta-direita.svg" alt="Seta para direita" class="seta-direita">
-            </div>
+
         </div>
+
+        <div class="arrows">
+            <button id="prev"><i class="fas fa-chevron-left"></i></button> 
+            <button id="next"><i class="fas fa-chevron-right"></i></button> 
+        </div>
+    </div>
 
         <script src="../js/script-home.js"></script>
 
@@ -133,7 +145,7 @@
                 disso, <span>busque novas clínicas</span> que possam se encaixar melhor em sua <span>realidade e
                     perfil</span>.</p>
 
-            <button class="button-1">CADASTRAR</button>
+            <button class="button-1"><a href="../html/area-restrita.html">CADASTRAR</a></button>
         </div>
 
     </main>
