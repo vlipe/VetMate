@@ -15,7 +15,7 @@ header {
     z-index: 1001;
 }
 
-main{
+main {
     overflow-x: hidden;
 }
 
@@ -213,7 +213,7 @@ main{
     transform: translateX(-50%);
 }
 
-.carousel .list .item .buttons button:nth-child(1) { 
+.carousel .list .item .buttons button:nth-child(1) {
     background-color: #ffffff;
     color: #003536;
     width: 380px;
@@ -229,11 +229,19 @@ main{
     position: relative;
 }
 
-.carousel .list .item .buttons .btn-cadastrar:hover{
+.carousel .list .item .buttons .btn-cadastrar a {
+    color: #003536;
+}
+
+.carousel .list .item .buttons .btn-agendar a {
+    color: #003536;
+}
+
+.carousel .list .item .buttons .btn-cadastrar:hover {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
 }
 
-.carousel .list .item .buttons .btn-agendar:hover{
+.carousel .list .item .buttons .btn-agendar:hover {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.638);
 }
 
@@ -264,7 +272,7 @@ main{
 .carousel .list .item:nth-child(2) .buttons {
     display: flex;
     justify-content: flex-end;
-    margin-right: 15%; 
+    margin-right: 15%;
 }
 
 .carousel .list .item .buttons {
@@ -323,7 +331,7 @@ main{
 }
 
 .arrows button#next {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
 .carousel .list .item:nth-child(1) {
@@ -347,12 +355,12 @@ main{
 
 @media (min-width: 800px) and (max-width: 1340px) {
 
-header {
-    background-color: #00353600;
-    margin-bottom: -14vw;
-    position: relative;
-    z-index: 1001;
-}
+    header {
+        background-color: #00353600;
+        margin-bottom: -14vw;
+        position: relative;
+        z-index: 1001;
+    }
 }
 
 @media (max-width: 800px) {
@@ -364,24 +372,24 @@ header {
         z-index: 1001;
     }
 
-    .carousel .list .item:nth-child(2) .content{
+    .carousel .list .item:nth-child(2) .content {
         transform: translateX(-25%);
         width: 90%;
     }
 
-    .carousel .list .item:nth-child(2) .title{
+    .carousel .list .item:nth-child(2) .title {
         font-size: 3rem;
     }
 
     .carousel .list .item:nth-child(2) .buttons {
-        margin-right: 25%; 
+        margin-right: 25%;
     }
 
-    .carousel .list .item:nth-child(2) .title{
+    .carousel .list .item:nth-child(2) .title {
         font-size: 3rem;
     }
 
-    }
+}
 
 .bg-branco {
     text-align: center;
@@ -575,7 +583,7 @@ header {
         font-size: 4rem;
         font-family: 'Cocon', sans-serif;
     }
-    
+
     .p-1 {
         margin: 0 auto;
         color: white;
@@ -584,14 +592,14 @@ header {
         width: 60%;
         word-wrap: break-word;
     }
-    
+
     .caixinha {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10vw;
     }
-    
+
     .servicos {
         background: linear-gradient(520deg, #ffffff, #ababab 80%);
         border-radius: 15px;
@@ -604,18 +612,18 @@ header {
         justify-content: center;
         align-items: center;
     }
-    
+
     .servicos-h3 {
         padding: 0.5vh;
         font-size: 2.2rem;
         color: #003536;
     }
-    
+
     .itens-servicos img {
         width: 20vw;
         height: auto;
     }
-    
+
     .servicos p {
         padding-top: 2vh;
         margin: 0 auto;
@@ -628,7 +636,7 @@ header {
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
     .h1-branco {
         margin: 0 auto;
@@ -638,7 +646,7 @@ header {
         font-family: 'Cocon', sans-serif;
         word-wrap: break-word;
     }
-    
+
     .p-1 {
         margin: 0 auto;
         padding-top: 5vh;
@@ -648,13 +656,13 @@ header {
         width: 80%;
         word-wrap: break-word;
     }
-    
+
     .caixinha {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .servicos {
         background: linear-gradient(520deg, #ffffff, #ababab 80%);
         border-radius: 15px;
@@ -667,18 +675,18 @@ header {
         justify-content: center;
         align-items: center;
     }
-    
+
     .servicos-h3 {
         padding: 0.5vh;
         font-size: 2.2rem;
         color: #003536;
     }
-    
+
     .itens-servicos img {
         width: 30vw;
         height: auto;
     }
-    
+
     .servicos p {
         padding-top: 2vh;
         margin: 0 auto;
@@ -764,7 +772,7 @@ span {
     box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
-a{
+a {
     color: #ffffff;
     text-decoration: none;
 }

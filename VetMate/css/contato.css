@@ -180,9 +180,9 @@ header {
 h1 {
     font-family: "Cocon", sans-serif;
     margin-bottom: 2%;
-    font-size: 3.5rem;
+    font-size: 3rem;
     word-wrap: break-word;
-    width: 70%;
+    width: 60%;
     color: white;
 }
 
@@ -272,6 +272,35 @@ form button[type="submit"]:hover {
     background-color: #00c2a2;
     color: white;
     scale: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container-form form {
+        margin-left: 6rem;
+        width: 63%;
+    }
+    
+    .container-form .image-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 6rem;
+        width: 30%;
+    }
+    
+    .container-form .image-container img {
+        width: 100%; 
+        height: auto;
+        margin-bottom: 20%;
+    }
+    
+    h1 {
+        font-family: "Cocon", sans-serif;
+        margin-bottom: 2%;
+        font-size: 2.5rem;
+        word-wrap: break-word;
+        width: 70%;
+        color: white;
+    }
 }
 
 /*Página de Perguntas e Dúvidas. */
