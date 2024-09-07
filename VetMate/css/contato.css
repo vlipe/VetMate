@@ -3,7 +3,6 @@
 @import url('https://fonts.cdnfonts.com/css/cocon');
 
 * {
-    color: white;
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -11,14 +10,12 @@
 
 header {
     background-color: #003536;
-    box-shadow: 0px 2px 10px #003536;
 }
 
 .nav-bar {
     display: flex;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
+    justify-content: space-between;
+    padding: 2% 5%;
 }
 
 .logo {
@@ -35,12 +32,11 @@ header {
 .nav-list {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-left: auto;
 }
 
 .nav-list ul {
     display: flex;
+    justify-content: center;
     list-style: none;
 }
 
@@ -98,16 +94,12 @@ header {
     color: white;
 }
 
-.mobile-menu {
-    display: none;
-}
-
 .mobile-menu-icon {
     display: none;
 }
 
-.mobile-menu.open {
-    display: block;
+.mobile-menu {
+    display: none;
 }
 
 @media screen and (max-width: 730px) {
@@ -161,15 +153,38 @@ header {
 
 /* Página do Contato e SAC: */
 
-h1 {
-    font-family: "Cocon", sans-serif;
-    margin-bottom: 5px;
-    margin-top: 3.5%;
-    font-size: 55px;
-    font-weight: 650;
-    color: white;
+.container-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.container-form form {
+    margin-left: 6rem;
+    width: 63%;
+}
+
+.container-form .image-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6rem;
+    width: 25%;
+}
+
+.container-form .image-container img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 20%;
+}
+
+h1 {
+    font-family: "Cocon", sans-serif;
+    margin-bottom: 2%;
+    font-size: 3rem;
+    word-wrap: break-word;
+    width: 60%;
+    color: white;
+}
 
 label {
     margin-bottom: 5px;
@@ -180,7 +195,6 @@ section {
     background-color: #003536;
 }
 
-
 input,
 textarea {
     margin-bottom: 10px;
@@ -189,6 +203,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    width: 55%;
 }
 
 input:focus,
@@ -201,6 +216,7 @@ textarea:focus {
 #duvida-label {
     max-width: fit-content;
     text-align: left;
+    color: white;
 }
 
 #nome,
@@ -230,35 +246,9 @@ textarea:focus {
     border-radius: 40px;
 }
 
-.container-form {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+form {
+    margin-left: 5rem;
 }
-
-.image-container {
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.form-and-image {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 0;
-    margin-left: 5%;
-}
-
-.form-container {
-    width: 60%;
-}
-
-.image-container {
-    width: 40rem;
-}
-
 
 form button[type="submit"] {
     border: none;
@@ -275,15 +265,42 @@ form button[type="submit"] {
 }
 
 form .submit {
-    align-self: auto;
     margin-top: 10px;
-    margin-bottom: 20%;
 }
 
 form button[type="submit"]:hover {
     background-color: #00c2a2;
     color: white;
     scale: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container-form form {
+        margin-left: 6rem;
+        width: 63%;
+    }
+    
+    .container-form .image-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 6rem;
+        width: 30%;
+    }
+    
+    .container-form .image-container img {
+        width: 100%; 
+        height: auto;
+        margin-bottom: 20%;
+    }
+    
+    h1 {
+        font-family: "Cocon", sans-serif;
+        margin-bottom: 2%;
+        font-size: 2.5rem;
+        word-wrap: break-word;
+        width: 70%;
+        color: white;
+    }
 }
 
 /*Página de Perguntas e Dúvidas. */
@@ -294,17 +311,17 @@ form button[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
     font-family: Poppins, sans-serif;
-    margin-bottom: 10vh;
+    margin-bottom: 5%;
 }
 
 h2 {
     font-family: "Cocon", sans-serif;
-    margin-top: 8vh;
+    margin-top: 5%;
     text-align: center;
     color: #003536;
-    font-size: 10vh;
+    font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 2vh;
+    margin-bottom: 2%;
 }
 
 .faq {
@@ -321,8 +338,8 @@ h2 {
     background: linear-gradient(49deg, #003536, #006C6F);
     border-radius: 15px;
     padding: 3vh;
-    width: 75vh;
-    height: 8vh;
+    width: 35vw;
+    height: 5vw;
     color: white;
     cursor: pointer;
     transition: transform 0.4s;
@@ -348,7 +365,7 @@ h2 {
 }
 
 .faq-texto {
-    font-size: 2.7vh;
+    font-size: 1.2rem;
     margin-left: 3vh;
 }
 
@@ -372,7 +389,7 @@ h2 {
 }
 
 .interacao-prompt p {
-    font-size: 3vh;
+    font-size: 1.5rem;
     font-weight: 410;
 }
 

@@ -410,7 +410,7 @@ header {
 }
 
 .container-form .grupo-form input {
-    width: 80%;
+    width: 100%;
     padding: 12px 16px;
     border-radius: 10px;
     font-family: inherit;

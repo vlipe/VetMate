@@ -390,12 +390,6 @@ header {
     height: 1rem;
 }
 
-.resultados-cards {
-    display: flex;
-    justify-content: space-between;
-    padding: 0rem 6rem;
-}
-
 #resultados-geral {
     margin-bottom: 2%;
 }
@@ -422,7 +416,7 @@ header {
 
 .card-container {
     box-sizing: border-box;
-    width: 32%;
+    width: 95%;
     height: 100%;
     background: #d9d9d994;
     border: 1px solid white;
@@ -557,16 +551,94 @@ header {
     }
 }
 
-@media (min-width:730px) and (max-width:1224px) {
-
-    .card-container {
-        width: 45%;
-         
+/* Estilo para telas com até 768px (mobile) */
+@media (max-width: 768px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        padding: 0rem 3rem;
+        row-gap: 2rem;
+        margin-top: 15%;
     }
 
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin: 2rem 0rem;
+    }
+
+    .card-container {
+        margin: 0rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-img {
+        padding: 0;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    .card-h3 {
+        text-align: center;
+    }
+
+    .card-p {
+        text-align: center;
+    }
+
+    .card-button {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        margin: 1rem 3rem 0rem 3rem;
+    }
+
+    .informacoes-card a {
+        text-decoration: none;
+    }
+
+    .informacoes-card {
+        display: grid;
+        place-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #h1-resultado {
+        font-size: 2rem;
+        margin-bottom: 5%;
+    }
+
+    .buscador-comprimido .input {
+        width: 100%;
+    }
 
 }
 
+/* Estilo para telas com largura entre 769px e 1023px (tablet e notebooks) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        padding: 0rem 5rem;
+        row-gap: 2rem;
+    }
+
+}
+
+/* Estilo para telas com mais de 1024px (desktop) */
+@media (min-width: 1025px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 0rem 6rem;
+    }
+}
 
 footer {
     width: 100%;

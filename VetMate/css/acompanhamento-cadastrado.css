@@ -340,76 +340,32 @@ header {
     }
 }
 
-.section-1 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5%;
-}
 
 #h1-1 {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3rem;
-    line-height: 1.2em;
     color: #003536;
-    display: grid;
-    place-items: left;
-    margin-left: 6rem;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 #p-1 {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.2rem;
     color: #003536;
-    display: grid;
-    place-items: left;
-    margin-left: 6rem;
-    margin-bottom: 3%;
-    width: 40%;
-    word-wrap: break-word;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-#img-right-top {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 6rem;
-    width: 25%;
-}
-
-.section-2 {
+.pets-cadastrados {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0rem 6rem;
-    margin-bottom: 8%;
+    justify-content: center;
 }
 
-#h1-2 {
-    color: #003536;
-    text-align: center;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 2%;
-}
-
-#p1-2 {
-    color: #003536;
-    text-align: center;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.2rem;
-    margin-bottom: 4%;
-}
-
-.card {
+.container-cadastro {
+    display: flex;
     box-sizing: border-box;
-    width: 25%;
-    height: 400px;
+    width: 60%;
+    height: 20rem;
     background: #d9d9d994;
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -417,181 +373,63 @@ header {
     border-radius: 17px;
     transition: all 0.5s;
     color: #003536;
+    margin-bottom: 2rem;
 }
 
-.card-button {
-    transform: translate(-50%, 125%);
-    width: 60%;
-    cursor: pointer;
+.container-cadastro:hover {
+    border: 1px solid #003536;
+    transform: scale(1.02);
+}
+
+.card-img {
+    padding: 2rem 2rem;
+}
+
+.card-img img{
+    object-fit: cover;
+    border: 2px solid #003536;
     border-radius: 10px;
-    border: none;
-    background-color: #003536;
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
+    width: 100%;
+    height: 100%;
 }
 
-.card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
+.informacoes-card {
+    padding: 2rem 0rem 2rem 2rem;
 }
 
 .card-h3 {
+    width: 100%;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.7rem;
-    text-align: center;
-    padding-top: 3rem;
-}
-
-
-.card-img {
-    margin: auto;
-    width: 80%;
-    height: 100px;
-    border-radius: 10px;
-    background-color: #003536;
+    font-size: 1.4rem;
+    text-align: left;
 }
 
 .card-p {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    text-align: center;
-    padding-top: 1.5rem;
-    margin-bottom: 2rem;
+    text-align: left;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    word-wrap: break-word;
 }
 
-.card:hover {
-    border: 1px solid #003536;
-    transform: scale(1.04);
+.card-button {
+    width: 60%;
+    cursor: pointer;
+    background-color: #003536;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    transition: 0.3s;
 }
 
-@media screen and (max-width:730px) {
-
-    #h1-1 {
-        text-align: left;
-        font-size: 1.8rem;
-        line-height: 1.2em;
-        color: #003536;
-        margin-left: 4rem;
-        margin-top: 2%;
-        margin-bottom: 10%;
-    }
-
-    #img-right-top {
-        margin-right: 4rem;
-        width: 35%;
-        height: 100%;
-    }
-
-    #p-1 {
-        text-align: left;
-        width: 80%;
-        word-wrap: break-word;
-        font-size: 1rem;
-        color: #003536;
-        margin-left: 4rem;
-        margin-bottom: 5%;
-    }
-
-    #h1-2 {
-        text-align: center;
-        font-size: 1.8rem;
-        color: #003536;
-        margin-left: 4rem;
-        margin-right: 4rem;
-        margin-bottom: 3%;
-    }
-
-    #p1-2 {
-        text-align: center;
-        font-size: 1rem;
-        color: #003536;
-        margin-left: 4rem;
-        margin-right: 4rem;
-        margin-bottom: 10%;
-    }
-
-    .section-2 {
-        display: grid;
-        place-items: center;
-        margin-bottom: 8%;
-    }
-
-    .card {
-        box-sizing: border-box;
-        width: 100%;
-        height: 300px;
-        margin-bottom: 20%;
-        background: #d9d9d994;
-        border: 1px solid white;
-        box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-        backdrop-filter: blur(6px);
-        border-radius: 17px;
-        transition: all 0.5s;
-        color: #003536;
-    }
-
-    .card-button {
-        transform: translate(-50%, 125%);
-        width: 40%;
-        cursor: pointer;
-        border-radius: 10px;
-        border: none;
-        background-color: #003536;
-        color: #fff;
-        font-size: 1rem;
-        padding: .5rem 1rem;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        opacity: 0;
-        transition: 0.3s ease-out;
-    }
-
-    .card:hover .card-button {
-        transform: translate(-50%, 50%);
-        opacity: 1;
-    }
-
-    .card-h3 {
-        font-weight: 600;
-        font-style: normal;
-        font-size: 1.2rem;
-        text-align: center;
-        padding-top: 3rem;
-    }
-
-    .card-img {
-        margin: auto;
-        width: 80%;
-        height: 50px;
-        border-radius: 10px;
-        background-color: #003536;
-    }
-
-    .card-p {
-        margin: auto;
-        white-space: break-word;
-        width: 80%;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 0.8rem;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .card:hover {
-        border: 1px solid #003536;
-        transform: scale(1.04);
-    }
-
+.card-button:hover {
+    scale: 0.98;
+    background-color: #00c2a2;
 }
 
 footer {
