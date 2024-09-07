@@ -1,9 +1,5 @@
 * {
   font-family: "Poppins", sans-serif;
-}
-
-header,
-footer {
   padding: 0;
   margin: 0;
 }
@@ -348,7 +344,7 @@ header {
   background-color: white;
   width: 600px;
   margin: auto;
-  padding: 40px 80px 40px 80px;
+  padding: 50px 60px 50px 60px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   box-shadow: 0px 0px 30px rgba(0, 33, 33, 0.4);
@@ -367,11 +363,15 @@ h3 {
   color: #003536;
   text-align: left;
   font-size: 20px;
+  padding-bottom: 1rem;
+}
+
+.grupo-input-nome {
+  padding-bottom: 1rem;
 }
 
 .grupo-input-nome label {
   display: block;
-  margin-bottom: 5px;
 }
 
 .grupo-input-nome input {
@@ -398,6 +398,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  padding-bottom: 1rem;
 }
 
 .checkbox-buscador {
@@ -514,14 +515,18 @@ h3 {
 
 /* input custo */
 
+.input-distancia {
+  padding-bottom: 1rem;
+}
+
 .container-input-custo {
   width: 100%;
   margin-top: 8px;
   box-sizing: border-box;
-  padding-top: 12px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 12px;
+  margin-bottom: 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
 }
@@ -652,6 +657,7 @@ h3 {
 
 .radio-inputs {
   display: flex;
+  padding-bottom: 1rem;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -777,6 +783,7 @@ h3 {
   border: 1px solid #ccc;
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  margin-bottom: 1rem;
 }
 
 .select input::placeholder {
