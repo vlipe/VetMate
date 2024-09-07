@@ -390,12 +390,6 @@ header {
     height: 1rem;
 }
 
-.resultados-cards {
-    display: flex;
-    justify-content: space-between;
-    padding: 0rem 6rem;
-}
-
 #resultados-geral {
     margin-bottom: 2%;
 }
@@ -422,7 +416,7 @@ header {
 
 .card-container {
     box-sizing: border-box;
-    width: 32%;
+    width: 95%;
     height: 100%;
     background: #d9d9d994;
     border: 1px solid white;
@@ -557,16 +551,43 @@ header {
     }
 }
 
-@media (min-width:730px) and (max-width:1224px) {
-
-    .card-container {
-        width: 45%;
-         
+/* Estilo para telas com até 768px (mobile) */
+@media (max-width: 768px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        padding: 0rem 6rem;
     }
 
-
+    .resultados-cards .card-container {
+        margin-bottom: 5%;
+    }
 }
 
+/* Estilo para telas com largura entre 769px e 1023px (tablet e notebooks) */
+@media (min-width: 769px) and (max-width: 1025px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        padding: 0rem 6rem;
+    }
+
+    .resultados-cards .card-container {
+        margin-bottom: 5%;
+    }
+}
+
+/* Estilo para telas com mais de 1024px (desktop) */
+@media (min-width: 1026px) {
+    .resultados-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        padding: 0rem 6rem;
+    }
+}
 
 footer {
     width: 100%;
