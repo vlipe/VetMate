@@ -606,7 +606,7 @@ a{
     font-style: normal;
     font-size: 22px;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-c~bxb50%, -50%);
     cursor: pointer;
 }
 
