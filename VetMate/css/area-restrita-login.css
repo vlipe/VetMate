@@ -554,12 +554,12 @@ header {
         opacity: 0;
         transition: 0.3s ease-out;
     }
-    
+
     .card:hover .card-button {
         transform: translate(-50%, 50%);
         opacity: 1;
     }
-    
+
     .card-h3 {
         font-weight: 600;
         font-style: normal;
@@ -567,7 +567,7 @@ header {
         text-align: center;
         padding-top: 3rem;
     }
-    
+
     .card-img {
         margin: auto;
         width: 80%;
@@ -575,7 +575,7 @@ header {
         border-radius: 10px;
         background-color: #003536;
     }
-    
+
     .card-p {
         margin: auto;
         white-space: break-word;
@@ -586,7 +586,7 @@ header {
         text-align: center;
         margin-bottom: 2rem;
     }
-    
+
     .card:hover {
         border: 1px solid #003536;
         transform: scale(1.04);
@@ -607,7 +607,7 @@ footer {
     background-color: #003536;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 3.5rem 6rem;
+    padding: 3rem 5%;
 }
 
 #footer_contacts img {
@@ -700,7 +700,7 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #003536a8;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
     font-family: "Poppins", sans-serif;
