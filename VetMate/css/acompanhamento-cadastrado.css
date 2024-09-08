@@ -364,15 +364,16 @@ header {
 .container-cadastro {
     display: flex;
     box-sizing: border-box;
-    width: 60%;
-    height: 20rem;
+    width: 50%;
+    height: 16rem;
     background: #d9d9d994;
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     border-radius: 17px;
     transition: all 0.5s;
     color: #003536;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .container-cadastro:hover {
@@ -381,25 +382,28 @@ header {
 }
 
 .card-img {
-    padding: 2rem 2rem;
+    padding-right: 3rem;
 }
 
-.card-img img{
+.card-img img {
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     width: 100%;
     height: 100%;
 }
 
 .informacoes-card {
-    padding: 2rem 0rem 2rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-h3 {
     width: 100%;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-align: left;
 }
 
@@ -408,17 +412,23 @@ header {
     font-style: normal;
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 0.8rem;
     width: 100%;
     word-wrap: break-word;
 }
 
-.detalhes {
-    margin-bottom: 1rem;
+.detalhe {
+    display: flex;
+    align-items: end;
+    justify-content: left;
 }
 
 .detalhes i {
-    font-size: 10rem;
+    font-size: 1.8rem;
+    margin-right: 1.2rem;
+}
+
+.detalhes p {
+    font-size: 1rem;
 }
 
 .botoes {
@@ -431,8 +441,7 @@ header {
     border: none;
     border-radius: 8px;
     color: white;
-    padding: 0.8rem 3rem;
-    margin-top: 1rem;
+    padding: 0.8rem 2rem;
     transition: 0.3s;
 }
 
