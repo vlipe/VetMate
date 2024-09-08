@@ -15,7 +15,7 @@ header {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 2% 5%;
+    padding: 2% 6rem;
 }
 
 .logo {
@@ -102,7 +102,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 768px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -172,7 +172,8 @@ header {
 }
 
 .container-form .image-container img {
-    width: 100%; 
+    padding-bottom: 5rem;
+    width: 100%;
     height: auto;
     margin-bottom: 20%;
 }
@@ -262,6 +263,7 @@ form button[type="submit"] {
     transition: all 0.3s;
     cursor: pointer;
     display: flex;
+    margin-bottom: 10%;
 }
 
 form .submit {
@@ -274,32 +276,63 @@ form button[type="submit"]:hover {
     scale: 1;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
     .container-form form {
         margin-left: 6rem;
         width: 63%;
     }
-    
+
     .container-form .image-container {
         display: flex;
         justify-content: flex-end;
         margin-right: 6rem;
         width: 30%;
     }
-    
+
     .container-form .image-container img {
-        width: 100%; 
+        width: 100%;
         height: auto;
         margin-bottom: 20%;
     }
-    
+
     h1 {
         font-family: "Cocon", sans-serif;
         margin-bottom: 2%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         word-wrap: break-word;
-        width: 70%;
+        width: 80%;
         color: white;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        width: 80%;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .container-form {
+        margin-left: -6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-form .image-container {
+        display: none;
+    }
+
+    .container-form form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -320,6 +353,8 @@ h2 {
     text-align: center;
     color: #003536;
     font-size: 5rem;
+    width: 80%;
+    word-wrap: break-word;
     font-weight: 700;
     margin-bottom: 2%;
 }
@@ -329,7 +364,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3vh 7vh;
+    gap: 3vh;
 }
 
 /* Caixinha verde de perguntas e animações da mesma. */
@@ -483,6 +518,54 @@ body.modal-open {
     opacity: 1;
     pointer-events: auto;
     overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .faq-icone {
+        padding-left: 0vh;
+        width: 10vw;
+        height: auto;
+    }
+
+    .faq-item {
+        width: 35vw;
+        height: auto;
+    }
+
+    .faq-texto {
+        margin-left: 2vh;
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .interacao-prompt p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    h2 {
+        margin-top: 4rem;
+        font-size: 3.5rem;
+        word-wrap: break-word;
+    }
+
+    .interacao-prompt p {
+        margin-top: 1rem;
+        word-wrap: break-word;
+        font-size: 1rem;
+    }
+
+    .faq-item {
+        width: 19rem;
+        height: 6rem;
+    }
 }
 
 /* Rodapé da Tela. */
