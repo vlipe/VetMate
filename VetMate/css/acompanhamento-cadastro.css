@@ -428,6 +428,11 @@ header {
     background-color: #00c2a2;
 }
 
+.input-container label {
+    display: block;
+    margin-bottom: 3px;
+}
+
 a {
     text-decoration: none;
 }
