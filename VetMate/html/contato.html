@@ -65,6 +65,17 @@
                 <label for="duvida" id="duvida-label">Dúvida</label>
                 <textarea type="text" id="duvida" name="duvida" placeholder="Escreva sua dúvida" required></textarea>
                 <button class="submit" type="submit">Enviar</button>
+
+                <div class="blur1">
+                <dialog id="modal-envio">
+                    <div class="container-form-modal" id="container-form-modal-id">
+                        <h1>Pronto, agora é por nossa conta! <br> Nossa equipe tentará responder sua dúvida o mais rápido possível.</h1>
+                        <br>
+                        <button class="btn-voltar" id="btn-voltar-modal" onclick="ocultarModal('modal-envio')">Voltar</button> 
+                    </div>
+                </dialog>
+</div>
+
               </form>
             </div> 
       
