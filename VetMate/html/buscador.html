@@ -97,145 +97,103 @@
 
     </header>
 
-    <div class="container-buscador">
+    <main>
+        <a href="area-restrita-login.html">
+            <button class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar</span>
+            </button>
+        </a>
 
-        <h3>Insira o nome da clínica palavras-chave:</h3>
-
-        <div class="grupo-input-nome">
-            <input type="text" id="nome" name="nome" placeholder="Insira o nome da clínica ou palavras-chave">
-        </div>
-
-
-        <h3>Selecione a área de atuação:</h3>
-
-        <div class="escolhas-buscador">
-
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Consultas</label>
+        <div class="container-buscador">
+            <h3>Insira o nome da clínica palavras-chave:</h3>
+            <div class="grupo-input-nome">
+                <input type="text" id="nome" name="nome" placeholder="Insira o nome da clínica ou palavras-chave">
             </div>
-
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Exames</label>
-            </div>
-
-            <div>
-                <label class="grupo-checkbox-label">
-                    <input type="checkbox" class="checkbox-buscador">
-                    Vacinas</label>
-            </div>
-
-        </div>
-
-        <div class="grupo-inputs-1">
-
-            <h3>Selecione o raio de distância:</h3>
-
-            <div class="input-distancia">
-
-                <div class="container-slider-distancia">
-                    <input type="range" min="0" max="100" value="25" class="slider-distancia" id="myRange">
-                    <p class="slider-distancia-valores">25km</p>
+            <h3>Selecione a área de atuação:</h3>
+            <div class="escolhas-buscador">
+                <div>
+                    <label class="grupo-checkbox-label">
+                        <input type="checkbox" class="checkbox-buscador">
+                        Consultas</label>
                 </div>
-
-            </div>
-
-            <h3>Selecione o custo estimado:</h3>
-
-            <div class="input-custo">
-
-                <div class="input-custo-valores">
-                    <div>R$ <span id="first">500</span></div> -
-                    <div>R$ <span id="second">5 000</span></div>
+                <div>
+                    <label class="grupo-checkbox-label">
+                        <input type="checkbox" class="checkbox-buscador">
+                        Exames</label>
                 </div>
-                <small class="input-custo-previa">
-                    Faixa de Preço:
-                    <div>R$ <span id="third">4 500</span></div>
-                </small>
-
-                <div class="container-input-custo">
-                    <div data-range="#third" data-value-1="#second" data-value-0="#first" class="slider">
-                        <label class="label-min-value">1</label>
-                        <label class="label-max-value">10 000</label>
-                    </div>
-                    <div class="rangeslider">
-                        <input class="min input-ranges" name="range_1" type="range" min="1" max="10000" value="500">
-                        <input class="max input-ranges" name="range_1" type="range" min="1" max="10000" value="5000">
+                <div>
+                    <label class="grupo-checkbox-label">
+                        <input type="checkbox" class="checkbox-buscador">
+                        Vacinas</label>
+                </div>
+            </div>
+            <div class="grupo-inputs-1">
+                <h3>Selecione o raio de distância:</h3>
+                <div class="input-distancia">
+                    <div class="container-slider-distancia">
+                        <input type="range" min="0" max="100" value="25" class="slider-distancia" id="myRange">
+                        <p class="slider-distancia-valores">25km</p>
                     </div>
                 </div>
-
+                <h3>Selecione o custo estimado:</h3>
+                <div class="input-custo">
+                    <div class="input-custo-valores">
+                        <div>R$ <span id="first">500</span></div> -
+                        <div>R$ <span id="second">5 000</span></div>
+                    </div>
+                    <small class="input-custo-previa">
+                        Faixa de Preço:
+                        <div>R$ <span id="third">4 500</span></div>
+                    </small>
+                    <div class="container-input-custo">
+                        <div data-range="#third" data-value-1="#second" data-value-0="#first" class="slider">
+                            <label class="label-min-value">1</label>
+                            <label class="label-max-value">10 000</label>
+                        </div>
+                        <div class="rangeslider">
+                            <input class="min input-ranges" name="range_1" type="range" min="1" max="10000" value="500">
+                            <input class="max input-ranges" name="range_1" type="range" min="1" max="10000" value="5000">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
-        <h3>Selecione uma espécie:</h3>
-
-        <div class="escolhas-especie">
-
-            <div class="radio-inputs">
-
-                <label>
-
-                    <input class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-cao.webp" alt=""> </span>
-
-                        <span class="radio-label">Cão</span>
-                    </span>
-
-                </label>
-
-                <label>
-
-                    <input checked="" class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-gato.webp" alt=""> </span>
-
-                        <span class="radio-label">Gato</span>
-
-                    </span>
-
-                </label>
-
-                <label>
-
-                    <input class="radio-input" type="radio" name="engine">
-
-                    <span class="radio-tile">
-
-                        <span class="icon-animal"> <img src="../imagens/icon-coelho.webp" alt=""> </span>
-
-                        <span class="radio-label">Silvestre</span>
-
-                    </span>
-
-                </label>
+            <h3>Selecione uma espécie:</h3>
+            <div class="escolhas-especie">
+                <div class="radio-inputs">
+                    <label>
+                        <input class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="icon-animal"> <img src="../imagens/icon-cao.webp" alt=""> </span>
+                            <span class="radio-label">Cão</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input checked="" class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="icon-animal"> <img src="../imagens/icon-gato.webp" alt=""> </span>
+                            <span class="radio-label">Gato</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="icon-animal"> <img src="../imagens/icon-coelho.webp" alt=""> </span>
+                            <span class="radio-label">Silvestre</span>
+                        </span>
+                    </label>
+                </div>
             </div>
-        </div>
-
-        <h3>Selecione uma especialidade:</h3>
-
-        <div class="select-especialidade">
-
-            <div class="select">
-
-                <input type="text" id="searchInput" placeholder="Pesquise uma especialidade">
-                <ul id="resultList"></ul>
-
+            <h3>Selecione uma especialidade:</h3>
+            <div class="select-especialidade">
+                <div class="select">
+                    <input type="text" id="searchInput" placeholder="Pesquise uma especialidade">
+                    <ul id="resultList"></ul>
+                </div>
             </div>
-
+            <a href="resultado.html"><button class="btn-enviar">Buscar clínicas</button></a>
         </div>
-
-        <a href="resultado.html"><button class="btn-enviar">Buscar clínicas</button></a>
-
-    </div>
+    </main>
 
     <footer>
 

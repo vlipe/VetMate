@@ -10,6 +10,10 @@ header {
     margin-bottom: 6%;
 }
 
+button {
+    font-family: "Poppins", sans-serif;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -340,6 +344,47 @@ header {
     }
 }
 
+a {
+    text-decoration: none;
+}
+
+.btn-voltar {
+    font-size: 1rem;
+    display: flex;
+    margin-left: 6rem;
+    height: 3em;
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: #003536;
+    color: white;
+}
+
+.btn-voltar i {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-size: 18px;
+    transition: all 0.4s ease-in;
+    stroke: white;
+    fill: white;
+}
+
+.btn-voltar:hover i {
+    font-size: 1.2em;
+    transform: translateX(-3px);
+}
+
+.btn-voltar:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    background: #00c2a2;
+}
+
 #h1-1 {
     color: #003536;
     font-size: 2rem;
@@ -357,11 +402,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 0rem;
+    margin: 4rem 0rem;
 }
 
 .ilustração img {
-    width: 40%;
+    width: 35%;
     height: 100%;
 }
 
@@ -370,13 +415,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}  
-
-.button-1 a {
-   text-decoration: none;
 }
 
-button {
+.button-1 a {
+    text-decoration: none;
+}
+
+.btn-cadastro {
     background-color: #003536;
     color: white;
     text-align: center;
@@ -387,9 +432,9 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+.btn-cadastro:hover {
     background-color: #00c2a2;
-    scale: 1.05;   
+    scale: 1.05;
 }
 
 
