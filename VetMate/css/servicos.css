@@ -1,8 +1,8 @@
 header {
     background-color: #013037;
     box-shadow: 0px 2px 10px #012324;
-   margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
 .nav-bar {
     display: flex;
@@ -169,23 +169,22 @@ align-items: center;
     flex-direction: column;
 }
 
-.container {
-
+.container{
     background-image: url(../imagens/banner-6.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 49vw;
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+height: 49vw;
+width: 100%;
+margin: 0 auto;
+box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
 }
+
 
 .container h1 {
 
@@ -861,17 +860,17 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     }
 }
 
-/* Estilos para tablets (entre 481px e 1280px) */
+/* Estilos para desktop maiores (1280px) */
 @media screen and (min-width: 1281px) {
    
   
     .nav-bar {
         padding-bottom: 2%; /* Diminuir a largura do padding em telas grandes */
-            
-        
     }
     
-
+.nav-list{
+    padding-right: 14%;
+}
     
     
     
