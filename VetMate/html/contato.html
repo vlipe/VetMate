@@ -24,17 +24,15 @@
             <div class="logo">
                 <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
             </div>
-
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Institucional</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contato e SAC</a></li>
+                    <li class="nav-item"><a href="../html/institucional.html" class="nav-link">Institucional</a></li>
+                    <li class="nav-item"><a href="../html/servicos.html" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="../html/contato.html" class="nav-link">Contato e SAC</a></li>
                 </ul>
-
-                <div class="login-button">
-                    <button><a href="#">Área Restrita</a></button>
-                </div>
+            </div>
+            <div class="login-button">
+                <button><a href="../html/area-restrita.html">Área Restrita</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -49,9 +47,10 @@
             </ul>
 
             <div class="login-button">
-                <button><a href="#">Área Restrita</a></button>
+                <button><a href="../html/area-restrita.html">Área Restrita</a></button>
             </div>
         </div>
+
     </header>
 
     <main>
@@ -66,6 +65,17 @@
                 <label for="duvida" id="duvida-label">Dúvida</label>
                 <textarea type="text" id="duvida" name="duvida" placeholder="Escreva sua dúvida" required></textarea>
                 <button class="submit" type="submit">Enviar</button>
+
+                <div class="blur1">
+                <dialog id="modal-envio">
+                    <div class="container-form-modal" id="container-form-modal-id">
+                        <h1>Pronto, agora é por nossa conta! <br> Nossa equipe tentará responder sua dúvida o mais rápido possível.</h1>
+                        <br>
+                        <button class="btn-voltar" id="btn-voltar-modal" onclick="ocultarModal('modal-envio')">Voltar</button> 
+                    </div>
+                </dialog>
+</div>
+
               </form>
             </div> 
       
@@ -75,7 +85,7 @@
       
           </div> 
         </section>
-      </main>
+      
 
     <div class="questions">
         <h2>Principais Dúvidas</h2>
@@ -213,7 +223,7 @@
             </div>
         </dialog>
     </div>
-
+</main>
 
     <footer>
 
