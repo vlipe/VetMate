@@ -391,11 +391,11 @@ header {
 }
 
 #resultados-geral {
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
 }
 
 #resultados-ultimo {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .card {
@@ -421,7 +421,6 @@ header {
     background: #d9d9d994;
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
     border-radius: 17px;
     transition: all 0.5s;
     color: #003536;
@@ -537,6 +536,68 @@ header {
     animation: loading 1.5s linear infinite;
 }
 
+.container,
+.button,
+.links,
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    column-gap: 12px;
+    background: #fff;
+    margin-bottom: 5rem;
+}
+
+.button {
+    border: none;
+}
+
+.button i {
+    pointer-events: none;
+}
+
+.button:disabled {
+    color: #b3b3b3;
+    pointer-events: none;
+}
+
+.button,
+.link {
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    color: #666666;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.links {
+    column-gap: 12px;
+}
+
+.link {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.button:hover,
+.link:hover {
+    color: #fff;
+    background: #003536;
+}
+
+.link.active {
+    color: #fff;
+    background: #003536;
+}
+
+
 @keyframes loading {
     0% {
         background-position: 0%;
@@ -592,7 +653,7 @@ header {
     .card-button {
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         margin: 1rem 3rem 0rem 3rem;
     }
 
@@ -639,6 +700,7 @@ header {
         padding: 0rem 6rem;
     }
 }
+
 
 footer {
     width: 100%;
