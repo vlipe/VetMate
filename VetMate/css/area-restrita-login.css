@@ -451,11 +451,17 @@ header {
 
 .card-img {
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    object-fit: cover;
     width: 80%;
     height: 100px;
     border-radius: 10px;
-    background-color: #003536;
-}
+}    
 
 .card-p {
     font-weight: 400;
