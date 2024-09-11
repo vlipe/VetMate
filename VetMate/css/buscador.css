@@ -883,6 +883,68 @@ h3 {
   box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
+/* ... (seu CSS original) ... */
+
+/* Media queries para responsividade */
+@media screen and (max-width: 1250px) {
+  .btn-voltar {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-buscador {
+    width: calc(90% - 8rem); /* Ajusta a largura do container e inclui margens laterais */
+    padding: 30px; 
+    margin: 0 4rem; /* Adiciona margem lateral de 4rem */
+    margin-bottom: 8rem; 
+  }
+
+  .escolhas-buscador {
+    flex-direction: column; 
+    gap: 1rem; 
+  }
+
+  .escolhas-especie {
+    flex-direction: column; 
+  }
+
+  .radio-inputs {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .radio-tile {
+    width: 150px; 
+    height: 150px; 
+  }
+
+  .btn-voltar {
+    margin: 1rem 4rem; /* Adiciona margem lateral de 4rem e margem superior de 1rem */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container-buscador {
+    padding: 20px; 
+  }
+
+  .grupo-inputs-1 {
+    flex-direction: column;
+  }
+
+  .input-distancia,
+  .input-custo {
+    width: 100%; 
+    margin-bottom: 1rem;
+  }
+
+  .btn-voltar {
+    margin: 1rem 2rem; /* Reduz a margem lateral para 2rem em telas muito pequenas */
+  }
+}
+
 footer {
   width: 100%;
   color: white;
