@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetMate - Vacinas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Minhas Vacinas</h1>
+
+        <div id="mensagemInicial" class="mensagem">
+            <p>Você ainda não cadastrou nenhuma vacina.</p>
+        </div>
+
+        <button id="abrirModal">Adicionar Vacina</button>
+
+        <div id="listaVacinas"></div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <h2>Cadastrar Vacina</h2>
+                <form id="formVacina">
+                    <label for="fotoRotulo">Foto do Rótulo:</label> 
+                    <input type="file" id="fotoRotulo" accept="image/*" required>
+                
+                    <label for="nomeVacina">Nome da Vacina:</label>
+                    <input type="text" id="nomeVacina" placeholder="Nome da Vacina" required>
+                
+                    <label for="farmaceutica">Farmacêutica/Fabricante:</label>
+                    <input type="text" id="farmaceutica" placeholder="Farmacêutica/Fabricante" required>
+                
+                    <label for="dataAplicacao">Data de Aplicação:</label>
+                    <input type="date" id="dataAplicacao" required> <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
