@@ -9,9 +9,9 @@ const mensagemInicial = document.getElementById('mensagemInicial');
 // Abrir e fechar o modal
 abrirModalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
-    setTimeout(() => { // Adiciona um pequeno atraso antes de aplicar a classe
+    setTimeout(() => { 
         document.body.classList.add('modal-aberto');
-    }, 10); // Ajuste o tempo de atraso conforme necessário
+    }, 10); 
 });
 
 fecharModalBtn.addEventListener('click', () => {
@@ -22,8 +22,7 @@ fecharModalBtn.addEventListener('click', () => {
 window.addEventListener('click', (event) => {
     if (event.target == modal) {
         modal.style.display = 'none';
-        document.body.classList.remove('modal-aberto');   
-
+        document.body.classList.remove('modal-aberto'); 
     }
 });
 
@@ -60,10 +59,13 @@ formVacina.addEventListener('submit', (event) => {
 
         nomeVacinaInput.value = '';
         farmaceuticaInput.value = '';
-        dataAplicacaoInput.value = ''; // Limpa o campo de data
+        dataAplicacaoInput.value = ''; 
         fotoRotuloInput.value = ''; 
 
         modal.style.display = 'none';
+
+        // Remove a classe 'modal-aberto' após fechar o modal
+        document.body.classList.remove('modal-aberto'); 
 
         if (vacinas.length > 0) {
             mensagemInicial.style.display = 'none';

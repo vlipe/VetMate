@@ -16,6 +16,43 @@ body {
     margin-top: 2rem; 
 }
 
+.btn-voltar {
+    font-size: 1rem;
+    display: flex;
+    margin-left: 6rem;
+    height: 3em;
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: #003536;
+    color: white;
+}
+
+.btn-voltar i {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-size: 18px;
+    transition: all 0.4s ease-in;
+    stroke: white;
+    fill: white;
+}
+
+.btn-voltar:hover i {
+    font-size: 1.2em;
+    transform: translateX(-3px);
+}
+
+.btn-voltar:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    background: #00c2a2;
+}
+
 button {
     background-color: #003536;
     color: white;
@@ -120,11 +157,28 @@ a {
 }
 
 @media (max-width: 768px) { 
-    /* ... outros estilos ... */
+    .container {
+        padding: 1rem; /* Reduz o padding em telas menores */
+    }
 
     .card {
-        /* ... outros estilos ... */
-        margin-top: 3rem; 
+        flex-direction: column; /* Muda para layout em coluna em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .card img {
+        margin-bottom: 1rem; /* Adiciona espaçamento abaixo da imagem em telas menores */
+        margin-right: 0; /* Remove a margem direita da imagem */
+    }
+
+    input[type="text"],
+    input[type="file"],
+    input[type="date"] {
+        width: 100%; /* Inputs ocupam toda a largura em telas menores */
+    }
+
+    #formVacina button[type="submit"] {
+        width: 100%; /* Botão ocupa toda a largura em telas menores */
     }
 
     .imagem-vacinas {
