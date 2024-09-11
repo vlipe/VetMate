@@ -2,26 +2,17 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #fff;
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-}
-
-.container {
-    background-color: #fff;
-    color: #003536;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: 0px 0px 30px rgba(0, 33, 33, 0.4);
-    transition: 0.5s;
-    width: calc(100% - 4rem); 
-    max-width: 600px; 
+    padding: 2rem; 
 }
 
 .mensagem {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 
 }
 
 button {
@@ -97,7 +88,7 @@ h1 {
     color: #003536;
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
 }
 
 p {
@@ -115,12 +106,12 @@ a {
 .card {
     background-color: #f5f5f5; 
     border-radius: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.2); /* Sombra com desfoque e cor */
     padding: 1rem; 
     margin-bottom: 1rem;
     display: flex;
     align-items: stretch; 
-    width: calc(100% - 3rem); 
+    width: calc(100% - 1rem); /* Aumenta a largura do card */
 }
 
 .card img {
@@ -142,19 +133,23 @@ a {
 }
 
 .card-info h3 {
-    margin: 0rem; /* Reduz a margem inferior para 0.25rem */
+    margin: 0 0 0.25rem; 
     font-size: 1.5rem; 
 }
 
 .card-info p {
-    margin: 0rem;
+    margin: 0;
     font-size: 1rem; 
     color: #555;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-bottom: 0.25rem; 
 }
 
+.card-info p:first-of-type { 
+    margin-top: 0.5rem; 
+}
 
 .card button {
     background-color: #dc3545;
@@ -174,6 +169,8 @@ a {
 
 #listaVacinas {
     margin-top: 2rem; 
+    width: 100%; 
+    max-width: 600px; 
 }
 
 #formVacina button[type="submit"] { 
