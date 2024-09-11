@@ -883,9 +883,6 @@ h3 {
   box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
-/* ... (seu CSS original) ... */
-
-/* Media queries para responsividade */
 @media screen and (max-width: 1250px) {
   .btn-voltar {
     margin-bottom: 4rem;
@@ -894,9 +891,9 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .container-buscador {
-    width: calc(90% - 8rem); /* Ajusta a largura do container e inclui margens laterais */
+    width: calc(90% - 8rem);
     padding: 30px; 
-    margin: 0 4rem; /* Adiciona margem lateral de 4rem */
+    margin: 0 4rem; 
     margin-bottom: 8rem; 
   }
 
@@ -921,7 +918,7 @@ h3 {
   }
 
   .btn-voltar {
-    margin: 1rem 4rem; /* Adiciona margem lateral de 4rem e margem superior de 1rem */
+    margin: 1rem 4rem; 
   }
 }
 
@@ -941,7 +938,7 @@ h3 {
   }
 
   .btn-voltar {
-    margin: 1rem 2rem; /* Reduz a margem lateral para 2rem em telas muito pequenas */
+    margin: 1rem 2rem;
   }
 }
 

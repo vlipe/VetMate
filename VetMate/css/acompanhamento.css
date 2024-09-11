@@ -437,6 +437,29 @@ a {
     scale: 1.05;
 }
 
+/* Responsividade do botão de voltar/posição dos itens. */
+
+@media screen and (max-width: 950px){
+
+    .btn-voltar{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 1270px){
+    .button-1 {
+        margin: 2rem 0rem 8rem 0rem;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .btn-voltar{
+        position: sticky;
+        top: 10px;  
+        margin: 7rem auto 1rem auto;
+        width: 30%; 
+    }
+}
 
 footer {
     width: 100%;
