@@ -1,11 +1,72 @@
-h1 , h2 ,h4 , p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.cdnfonts.com/css/cocon');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-p, h2 ,h4 {
-    padding-bottom: 20px;
+.filho-unico{
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
 }
 
-h2 , p{
-    padding-top: 20px;
+.itens-centro{
+    margin-top: 3.5rem;
+    text-align: center;
 }
+
+.itens-centro img{
+    width: 250px;
+    height: auto;
+}
+
+.itens-centro h1{
+    width: 99%;
+    word-wrap: break-word;
+    font-family: "Cocon", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.7rem;
+}
+
+.itens-centro p{
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.conteudo ul{
+    text-align: left;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+}
+
+hr{
+    background-color: black;
+    height: 3px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+}
+
+.conteudo h3{
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+    font-size: 1.2rem;
+}
+
+.rodape{
+    color: rgba(0, 0, 0, 0.593);
+    font-weight: 500;
+}
+
+.conteudo ul li:last-child { 
+    font-weight: bold; 
+  }
+
+@media (max-width:768px) {
+
+    .conteudo{
+        margin-left: -3rem;
+    }
+  }
