@@ -9,15 +9,21 @@ const mensagemInicial = document.getElementById('mensagemInicial');
 // Abrir e fechar o modal
 abrirModalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
+    setTimeout(() => { // Adiciona um pequeno atraso antes de aplicar a classe
+        document.body.classList.add('modal-aberto');
+    }, 10); // Ajuste o tempo de atraso conforme necessário
 });
 
 fecharModalBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    document.body.classList.remove('modal-aberto');
 });
 
 window.addEventListener('click', (event) => {
     if (event.target == modal) {
         modal.style.display = 'none';
+        document.body.classList.remove('modal-aberto');   
+
     }
 });
 

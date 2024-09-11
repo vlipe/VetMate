@@ -13,6 +13,7 @@ body {
 .mensagem {
     text-align: center;
     margin-bottom: 2rem; 
+    margin-top: 2rem; 
 }
 
 button {
@@ -40,18 +41,21 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 500px; 
     border-radius: 1.5rem;
+    position: fixed; /* Corrigido para position fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
 .fechar {
@@ -76,7 +80,8 @@ input[type="date"] {
     padding-right: 3rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    width: 90%; 
+    width: 100%; /* Ajustamos a largura para 100% */
+    box-sizing: border-box; /* Incluímos o padding e a borda no cálculo da largura */
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     outline: none;
@@ -88,7 +93,7 @@ h1 {
     color: #003536;
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 1rem; 
+    margin-bottom: 2rem; 
 }
 
 p {
@@ -106,12 +111,25 @@ a {
 .card {
     background-color: #f5f5f5; 
     border-radius: 1rem;
-    box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.2); /* Sombra com desfoque e cor */
+    box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.5); 
     padding: 1rem; 
     margin-bottom: 1rem;
     display: flex;
     align-items: stretch; 
-    width: calc(100% - 1rem); /* Aumenta a largura do card */
+    width: calc(100% - 1rem); 
+}
+
+@media (max-width: 768px) { 
+    /* ... outros estilos ... */
+
+    .card {
+        /* ... outros estilos ... */
+        margin-top: 3rem; 
+    }
+
+    .imagem-vacinas {
+        max-width: 200px; 
+    }
 }
 
 .card img {
@@ -133,8 +151,9 @@ a {
 }
 
 .card-info h3 {
-    margin: 0 0 0.25rem; 
+    margin: 0 0 0rem;  
     font-size: 1.5rem; 
+    color: #003536; 
 }
 
 .card-info p {
@@ -144,11 +163,16 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-bottom: 0.25rem; 
+    margin-bottom: 0.1rem; 
 }
 
 .card-info p:first-of-type { 
-    margin-top: 0.5rem; 
+    margin-top: 0.25rem;  
+}
+
+.card-info p:last-of-type { 
+    margin-top: 0.75rem; 
+    margin-bottom: 0.5rem; 
 }
 
 .card button {
@@ -161,6 +185,13 @@ a {
     align-self: flex-start; 
 }
 
+.imagem-vacinas {
+    display: block; 
+    margin: 0 auto 2rem; 
+    max-width: 300px; 
+    height: auto; 
+}
+
 #abrirModal { 
     font-family: "Poppins", sans-serif; 
     display: block; 
@@ -168,9 +199,23 @@ a {
 }
 
 #listaVacinas {
-    margin-top: 2rem; 
+    margin-top: 4rem; 
     width: 100%; 
     max-width: 600px; 
+}
+
+body.modal-aberto {
+    overflow: hidden; 
+}
+
+body.modal-aberto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
 }
 
 #formVacina button[type="submit"] { 
@@ -178,7 +223,7 @@ a {
     margin-top: 1rem; 
     font-family: "Poppins", sans-serif; 
     display: block; 
-    width: 50%; 
+    width: 100%; 
 }
 
 label {

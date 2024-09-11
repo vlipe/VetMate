@@ -12,35 +12,37 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Minhas Vacinas</h1>
+    <h1>Minhas Vacinas</h1>
 
-        <div id="mensagemInicial" class="mensagem">
-            <p>Você ainda não cadastrou nenhuma vacina.</p>
-        </div>
+    <img src="../imagens/imagem-vacinas-vetmate.png" alt="Imagem de Vacinas" class="imagem-vacinas"> 
 
-        <button id="abrirModal">Adicionar Vacina</button>
+    <button id="abrirModal">Adicionar Vacina</button>
 
-        <div id="listaVacinas"></div>
+    <div id="mensagemInicial" class="mensagem">
+        <p>Você ainda não cadastrou nenhuma vacina.</p>
+    </div>
 
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="fechar">&times;</span>
-                <h2>Cadastrar Vacina</h2>
-                <form id="formVacina">
-                    <label for="fotoRotulo">Foto do Rótulo:</label> 
-                    <input type="file" id="fotoRotulo" accept="image/*" required>
-                
-                    <label for="nomeVacina">Nome da Vacina:</label>
-                    <input type="text" id="nomeVacina" placeholder="Nome da Vacina" required>
-                
-                    <label for="farmaceutica">Farmacêutica/Fabricante:</label>
-                    <input type="text" id="farmaceutica" placeholder="Farmacêutica/Fabricante" required>
-                
-                    <label for="dataAplicacao">Data de Aplicação:</label>
-                    <input type="date" id="dataAplicacao" required> <button type="submit">Salvar</button>
-                </form>
-            </div>
+    <div id="listaVacinas"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+            <h2>Cadastrar Vacina</h2>
+            <form id="formVacina">
+                <label for="fotoRotulo">Foto do Rótulo:</label> 
+                <input type="file" id="fotoRotulo" accept="image/*" required>
+
+                <label for="nomeVacina">Nome da Vacina:</label>
+                <input type="text" id="nomeVacina" placeholder="Nome da Vacina" required>
+
+                <label for="farmaceutica">Farmacêutica/Fabricante:</label>
+                <input type="text" id="farmaceutica" placeholder="Farmacêutica/Fabricante" required>
+
+                <label for="dataAplicacao">Data de Aplicação:</label>
+                <input type="date" id="dataAplicacao" required>
+
+                <button type="submit">Salvar</button>
+            </form>
         </div>
     </div>
 
