@@ -357,7 +357,6 @@ main {
 h1 {
     color: #003536;
     font-size: 2rem;
-    margin-top: 20px;
 }
 
 p {
@@ -438,6 +437,44 @@ button:hover {
         margin-top: 0.5rem;
         width: 100%;
     }
+}
+
+.btn-voltar {
+    font-size: 1rem;
+    display: flex;
+    margin-left: 6rem;
+    height: 3em;
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: #003536;
+    color: white;
+    margin-top: -3rem;
+}
+
+.btn-voltar i {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-size: 18px;
+    transition: all 0.4s ease-in;
+    stroke: white;
+    fill: white;
+}
+
+.btn-voltar:hover i {
+    font-size: 1.2em;
+    transform: translateX(-3px);
+}
+
+.btn-voltar:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    background: #00c2a2;
 }
 
 .card img {
