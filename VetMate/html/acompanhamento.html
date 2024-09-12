@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Restrita</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Cadastro de Pets</title>
     <link rel="stylesheet" href="../css/acompanhamento.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -98,25 +98,36 @@
     </header>
 
     <main>
-
-        <a href="area-restrita-login.html">
-            <button class="btn-voltar">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Voltar</span>
-            </button>
-        </a>
-
-        <h1 id="h1-1">Seus animais de estimação:</h1>
-
-        <p id="p-1">Você ainda não tem pets cadastrados!</p>
-
-        <div class="ilustração">
-            <img src="../imagens/9228.png" alt="">
+        <div class="container">
+            <h1>Meus Pets</h1>
+            <div id="mensagemInicial" class="mensagem">
+                <p>Você ainda não cadastrou nenhum pet.</p>
+            </div>
+            <img src="../imagens/9228.png" alt="Imagem de Pets" class="imagem-pets">
+            <button id="abrirModal">Adicionar Pet</button>
         </div>
-
-        <div class="button-1"> <a href="acompanhamento-cadastro.html"><button class="btn-cadastro">Cadastrar Pets</button></a> </div>
-
-
+        <section>
+            <div id="listaPets"></div>
+        </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <h2>Cadastrar Pet</h2>
+                <form id="formPet">
+                    <label for="fotoPet">Foto do Pet:</label>
+                    <input type="file" id="fotoPet" accept="image/*" required>
+                    <label for="nomePet">Nome do Pet:</label>
+                    <input type="text" id="nomePet" placeholder="Nome do Pet" required>
+                    <label for="especie">Espécie:</label>
+                    <input type="text" id="especie" placeholder="Espécie" required>
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca" placeholder="Raça" required>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" placeholder="Idade" min="0" max="100" required>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
     </main>
 
 
@@ -202,5 +213,6 @@
     </footer>
 
     <script src="../js/acompanhamento.js"></script>
-
 </body>
+
+</html>
