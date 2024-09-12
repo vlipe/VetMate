@@ -1,0 +1,442 @@
+.todo {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .div {
+  background-color: #ffffff;
+  width: 1920px;
+  height: 1808px;
+  position: relative;
+}
+
+.frame .esg {
+  position: absolute;
+  width: 1920px;
+  height: 728px;
+  top: 1080px;
+  left: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+
+
+.frame .element {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--variable-collection-spacing-s);
+  position: absolute;
+  top: 50px;
+  left: 1404px;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.frame .element-2 {
+  position: absolute;
+  width: 186px;
+  height: 154px;
+  top: 50px;
+  left: 320px;
+}
+
+.frame .text-wrapper-3 {
+  position: absolute;
+  width: 99px;
+  height: 26px;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+.frame .social-icons {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--variable-collection-spacing-XS);
+  position: absolute;
+  top: 114px;
+  left: 0;
+}
+
+.frame .buttons-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.frame .icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 8px;
+  left: 8px;
+}
+
+.frame .img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 498px;
+  left: 4709px;
+}
+
+.frame .icon-2 {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 499px;
+  left: 4662px;
+}
+
+.frame .icon-3 {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  top: 501px;
+  left: 4613px;
+}
+
+.frame .icon-4 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 498px;
+  left: 4565px;
+}
+
+.frame .divider {
+  position: absolute;
+  width: 1280px;
+  height: 1px;
+  top: 0;
+  left: 80px;
+  object-fit: cover;
+}
+
+.frame .text-wrapper-4 {
+  position: absolute;
+  top: 99px;
+  left: 446px;
+  font-family: "Cocon-Bold", Helvetica;
+  font-weight: 700;
+  color: #003536;
+  font-size: 120px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 118.8px;
+  white-space: nowrap;
+}
+
+.frame .overlap-group {
+  position: absolute;
+  width: 524px;
+  height: 350px;
+  top: 274px;
+  left: 320px;
+}
+
+.frame .text-wrapper-5 {
+  position: absolute;
+  width: 239px;
+  top: 50px;
+  left: 103px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 31.7px;
+  white-space: nowrap;
+}
+
+.frame .a-vetmate-est {
+  position: absolute;
+  width: 524px;
+  height: 350px;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #003536;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: 35px;
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 735px;
+  height: 373px;
+  top: 275px;
+  left: 865px;
+}
+
+.frame .text-wrapper-6 {
+  position: absolute;
+  width: 239px;
+  top: 49px;
+  left: 442px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 31.7px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-7 {
+  position: absolute;
+  width: 239px;
+  top: 49px;
+  left: 0;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 31.7px;
+  white-space: nowrap;
+}
+
+.frame .rectangle {
+  position: absolute;
+  width: 655px;
+  height: 373px;
+  top: 0;
+  left: 80px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 6px solid;
+  border-color: #003536;
+}
+
+.frame .play-circle-filled {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: 124px;
+  left: 345px;
+}
+
+.frame .sobre-nos-m-v-v {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.frame .mvv {
+  position: absolute;
+  width: 600px;
+  height: 782px;
+  top: 270px;
+  left: 1000px;
+}
+
+.frame .element-3 {
+  position: absolute;
+  width: 604px;
+  height: 250px;
+  top: 532px;
+  left: 0;
+}
+
+.frame .overlap-group-2 {
+  position: absolute;
+  width: 600px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgb(0, 87.6, 89.25) 1.07%, rgb(0, 53, 54) 100%);
+}
+
+.frame .p {
+  position: absolute;
+  width: 567px;
+  height: 86px;
+  top: 115px;
+  left: 31px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 37.7px;
+}
+
+.frame .valores{
+  padding: 40px;
+}
+
+.frame .text-wrapper-8 {
+  position: absolute;
+  width: 119px;
+  height: 24px;
+  top: 44px;
+  left: 123px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.frame .icon-5 {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 2504px;
+  left: 5066px;
+}
+
+.frame .overlap-wrapper {
+  position: absolute;
+  width: 604px;
+  height: 250px;
+  top: 266px;
+  left: 0;
+}
+
+.frame .overlap-2 {
+  position: relative;
+  width: 600px;
+  height: 250px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgb(0, 87.6, 89.25) 1.07%, rgb(0, 53, 54) 100%);
+}
+
+.frame .text-wrapper-9 {
+  position: absolute;
+  width: 505px;
+  height: 86px;
+  top: 115px;
+  left: 31px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 37.7px;
+}
+
+.frame .Missao {
+  padding: 40px;
+}
+
+.frame .visao {
+  padding: 40px;
+}
+
+.frame .text-wrapper-10 {
+  position: absolute;
+  width: 110px;
+  height: 24px;
+  top: 44px;
+  left: 123px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.frame .overlap-group-wrapper {
+  position: absolute;
+  width: 604px;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
+.frame .text-wrapper-11 {
+  position: absolute;
+  width: 502px;
+  height: 86px;
+  top: 115px;
+  left: 31px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 37.7px;
+}
+
+.frame .text-wrapper-12 {
+  position: absolute;
+  width: 583px;
+  height: 630px;
+  top: 269px;
+  left: 320px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #003536;
+  font-size: 33px;
+  letter-spacing: 0;
+  line-height: 46.2px;
+}
+
+.frame .text-wrapper-13 {
+  position: absolute;
+  top: 99px;
+  left: 324px;
+  font-family: "Cocon-Bold", Helvetica;
+  font-weight: 700;
+  color: #003536;
+  font-size: 120px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 118.8px;
+  white-space: nowrap;
+}
+
+.frame .boto {
+  position: absolute;
+  width: 643px;
+  height: 158px;
+  top: 922px;
+  left: 290px;
+}
