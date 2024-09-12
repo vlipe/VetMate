@@ -944,7 +944,7 @@ h3 {
 
 footer {
   width: 100%;
-  color: white;
+  color: white;   
 }
 
 .footer-link {
@@ -993,6 +993,10 @@ footer {
   flex-direction: column;
   gap: 0.75rem;
   list-style: none;
+}
+
+.h3-footer{
+  color: white;
 }
 
 .footer-list .footer-link {
