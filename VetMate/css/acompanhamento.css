@@ -518,26 +518,21 @@ button:hover {
     align-self: flex-start;
 }
 
-/* Estilos para os botões no card */
 .card .botoes-container {
     display: flex;
     justify-content: flex-start;
     gap: 0.5rem;
 }
 
-/* Efeito de hover para todos os botões do card */
 .card .botoes-container button:hover {
     background-color: #00c2a2;
 }
 
-/* Estilo específico para o botão "Apagar" */
 #apagarBtn {
     background-color: #dc3545;
-    /* Vermelho */
     margin-left: auto;
 }
 
-/* Estilos para o modal */
 .modal {
     display: none;
     position: fixed;
@@ -582,7 +577,6 @@ button:hover {
     margin-bottom: 3px;
 }
 
-/* Estilos para todos os inputs do modal, incluindo o de idade */
 .modal input[type="text"],
 .modal input[type="date"],
 .modal input[type="file"],
@@ -593,8 +587,6 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-
-    /* Remove estilos padrão do navegador para o input type="number" */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
