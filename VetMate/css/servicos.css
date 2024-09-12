@@ -875,8 +875,8 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     
     
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
-        left: 34%;
+        font-size: 8vh; /* Ajusta o tamanho da fonte no banner */
+        left: 30%;
     }
 
     .container-2 h1 {

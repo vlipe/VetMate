@@ -300,29 +300,57 @@ form button[type="submit"]:hover {
 }
 
 .btn-voltar {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-color: #003536;
-    color: white;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.1rem;
-    transition: all 0.3s;
-    cursor: pointer;
+    font-size: 1rem;
     display: flex;
+    height: 3em;
+    width: 510px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: #003536;
+    color: white;
+}
+
+.btn-voltar:hover i {
+    transform: translateX(-3px);
 }
 
 .btn-voltar:hover {
-    background-color: #00c2a2;
-    color: white;
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    background: #00c2a2;
 }
 
-.blur1 h1 {
+.btn-voltar i {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-size: 18px;
+    transition: all 0.4s ease-in;
+    stroke: white;
+    fill: white;
+}
+
+.blur1 p {
+    font-weight: 660;
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     text-align: center;
     color: #003536;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
