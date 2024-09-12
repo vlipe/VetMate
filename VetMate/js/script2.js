@@ -45,6 +45,7 @@ function mostrarModal(modalId) {
     if (modal) {
         modal.showModal();
         document.getElementById('blur').classList.add('active'); 
+        document.body.classList.add('no-scroll');
     } else {
         console.error('Modal não encontrado com o ID:', modalId);
     }
@@ -55,6 +56,7 @@ function ocultarModal(modalId) {
     if (modal) {
         modal.close();
         document.getElementById('blur').classList.remove('active'); 
+        document.body.classList.remove('no-scroll');
     } else {
         console.error('Modal não encontrado com o ID:', modalId);
     }

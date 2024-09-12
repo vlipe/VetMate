@@ -341,6 +341,10 @@ form button[type="submit"]:hover {
     color: #003536;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 a{
     text-decoration: none;
 }
