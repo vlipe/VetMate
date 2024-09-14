@@ -1,17 +1,14 @@
+/* Estilos gerais */
 * {
+    font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
 }
 
 header {
     background-color: #003536;
     box-shadow: 0px 2px 10px #003536;
     margin-bottom: 6%;
-}
-
-button {
-    font-family: "Poppins", sans-serif;
 }
 
 .nav-bar {
@@ -344,8 +341,102 @@ button {
     }
 }
 
-a {
-    text-decoration: none;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #003536;
+    font-size: 2rem;
+}
+
+p {
+    color: #003536;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #003536;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00c2a2;
+    scale: 1.05;
+}
+
+.imagem-pets {
+    width: 30%;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.5);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: stretch;
+    width: calc(100% - 1rem);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .imagem-pets {
+        width: 50%;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    input[type="date"],
+    input[type="number"] {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .botoes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes-container button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
 }
 
 .btn-voltar {
@@ -364,6 +455,7 @@ a {
     border: none;
     background: #003536;
     color: white;
+    margin-top: -3rem;
 }
 
 .btn-voltar i {
@@ -385,83 +477,176 @@ a {
     background: #00c2a2;
 }
 
-#h1-1 {
-    color: #003536;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
+.card img {
+    width: 10rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
 }
 
-#p-1 {
-    color: #003536;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.ilustração {
+.card-info {
+    flex-grow: 1;
+    text-align: left;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 4rem 0rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.ilustração img {
-    width: 35%;
+.card-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #003536;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #003536;
+    margin-bottom: 0.25rem;
+}
+
+.card button {
+    background-color: #003536;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.card .botoes-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.card .botoes-container button:hover {
+    background-color: #00c2a2;
+}
+
+#apagarBtn {
+    background-color: #dc3545;
+    margin-left: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.button-1 {
-    margin: 2rem 0rem 10rem 0rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 1.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.button-1 a {
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.modal input[type="text"],
+.modal input[type="date"],
+.modal input[type="file"],
+.modal input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.modal h2 {
+    color: #003536;
+}
+
+.modal button[type="submit"] {
+    background-color: #003536;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.modal button[type="submit"]:hover {
+    background-color: #00c2a2;
+    scale: 1.02;
+}
+
+.mensagem {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+a {
     text-decoration: none;
 }
 
-.btn-cadastro {
-    background-color: #003536;
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    transition: 0.3s;
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
 }
 
-.btn-cadastro:hover {
-    background-color: #00c2a2;
-    scale: 1.05;
+#listaPets {
+    margin-top: 2rem;
 }
 
-/* Responsividade do botão de voltar/posição dos itens. */
-
-@media screen and (max-width: 950px){
-
-    .btn-voltar{
-        margin-bottom: 1rem;
-    }
-}
-
-@media screen and (max-width: 1270px){
-    .button-1 {
-        margin: 2rem 0rem 8rem 0rem;
-    }
-}
-
-@media screen and (max-width: 660px){
-    .btn-voltar{
-        position: sticky;
-        top: 10px;  
-        margin: 7rem auto 1rem auto;
-        width: 30%; 
-    }
+h1,
+h2,
+h3,
+label,
+input,
+button,
+textarea {
+    font-family: "Poppins", sans-serif;
 }
 
 footer {
+    margin-top: 5rem;
     width: 100%;
     color: white;
 }
@@ -530,6 +715,7 @@ footer {
 }
 
 #footer_subscribe p {
+    text-align: left;
     color: #dfdfdf;
 }
 

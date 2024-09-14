@@ -1,4 +1,161 @@
-.todo {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #00353600;
+  margin-bottom: -10vw;
+  position: relative;
+  z-index: 1001;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: flex;
+  align-items: center;
+  width: 80px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 30px;
+}
+
+.nav-item a:hover {
+  color: #00c2a2;
+  transition: all 0.3s;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: #00c2a2;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+}
+
+.login-button button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.login-button button:hover {
+  background-color: #00c2a2;
+  scale: 1.05;
+}
+
+.login-button button a {
+  text-decoration: none;
+  color: #003536;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.login-button button a:hover {
+  color: white;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 730px) {
+  .nav-bar {
+      padding: 1.5rem 4rem;
+  }
+
+  .nav-item {
+      display: none;
+  }
+
+  .login-button {
+      display: none;
+  }
+
+  .mobile-menu-icon {
+      display: block;
+  }
+
+  .mobile-menu-icon button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+  }
+
+  .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1rem;
+  }
+
+  .mobile-menu .nav-item {
+      display: block;
+      padding-top: 1.2rem;
+  }
+
+  .mobile-menu .login-button {
+      display: block;
+      padding: 1rem 2rem;
+  }
+
+  .mobile-menu .login-button button {
+      width: 100%;
+  }
+
+  .open {
+      display: block;
+  }
+}
+
+
+.frame {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -9,146 +166,20 @@
 .frame .div {
   background-color: #ffffff;
   width: 1920px;
-  height: 1808px;
+  height: 3240px;
   position: relative;
 }
 
 .frame .esg {
   position: absolute;
   width: 1920px;
-  height: 728px;
-  top: 1080px;
+  height: 1080px;
+  top: 2160px;
   left: 0;
   background-color: #ffffff;
-  overflow: hidden;
-}
-
-
-
-.frame .element {
-  display: flex;
-  flex-direction: column;
-  width: 187px;
-  align-items: flex-end;
-  justify-content: center;
-  gap: var(--variable-collection-spacing-s);
-  position: absolute;
-  top: 50px;
-  left: 1404px;
 }
 
 .frame .text-wrapper {
-  position: relative;
-  align-self: stretch;
-  margin-top: -1px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 30px;
-}
-
-.frame .text-wrapper-2 {
-  position: relative;
-  align-self: stretch;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 30px;
-}
-
-.frame .element-2 {
-  position: absolute;
-  width: 186px;
-  height: 154px;
-  top: 50px;
-  left: 320px;
-}
-
-.frame .text-wrapper-3 {
-  position: absolute;
-  width: 99px;
-  height: 26px;
-  top: 0;
-  left: 0;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 36px;
-  white-space: nowrap;
-}
-
-.frame .social-icons {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: var(--variable-collection-spacing-XS);
-  position: absolute;
-  top: 114px;
-  left: 0;
-}
-
-.frame .buttons-icon {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-}
-
-.frame .icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  top: 8px;
-  left: 8px;
-}
-
-.frame .img {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 498px;
-  left: 4709px;
-}
-
-.frame .icon-2 {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 499px;
-  left: 4662px;
-}
-
-.frame .icon-3 {
-  position: absolute;
-  width: 20px;
-  height: 14px;
-  top: 501px;
-  left: 4613px;
-}
-
-.frame .icon-4 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 498px;
-  left: 4565px;
-}
-
-.frame .divider {
-  position: absolute;
-  width: 1280px;
-  height: 1px;
-  top: 0;
-  left: 80px;
-  object-fit: cover;
-}
-
-.frame .text-wrapper-4 {
   position: absolute;
   top: 99px;
   left: 446px;
@@ -162,7 +193,7 @@
   white-space: nowrap;
 }
 
-.frame .overlap-group {
+.frame .overlap {
   position: absolute;
   width: 524px;
   height: 350px;
@@ -170,7 +201,7 @@
   left: 320px;
 }
 
-.frame .text-wrapper-5 {
+.frame .text-wrapper-2 {
   position: absolute;
   width: 239px;
   top: 50px;
@@ -198,7 +229,7 @@
   line-height: 35px;
 }
 
-.frame .overlap {
+.frame .overlap-group {
   position: absolute;
   width: 735px;
   height: 373px;
@@ -206,7 +237,7 @@
   left: 865px;
 }
 
-.frame .text-wrapper-6 {
+.frame .text-wrapper-3 {
   position: absolute;
   width: 239px;
   top: 49px;
@@ -220,7 +251,7 @@
   white-space: nowrap;
 }
 
-.frame .text-wrapper-7 {
+.frame .text-wrapper-4 {
   position: absolute;
   width: 239px;
   top: 49px;
@@ -258,7 +289,7 @@
   position: absolute;
   width: 1920px;
   height: 1080px;
-  top: 0;
+  top: 1080px;
   left: 0;
   background-color: #ffffff;
 }
@@ -271,7 +302,7 @@
   left: 1000px;
 }
 
-.frame .element-3 {
+.frame .element {
   position: absolute;
   width: 604px;
   height: 250px;
@@ -280,13 +311,20 @@
 }
 
 .frame .overlap-group-2 {
-  position: absolute;
+  position: relative;
   width: 600px;
   height: 250px;
-  top: 0;
-  left: 0;
   border-radius: 30px;
   background: linear-gradient(180deg, rgb(0, 87.6, 89.25) 1.07%, rgb(0, 53, 54) 100%);
+}
+
+.frame .icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 28px;
+  left: 31px;
+  object-fit: cover;
 }
 
 .frame .p {
@@ -303,11 +341,7 @@
   line-height: 37.7px;
 }
 
-.frame .valores{
-  padding: 40px;
-}
-
-.frame .text-wrapper-8 {
+.frame .text-wrapper-5 {
   position: absolute;
   width: 119px;
   height: 24px;
@@ -322,14 +356,6 @@
   white-space: nowrap;
 }
 
-.frame .icon-5 {
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  top: 2504px;
-  left: 5066px;
-}
-
 .frame .overlap-wrapper {
   position: absolute;
   width: 604px;
@@ -338,15 +364,7 @@
   left: 0;
 }
 
-.frame .overlap-2 {
-  position: relative;
-  width: 600px;
-  height: 250px;
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgb(0, 87.6, 89.25) 1.07%, rgb(0, 53, 54) 100%);
-}
-
-.frame .text-wrapper-9 {
+.frame .text-wrapper-6 {
   position: absolute;
   width: 505px;
   height: 86px;
@@ -360,15 +378,7 @@
   line-height: 37.7px;
 }
 
-.frame .Missao {
-  padding: 40px;
-}
-
-.frame .visao {
-  padding: 40px;
-}
-
-.frame .text-wrapper-10 {
+.frame .text-wrapper-7 {
   position: absolute;
   width: 110px;
   height: 24px;
@@ -391,7 +401,7 @@
   left: 0;
 }
 
-.frame .text-wrapper-11 {
+.frame .text-wrapper-8 {
   position: absolute;
   width: 502px;
   height: 86px;
@@ -405,7 +415,7 @@
   line-height: 37.7px;
 }
 
-.frame .text-wrapper-12 {
+.frame .text-wrapper-9 {
   position: absolute;
   width: 583px;
   height: 630px;
@@ -419,7 +429,7 @@
   line-height: 46.2px;
 }
 
-.frame .text-wrapper-13 {
+.frame .text-wrapper-10 {
   position: absolute;
   top: 99px;
   left: 324px;
@@ -439,4 +449,176 @@
   height: 158px;
   top: 922px;
   left: 290px;
+}
+
+
+.frame .group {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+}
+
+.frame .banner-unico {
+  height: 1080px;
+  background-color: #ffffff;
+}
+
+.frame .saiba-melhor-quem-a-wrapper {
+  position: relative;
+  width: 1920px;
+  height: 1028px;
+  background-image: url(../imagens/banner-5\ 1.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .saiba-melhor-quem-a {
+  position: absolute;
+  width: 1023px;
+  height: 212px;
+  top: 319px;
+  left: 577px;
+  font-family: "Cocon-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 70px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 84px;
+}
+
+footer {
+  width: 100%;
+  color: white;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+#container-footer {
+  background-color: #003536;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts img {
+  margin-bottom: 0.75rem;
+  width: 100px;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list .footer-link {
+  color: #dfdfdf;
+  transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+  color: #00c2a2;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-h3 {
+  color: #ffffff;
+}
+
+#footer_subscribe p {
+  color: #dfdfdf;
+}
+
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+#input_group input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group button {
+  background-color: #ffffff;
+  border: none;
+  color: #003536;
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+
+#input_group button:hover {
+  opacity: 0.8;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  background-color: #003536a8;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Rodapé responsivo (dispositivos móveis). */
+
+@media screen and (max-width: 768px) {
+  #container-footer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #container-footer {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+  }
 }
