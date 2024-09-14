@@ -6,9 +6,9 @@ const items = document.querySelectorAll('.carousel .list .item');
 let activeIndex = 0; 
 
 function showItem(index) {
-    items.forEach(item => item.style.display = 'none');
+    items.forEach(item => item.style.opacity = '0');
 
-    items[index].style.display = 'block';
+    items[index].style.opacity = '1';
 
     if (index > activeIndex) {
         carousel.classList.add('next');
