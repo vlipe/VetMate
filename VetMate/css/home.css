@@ -765,6 +765,7 @@ span {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    transition: all ease 0.5s;
 }
 
 .button-1:hover {
@@ -844,6 +845,7 @@ a {
 /* Rodapé do site. */
 
 footer {
+    margin-top: 5rem;
     width: 100%;
     color: white;
 }
@@ -856,7 +858,7 @@ footer {
     background-color: #003536;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
+    padding: 3rem 5%;
 }
 
 #footer_contacts img {
@@ -911,11 +913,8 @@ footer {
     gap: 1.5rem;
 }
 
-.footer-h3 {
-    color: #ffffff;
-}
-
 #footer_subscribe p {
+    text-align: left;
     color: #dfdfdf;
 }
 
@@ -960,8 +959,6 @@ footer {
     font-weight: 400;
     font-style: normal;
 }
-
-/* Rodapé responsivo (dispositivos móveis). */
 
 @media screen and (max-width: 768px) {
     #container-footer {

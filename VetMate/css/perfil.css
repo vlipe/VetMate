@@ -410,11 +410,6 @@ a {
     transition: 0.5s;
 }
 
-.form:hover {
-    transition: 0.5s;
-    scale: 1.02;
-}
-
 .form-title {
     font-size: 1.25rem;
     line-height: 1.75rem;
