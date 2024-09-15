@@ -1,4 +1,7 @@
-/* Estilos gerais */
+/*Fonte "Cocon" para títulos. */
+
+@import url('https://fonts.cdnfonts.com/css/cocon');
+
 * {
     font-family: "Poppins", sans-serif;
     padding: 0;
@@ -355,9 +358,11 @@ main {
     text-align: center;
 }
 
-h1 {
+.container h1 {
+    margin-bottom: 1rem;
+    font-family: "Cocon", sans-serif;
     color: #003536;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 p {
@@ -551,6 +556,8 @@ button:hover {
 }
 
 .modal h2 {
+    font-family: "Cocon", sans-serif;
+    margin-bottom: 1rem;
     color: #003536;
 }
 
