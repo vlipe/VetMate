@@ -65,6 +65,9 @@ formPet.addEventListener('submit', (event) => {
         if (pets.length > 0) {
             mensagemInicial.style.display = 'none';
         }
+
+        // Ajustar a altura do main após adicionar um pet
+        ajustarAlturaMain(); 
     };
     reader.readAsDataURL(fotoPetInput.files[0]);
 });
@@ -140,6 +143,9 @@ function criarCardPet(pet) {
     cardInfo.appendChild(botoesContainer); 
     card.appendChild(cardInfo); 
     listaPets.appendChild(card);
+
+    // Ajustar a altura do main após adicionar um pet
+    ajustarAlturaMain(); 
 }
 
 // Apagar pet
@@ -156,6 +162,9 @@ function apagarPet(id) {
     if (pets.length === 0) {
         mensagemInicial.style.display = 'block';
     }
+
+    // Ajustar a altura do main após remover um pet
+    ajustarAlturaMain(); 
 }
 
 // Exibir pets ao carregar a página
@@ -166,6 +175,26 @@ function exibirPets() {
     if (pets.length > 0) {
         mensagemInicial.style.display = 'none';
     }
+
+    // Ajustar a altura do main ao carregar a página
+    ajustarAlturaMain(); 
+}
+
+// Ajustar a altura do main dinamicamente
+function ajustarAlturaMain() {
+  const mainContent = document.getElementById('mainContent');
+  const listaPets = document.getElementById('listaPets');
+  const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
+
+  // Obter a altura do conteúdo da lista de pets
+  const listaPetsHeight = listaPets.offsetHeight;
+
+  // Definir a altura mínima do main para evitar que o footer suba demais
+  const minHeight = window.innerHeight - header.offsetHeight - footer.offsetHeight - 50; 
+
+  // Ajustar a altura do main com base no conteúdo da lista de pets ou na altura mínima
+  mainContent.style.minHeight = Math.max(minHeight, listaPetsHeight + 100) + 'px'; 
 }
 
 // Chamar a função para exibir os pets ao carregar a página

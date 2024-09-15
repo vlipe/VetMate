@@ -121,6 +121,7 @@ header {
 
     .mobile-menu-icon {
         display: block;
+        align-self: center;
     }
 
     .mobile-menu-icon button {
