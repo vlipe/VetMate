@@ -398,48 +398,6 @@ button:hover {
     width: calc(100% - 1rem);
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    .imagem-pets {
-        width: 50%;
-    }
-
-    input[type="text"],
-    input[type="file"],
-    input[type="date"],
-    input[type="number"] {
-        width: 100%;
-    }
-
-    .modal-content {
-        width: 90%;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card img {
-        margin-bottom: 1rem;
-        margin-right: 0;
-    }
-
-    .botoes-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .botoes-container button {
-        margin-left: 0;
-        margin-top: 0.5rem;
-        width: 100%;
-    }
-}
-
 .btn-voltar {
     font-size: 1rem;
     display: flex;
@@ -456,7 +414,6 @@ button:hover {
     border: none;
     background: #003536;
     color: white;
-    margin-top: -3rem;
 }
 
 .btn-voltar i {
@@ -644,6 +601,48 @@ input,
 button,
 textarea {
     font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .imagem-pets {
+        width: 50%;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    input[type="date"],
+    input[type="number"] {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .botoes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes-container button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
 }
 
 footer {
