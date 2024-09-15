@@ -315,6 +315,7 @@ header {
 
     .mobile-menu-icon {
         display: block;
+        align-self: center;
     }
 
     .mobile-menu-icon button {
@@ -492,7 +493,7 @@ header {
         word-wrap: break-word;
     }
 
-    .card-h3{
+    .card-h3 {
         font-size: 1.3rem;
     }
 }

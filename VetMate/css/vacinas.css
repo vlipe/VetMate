@@ -315,6 +315,7 @@ header {
 
     .mobile-menu-icon {
         display: block;
+        align-self: center;
     }
 
     .mobile-menu-icon button {
@@ -420,7 +421,6 @@ button:hover {
     max-width: 500px;
     border-radius: 1.5rem;
     position: fixed;
-    /* Corrigido para position fixed */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -449,9 +449,7 @@ input[type="date"] {
     font-size: 0.875rem;
     line-height: 1.25rem;
     width: 100%;
-    /* Ajustamos a largura para 100% */
     box-sizing: border-box;
-    /* Incluímos o padding e a borda no cálculo da largura */
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     outline: none;
@@ -476,7 +474,8 @@ a {
     text-decoration: none;
 }
 
-/* Estilos para os cards das vacinas */
+/* Estilos para os cards das vacinas. */
+
 .card {
     background-color: #f5f5f5;
     border-radius: 1rem;
@@ -491,33 +490,26 @@ a {
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
-        /* Reduz o padding em telas menores */
     }
 
     .card {
         flex-direction: column;
-        /* Muda para layout em coluna em telas menores */
         align-items: center;
-        /* Centraliza os itens horizontalmente */
     }
 
     .card img {
         margin-bottom: 1rem;
-        /* Adiciona espaçamento abaixo da imagem em telas menores */
         margin-right: 0;
-        /* Remove a margem direita da imagem */
     }
 
     input[type="text"],
     input[type="file"],
     input[type="date"] {
         width: 100%;
-        /* Inputs ocupam toda a largura em telas menores */
     }
 
     #formVacina button[type="submit"] {
         width: 100%;
-        /* Botão ocupa toda a largura em telas menores */
     }
 
     .imagem-vacinas {
