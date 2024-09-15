@@ -186,7 +186,7 @@ header {
 .tela {
     grid-area: tela;
     width: 900px;
-    height: 600px;
+    height: auto;
     z-index: 2;
     border-radius: 25px;
 }
@@ -194,7 +194,7 @@ header {
 .tela-1 {
     grid-area: tela-1;
     width: 900px;
-    height: 600px;
+    height: auto;
     z-index: 3;
     border-radius: 25px;
 }
@@ -495,6 +495,26 @@ header {
     box-sizing: border-box;
 }
 
+/*Responsividade. */
+
+@media screen and (max-width: 1024px) {
+    .monitor img, .tela, .tela-1 {  
+        max-width: 700px; 
+    }
+
+    .container-form, .container-form-modal, .container-form-modal-2 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .monitor img, .tela, .tela-1 {
+        max-width: 500px; 
+    }
+
+}
+
+/* Rodapé do site. */
 
 footer {
     width: 100%;
