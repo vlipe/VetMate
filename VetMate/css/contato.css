@@ -15,7 +15,7 @@ header {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 2% 6rem;
+    padding: 2% 5%;
 }
 
 .logo {
@@ -154,21 +154,24 @@ header {
 
 /* Página do Contato e SAC: */
 
+
+
 .container-form {
+    background-color: #003536;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .container-form form {
-    margin-left: 6rem;
+    margin-left: 5%;
     width: 63%;
 }
 
 .container-form .image-container {
     display: flex;
     justify-content: flex-end;
-    margin-right: 6rem;
+    margin-right: 5%;
     width: 25%;
 }
 
@@ -193,9 +196,7 @@ label {
     display: block;
 }
 
-section {
-    background-color: #003536;
-}
+
 
 input,
 textarea {
@@ -356,14 +357,12 @@ a:visited{
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .container-form form {
-        margin-left: 6rem;
         width: 63%;
     }
 
     .container-form .image-container {
         display: flex;
         justify-content: flex-end;
-        margin-right: 6rem;
         width: 30%;
     }
 
