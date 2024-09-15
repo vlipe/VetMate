@@ -669,6 +669,10 @@ footer {
     padding: 3rem 5%;
 }
 
+#container-footer p{
+    color: white;
+}
+
 #footer_contacts img {
     margin-bottom: 0.75rem;
     width: 100px;

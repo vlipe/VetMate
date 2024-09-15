@@ -348,6 +348,7 @@ header {
 }
 
 #h1-1 {
+    font-family: "Cocon", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 3rem;
@@ -389,6 +390,7 @@ header {
 }
 
 #h1-2 {
+    font-family: "Cocon", sans-serif;
     color: #003536;
     text-align: center;
     font-weight: 700;

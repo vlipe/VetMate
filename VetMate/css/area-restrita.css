@@ -151,7 +151,8 @@ header {
 }
 
 #h1-1 {
-    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-family: "Cocon", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #003536;
@@ -200,7 +201,8 @@ header {
 }
 
 #h1-2 {
-    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-family: "Cocon", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #003536;

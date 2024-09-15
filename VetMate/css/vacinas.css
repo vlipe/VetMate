@@ -351,6 +351,7 @@ header {
     font-size: 1rem;
     display: flex;
     margin-left: 6rem;
+    margin-bottom: 1rem;
     height: 3em;
     width: 110px;
     align-items: center;
@@ -458,17 +459,13 @@ input[type="date"] {
 }
 
 h1 {
+    font-family: "Cocon", sans-serif;
     color: #003536;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-p {
-    color: #003536;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
 a {
     text-decoration: none;
@@ -622,6 +619,16 @@ label {
     margin-bottom: 3px;
 }
 
+/* Responsividade. */
+
+@media screen and (max-width:768px) {
+    
+.btn-voltar {
+    width: 200px;
+    margin: 2rem auto;
+}
+}
+
 footer {
     margin-top: 5rem;
     width: 100%;
@@ -637,6 +644,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 5%;
+}
+
+#container-footer p{
+    color: white;
 }
 
 #footer_contacts img {
