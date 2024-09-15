@@ -1,8 +1,10 @@
 header {
-    background-color: #013037;
-    box-shadow: 0px 2px 10px #012324;
-    margin: 0 auto;
-  }
+    background-color: #00353600;
+    margin-bottom: -10vw;
+    position: relative;
+    z-index: 1001;
+}
+
 
 .nav-bar {
     display: flex;
@@ -12,7 +14,8 @@ header {
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .logo img {
@@ -59,6 +62,7 @@ header {
 .login-button {
     display: flex;
     align-items: center;
+    
 }
 
 .login-button button {
@@ -67,6 +71,7 @@ header {
     border-radius: 8px;
     background-color: #ffffff;
     transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
 
 }
 
@@ -99,7 +104,7 @@ header {
 @media screen and (max-width: 768px) {
 
     .logo{
-        padding-left: 8%;
+        padding-left: 1%;
     }
 
     .nav-bar {
@@ -171,19 +176,17 @@ align-items: center;
 }
 
 .container{
-    background-image: url(../imagens/banner-6.png);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-height: 49vw;
+    display: grid;
+    width: 100%;
+}
+
+.container img{
 width: 100%;
 margin: 0 auto;
 box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
-justify-content: center;
 display: flex;
-flex-direction: column;
-align-items: center;
-position: relative;
+grid-area: 1/1;
+grid-template-columns: column;
 }
 
 
@@ -194,13 +197,10 @@ position: relative;
     font-weight: 600;
     font-size: 4vw;
     display: flex;
+    grid-area: 1/1;
     align-items: center;
-    justify-content: center;
-    padding: 0;
-    position: absolute;
-    left: 25%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+    justify-content: flex-start;
+    padding-bottom: 10%;
 }
 
 
@@ -574,8 +574,9 @@ a{
 
 /* Página de cadastro responsiva para tablets maiores ou notebooks pequenos. */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
+    
     .bg-branco2 {
         
         margin-bottom: 10%;
@@ -600,6 +601,19 @@ a{
         margin-top: 4rem;
         position: relative;
         transform: none;
+    }
+
+    .container h1{
+        font-size: 5.5vh;
+        padding-left: 6.5%;
+        padding-top: 10%;
+    }
+
+    header {
+        background-color: #00353600;
+        margin-bottom: -16vw;
+        position: relative;
+        z-index: 1001;
     }
 }
 
@@ -840,16 +854,19 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     
 
     .nav-list{
-        padding-left: 10%;
+        padding-left: 11%;
     }
 
     .nav-bar {
-        padding: 2% 15%; /* Diminuir a largura do padding em telas grandes */
+        padding: 0.6% 5%; /* Diminuir a largura do padding em telas grandes */
     }
     
+    
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
-        left: 34%;
+        font-size: 8vh; /* Ajusta o tamanho da fonte no banner */
+        padding-left: 4.5%;
+        padding-top: 10%;
+        
     }
 
     .slides img {
@@ -861,7 +878,7 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     }
 }
 
-/* Estilos para desktop maiores (1280px) */
+/* Estilos para desktop maiores (1281px) */
 @media screen and (min-width: 1281px) {
    
   
@@ -876,8 +893,9 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     
     
     .container h1 {
-        font-size: 8vh; /* Ajusta o tamanho da fonte no banner */
-        left: 30%;
+        font-size: 9vh; /* Ajusta o tamanho da fonte no banner */
+        padding-left: 4.5%;
+        padding-top: 10%;
     }
 
     .container-2 h1 {
@@ -956,15 +974,24 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
    
 
     .nav-bar {
-        padding: 1rem 2rem; /* Diminui o padding da navbar em telas pequenas */
+        padding: 0rem 0.1rem; /* Diminui o padding da navbar em telas pequenas */
     }
 
     .logo img {
-        width: 60px; /* Ajusta o tamanho do logo */
+        width: 40px; /* Ajusta o tamanho do logo */
     }
 
     .container h1 {
-        font-size: 5vw; /* Maior flexibilidade no texto principal */
+        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
+        padding-right: 21%;
+        padding-top: 10%;
+    }
+
+    header {
+        background-color: #00353600;
+        margin-bottom: -14.5vw;
+        position: relative;
+        z-index: 1001;
     }
 
 
@@ -996,11 +1023,27 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 
 
 /* Ajuste o tamanho das caixas de comentários para telas menores */
-@media screen and (max-width: 768px) {
+@media (min-width:481px) and (max-width: 768px) {
+
+    .nav-bar {
+        padding: 0rem 1rem; /* Diminui o padding da navbar em telas pequenas */
+    }
+
+    .logo img {
+        width: 50px; /* Ajusta o tamanho do logo */
+    }
 
     .container h1 {
         font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
-        left: 34%;
+        padding-right:16.5%;
+        padding-top: 10%;
+    }
+
+    header {
+        background-color: #00353600;
+        margin-bottom: -10.5vw;
+        position: relative;
+        z-index: 1001;
     }
 
 
