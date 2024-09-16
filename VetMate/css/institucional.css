@@ -1,4 +1,4 @@
-/*Fonte "Cocon" para títulos. */
+  /*Fonte "Cocon" para títulos. */
 
 @import url('https://fonts.cdnfonts.com/css/cocon');
 
@@ -160,42 +160,125 @@ main {
 }
 
 .banner-topo {
-  position: relative;
   display: grid;
+  width: 100%;
+ 
 }
 
 .banner-topo img {
   width: 100vw;
+  height: 100%;
+  display: flex;
+  grid-area: 1/1;
+   grid-template-columns: column;
 }
 
 .banner-topo h1 {
   font-family: "Cocon", sans-serif;
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 4vw;
   text-align: right;
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 77%;
-  width: 35%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  flex-direction: column;
+  grid-area: 1/1;
+  padding-top: 15%;
+  align-items: flex-end;
+  padding-right: 4%;
 }
 
-@media (max-width:1326px){
+@media (max-width:480px){
+  header {
+    background-color: #00353600;
+    margin-bottom: -40vw;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .logo img{
+width: 40px;
+  }
+
+  .logo{
+    margin-left:-25%;
+    padding-bottom: 10%;
+  }
+
+  .mobile-menu-icon{
+    width: 20px;
+    padding-bottom: 10%;
+  }
+
+  .nav-bar{
+    padding-right: 10%;
+  
+
+
+  }
+  .banner-topo h1 {
+    font-family: "Cocon", sans-serif;
+    color: #ffffff;
+    font-size: 4vw;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/1;
+    margin-top: 9%;
+    align-items: flex-end;
+    padding-right: 5%;
+  }
+
+
 }
+
+@media(min-width:480px) and (max-width:768px){
+  header {
+    background-color: #00353600;
+    margin-bottom: -26.5vw;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .banner-topo h1 {
+    font-family: "Cocon", sans-serif;
+    color: #ffffff;
+    font-size: 4vw;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/1;
+    margin-top: 9%;
+    align-items: flex-end;
+    padding-right: 5%;
+  }
+
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+  header {
+    background-color: #00353600;
+    margin-bottom: -14.5vw;
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+@media (min-width:1024px) {
+  header {
+    background-color: #00353600;
+    margin-bottom: -12vw;
+    position: relative;
+    z-index: 1001;
+  }
+}
+
 
 /* Estilos da seção hero. */
 
-.hero {
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
 
 .hero-content {
-  margin-left: 6rem;
+  margin-left: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -204,30 +287,42 @@ main {
   margin-bottom: 10vw;
   background-color: #003536;
   color: white;
-  width: 430px;
-  height: 80px;
+  width: 400px;
+  height: 70px;
   border: none;
   border-radius: 15px;
-  box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.25);
+  box-shadow:#0035369b 1px 1px 8px 4px ;
   font-weight: 600;
   font-size: 1.2rem;
   position: relative;
   cursor: pointer;
   transition: all 0.2s linear;
+  margin-right: 60%;
 }
 
 .hero-content button:hover {
-  background-color: #00c2a2;
+  background-color: #006C6F ;
   box-shadow: 0px 20px 30px rgba(0, 97, 99, 0.50);
 }
 
 .h1-1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
   text-align: center;
   font-family: "Cocon", sans-serif;
-  font-size: 4rem;
+  font-size: 5.5rem;
   color: #003536;
+  padding-left: 0%;
+
+}
+.hero-text-and-button{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 20%;
+  margin-right: 3%;
+  
 }
 
 .p-1 {
@@ -235,50 +330,226 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   color: #003536;
-  width: 55%;
-  word-wrap: break-word;
 }
 
 .mvv-container {
-  margin-bottom: 10rem;
-  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  flex-shrink: 0;
+  justify-items: start;
+  text-align: start;
+  padding-bottom: 32%;
+ 
 }
 
 .mvv {
   margin-top: 1rem;
   background: linear-gradient(49deg, #003536, #006C6F);
   border-radius: 20px;
-  padding: 2rem;
-  width: 35%;
+  padding: 1rem;
+  padding-bottom: 2%;
+  width: 25vw;
+  height: 20vh;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  flex: 0 0 auto;
 }
 
 .mvv-icone {
   display: flex;
+  padding-bottom: 2%;
 }
 
 .mvv-icone img {
-  width: 3rem;
+  width: 2.5rem;
   height: auto;
 }
 
 .mvv h4 {
   font-weight: 600;
-  padding-top: 1.2vh;
+  padding-top: 0.3vh;
   padding-left: 2vh;
   font-size: 1.2rem;
 }
 
 .mvv p {
-  font-size: 1rem;
+  font-size: 1.5vw;
 }
+
+@media (max-width:480px){
+  
+  .mvv {
+    margin-top: 1rem;
+    background: linear-gradient(49deg, #003536, #006C6F);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-bottom: 2%;
+    width: 20vw;
+    height: 55vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mvv p {
+    font-size: 2.5vw;
+  }
+  
+  .hero-content button {
+    margin-top: 2rem;
+    margin-bottom: 10vw;
+    background-color: #003536;
+    color: white;
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    box-shadow:#0035369b 1px 1px 8px 4px ;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  .p-1 {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5vw;
+    color: #003536;
+  }
+
+  .hero-text-and-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom:65%;
+    margin-right: 3%;
+    
+  }
+
+  .mvv-icone img {
+    width: 1.5rem;
+    height: auto;
+  }
+  
+  .mvv h4 {
+    font-weight: 600;
+    padding-top: 0.3vh;
+    padding-left: 1vh;
+    font-size: 0.6rem;
+  }
+  
+  .h1-1 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: "Cocon", sans-serif;
+    font-size: 2.5rem;
+    color: #003536;
+    padding-left: 0%;
+  
+  }
+
+}
+
+@media(min-width:481px) and (max-width:768px){
+ .mvv-container{
+  
+ }
+  .mvv {
+    margin-top: 1rem;
+    background: linear-gradient(49deg, #003536, #006C6F);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-bottom: 2%;
+    width: 25vw;
+    height: 28vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mvv p {
+    font-size: 1.8vw;
+  }
+  
+  .hero-content button {
+    margin-top: 2rem;
+    margin-bottom: 10vw;
+    background-color: #003536;
+    color: white;
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    box-shadow:#0035369b 1px 1px 8px 4px ;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  .p-1 {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 3.5vw;
+    color: #003536;
+  }
+
+  .hero-text-and-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom:65%;
+    margin-right: 3%;
+    
+  }
+
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+  .mvv {
+    margin-top: 1rem;
+    background: linear-gradient(49deg, #003536, #006C6F);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-bottom: 2%;
+    width: 25vw;
+    height: 33vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  
+}
+
+@media (min-width:1024px) {
+  .mvv {
+    margin-top: 1rem;
+    background: linear-gradient(49deg, #003536, #006C6F);
+    border-radius: 20px;
+    padding: 1rem;
+    padding-bottom: 5%;
+    width: 30vw;
+    height: 25vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 
 .section-2 {
   display: flex;
@@ -289,6 +560,7 @@ main {
 .movimento-esg {
   margin-left: 6rem;
   margin-right: 6rem;
+  margin-top: -30%;
 }
 
 .movimento-esg h1 {
@@ -352,6 +624,22 @@ main {
   .video img{
     margin: 4vh 8vh 4vh 8vh;
   }
+
+  .movimento-esg {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: -30%;
+  }
+  
+  .movimento-esg h1 {
+    text-align: center;
+    color: #003536;
+    font-size: 2rem;
+    font-family: "Cocon", sans-serif;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
 }
 
 footer {
