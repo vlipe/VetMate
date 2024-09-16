@@ -183,7 +183,7 @@ main {
   grid-area: 1/1;
   padding-top: 15%;
   align-items: flex-end;
-  padding-right: 4%;
+  padding-right: 6%;
 }
 
 @media (max-width:480px){
@@ -459,7 +459,7 @@ width: 40px;
 
 @media(min-width:481px) and (max-width:768px){
  .mvv-container{
-  
+  margin-bottom: 40%;
  }
   .mvv {
     margin-top: 1rem;
@@ -468,7 +468,7 @@ width: 40px;
     padding: 1rem;
     padding-bottom: 2%;
     width: 25vw;
-    height: 28vh;
+    height: 25vw;
     color: white;
     display: flex;
     flex-direction: column;
@@ -513,6 +513,10 @@ width: 40px;
     
   }
 
+  .h1-1{
+    font-size: 7vw;
+  }
+
 }
 
 @media (min-width:769px) and (max-width:1024px) {
@@ -523,7 +527,7 @@ width: 40px;
     padding: 1rem;
     padding-bottom: 2%;
     width: 25vw;
-    height: 33vh;
+    height: 20vw;
     color: white;
     display: flex;
     flex-direction: column;
