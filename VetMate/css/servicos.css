@@ -298,9 +298,24 @@ body .carousel-container {
 
 .carousel-wrapper {
     overflow: hidden;
-    max-width: 600px;
+    max-width: 80vh;
     display: flex;
     border-radius: 20px;
+    cursor: grab;
+}
+
+.carousel-wrapper:active{
+cursor: grabbing;
+}
+
+#carousel-wrapper:hover{
+scale:1.08;
+transition: transform ease-out 4s;
+box-shadow: 1px 1px 1000px 100px rgb(97, 89, 89);
+}
+
+.carousel-wrapper{
+    transition: transform 5s ease-in;
 }
 
 .carousel {
@@ -603,11 +618,23 @@ a{
         transform: none;
     }
 
+    .container{
+        width: 101%;
+    }
+
     .container h1{
-        font-size: 5.5vh;
+        font-size: 4.5vw;
         padding-left: 6.5%;
         padding-top: 10%;
     }
+    .container-2 h1 {
+        color: #003536;
+        font-weight: 700;
+        font-size: 7vw;
+        font-family: "Cocon", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;}
 
     header {
         background-color: #00353600;
@@ -854,7 +881,7 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     
 
     .nav-list{
-        padding-left: 11%;
+        padding-left: 0%;
     }
 
     .nav-bar {
@@ -863,11 +890,20 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     
     
     .container h1 {
-        font-size: 8vh; /* Ajusta o tamanho da fonte no banner */
+        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
         padding-left: 4.5%;
         padding-top: 10%;
         
     }
+
+    .container-2 h1 {
+        color: #003536;
+        font-weight: 700;
+        font-size: 6vw;
+        font-family: "Cocon", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;}
 
     .slides img {
         width: 65%; /* Reduz as imagens do carrossel em telas maiores */
@@ -887,13 +923,13 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     }
     
 .nav-list{
-    padding-right: 14%;
+    padding-right: 0%;
 }
     
     
     
     .container h1 {
-        font-size: 9vh; /* Ajusta o tamanho da fonte no banner */
+        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
         padding-left: 4.5%;
         padding-top: 10%;
     }
@@ -901,7 +937,7 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 5vw;
+        font-size: 6vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
@@ -987,6 +1023,15 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         padding-top: 10%;
     }
 
+    .container-2 h1 {
+        color: #003536;
+        font-weight: 700;
+        font-size: 7vw;  
+        font-family: "Cocon", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;}
+
     header {
         background-color: #00353600;
         margin-bottom: -14.5vw;
@@ -1038,6 +1083,15 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         padding-right:16.5%;
         padding-top: 10%;
     }
+
+    .container-2 h1 {
+        color: #003536;
+        font-weight: 700;
+        font-size: 7vw;
+        font-family: "Cocon", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;}
 
     header {
         background-color: #00353600;
