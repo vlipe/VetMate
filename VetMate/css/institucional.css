@@ -458,9 +458,6 @@ width: 40px;
 }
 
 @media(min-width:481px) and (max-width:768px){
- .mvv-container{
-  
- }
   .mvv {
     margin-top: 1rem;
     background: linear-gradient(49deg, #003536, #006C6F);
