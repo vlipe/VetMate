@@ -62,7 +62,7 @@ header {
 .login-button {
     display: flex;
     align-items: center;
-    
+
 }
 
 .login-button button {
@@ -103,7 +103,7 @@ header {
 
 @media screen and (max-width: 768px) {
 
-    .logo{
+    .logo {
         padding-left: 1%;
     }
 
@@ -170,32 +170,31 @@ body {
 
 body .comentarios {
     display: flex;
-align-items: center;
+    align-items: center;
     justify-items: center;
     flex-direction: column;
 }
 
-.container{
+.container {
     display: grid;
     width: 100%;
 }
 
-.container img{
-width: 100%;
-margin: 0 auto;
-box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
-display: flex;
-grid-area: 1/1;
-grid-template-columns: column;
+.container img {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
+    display: flex;
+    grid-area: 1/1;
+    grid-template-columns: column;
 }
 
 
 .container h1 {
-
     font-family: "Cocon", sans-serif;
     color: #ffffff;
     font-weight: 600;
-    font-size: 4vw;
+    font-size: 3rem;
     display: flex;
     grid-area: 1/1;
     align-items: center;
@@ -207,7 +206,7 @@ grid-template-columns: column;
 .container-2 h1 {
     color: #003536;
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 4rem;
     font-family: "Cocon", sans-serif;
 }
 
@@ -273,7 +272,7 @@ grid-template-columns: column;
     text-align: center;
     margin: 0 auto;
     color: #003536;
-    
+
 
 }
 
@@ -291,7 +290,7 @@ body .carousel-container {
 .depo h1 {
     color: #003536;
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 4rem;
     font-family: "Cocon", sans-serif;
 }
 
@@ -301,40 +300,31 @@ body .carousel-container {
     max-width: 80vh;
     display: flex;
     border-radius: 20px;
-    cursor: grab;
 }
 
-.carousel-wrapper:active{
-cursor: grabbing;
-}
-
-#carousel-wrapper:hover{
-scale:1.08;
-transition: transform ease-out 4s;
-box-shadow: 1px 1px 1000px 100px rgb(97, 89, 89);
-}
-
-.carousel-wrapper{
+.carousel-wrapper {
     transition: transform 5s ease-in;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    
 }
 
 .comment {
     min-width: 100%;
     box-sizing: border-box;
     display: flex;
-    align-items: flex-start; /* Alinha a imagem e o texto no topo */
-    flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+    align-items: flex-start;
+    /* Alinha a imagem e o texto no topo */
+    flex-direction: row;
+    /* Alinha a imagem e o texto lado a lado */
     border-radius: 10px;
-    justify-content: center; /* Centraliza a div */
+    justify-content: center;
+    /* Centraliza a div */
 }
 
-.comment img{
+.comment img {
     width: 100%;
 }
 
@@ -352,7 +342,7 @@ box-shadow: 1px 1px 1000px 100px rgb(97, 89, 89);
 
 /* Responsividade */
 @media (max-width: 480px) {
-   
+
     .comment {
         padding: 10px;
         font-size: 14px;
@@ -360,7 +350,7 @@ box-shadow: 1px 1px 1000px 100px rgb(97, 89, 89);
 
     .nav-button {
         padding: 8px;
-        font-size: 14px;    
+        font-size: 14px;
     }
 }
 
@@ -370,7 +360,7 @@ footer {
     color: white;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .footer-link {
@@ -392,7 +382,7 @@ footer {
 #footer_social_media {
     display: flex;
     gap: 2rem;
-    
+
 }
 
 #footer_social_media .footer-link {
@@ -488,7 +478,7 @@ footer {
         gap: 2rem;
     }
 
-    
+
 }
 
 @media screen and (max-width: 426px) {
@@ -550,7 +540,7 @@ span {
     box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
-a{
+a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -591,9 +581,9 @@ a{
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    
+
     .bg-branco2 {
-        
+
         margin-bottom: 10%;
     }
 
@@ -618,23 +608,22 @@ a{
         transform: none;
     }
 
-    .container{
+    .container {
         width: 101%;
     }
 
-    .container h1{
-        font-size: 4.5vw;
+    .container h1 {
         padding-left: 6.5%;
         padding-top: 10%;
     }
+
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 7vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;}
+    }
 
     header {
         background-color: #00353600;
@@ -648,7 +637,7 @@ a{
 
 /*Página de cadastro do carrossel*/
 
-.bg-branco4{
+.bg-branco4 {
     position: relative;
     bottom: 45%;
     right: 22%;
@@ -662,24 +651,24 @@ a{
 
 
 .button-4 {
-border-color: transparent;
-background-color: #003536;
-color: white;
-width:190px;
-height:25px;
-border-radius: 5px;
-box-shadow: 1px 1px 10px 10px rgba(0, 51, 52, 0.477);
-font-family: "Poppins", sans-serif;
-font-weight:bolder 18;
-font-style:normal;
-font-size: 8px;
-cursor: pointer;
-position: absolute;
+    border-color: transparent;
+    background-color: #003536;
+    color: white;
+    width: 190px;
+    height: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.25);
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder 18;
+    font-style: normal;
+    font-size: 8px;
+    cursor: pointer;
+    position: absolute;
 }
 
 .button-4:hover {
-background-color: rgb(0, 97, 99);
-box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
+    background-color: rgb(0, 97, 99);
+    box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
 
@@ -687,38 +676,31 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 @media (max-width:480px) {
     .imgslide {
         display: grid;
-        align-items: center; /* Centraliza verticalmente */
-        justify-items: center; /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-items: center;
+        /* Centraliza horizontalmente */
         grid-template-rows: auto auto;
     }
 
     .imgslide img {
-        grid-area: 1 / 1; /* Coloca a imagem na primeira linha e coluna */
+        grid-area: 1 / 1;
+        /* Coloca a imagem na primeira linha e coluna */
         width: 100%;
         height: auto;
     }
+
     .slides img {
-        width: 84%; /* Aumenta o tamanho do carrossel em mobile */
+        width: 84%;
+        /* Aumenta o tamanho do carrossel em mobile */
     }
 
-    .button-4 {
-         /* Sobrepõe o botão à imagem na mesma área */
-        background-color: #003536; /* Transparência para destacar o botão */
-        border-radius: 5px;
-        font-weight: 600;
-        text-align: center;
-        width: 15%;
-        height: 25px;
-        border-color: transparent;
-        box-shadow: 1px 1px 8px 6px rgba(0, 51, 52, 0.477);
-        
-    }
 
-    .bg-branco4{
+    .bg-branco4 {
         justify-self: start;
-    grid-area: 1/1;
-    margin-left: -30%;
-        
+        grid-area: 1/1;
+        margin-left: -30%;
+
     }
 
     .button-4 a {
@@ -731,44 +713,36 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 
 
 @media (min-width:481px) and (max-width: 768px) {
- 
-     
- 
-     
+
+
+
+
     .imgslide {
         display: grid;
-        align-items: center; /* Centraliza verticalmente */
-        justify-items: center; /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-items: center;
+        /* Centraliza horizontalmente */
         grid-template-rows: auto auto;
     }
 
     .imgslide img {
-        grid-area: 1 / 1; /* Coloca a imagem na primeira linha e coluna */
+        grid-area: 1 / 1;
+        /* Coloca a imagem na primeira linha e coluna */
         width: 100%;
         height: auto;
     }
+
     .slides img {
-        width: 65%; /* Reduz as imagens do carrossel em telas maiores */
+        width: 65%;
+        /* Reduz as imagens do carrossel em telas maiores */
     }
 
-    .button-4 {
-         /* Sobrepõe o botão à imagem na mesma área */
-        background-color: #003536; /* Transparência para destacar o botão */
-        border-radius: 5px;
-        font-weight: 600;
-        text-align: center;
-        width: 17%;
-        height: 25px;
-        border-color: transparent;
-        box-shadow: 1px 1px 8px 6px rgba(0, 51, 52, 0.477);
-        
-    }
-
-    .bg-branco4{
+    .bg-branco4 {
         justify-self: start;
-    grid-area: 1/1;
-    margin-right: 13%;
-        
+        grid-area: 1/1;
+        margin-right: 13%;
+
     }
 
     .button-4 a {
@@ -778,89 +752,69 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 
 
 }
- 
+
 
 /* Página de cadastro do carrossel responsiva para tablets maiores ou notebooks pequenos. */
-        
-    @media (min-width: 768px) and (max-width: 1280px) {
-        .imgslide {
-            display: grid;
-            align-items: center; /* Centraliza verticalmente */
-            justify-items: center; /* Centraliza horizontalmente */
-            grid-template-rows: auto auto;
-        }
-    
-        .imgslide img {
-            grid-area: 1 / 1; /* Coloca a imagem na primeira linha e coluna */
-            width: 100%;
-            height: auto;
-        }
-        .slides img {
-            width: 65%; /* Reduz as imagens do carrossel em telas maiores */
-        }
-    
-        .button-4 {
-             /* Sobrepõe o botão à imagem na mesma área */
-            background-color: #003536; /* Transparência para destacar o botão */
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 12px;    
-            text-align: center;
-            width: 17%;
-            height: 35px;
-            border-color: transparent;
-            
-            
-            
-        }
 
-        .bg-branco4{
-            justify-self: start;
-        grid-area: 1/1;
-        margin-right: 12.95%;
-            
-        }
-    
-        .button-4 a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-    
-    
-}
-
-@media screen and (min-width: 1281px ) {
+@media (min-width: 768px) and (max-width: 1280px) {
     .imgslide {
         display: grid;
-        align-items: center; /* Centraliza verticalmente */
-        justify-items: center; /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-items: center;
+        /* Centraliza horizontalmente */
         grid-template-rows: auto auto;
     }
 
     .imgslide img {
-        grid-area: 1 / 1; /* Coloca a imagem na primeira linha e coluna */
+        grid-area: 1 / 1;
+        /* Coloca a imagem na primeira linha e coluna */
         width: 100%;
         height: auto;
     }
 
-    .button-4 {
-         /* Sobrepõe o botão à imagem na mesma área */
-        background-color: #003536; /* Transparência para destacar o botão */
-        border-radius: 10px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-        width: 20%;
-        height: 50px;
-        
-        
+    .slides img {
+        width: 65%;
+        /* Reduz as imagens do carrossel em telas maiores */
     }
 
-    .bg-branco4{
+    .bg-branco4 {
         justify-self: start;
-    grid-area: 1/1;
-    margin-right: 16.95%;
-        
+        grid-area: 1/1;
+        margin-right: 12.95%;
+
+    }
+
+    .button-4 a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+
+}
+
+@media screen and (min-width: 1281px) {
+    .imgslide {
+        display: grid;
+        align-items: center;
+        /* Centraliza verticalmente */
+        justify-items: center;
+        /* Centraliza horizontalmente */
+        grid-template-rows: auto auto;
+    }
+
+    .imgslide img {
+        grid-area: 1 / 1;
+        /* Coloca a imagem na primeira linha e coluna */
+        width: 100%;
+        height: auto;
+    }
+
+    .bg-branco4 {
+        justify-self: start;
+        grid-area: 1/1;
+        margin-right: 16.95%;
+
     }
 
     .button-4 a {
@@ -878,58 +832,61 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 /* Estilos para desktop (acima de 1024px) */
 @media screen and (min-width: 1024px) {
 
-    
 
-    .nav-list{
+
+    .nav-list {
         padding-left: 0%;
     }
 
     .nav-bar {
-        padding: 0.6% 5%; /* Diminuir a largura do padding em telas grandes */
+        padding: 0.6% 5%;
+        /* Diminuir a largura do padding em telas grandes */
     }
-    
-    
+
+
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
+        font-size: 3rem;
+        /* Ajusta o tamanho da fonte no banner */
         padding-left: 4.5%;
         padding-top: 10%;
-        
+
     }
 
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 6vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;}
+    }
 
     .slides img {
-        width: 65%; /* Reduz as imagens do carrossel em telas maiores */
+        width: 65%;
+        /* Reduz as imagens do carrossel em telas maiores */
     }
 
     .depo h1 {
-        font-size: 5vw; /* Ajusta a fonte dos depoimentos */
+        font-size: 5vw;
+        /* Ajusta a fonte dos depoimentos */
     }
 }
 
 /* Estilos para desktop maiores (1281px) */
 @media screen and (min-width: 1281px) {
-   
-  
+
+
     .nav-bar {
-        padding-bottom: 2%; /* Diminuir a largura do padding em telas grandes */
+        padding-bottom: 2%;
+        /* Diminuir a largura do padding em telas grandes */
     }
-    
-.nav-list{
-    padding-right: 0%;
-}
-    
-    
-    
+
+    .nav-list {
+        padding-right: 0%;
+    }
+
+
+
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
         padding-left: 4.5%;
         padding-top: 10%;
     }
@@ -943,9 +900,9 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         flex-direction: column;
         padding-right: 4%;
     }
-    
+
     .container-2 {
-    
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -953,9 +910,10 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         text-align: center;
         margin: 0 auto;
     }
-    
+
     .slides img {
-        width: 65%; /* Aumenta o tamanho do carrossel em mobile */
+        width: 65%;
+        /* Aumenta o tamanho do carrossel em mobile */
         padding-right: 4%;
     }
 
@@ -973,52 +931,53 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         gap: 1.5rem;
     }
 
-    #container-footer{
+    #container-footer {
         padding-right: 6%;
-        
+
     }
 
-        #footer_copyright{
-            padding-right: 4%;
-        }
+    #footer_copyright {
+        padding-right: 4%;
+    }
 
 
 
-        #footer_contacts{
-            display: flex;
-            flex-direction: column;
-            padding-top: 8%;    
-        }
+    #footer_contacts {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8%;
+    }
 
-        #footer-list{
-            display: flex;
-            flex-direction: column;
-        }
+    #footer-list {
+        display: flex;
+        flex-direction: column;
+    }
 
 
 
-        #footer_subscribe{
-            display: flex;
-            flex-direction: column;
-            padding-top: 6%;
-        }
-    
+    #footer_subscribe {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6%;
+    }
+
 }
 
 /* Estilos para mobile (até 480px) */
 @media screen and (max-width: 480px) {
-   
+
 
     .nav-bar {
-        padding: 0rem 0.1rem; /* Diminui o padding da navbar em telas pequenas */
+        padding: 0rem 0.1rem;
+        /* Diminui o padding da navbar em telas pequenas */
     }
 
     .logo img {
-        width: 40px; /* Ajusta o tamanho do logo */
+        width: 40px;
+        /* Ajusta o tamanho do logo */
     }
 
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
         padding-right: 21%;
         padding-top: 10%;
     }
@@ -1026,11 +985,12 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 7vw;  
+        font-size: 7vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;}
+        margin-top: 10%;
+    }
 
     header {
         background-color: #00353600;
@@ -1042,26 +1002,30 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 
 
     .mobile-menu ul {
-        padding: 0; /* Remove padding adicional */
+        padding: 0;
+        /* Remove padding adicional */
     }
 
     .carousel-container {
-        height: auto; /* Deixa o carrossel com altura flexível */
+        height: auto;
+        /* Deixa o carrossel com altura flexível */
     }
 
     footer {
         flex-direction: column;
         text-align: center;
         margin: 0 auto;
-        
+
     }
 
     #footer_contacts img {
-        width: 80px; /* Ajusta o tamanho do logo no rodapé */
+        width: 80px;
+        /* Ajusta o tamanho do logo no rodapé */
     }
 
     #footer_subscribe p {
-        font-size: 0.9rem; /* Texto menor no rodapé */
+        font-size: 0.9rem;
+        /* Texto menor no rodapé */
     }
 }
 
@@ -1071,16 +1035,17 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 @media (min-width:481px) and (max-width: 768px) {
 
     .nav-bar {
-        padding: 0rem 1rem; /* Diminui o padding da navbar em telas pequenas */
+        padding: 0rem 1rem;
+        /* Diminui o padding da navbar em telas pequenas */
     }
 
     .logo img {
-        width: 50px; /* Ajusta o tamanho do logo */
+        width: 50px;
+        /* Ajusta o tamanho do logo */
     }
 
     .container h1 {
-        font-size: 5vw; /* Ajusta o tamanho da fonte no banner */
-        padding-right:16.5%;
+        padding-right: 16.5%;
         padding-top: 10%;
     }
 
@@ -1091,7 +1056,8 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;}
+        margin-top: 10%;
+    }
 
     header {
         background-color: #00353600;
@@ -1102,29 +1068,34 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 
 
     .carousel-container {
-        height: auto; /* Ajuste automático da altura */
+        height: auto;
+        /* Ajuste automático da altura */
         padding: 20px;
     }
 
     .comment {
-        flex-direction: column; /* Empilhar imagem e texto verticalmente em telas menores */
-        align-items: center; 
-        gap: 15px; /* Espaçamento entre a imagem e o texto */
+        flex-direction: column;
+        /* Empilhar imagem e texto verticalmente em telas menores */
+        align-items: center;
+        gap: 15px;
+        /* Espaçamento entre a imagem e o texto */
         font-size: 16px;
     }
 
     .person img {
-        width: 40px; /* Reduzir o tamanho da imagem da pessoa */
+        width: 40px;
+        /* Reduzir o tamanho da imagem da pessoa */
     }
 
     .carousel {
         display: flex;
-        transform: translateX(0); /* Assegura que o carrossel fique visível em telas menores */
+        transform: translateX(0);
+        /* Assegura que o carrossel fique visível em telas menores */
     }
 }
 
 @media screen and (max-width: 480px) {
-    
+
     .carousel-container {
         padding: 10px;
     }
@@ -1139,8 +1110,7 @@ box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
     }
 
     .nav-button {
-        padding: 5px; /* Ajuste o tamanho dos botões de navegação */
+        padding: 5px;
+        /* Ajuste o tamanho dos botões de navegação */
     }
 }
-
-
