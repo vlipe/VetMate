@@ -109,54 +109,53 @@
     display: none;
   }
 
-  @media screen and (max-width: 730px) {
-    .nav-bar {
-      padding: 1.5rem 4rem;
-    }
+  @media screen and (max-width: 768px) {
 
-    .nav-item {
+  .nav-item {
       display: none;
-    }
+  }
 
-    .login-button {
+  .login-button {
       display: none;
-    }
+  }
 
-    .mobile-menu-icon {
+  .mobile-menu-icon {
       display: block;
       align-self: center;
-    }
+  }
 
-    .mobile-menu-icon button {
-      background-color: transparent;
+  .mobile-menu-icon button {
+      background-color:transparent ;
       border: none;
       cursor: pointer;
-    }
+  }
 
-    .mobile-menu ul {
+  .mobile-menu ul {
       display: flex;
       flex-direction: column;
       text-align: center;
-      padding-bottom: 1rem;
-    }
+      
+  }
 
-    .mobile-menu .nav-item {
+  .mobile-menu .nav-item {
       display: block;
-      padding-top: 1.2rem;
-    }
+  }
 
-    .mobile-menu .login-button {
+  .mobile-menu .login-button {
       display: block;
-      padding: 1rem 2rem;
-    }
+      width: 80%;
+      padding-left: 12%;
+      
+  }
 
-    .mobile-menu .login-button button {
+  .mobile-menu .login-button button {
       width: 100%;
-    }
+      height: 20%;
+  }
 
-    .open {
+  .open {
       display: block;
-    }
+  }
   }
 
   .banner-topo {
@@ -176,20 +175,19 @@
   .banner-topo h1 {
     font-family: "Cocon", sans-serif;
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 5vw;
     text-align: right;
     display: flex;
     flex-direction: column;
     grid-area: 1/1;
-    padding-top: 20%;
+    padding-top: 17%;
     align-items: flex-end;
-    padding-right: 6rem;
+    padding-right: 5rem;
   }
 
   @media (max-width:480px) {
     header {
-      background-color: #00353600;
-      margin-bottom: -40vw;
+      background-color: #003536;
       position: relative;
       z-index: 1001;
     }
@@ -199,7 +197,7 @@
     }
 
     .logo {
-      margin-left: -25%;
+      
       padding-bottom: 10%;
     }
 
@@ -210,6 +208,7 @@
 
     .nav-bar {
       padding-right: 10%;
+      padding-left: 5%;
     }
 
     .banner-topo h1 {
@@ -222,16 +221,48 @@
       grid-area: 1/1;
       margin-top: 9%;
       align-items: flex-end;
-      padding-right: 5%;
+      padding-right: 7%;
     }
 
+    .banner-topo {
+      display: grid;
+      width: 100%;
+  
+    }
+
+    .banner-topo img {
+      width: 100vw;
+      height: 65vw;
+      display: flex;
+      grid-area: 1/1;
+      grid-template-columns: column;
+    }
 
   }
 
-  @media(min-width:480px) and (max-width:768px) {
+  @media(min-width:481px) and (max-width:768px) {
+
+    .logo img {
+      width:50px;
+    }
+
+    .logo {
+
+      padding-bottom: 10%;
+    }
+
+    .mobile-menu-icon {
+      width: 20px;
+      padding-bottom: 10%;
+    }
+
+    .nav-bar {
+      padding-right: 7%;
+    }
+
     header {
       background-color: #00353600;
-      margin-bottom: -26.5vw;
+      margin-bottom: -48vw;
       position: relative;
       z-index: 1001;
     }
@@ -244,9 +275,23 @@
       display: flex;
       flex-direction: column;
       grid-area: 1/1;
-      margin-top: 9%;
+      margin-top: 25%;
       align-items: flex-end;
       padding-right: 5%;
+    }
+
+    .banner-topo {
+      display: grid;
+      width: 100%;
+  
+    }
+
+    .banner-topo img {
+      width: 100vw;
+      height: 80vw;
+      display: flex;
+      grid-area: 1/1;
+      grid-template-columns: column;
     }
 
   }
@@ -258,6 +303,33 @@
       position: relative;
       z-index: 1001;
     }
+
+    .banner-topo {
+      display: grid;
+      width: 100%;
+  
+    }
+
+    .banner-topo img {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      grid-area: 1/1;
+      grid-template-columns: column;
+    }
+  
+    .banner-topo h1 {
+      font-family: "Cocon", sans-serif;
+      color: #ffffff;
+      font-size: 5vw;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      grid-area: 1/1;
+      padding-top: 17%;
+      align-items: flex-end;
+      padding-right: 3rem;
+    }
   }
 
   @media (min-width:1024px) {
@@ -268,24 +340,35 @@
       z-index: 1001;
     }
   }
+  
 
 
   /* Estilos da seção hero. */
 
-
-  .hero-content {
-    margin-left: 1rem;
+  .section-1{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    margin-bottom: 20%;
+    
   }
+
+.hero-content{
+display: flex;
+justify-content: space-between;
+flex: content;
+flex-direction: row;
+min-width: 63.5vw;
+} 
+
+  
 
   .hero-content button {
     margin-top: 2rem;
-    margin-bottom: 10vw;
     background-color: #003536;
     color: white;
-    width: 400px;
+    width: 30vw;
     height: 70px;
     border: none;
     border-radius: 15px;
@@ -308,7 +391,7 @@
     margin-top: 2rem;
     text-align: center;
     font-family: "Cocon", sans-serif;
-    font-size: 4rem;
+    font-size: 4vw;
     color: #003536;
     padding-left: 0%;
 
@@ -318,16 +401,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding-bottom: 20%;
-    margin-left: -2%;
+    flex-wrap: wrap;
   }
 
   .p-1 {
     text-align: left;
     font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.8vw;
     color: #003536;
+    white-space:nowap;
   }
 
   .mvv-container {
@@ -335,9 +417,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    justify-items: start;
-    padding-bottom: 32%;
-    margin-left: 10%;
+    justify-items: flex-start;
+    padding-bottom: 34%;
   }
 
   .mvv {
@@ -347,9 +428,6 @@
     padding: 1rem;
     width: 25vw;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .mvv-icone {
@@ -370,85 +448,94 @@
   }
 
   .mvv p {
-    font-size: 1rem;
+    font-size: 1.5vw;
+    white-space: nowap;
   }
 
   @media (max-width:480px) {
+    .h1-1 {
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-family: "Cocon", sans-serif;
+      font-size: 4vw;
+      color: #003536;
+      padding-left: 0%;
+  
+    }
 
     .mvv {
       margin-top: 1rem;
       background: linear-gradient(49deg, #003536, #006C6F);
       border-radius: 20px;
       padding: 1rem;
-      padding-bottom: 2%;
       width: 20vw;
-      height: 55vw;
+      height: 33vh;
       color: white;
+    }
+    
+    .mvv-container {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      width: 90vw;
+      align-items: center;
+      flex-direction: row;
+      justify-items: flex-start;
     }
 
-    .mvv p {
-      font-size: 2.5vw;
-    }
-
-    .hero-content button {
-      margin-top: 2rem;
-      margin-bottom: 10vw;
-      background-color: #003536;
-      color: white;
-      width: 150px;
-      height: 70px;
-      border: none;
-      border-radius: 15px;
-      box-shadow: #0035369b 1px 1px 8px 4px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.2s linear;
-    }
-
-    .p-1 {
-      text-align: left;
-      font-family: "Poppins", sans-serif;
-      font-size: 3.5vw;
-      color: #003536;
-    }
-
-    .hero-text-and-button {
+    .hero-content{
       display: flex;
+      justify-content: space-between;
+      flex: content;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding-bottom: 65%;
-      margin-right: 3%;
+      align-items: center;
+      min-width: 70vw;
+      } 
 
-    }
+      .hero-content button {
+        margin-bottom: 10%;
+        margin-top: 2rem;
+        background-color: #003536;
+        color: white;
+        width: 30vw;
+        height: 10vw;
+        border: none;
+        border-radius: 15px;
+        box-shadow: #0035369b 1px 1px 8px 4px;
+        font-weight: 600;
+        font-size: 2vw;
+        cursor: pointer;
+        transition: all 0.2s linear;
+       
+      }
 
-    .mvv-icone img {
-      width: 1.5rem;
-      height: auto;
-    }
+      .p-1 {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 2vw;
+        color: #003536;
+        white-space:nowap;
+      }
 
-    .mvv h4 {
-      font-weight: 600;
-      padding-top: 0.3vh;
-      padding-left: 1vh;
-      font-size: 0.6rem;
-    }
+      .hero-text-and-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
-    .h1-1 {
-      margin-bottom: 1rem;
-      margin-top: 2rem;
-      text-align: center;
-      font-family: "Cocon", sans-serif;
-      font-size: 2.5rem;
-      color: #003536;
-      padding-left: 0%;
-
-    }
+      .mvv-icone img {
+        width: 4vw;
+        height: auto;
+      }
+    
+      .mvv h4 {
+        font-weight: 600;
+        padding-top: 0.3vh;
+        padding-left: 2vh;
+        font-size: 2vw;
+      }
+    
 
   }
 
@@ -456,58 +543,89 @@
   
   @media(min-width:481px) and (max-width:768px) {
 
+    .h1-1 {
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-family: "Cocon", sans-serif;
+      font-size: 4vw;
+      color: #003536;
+      padding-left: 0%;
+  
+    }
+
     .mvv {
       margin-top: 1rem;
       background: linear-gradient(49deg, #003536, #006C6F);
       border-radius: 20px;
       padding: 1rem;
-      padding-bottom: 2%;
       width: 25vw;
-      height: 28vh;
+      height: 33vh;
       color: white;
+    }
+    
+    .mvv-container {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      width: 95vw;
+      align-items: center;
+      flex-direction: row;
+      justify-items: flex-start;
     }
 
-    .mvv p {
-      font-size: 1.8vw;
-    }
-
-    .hero-content button {
-      margin-top: 2rem;
-      margin-bottom: 10vw;
-      background-color: #003536;
-      color: white;
-      width: 200px;
-      height: 70px;
-      border: none;
-      border-radius: 15px;
-      box-shadow: #0035369b 1px 1px 8px 4px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.2s linear;
-    }
-
-    .p-1 {
-      text-align: left;
-      font-family: "Poppins", sans-serif;
-      font-size: 3.5vw;
-      color: #003536;
-    }
-
-    .hero-text-and-button {
+    .hero-content{
       display: flex;
+      justify-content: space-between;
+      flex: content;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding-bottom: 65%;
-      margin-right: 3%;
+      align-items: center;
+      min-width: 70vw;
+      } 
 
-    }
+      .hero-content button {
+        margin-bottom: 10%;
+        margin-top: 2rem;
+        background-color: #003536;
+        color: white;
+        width: 30vw;
+        height: 10vw;
+        border: none;
+        border-radius: 15px;
+        box-shadow: #0035369b 1px 1px 8px 4px;
+        font-weight: 600;
+        font-size: 2vw;
+        cursor: pointer;
+        transition: all 0.2s linear;
+       
+      }
 
+      .p-1 {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 2vw;
+        color: #003536;
+        white-space:nowap;
+      }
+
+      .hero-text-and-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .mvv-icone img {
+        width: 4vw;
+        height: auto;
+      }
+    
+      .mvv h4 {
+        font-weight: 600;
+        padding-top: 0.3vh;
+        padding-left: 2vh;
+        font-size: 2vw;
+      }
+    
   }
 
   @media (min-width:769px) and (max-width:1024px) {
@@ -516,16 +634,71 @@
       background: linear-gradient(49deg, #003536, #006C6F);
       border-radius: 20px;
       padding: 1rem;
-      padding-bottom: 2%;
       width: 25vw;
       height: 33vh;
       color: white;
+    }
+    
+    .mvv-container {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
+      width: 90vw;
+      align-items: center;
+      flex-direction: row;
+      justify-items: flex-start;
     }
 
+    .hero-content{
+      display: flex;
+      justify-content: space-between;
+      flex: content;
+      flex-direction: column;
+      align-items: center;
+      min-width: 70vw;
+      } 
 
+      .hero-content button {
+        margin-bottom: 10%;
+        margin-top: 2rem;
+        background-color: #003536;
+        color: white;
+        width: 30vw;
+        height: 70px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: #0035369b 1px 1px 8px 4px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.2s linear;
+       
+      }
+
+      .p-1 {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 2vw;
+        color: #003536;
+        white-space:nowap;
+      }
+
+      .hero-text-and-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    
+  }
+
+  @media (min-width:1025px) and (max-width:1290px) {
+    .hero-content{
+      display: flex;
+      justify-content: space-between;
+      flex: content;
+      flex-direction: row;
+      min-width: 70vw;
+      } 
   }
 
   .section-2 {
@@ -538,9 +711,14 @@
     margin-left: 6rem;
     margin-right: 6rem;
     margin-top: -30%;
+    display: flex;
+    flex-direction: column;
   }
 
   .movimento-esg h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #003536;
     font-size: 4rem;
