@@ -9,7 +9,7 @@ header {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 2% 7%;
+    padding: 2% 5%;
 }
 
 .logo {
@@ -178,6 +178,7 @@ body .comentarios {
 .container {
     display: grid;
     width: 100%;
+    box-shadow: 0px 7px 40px #003536;
 }
 
 .container img {
@@ -194,16 +195,16 @@ body .comentarios {
     font-family: "Cocon", sans-serif;
     color: #ffffff;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 4rem;
     display: flex;
     grid-area: 1/1;
     align-items: center;
     justify-content: flex-start;
-    padding-bottom: 10%;
 }
 
 
 .container-2 h1 {
+    margin-top: 4rem;
     color: #003536;
     font-weight: 700;
     font-size: 4rem;
@@ -331,12 +332,12 @@ body .carousel-container {
 
 .nav-button {
     background-color: transparent;
-    color: black;
+    color: #003536;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
     flex-shrink: 0;
 }
 
@@ -655,13 +656,13 @@ a {
     background-color: #003536;
     color: white;
     width: 190px;
-    height: 25px;
-    border-radius: 15px;
+    height: auto;
+    border-radius: 5px;
     box-shadow: 0px 0px 30px rgba(0, 53, 54, 0.25);
     font-family: "Poppins", sans-serif;
-    font-weight: bolder 18;
     font-style: normal;
-    font-size: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
     cursor: pointer;
     position: absolute;
 }
@@ -894,7 +895,6 @@ a {
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 6vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
@@ -985,7 +985,6 @@ a {
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 7vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
@@ -1052,7 +1051,6 @@ a {
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
-        font-size: 7vw;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
