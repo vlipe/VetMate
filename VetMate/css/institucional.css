@@ -320,7 +320,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding-bottom: 20%;
-    margin-right: 3%;
+    margin-left: -2%;
   }
 
   .p-1 {
@@ -337,7 +337,7 @@
     flex-direction: column;
     justify-items: start;
     padding-bottom: 32%;
-
+    margin-left: 10%;
   }
 
   .mvv {
