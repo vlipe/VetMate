@@ -102,11 +102,6 @@ header {
 
 
 @media screen and (max-width: 768px) {
-
-    .logo {
-        padding-left: 1%;
-    }
-
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -133,6 +128,7 @@ header {
     .mobile-menu ul {
         display: flex;
         flex-direction: column;
+        margin-right: 1.5rem;
         text-align: center;
         padding-bottom: 1rem;
     }
@@ -196,6 +192,8 @@ body .comentarios {
     color: #ffffff;
     font-weight: 600;
     font-size: 4rem;
+    margin-left: 3rem;   
+    width: 100%;
     display: flex;
     grid-area: 1/1;
     align-items: center;
@@ -204,7 +202,7 @@ body .comentarios {
 
 
 .container-2 h1 {
-    margin-top: 4rem;
+    margin-top: 6rem;
     color: #003536;
     font-weight: 700;
     font-size: 4rem;
@@ -291,7 +289,7 @@ body .carousel-container {
 .depo h1 {
     color: #003536;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: "Cocon", sans-serif;
 }
 
@@ -614,8 +612,10 @@ a {
     }
 
     .container h1 {
-        padding-left: 6.5%;
-        padding-top: 10%;
+        word-wrap: break-word;
+       margin-left: 3rem;
+       font-size: 2.5rem;
+       width: 50%;
     }
 
     .container-2 h1 {
@@ -624,6 +624,7 @@ a {
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
+        font-size: 3rem;
     }
 
     header {
@@ -700,13 +701,20 @@ a {
     .bg-branco4 {
         justify-self: start;
         grid-area: 1/1;
-        margin-left: -30%;
+        width: 66%;
+    }
 
+    .button-4{
+        width: 30%;
+        height: 25px;
+        border-radius: 40px;
     }
 
     .button-4 a {
         text-decoration: none;
         color: #ffffff;
+        font-size: 0.5rem;
+        text-align: left;
     }
 
 
@@ -741,14 +749,22 @@ a {
 
     .bg-branco4 {
         justify-self: start;
+        align-items: flex-start;
+        width: 85%;
         grid-area: 1/1;
         margin-right: 13%;
+    }
 
+    .button-4{
+        width: 20%;
+        height: 25px;
+        border-radius: 20px;
     }
 
     .button-4 a {
         text-decoration: none;
         color: #ffffff;
+        font-size: 0.6rem;
     }
 
 
@@ -757,7 +773,7 @@ a {
 
 /* Página de cadastro do carrossel responsiva para tablets maiores ou notebooks pequenos. */
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .imgslide {
         display: grid;
         align-items: center;
@@ -781,9 +797,16 @@ a {
 
     .bg-branco4 {
         justify-self: start;
+        align-items: flex-start;
         grid-area: 1/1;
-        margin-right: 12.95%;
+        margin-right: 16%;
+        width: 84%;
+    }
 
+    .button-4{
+        width: 20%;
+        height: 25px;  
+        border-radius: 10px;  
     }
 
     .button-4 a {
@@ -794,7 +817,7 @@ a {
 
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
     .imgslide {
         display: grid;
         align-items: center;
@@ -833,24 +856,19 @@ a {
 /* Estilos para desktop (acima de 1024px) */
 @media screen and (min-width: 1024px) {
 
-
-
-    .nav-list {
-        padding-left: 0%;
+    header {
+        background-color: #00353600;
+        margin-bottom: -13vw;
+        position: relative;
+        z-index: 1001;
     }
-
-    .nav-bar {
-        padding: 0.6% 5%;
-        /* Diminuir a largura do padding em telas grandes */
-    }
-
 
     .container h1 {
         font-size: 3rem;
+        margin-left: 3rem;
+        width: 50%;
         /* Ajusta o tamanho da fonte no banner */
-        padding-left: 4.5%;
-        padding-top: 10%;
-
+        
     }
 
     .container-2 h1 {
@@ -867,7 +885,9 @@ a {
     }
 
     .depo h1 {
-        font-size: 5vw;
+        font-size: 3.2rem;
+        word-wrap:break-word;
+        width: 100%;
         /* Ajusta a fonte dos depoimentos */
     }
 }
@@ -876,20 +896,12 @@ a {
 @media screen and (min-width: 1281px) {
 
 
-    .nav-bar {
-        padding-bottom: 2%;
-        /* Diminuir a largura do padding em telas grandes */
-    }
-
-    .nav-list {
-        padding-right: 0%;
-    }
-
-
-
     .container h1 {
-        padding-left: 4.5%;
-        padding-top: 10%;
+        font-size: 4rem;
+        margin-left: 4rem;
+        width: 50%;
+        /* Ajusta o tamanho da fonte no banner */
+        
     }
 
     .container-2 h1 {
@@ -966,20 +978,19 @@ a {
 /* Estilos para mobile (até 480px) */
 @media screen and (max-width: 480px) {
 
-
-    .nav-bar {
-        padding: 0rem 0.1rem;
-        /* Diminui o padding da navbar em telas pequenas */
-    }
-
-    .logo img {
-        width: 40px;
-        /* Ajusta o tamanho do logo */
-    }
-
     .container h1 {
-        padding-right: 21%;
-        padding-top: 10%;
+       font-size: 0.8rem;
+       margin-left: 4rem;
+       width: 50%;
+    }
+
+    .container img {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
+        display: flex;
+        grid-area: 1/1;
+        grid-template-columns: column;
     }
 
     .container-2 h1 {
@@ -988,21 +999,28 @@ a {
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        width: 100%;
         margin-top: 10%;
+    }
+    
+    .depo h1{
+        word-wrap:break-word;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .carousel-wrapper{
+        .carousel-wrapper{
+            border-radius:10px ;
+        }
     }
 
     header {
-        background-color: #00353600;
-        margin-bottom: -14.5vw;
+        background-color: #003536;
         position: relative;
         z-index: 1001;
-    }
-
-
-
-    .mobile-menu ul {
-        padding: 0;
-        /* Remove padding adicional */
     }
 
     .carousel-container {
@@ -1017,11 +1035,6 @@ a {
 
     }
 
-    #footer_contacts img {
-        width: 80px;
-        /* Ajusta o tamanho do logo no rodapé */
-    }
-
     #footer_subscribe p {
         font-size: 0.9rem;
         /* Texto menor no rodapé */
@@ -1032,34 +1045,43 @@ a {
 
 /* Ajuste o tamanho das caixas de comentários para telas menores */
 @media (min-width:481px) and (max-width: 768px) {
+    
 
-    .nav-bar {
-        padding: 0rem 1rem;
-        /* Diminui o padding da navbar em telas pequenas */
-    }
-
-    .logo img {
-        width: 50px;
-        /* Ajusta o tamanho do logo */
+    .depo h1{
+        word-wrap:break-word;
+        width: 100%;
+        font-size: 1.5rem;
     }
 
     .container h1 {
-        padding-right: 16.5%;
-        padding-top: 10%;
+        width: 50%;
+        font-size: 1.5rem;
+        margin-left: 3.8rem;
+        margin-top: 2%;
     }
 
+    .container img {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        grid-area: 1/1;
+        grid-template-columns: column;
+        height: 100%;
+    }
     .container-2 h1 {
         color: #003536;
         font-weight: 700;
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
+        font-size: 2rem;
+        word-wrap: break-word;
+        width: 100%;
         margin-top: 10%;
     }
 
     header {
-        background-color: #00353600;
-        margin-bottom: -10.5vw;
+        background-color: #003536;
         position: relative;
         z-index: 1001;
     }
