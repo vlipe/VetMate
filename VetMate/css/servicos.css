@@ -296,7 +296,7 @@ body .carousel-container {
 
 .carousel-wrapper {
     overflow: hidden;
-    max-width: 80vh;
+    max-width: 50vw;
     display: flex;
     border-radius: 20px;
 }
@@ -701,20 +701,21 @@ a {
     .bg-branco4 {
         justify-self: start;
         grid-area: 1/1;
-        width: 66%;
+        width: 68%;
+        display: block;
     }
 
     .button-4{
-        width: 30%;
-        height: 25px;
+        width: 32%;
+        height: 0.7rem;
         border-radius: 40px;
     }
 
     .button-4 a {
         text-decoration: none;
         color: #ffffff;
-        font-size: 0.5rem;
-        text-align: left;
+        font-size: 0.3rem;
+        display: block;
     }
 
 
@@ -757,7 +758,7 @@ a {
 
     .button-4{
         width: 20%;
-        height: 25px;
+        height: 2rem;
         border-radius: 20px;
     }
 
@@ -837,7 +838,7 @@ a {
     .bg-branco4 {
         justify-self: start;
         grid-area: 1/1;
-        margin-right: 16.95%;
+        width: 86%;
 
     }
 
@@ -976,16 +977,17 @@ a {
 }
 
 /* Estilos para mobile (até 480px) */
+
 @media screen and (max-width: 480px) {
 
     .container h1 {
-       font-size: 0.8rem;
+       font-size: 0.6rem;
        margin-left: 4rem;
        width: 50%;
     }
 
     .container img {
-        width: 100%;
+        width: 104%;
         margin: 0 auto;
         box-shadow: 0 0 1em 0.em rgb(113, 100, 100);
         display: flex;
@@ -1012,9 +1014,7 @@ a {
     }
 
     .carousel-wrapper{
-        .carousel-wrapper{
             border-radius:10px ;
-        }
     }
 
     header {
@@ -1115,6 +1115,8 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+
+    
 
     .carousel-container {
         padding: 10px;
