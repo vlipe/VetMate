@@ -111,51 +111,51 @@
 
   @media screen and (max-width: 768px) {
 
-  .nav-item {
+    .nav-item {
       display: none;
-  }
+    }
 
-  .login-button {
+    .login-button {
       display: none;
-  }
+    }
 
-  .mobile-menu-icon {
+    .mobile-menu-icon {
       display: block;
       align-self: center;
-  }
+    }
 
-  .mobile-menu-icon button {
-      background-color:transparent ;
+    .mobile-menu-icon button {
+      background-color: transparent;
       border: none;
       cursor: pointer;
-  }
+    }
 
-  .mobile-menu ul {
+    .mobile-menu ul {
       display: flex;
       flex-direction: column;
       text-align: center;
-      
-  }
 
-  .mobile-menu .nav-item {
+    }
+
+    .mobile-menu .nav-item {
       display: block;
-  }
+    }
 
-  .mobile-menu .login-button {
+    .mobile-menu .login-button {
       display: block;
       width: 80%;
       padding-left: 12%;
-      
-  }
 
-  .mobile-menu .login-button button {
+    }
+
+    .mobile-menu .login-button button {
       width: 100%;
       height: 20%;
-  }
+    }
 
-  .open {
+    .open {
       display: block;
-  }
+    }
   }
 
   .banner-topo {
@@ -175,14 +175,14 @@
   .banner-topo h1 {
     font-family: "Cocon", sans-serif;
     color: #ffffff;
-    font-size: 5vw;
+    font-size: 3.5rem;
     text-align: right;
     display: flex;
     flex-direction: column;
     grid-area: 1/1;
     padding-top: 17%;
     align-items: flex-end;
-    padding-right: 5rem;
+    padding-right: 6rem;
   }
 
   @media (max-width:480px) {
@@ -197,7 +197,7 @@
     }
 
     .logo {
-      
+
       padding-bottom: 10%;
     }
 
@@ -227,7 +227,7 @@
     .banner-topo {
       display: grid;
       width: 100%;
-  
+
     }
 
     .banner-topo img {
@@ -243,7 +243,7 @@
   @media(min-width:481px) and (max-width:768px) {
 
     .logo img {
-      width:50px;
+      width: 50px;
     }
 
     .logo {
@@ -283,7 +283,7 @@
     .banner-topo {
       display: grid;
       width: 100%;
-  
+
     }
 
     .banner-topo img {
@@ -307,7 +307,7 @@
     .banner-topo {
       display: grid;
       width: 100%;
-  
+
     }
 
     .banner-topo img {
@@ -317,7 +317,7 @@
       grid-area: 1/1;
       grid-template-columns: column;
     }
-  
+
     .banner-topo h1 {
       font-family: "Cocon", sans-serif;
       color: #ffffff;
@@ -340,36 +340,36 @@
       z-index: 1001;
     }
   }
-  
+
 
 
   /* Estilos da seção hero. */
 
-  .section-1{
+  .section-1 {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     margin-bottom: 20%;
-    
+
   }
 
-.hero-content{
-display: flex;
-justify-content: space-between;
-flex: content;
-flex-direction: row;
-min-width: 63.5vw;
-} 
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    flex: content;
+    flex-direction: row;
+    min-width: 63.5vw;
+  }
 
-  
+
 
   .hero-content button {
     margin-top: 2rem;
     background-color: #003536;
     color: white;
-    width: 30vw;
-    height: 70px;
+    width: 23vw;
+    height: 4vw;
     border: none;
     border-radius: 15px;
     box-shadow: #0035369b 1px 1px 8px 4px;
@@ -387,7 +387,7 @@ min-width: 63.5vw;
   }
 
   .h1-1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
     text-align: center;
     font-family: "Cocon", sans-serif;
@@ -397,22 +397,7 @@ min-width: 63.5vw;
 
   }
 
-<<<<<<< HEAD
-}
-
-@media(min-width:481px) and (max-width:768px){
-  .mvv {
-    margin-top: 1rem;
-    background: linear-gradient(49deg, #003536, #006C6F);
-    border-radius: 20px;
-    padding: 1rem;
-    padding-bottom: 2%;
-    width: 25vw;
-    height: 28vh;
-    color: white;
-=======
   .hero-text-and-button {
->>>>>>> 17a34c882d0072deacf18305cba2991ac64bd114
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -422,9 +407,8 @@ min-width: 63.5vw;
   .p-1 {
     text-align: left;
     font-family: "Poppins", sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.3rem;
     color: #003536;
-    white-space:nowap;
   }
 
   .mvv-container {
@@ -463,8 +447,7 @@ min-width: 63.5vw;
   }
 
   .mvv p {
-    font-size: 1.5vw;
-    white-space: nowap;
+    font-size: 1.2rem;
   }
 
   @media (max-width:480px) {
@@ -476,7 +459,7 @@ min-width: 63.5vw;
       font-size: 4vw;
       color: #003536;
       padding-left: 0%;
-  
+
     }
 
     .mvv {
@@ -488,7 +471,7 @@ min-width: 63.5vw;
       height: 33vh;
       color: white;
     }
-    
+
     .mvv-container {
       display: flex;
       justify-content: space-between;
@@ -498,64 +481,62 @@ min-width: 63.5vw;
       justify-items: flex-start;
     }
 
-    .hero-content{
+    .hero-content {
       display: flex;
       justify-content: space-between;
       flex: content;
       flex-direction: column;
       align-items: center;
       min-width: 70vw;
-      } 
+    }
 
-      .hero-content button {
-        margin-bottom: 10%;
-        margin-top: 2rem;
-        background-color: #003536;
-        color: white;
-        width: 30vw;
-        height: 10vw;
-        border: none;
-        border-radius: 15px;
-        box-shadow: #0035369b 1px 1px 8px 4px;
-        font-weight: 600;
-        font-size: 2vw;
-        cursor: pointer;
-        transition: all 0.2s linear;
-       
-      }
+    .hero-content button {
+      margin-bottom: 10%;
+      margin-top: 2rem;
+      background-color: #003536;
+      color: white;
+      width: 30vw;
+      height: 10vw;
+      border: none;
+      border-radius: 15px;
+      box-shadow: #0035369b 1px 1px 8px 4px;
+      font-weight: 600;
+      font-size: 2vw;
+      cursor: pointer;
+      transition: all 0.2s linear;
 
-      .p-1 {
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-size: 2vw;
-        color: #003536;
-        white-space:nowap;
-      }
+    }
 
-      .hero-text-and-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-      }
+    .p-1 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 2vw;
+      color: #003536;
+      white-space: nowap;
+    }
 
-      .mvv-icone img {
-        width: 4vw;
-        height: auto;
-      }
-    
-      .mvv h4 {
-        font-weight: 600;
-        padding-top: 0.3vh;
-        padding-left: 2vh;
-        font-size: 2vw;
-      }
-    
+    .hero-text-and-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .mvv-icone img {
+      width: 4vw;
+      height: auto;
+    }
+
+    .mvv h4 {
+      font-weight: 600;
+      padding-top: 0.3vh;
+      padding-left: 2vh;
+      font-size: 2vw;
+    }
+
 
   }
 
-  /*Depois apago isso. */
-  
   @media(min-width:481px) and (max-width:768px) {
 
     .h1-1 {
@@ -566,7 +547,7 @@ min-width: 63.5vw;
       font-size: 4vw;
       color: #003536;
       padding-left: 0%;
-  
+
     }
 
     .mvv {
@@ -578,7 +559,7 @@ min-width: 63.5vw;
       height: 33vh;
       color: white;
     }
-    
+
     .mvv-container {
       display: flex;
       justify-content: space-between;
@@ -588,59 +569,59 @@ min-width: 63.5vw;
       justify-items: flex-start;
     }
 
-    .hero-content{
+    .hero-content {
       display: flex;
       justify-content: space-between;
       flex: content;
       flex-direction: column;
       align-items: center;
       min-width: 70vw;
-      } 
+    }
 
-      .hero-content button {
-        margin-bottom: 10%;
-        margin-top: 2rem;
-        background-color: #003536;
-        color: white;
-        width: 30vw;
-        height: 10vw;
-        border: none;
-        border-radius: 15px;
-        box-shadow: #0035369b 1px 1px 8px 4px;
-        font-weight: 600;
-        font-size: 2vw;
-        cursor: pointer;
-        transition: all 0.2s linear;
-       
-      }
+    .hero-content button {
+      margin-bottom: 10%;
+      margin-top: 2rem;
+      background-color: #003536;
+      color: white;
+      width: 30vw;
+      height: 10vw;
+      border: none;
+      border-radius: 15px;
+      box-shadow: #0035369b 1px 1px 8px 4px;
+      font-weight: 600;
+      font-size: 2vw;
+      cursor: pointer;
+      transition: all 0.2s linear;
 
-      .p-1 {
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-size: 2vw;
-        color: #003536;
-        white-space:nowap;
-      }
+    }
 
-      .hero-text-and-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-      }
+    .p-1 {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-size: 2vw;
+      color: #003536;
+      white-space: nowap;
+    }
 
-      .mvv-icone img {
-        width: 4vw;
-        height: auto;
-      }
-    
-      .mvv h4 {
-        font-weight: 600;
-        padding-top: 0.3vh;
-        padding-left: 2vh;
-        font-size: 2vw;
-      }
-    
+    .hero-text-and-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .mvv-icone img {
+      width: 4vw;
+      height: auto;
+    }
+
+    .mvv h4 {
+      font-weight: 600;
+      padding-top: 0.3vh;
+      padding-left: 2vh;
+      font-size: 2vw;
+    }
+
   }
 
   @media (min-width:769px) and (max-width:1024px) {
@@ -650,10 +631,10 @@ min-width: 63.5vw;
       border-radius: 20px;
       padding: 1rem;
       width: 25vw;
-      height: 33vh;
+      height: 25vw;
       color: white;
     }
-    
+
     .mvv-container {
       display: flex;
       justify-content: space-between;
@@ -663,57 +644,56 @@ min-width: 63.5vw;
       justify-items: flex-start;
     }
 
-    .hero-content{
+    .hero-content {
       display: flex;
       justify-content: space-between;
       flex: content;
       flex-direction: column;
       align-items: center;
       min-width: 70vw;
-      } 
+    }
 
-      .hero-content button {
-        margin-bottom: 10%;
-        margin-top: 2rem;
-        background-color: #003536;
-        color: white;
-        width: 30vw;
-        height: 70px;
-        border: none;
-        border-radius: 15px;
-        box-shadow: #0035369b 1px 1px 8px 4px;
-        font-weight: 600;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: all 0.2s linear;
-       
-      }
+    .hero-content button {
+      margin-bottom: 10%;
+      margin-top: 2rem;
+      background-color: #003536;
+      color: white;
+      width: 30vw;
+      height: 70px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: #0035369b 1px 1px 8px 4px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s linear;
 
-      .p-1 {
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-size: 2vw;
-        color: #003536;
-        white-space:nowap;
-      }
+    }
 
-      .hero-text-and-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-    
+    .p-1 {
+      text-align: center;
+      font-size: 2vw;
+      color: #003536;
+      white-space: nowap;
+    }
+
+    .hero-text-and-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
   }
 
   @media (min-width:1025px) and (max-width:1290px) {
-    .hero-content{
+    .hero-content {
       display: flex;
       justify-content: space-between;
       flex: content;
       flex-direction: row;
       min-width: 70vw;
-      } 
+    }
   }
 
   .section-2 {
