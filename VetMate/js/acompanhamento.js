@@ -104,19 +104,6 @@ function criarCardPet(pet) {
     const botoesContainer = document.createElement('div');
     botoesContainer.classList.add('botoes-container');
 
-    const consultasBtn = document.createElement('a'); 
-    consultasBtn.href = 'consultas.html'; 
-    const consultasBtnInner = document.createElement('button');
-    consultasBtnInner.textContent = 'Consultas';
-    consultasBtn.appendChild(consultasBtnInner);
-    botoesContainer.appendChild(consultasBtn);
-
-    const examesBtn = document.createElement('a'); 
-    examesBtn.href = 'exames.html'; 
-    const examesBtnInner = document.createElement('button'); 
-    examesBtnInner.textContent = 'Exames';
-    examesBtn.appendChild(examesBtnInner);
-    botoesContainer.appendChild(examesBtn);
 
     const vacinasBtn = document.createElement('a'); 
     vacinasBtn.href = 'vacinas.html'; 
