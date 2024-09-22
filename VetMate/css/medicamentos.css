@@ -384,14 +384,12 @@ a {
     }
 }
 
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
 
-/* Estilos específicos */
 .h1-medicamentos {
     font-family: "Cocon", sans-serif;
     color: #003536;
@@ -406,7 +404,7 @@ a {
 }
 
 .medicamentos-input-container {
-    margin-bottom: 1rem; /* Espaçamento entre os campos de entrada */
+    margin-bottom: 1rem;
 }
 
 .medicamentos-input-container label {
@@ -415,10 +413,9 @@ a {
 }
 
 .medicamentos-input-container input[type="file"] {
-    padding: 0.75rem; /* Ajuste o padding para inputs do tipo file */
+    padding: 0.75rem; 
 }
 
-/* Estilos para modais */
 .modal {
     display: none;
     position: fixed;
@@ -444,13 +441,11 @@ a {
     transform: translate(-50%, -50%);
 }
 
-/* Estilos para o título do modal */
 .modal-content h2 {
-    color: #003536; /* Cor do título */
-    margin-bottom: 1rem; /* Adicionar margin bottom */
+    color: #003536;
+    margin-bottom: 1rem;
 }
 
-/* Estilos para o input de imagem */
 .modal .medicamentos-input-container input[type="file"] {
     background-color: #fff;
     padding: 1rem;
@@ -463,15 +458,14 @@ a {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     outline: none;
     border: 1px solid #e5e7eb;
-    margin: 0.25rem 0; /* Reduzir ainda mais o espaçamento entre os inputs */
+    margin: 0.25rem 0; 
 }
 
-/* Estilos para inputs dentro do modal */
 .modal .medicamentos-input-container input[type="text"],
 .modal .medicamentos-input-container input[type="number"],
 .modal .medicamentos-input-container input[type="time"] {
     background-color: #fff;
-    padding: 1rem; /* Manter o padding interno */
+    padding: 1rem;
     padding-right: 3rem; 
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -481,18 +475,17 @@ a {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     outline: none;
     border: 1px solid #e5e7eb;
-    margin: 0.25rem 0; /* Reduzir ainda mais o espaçamento entre os inputs */
+    margin: 0.25rem 0;
 }
 
-/* Remover espaçamento entre placeholder e input */
 .modal .medicamentos-input-container input::placeholder {
-    padding: 0; /* Zerar o padding do placeholder */
+    padding: 0; 
 }
 
-/* Estilos para os botões do modal */
+
 .medicamentos-botoes-modal {
     display: flex;
-    justify-content: space-between; /* Distribui o espaço entre os botões */
+    justify-content: space-between; 
     margin-top: 1rem;
 }
 
@@ -502,7 +495,7 @@ a {
     text-align: center;
     font-size: 1rem;
     border: none;
-    padding: 0.5rem 2rem; /* Reduzir o padding vertical */
+    padding: 0.5rem 2rem; 
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -512,17 +505,17 @@ a {
     background-color: #00c2a2;
 }
 
-/* Estilo específico para o botão "Cancelar" */
+
 #medicamentos-botao-cancelar-cadastro {
-    background-color: #dc2626; /* Cor vermelha */
+    background-color: #dc2626; 
 }
 
-/* Alinha o botão "Cadastrar" à direita */
+
 #medicamentos-botao-cadastrar-medicamento {
     margin-left: auto; 
 }
 
-/* Estilos para cards de medicamentos */
+
 .card {
     background-color: #f5f5f5;
     border-radius: 1rem;
@@ -567,23 +560,21 @@ a {
     margin-bottom: 0.1rem;
 }
 
-/* Container para os botões */
 .card-info .botoes-container {
-    display: flex; /* Usa flexbox para organizar os botões horizontalmente */
+    display: flex; 
     justify-content: flex-start
 }
 
 .medicamentos-botao-doses, .medicamentos-botao-excluir {
-    /* width: 48%; */ /* Remove a largura fixa */
-    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento entre os botões */
+    margin-right: 0.5rem;
 }
 
 .medicamentos-botao-excluir {
-    margin-right: 0; /* Remove a margem direita do último botão */
+    margin-right: 0;
 }
 
 .medicamentos-botao-doses {
-    background-color: #003536; /* Cor verde */
+    background-color: #003536;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -596,7 +587,7 @@ a {
 }
 
 .medicamentos-botao-doses:hover {
-    background-color: #00c2a2; /* Cor mais clara ao passar o mouse */
+    background-color: #00c2a2;
 }
 
 .medicamentos-botao-excluir {
@@ -623,7 +614,6 @@ a {
     padding: 0 1rem;
 }
 
-/* Estilos para o botão de cadastro */
 #medicamentos-botao-cadastrar {
     background-color: #003536;
     color: white;
@@ -634,8 +624,6 @@ a {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-
-    /* Centraliza o botão horizontalmente */
     display: block; 
     margin: 0 auto; 
 }
@@ -644,7 +632,6 @@ a {
     background-color: #00c2a2;
 }
 
-/* Estilos para a tabela de notificações */
 #medicamentos-tabela-notificacoes {
     width: 100%;
     border-collapse: collapse;
@@ -658,62 +645,62 @@ a {
     border-bottom: 1px solid #ddd;
 }
 
-/* Estilos para o botão "Fechar" */
+
 #medicamentos-botao-fechar-notificacoes {
-    background-color: #003536; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    padding: 0.5rem 1rem; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+    background-color: #003536; 
+    color: white; 
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }
 
 #medicamentos-botao-fechar-notificacoes:hover {
-    background-color: #00c2a2; /* Cor de fundo ao passar o mouse */
+    background-color: #00c2a2; 
 }
 
-/* Media query para notebooks (até 1024px de largura) */
+/* media query para notebooks (até 1024px de largura) */
 @media (max-width: 1024px) {
     .medicamentos-container {
-        max-width: 90%; /* Ajuste a largura do container para ocupar mais espaço na tela */
+        max-width: 90%; 
     }
 
     .card {
-        flex-direction: column; /* Muda para column em telas menores */
+        flex-direction: column;
     }
 
     .card img {
-        margin-right: 0; /* Remove a margem direita da imagem */
-        margin-bottom: 1rem; /* Adiciona um espaçamento inferior à imagem */
+        margin-right: 0; 
+        margin-bottom: 1rem; 
     }
 
     .medicamentos-botoes-modal button {
-        padding: 0.5rem 1.5rem; /* Reduz o padding horizontal dos botões */
+        padding: 0.5rem 1.5rem;
     }
 }
 
-/* Media query para celulares (até 768px de largura) */
+/* media query para celulares (até 768px de largura) */
 @media (max-width: 768px) {
     .h1-medicamentos {
-        font-size: 2.5rem; /* Diminui o tamanho da fonte do título */
+        font-size: 2.5rem; 
     }
 
     .modal-content {
-        width: 90%; /* Aumenta a largura do modal para ocupar mais espaço na tela */
+        width: 90%;
     }
 
     .medicamentos-botoes-modal {
-        flex-direction: column; /* Muda para coluna em telas menores */
+        flex-direction: column;
     }
 
     .medicamentos-botoes-modal button {
-        width: 100%; /* Define a largura dos botões para 100% */
-        margin-bottom: 0.5rem; /* Adiciona um espaçamento inferior entre os botões */
+        width: 100%; 
+        margin-bottom: 0.5rem; 
     }
 
     .medicamentos-botoes-modal button:last-child {
-        margin-bottom: 0; /* Remove a margem inferior do último botão */
+        margin-bottom: 0; 
     }
 }
 
