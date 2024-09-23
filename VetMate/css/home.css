@@ -214,6 +214,7 @@ main {
     position: absolute;
     left: 50%;
     width: 70%;
+    font-size: 3.5rem;
     transform: translateX(-50%);
 }
 
@@ -449,7 +450,7 @@ main {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 551px) and (max-width:767px) {
 
     .h1-quemsomos {
         font-size: 3rem;
@@ -513,6 +514,33 @@ main {
         font-weight: 400;
         text-align: right;
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    #p-2 {
+        font-size: 0.7rem;
+        width: 90%;
+    }
+
+    .h1-quemsomos {
+        font-size: 2rem;
+        word-wrap: break-word;
+        text-align: center;
+        color: #003536;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    #dog-image {
+        height: 100%;
+        width: 45%;
+    }
+
+    .section-2{
+        margin: 0rem 3rem;
+        margin-bottom: 4rem;
     }
 }
 
@@ -640,7 +668,7 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 551px) and (max-width:767px) {
 
     .h1-branco {
         margin: 0 auto;
@@ -703,6 +731,65 @@ main {
     }
 }
 
+@media screen and (max-width:550px){
+    .h1-branco {
+        margin-top: 2rem;
+        width: 80%;
+        color: white;
+        font-size: 2.5rem;
+        font-family: 'Cocon', sans-serif;
+        word-wrap: break-word;
+    }
+
+    .p-1 {
+        margin: 0 auto;
+        padding-top: 3rem;
+        color: white;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        width: 80%;
+        word-wrap: break-word;
+    }
+
+    .caixinha {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .servicos {
+        background: linear-gradient(520deg, #ffffff, #ababab 80%);
+        border-radius: 15px;
+        padding: 8vw;
+        width: 45vw;
+        height: 50vw;
+        color: #003536;
+        display: flex;
+        cursor: default;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .servicos-h3 {
+        margin-top: 0.8rem;
+        font-size: 1.5rem;
+        color: #003536;
+    }
+
+    .itens-servicos img {
+        width: 30vw;
+        height: auto;
+    }
+
+    .servicos p {
+        margin: 0 auto;
+        width: 90%;
+        word-wrap: break-word;
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .bg-branco2 {
         margin-top: 8%;
@@ -724,6 +811,7 @@ main {
     }
 
 }
+
 
 /* Página de cadastro. */
 
@@ -844,6 +932,24 @@ a {
     }
 }
 
+@media screen and (max-width:550px){
+    .bg-branco2 h1{
+        font-size: 2.5rem;
+    }
+
+    .p-2{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+    .button-1 {
+        height: 3rem;
+        font-size: 1rem;
+        margin-top: 2rem;
+        position: relative;
+        transform: none;
+    }
+}
 
 /* Rodapé do site. */
 
