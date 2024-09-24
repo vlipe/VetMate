@@ -744,7 +744,7 @@ footer {
 
     .container h1 {
         font-size: 3rem;
-        margin-left: 3rem;
+        margin-left: 3.5rem;
         width: 50%;
         /* Ajusta o tamanho da fonte no banner */
         
@@ -777,11 +777,15 @@ footer {
 
 
     .container h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-left: 4rem;
         width: 50%;
         /* Ajusta o tamanho da fonte no banner */
         
+    }
+
+    .container img{
+width: 103vw;
     }
 
     .container-2 h1 {
