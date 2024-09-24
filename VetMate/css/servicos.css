@@ -689,7 +689,7 @@ footer {
     .bg-branco4 {
         justify-self: start;
         grid-area: 1/1;
-        width: 86%;
+        width: 85%;
 
     }
 
@@ -704,6 +704,33 @@ footer {
 
 
 /*responsividade*/
+
+@media (min-width:768px) and (max-width:1024px) {
+    .container h1 {
+        width: 50%;
+        font-size: 2.5rem;
+        margin-left: 3rem;
+        margin-top: 2%;
+    }
+
+    .container img {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        grid-area: 1/1;
+        grid-template-columns: column;
+        height: 100%;
+    }
+
+    header {
+        background-color: #00353600;
+        margin-bottom: -14vw;
+        position: relative;
+        z-index: 1001;
+    }
+
+
+}
 
 /* Estilos para desktop (acima de 1024px) */
 @media screen and (min-width: 1024px) {
@@ -728,6 +755,7 @@ footer {
         font-weight: 700;
         font-family: "Cocon", sans-serif;
         display: flex;
+        font-size: 2.5rem;
         flex-direction: column;
     }
 
@@ -737,7 +765,7 @@ footer {
     }
 
     .depo h1 {
-        font-size: 3.2rem;
+        font-size: 2.5rem;
         word-wrap:break-word;
         width: 100%;
         /* Ajusta a fonte dos depoimentos */
@@ -763,6 +791,7 @@ footer {
         display: flex;
         flex-direction: column;
         padding-right: 4%;
+        font-size: 3rem;
     }
 
     .container-2 {
@@ -783,7 +812,7 @@ footer {
 
 
     .depo h1 {
-        font-size: 4.5vw;
+        font-size: 3rem;
         padding-right: 4%;
     }
 
@@ -852,7 +881,7 @@ footer {
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        font-size: 1.2rem;
+        font-size: 1rem;
         word-wrap: break-word;
         width: 100%;
         margin-top: 10%;
@@ -925,7 +954,7 @@ footer {
         font-family: "Cocon", sans-serif;
         display: flex;
         flex-direction: column;
-        font-size: 2rem;
+        font-size: 1.5rem;
         word-wrap: break-word;
         width: 100%;
         margin-top: 10%;
