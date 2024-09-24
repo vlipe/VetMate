@@ -140,6 +140,50 @@
             </div>
         </div>
 
+        <div class="feedback-container">
+            <h1 id="feedback-titulo">Avalie a VetMate</h1>
+            <p id="feedback-descricao">Sua opinião é muito importante para nós! Compartilhe sua experiência com a VetMate e nos ajude a melhorar ainda mais nossos serviços.</p>
+    
+            <button id="feedback-botao-avaliar">Avaliar</button>
+    
+            <div id="feedback-modal" class="modal">
+                <div class="modal-content">
+                    <h2 id="feedback-titulo-modal">Sua Avaliação</h2>
+                    <form id="feedback-form">
+                        <div class="feedback-input-container">
+                            <label for="feedback-foto">Sua Foto (opcional):</label>
+                            <input type="file" id="feedback-foto" accept="image/*">
+                        </div>
+                        <div class="feedback-input-container">
+                            <label for="feedback-nome">Seu Nome:</label>
+                            <input type="text" id="feedback-nome">
+                        </div>
+                        <div class="feedback-input-container">
+                            <label for="feedback-estrelas">Avaliação:</label>
+                            <div id="feedback-estrelas">
+                                </div>
+                        </div>
+                        <div class="feedback-input-container">
+                            <label for="feedback-depoimento">Depoimento:</label>
+                            <textarea id="feedback-depoimento"></textarea>
+                        </div>
+                        <div class="feedback-botoes-modal">
+                            <button type="button" id="feedback-botao-cancelar" onclick="fecharModal()">Cancelar</button>
+                            <button type="submit" id="feedback-botao-enviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="feedback-agradecimento" class="modal">
+                <div class="modal-content">
+                    <h2 id="feedback-titulo-agradecimento">Agradecemos sua avaliação!</h2>
+                    <p id="feedback-mensagem-agradecimento">Sua opinião é muito valiosa para nós. Agradecemos por dedicar seu tempo para nos ajudar a melhorar.</p>
+                    <button type="button" id="feedback-botao-fechar-agradecimento" onclick="fecharModalAgradecimento()">Fechar</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
@@ -225,6 +269,6 @@
 
 </body>
 
-<script src="../js/script.js"></script>
+<script src="../js/area-restrita-login.js"></script>
 
 </html>

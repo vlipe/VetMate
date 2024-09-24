@@ -386,7 +386,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 0rem 6rem;
-    margin-bottom: 8%;
+    margin-bottom: 6%;
 }
 
 #h1-2 {
@@ -467,6 +467,8 @@ header {
 }
 
 .card-p {
+    margin: auto;
+    width: 80%;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
@@ -532,6 +534,285 @@ header {
         width: 80%;
         margin-bottom: 5%;
     }
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos específicos */
+#feedback-titulo { 
+    font-family: "Cocon", sans-serif;
+    color: #003536; /* Cor do texto */
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem; /* Aumenta o espaçamento inferior do título */
+}
+
+#feedback-descricao { 
+    text-align: center; /* Centraliza o texto */
+    color: #003536; /* Cor do texto */
+    margin-bottom: 1rem; /* Aumenta o espaçamento inferior */
+}
+
+.feedback-input-container {
+    margin-bottom: 1rem; /* Espaçamento entre os campos de entrada */
+}
+
+.feedback-input-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+.feedback-input-container input[type="file"] {
+    padding: 0.75rem; 
+}
+
+/* Estilos para modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #f5f5f5; /* Cinza bem claro */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 1.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para o título do modal */
+.modal-content h2 {
+    color: #003536; 
+    margin-bottom: 1rem; 
+}
+
+/* Estilos para o input de imagem */
+.modal .feedback-input-container input[type="file"] {
+    background-color: white; /* Cor de fundo branco */
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14); */ /* Sombra sutil */
+    outline: none;
+    border: 1px solid #ccc; /* Adiciona uma borda fina */
+    margin: 0.25rem 0; 
+}
+
+/* Estilos para inputs dentro do modal */
+.modal .feedback-input-container input[type="text"],
+.modal .feedback-input-container textarea { 
+    background-color: white; /* Cor de fundo branco */
+    padding: 1rem; 
+    padding-right: 3rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14); */ /* Sombra sutil */
+    outline: none;
+    border: 1px solid #ccc; /* Adiciona uma borda fina */
+    margin: 0.25rem 0; 
+}
+
+/* Remover espaçamento entre placeholder e input */
+.modal .feedback-input-container input::placeholder,
+.modal .feedback-input-container textarea::placeholder {
+    padding: 0; /* Zerar o padding do placeholder */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+/* Estilos para os botões do modal */
+.feedback-botoes-modal {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os botões */
+    margin-top: 1rem;
+}
+
+.feedback-botoes-modal button {
+    background-color: #003536;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem 2rem; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-botoes-modal button:hover {
+    background-color: #00c2a2;
+}
+
+/* Estilo específico para o botão "Cancelar" */
+#feedback-botao-cancelar {
+    background-color: #dc2626; /* Cor vermelha */
+}
+
+/* Alinha o botão "Enviar" à direita */
+#feedback-botao-enviar {
+    margin-left: auto; 
+}
+
+/* Estilos para container */
+.feedback-container {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 6%;
+    padding: 0 1rem;
+    text-align: center; /* Centraliza o conteúdo do container */
+}
+
+/* Estilos para o botão de cadastro */
+#feedback-botao-avaliar {
+    background-color: #003536;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2rem; /* Aumenta o espaçamento superior */
+}
+
+#feedback-botao-avaliar:hover {
+    background-color: #00c2a2;
+}
+
+/* Alinhamento das estrelas à esquerda e cor */
+#feedback-estrelas {
+    text-align: left; /* Alinha as estrelas à esquerda */
+}
+
+/* Estilos para as estrelas de avaliação */
+#feedback-estrelas .fa-star {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #003536; /* Cor das estrelas */
+}
+
+/* Estilos para a tabela de notificações */
+#medicamentos-tabela-notificacoes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+#medicamentos-tabela-notificacoes th,
+#medicamentos-tabela-notificacoes td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para o botão "Fechar" */
+#medicamentos-botao-fechar-notificacoes {
+    background-color: #003536; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na cor de fundo */
+}
+
+#medicamentos-botao-fechar-notificacoes:hover {
+    background-color: #00c2a2; /* Cor de fundo ao passar o mouse */
+}
+
+.medicamentos-botao-doses, .medicamentos-botao-excluir {
+    /* width: 48%; */ /* Remove a largura fixa */
+    margin-right: 0.5rem; /* Adiciona um pequeno espaçamento entre os botões */
+}
+
+.medicamentos-botao-excluir {
+    margin-right: 0; /* Remove a margem direita do último botão */
+}
+
+.medicamentos-botao-doses {
+    background-color: #003536; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.medicamentos-botao-doses:hover {
+    background-color: #00c2a2; /* Cor mais clara ao passar o mouse */
+}
+
+.medicamentos-botao-excluir {
+    background-color: #dc2626; 
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.medicamentos-botao-excluir:hover {
+    background-color: #b91c1c; 
+}
+
+#feedback-botao-fechar-agradecimento {
+    background-color: #dc2626; 
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#feedback-botao-fechar-agradecimento {
+    background-color: #b91c1c; 
+}
+
+/* Container para os botões */
+.card-info .botoes-container {
+    display: flex; /* Usa flexbox para organizar os botões horizontalmente */
+    justify-content: flex-start
+}
+
+#feedback-mensagem-agradecimento{
+    margin-bottom: 1rem;
 }
 
 footer {
