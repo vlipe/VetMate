@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/vlipe/VetMate/blob/main/VetMate/imagens/logo-vetmate-alta-resolucaoverde.png" alt="Logo da VetMate" width="200px">
 
-**VetMate** é um site que visa simplificar o cuidado com a saúde de pets, conectando tutores a clínicas veterinárias e oferecendo ferramentas para o gerenciamento da saúde animal. O projeto está sendo desenvolvido no primeiro ano de curso de Análise e Desenvolvimento de Sistemas, em colaboração com o programa P-TECH da IBM.
+**VetMate** é um site que tem foco em simplificar o cuidado com a saúde de pets, conectando tutores a clínicas veterinárias e oferecendo ferramentas para o gerenciamento da saúde animal. O projeto está sendo desenvolvido no primeiro ano de curso de Análise e Desenvolvimento de Sistemas, em colaboração com o programa P-TECH da IBM.
 </div>
 
 ---
@@ -16,12 +16,12 @@ A VetMate oferece uma plataforma completa para tutores de animais, com funcional
 
 ### Quais as funcionalidades oferecidas?
 
-* *Buscador de Clínicas:* Encontre clínicas veterinárias próximas com filtros por especialidade, área de atuação, distância e custo. Além da possibilidade de realizar avaliações.
-* *Cadastro de Pets:* Crie perfis para seus pets com informações como nome, espécie, raça, gênero, idade e histórico médico.
-* *Agendamento Online:* Agende consultas com facilidade e receba lembretes.
-* *Prontuário:* Acesse o histórico de consultas, exames e medicamentos dos seus pets de forma organizada.
-* *Controle de Medicamentos:* Registre os medicamentos dos seus pets e receba notificações para a administração correta.
-* *Chatbot:* Tenha um pré-diagnóstico rapidamente de seu animal com nosso chatbot.
+* **Buscador de Clínicas:** Encontre clínicas veterinárias próximas com filtros por especialidade, área de atuação, distância e custo. Além da possibilidade de realizar avaliações.
+* **Cadastro de Pets:** Crie perfis para seus pets com informações como nome, espécie, raça, gênero, idade e histórico médico.
+* **Agendamento Online:** Agende consultas com facilidade e receba lembretes.
+* **Prontuário:** Acesse o histórico de consultas, exames e medicamentos dos seus pets de forma organizada.
+* **Controle de Medicamentos:** Registre os medicamentos dos seus pets e receba notificações para a administração correta.
+* **Chatbot:** Tenha um pré-diagnóstico rapidamente de seu animal com nosso chatbot.
 
 <br>
 
