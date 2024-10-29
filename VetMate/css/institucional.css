@@ -350,7 +350,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 
   }
 
@@ -358,27 +358,26 @@
     display: flex;
     justify-content: space-between;
     flex: content;
-    flex-direction: row;
+    flex-direction: column;
     min-width: 63.5vw;
   }
 
 
 
   .hero-content button {
-    margin-top: 2rem;
-    background-color: #003536;
+    margin-top: 4rem;
+    background-color: #00C2A2;
     color: white;
-    width: 23vw;
-    height: 4vw;
+    width: 14vw;
+    height: 3.5vw;
     border: none;
-    border-radius: 15px;
-    box-shadow: #0035369b 1px 1px 8px 4px;
-    font-weight: 600;
+    border-radius: 100px;
+    box-shadow: #00C2A2 1px 1px 3px 1px;
     font-size: 1.2rem;
     position: relative;
     cursor: pointer;
     transition: all 0.2s linear;
-    margin-right: 60%;
+    margin-left: 42.6%;
   }
 
   .hero-content button:hover {
@@ -391,42 +390,45 @@
     margin-top: 2rem;
     text-align: center;
     font-family: "Cocon", sans-serif;
-    font-size: 4vw;
+    font-size: 3rem;
     color: #003536;
     padding-left: 0%;
+    font-weight: 60;
 
   }
 
-  .hero-text-and-button {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
 
   .p-1 {
-    text-align: left;
+    text-align: center;
     font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
-    color: #003536;
+    font-size: 0.85rem;
+    color: #969696;
+    padding-left:15% ;
+    padding-right: 15%;
+    width: 65%;
   }
 
   .mvv-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: flex-start;
-    padding-bottom: 34%;
+    margin-top: 5%;
+    gap: 7%;
   }
 
   .mvv {
     margin-top: 1rem;
-    background: linear-gradient(49deg, #003536, #006C6F);
-    border-radius: 20px;
+    background-color: #ffffff;
+    border:solid 1px;
+    border-color: #ECECEC;
+    border-radius: 10px;
     padding: 1rem;
-    width: 25vw;
+    width: 20vw;
     color: white;
+    height: 10vw;
+    width: 14%;
   }
 
   .mvv-icone {
@@ -440,14 +442,18 @@
   }
 
   .mvv h4 {
-    font-weight: 600;
+    font-weight:400;
     padding-top: 0.3vh;
     padding-left: 2vh;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding-top: 5%;
+    color: #003536;
   }
 
   .mvv p {
-    font-size: 1.2rem;
+    padding-top: 10%;
+    font-size: 0.8rem;
+    color: #969696;
   }
 
   @media (max-width:480px) {
@@ -696,6 +702,74 @@
     }
   }
 
+  .depo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .depo h1{
+    font-size: 3.5rem;
+    color: #003536;
+  }
+
+  .container-depo{
+    display: flex;
+    margin-top: 8%;
+    border: 2px solid #ECECEC;
+    width: 20vw;
+    border-radius: 20px;
+    padding: 10px;
+    
+  }
+
+  .depo-all{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    width: 65%;
+  }
+
+  .container-depo h3{
+    color: #000000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 85%;
+  }
+
+  .p-d{
+    font-size: 0.6rem;
+    color: #969696;
+    width: 70%;
+  }
+
+  .depo h4{
+    color: #003536;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+
+  .p-p{
+    font-size: 0.4rem;
+    color: #969696;
+  }
+
+  .nome-e-des{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 12%;
+  }
+
+  .foto-perfil{
+    display: flex;
+    position: relative;
+    top: 12%;
+  }
+  
+
   .section-2 {
     display: flex;
     align-items: center;
@@ -703,61 +777,86 @@
   }
 
   .movimento-esg {
-    margin-left: 6rem;
+    margin-left: 19rem;
     margin-right: 6rem;
-    margin-top: -30%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
   }
 
   .movimento-esg h1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     text-align: center;
     color: #003536;
     font-size: 4rem;
     font-family: "Cocon", sans-serif;
+    margin-left: -2.5rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
   }
 
-  .movimento-esg p {
-    color: #003536;
-    text-align: left;
+  .sigla{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 40%;
+  }
+  .sigla p{
+    padding-bottom: 8%;
+    color: #969696;
+  }
+
+  span{
+  font-weight: 500;
+}
+
+  .img-esg1 img{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    right: 10%;
+    top: 1.8vw; 
+
+  }
+
+  .s-img{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20%;
+  }
+
+  .b-esg{
+    margin-top: 4rem;
+    background-color: #00C2A2;
+    color: white;
+    width: 25vw;
+    height: 3.5vw;
+    border: none;
+    border-radius: 100px;
+    box-shadow: #00C2A2 1px 1px 3px 1px;
     font-size: 1.2rem;
-    width: 39%;
-    margin-right: 3rem;
-  }
-
-  .video {
-    border: 5px solid #003536;
-    border-radius: 10px;
     cursor: pointer;
+    transition: all 0.2s linear;
+    margin-left: 35%;
   }
 
-  .video img {
-    margin: 5vw 10vw 5vw 10vw;
-    width: 100px;
-    height: auto;
+  .b-esg:hover {
+    background-color: #006C6F;
+    box-shadow: 0px 20px 30px rgba(0, 97, 99, 0.50);
   }
+  
 
-  @media (max-width:1290px) {
-    .video img {
-      margin: 7vh 12vw 7vw 12vw;
-    }
-  }
+ 
 
   @media screen and (max-width:768px) {
     .section-2 {
       flex-direction: column;
-    }
-
-    .movimento-esg p {
-      margin: 2rem auto;
-      width: 100%;
-      word-wrap: break-word;
-      text-align: center;
     }
 
     .movimento-esg h1 {
@@ -765,15 +864,9 @@
       width: 100%;
     }
 
-    .video img {
-      margin: 5vh 15vh 5vh 15vh;
-    }
   }
 
   @media screen and (max-width:550px) {
-    .video img {
-      margin: 4vh 8vh 4vh 8vh;
-    }
 
     .movimento-esg {
       margin-left: 6rem;
