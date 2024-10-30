@@ -455,6 +455,7 @@
     padding-top: 10%;
     font-size: 0.8rem;
     color: #969696;
+    width: 101%;
   }
 
   @media (max-width:480px) {
@@ -721,7 +722,7 @@
     border: 2px solid #ECECEC;
     width: 20vw;
     border-radius: 20px;
-    padding: 10px;
+    padding: 18px;
     
   }
 
@@ -736,13 +737,13 @@
     color: #000000;
     font-weight: 600;
     font-size: 0.9rem;
-    width: 85%;
+    width: 105%;
   }
 
   .p-d{
     font-size: 0.6rem;
     color: #969696;
-    width: 70%;
+    width: 99%;
   }
 
   .depo h4{
@@ -761,7 +762,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: 12%;
+    padding-left: 15%;
   }
 
   .foto-perfil{
