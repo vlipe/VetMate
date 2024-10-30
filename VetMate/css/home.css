@@ -407,6 +407,11 @@ header {
     padding-bottom: 15%;
   }
   
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
   
   
   .titulo {
@@ -483,7 +488,7 @@ header {
   
   .cachorro {
   position: relative;
-  margin-top: 100px;
+  margin-top: 80px;
   }
   
   
@@ -522,7 +527,7 @@ header {
       color: #003536;
       font-size: 32px;
       font-family: 'poppins', sans-serif;
-      padding-top: 700px;
+      padding-top: 630px;
   }
   
   
