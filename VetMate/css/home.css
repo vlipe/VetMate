@@ -410,6 +410,7 @@ header {
   
   
   .titulo {
+  margin-top: 100px;
   text-align: center;
   color: #003536;
   font-size: 32px;
@@ -418,17 +419,19 @@ header {
   }
   
   
-  
+  .container-texto {
+  width: 553px;
+  height: 635px;
+  position: absolute;
+  right: 230px;
+  margin-top: 150px;
+  }
   
   
   .texto{
-  width: 553px;
-  height: 455px;
+
   text-align: right;
-  position: absolute;
-  bottom: 175px;
-  right: 250px;
-  font-size: 32px;
+   font-size: 32px;
   color: #969696;
   font-family: 'montserrat', sans-serif;
   
@@ -438,9 +441,9 @@ header {
   @media  (max-width: 1500px){
   
       .container-texto {
-            display: flex;
-      justify-content: center;
-      align-items: center;
+        padding-top: 100px;
+        position: static;
+         margin: auto;
       }
   
   
@@ -452,18 +455,42 @@ header {
           
       }
   }
+
   
+  @media (max-width:700px) {
+    .texto {
+        align-items: center;
+        text-align: center;
+        position: static;
+        font-size: 28px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+  }
+
+
+  @media (max-width:580px) {
+    .texto {
+        align-items: center;
+        text-align: center;
+        position: static;
+        font-size: 25px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+  }  
+
   
   .cachorro {
   position: relative;
-  
+  margin-top: 100px;
   }
   
   
   .imgcachorro {
   height: auto;
   bottom: -615px;
-  left: 250px;
+  left: 230px;
   position: absolute;
   
   
@@ -479,7 +506,7 @@ header {
   
       .imgcachorro {
           position: static;
-          padding-top: 40px;
+          margin-bottom: 60px;
       }
     
   }
