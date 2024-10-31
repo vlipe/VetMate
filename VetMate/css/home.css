@@ -426,10 +426,10 @@ header {
   
   .container-texto {
   width: 553px;
-  height: 635px;
+  height: 505px;
   position: absolute;
   right: 230px;
-  margin-top: 150px;
+  margin-top: 200px;
   }
   
   
@@ -463,6 +463,13 @@ header {
 
   
   @media (max-width:700px) {
+
+
+    .container-texto {
+        width: 500px;
+    }
+    
+
     .texto {
         align-items: center;
         text-align: center;
@@ -479,24 +486,29 @@ header {
         align-items: center;
         text-align: center;
         position: static;
-        font-size: 25px;
+        font-size: 20px;
         padding-right: 20px;
         padding-left: 20px;
+        width: 80%;
     }
   }  
 
   
   .cachorro {
   position: relative;
-  margin-top: 80px;
+  width: 524px;
+  height: 721px;
+  padding-top: 130px;
+  left: 230px;
+  display: flex;
   }
   
   
+  
+
+
   .imgcachorro {
-  height: auto;
-  bottom: -615px;
-  left: 230px;
-  position: absolute;
+  margin: auto;
   
   
   }
@@ -504,30 +516,53 @@ header {
   
   @media  (max-width: 1500px){
     .cachorro{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    margin: auto;
+    display: flex;
+    left: 0px;
     }
   
       .imgcachorro {
           position: static;
-          margin-bottom: 60px;
       }
     
   }
   
+
+  @media (max-width:700px) {
+     .cachorro {
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 70px;
+     }
+
+     
+
+  }
   
-   .caixa-nossos {
-    align-items: center;
-   }
-  
+
+  @media (max-width: 580px) {
+    .cachorro {
+       margin-bottom: auto;
+       margin-left: auto;
+       margin-right: auto;
+       padding-top: 0px;
+       max-width: 90%;
+       min-width: 80%;
+    }
+
+    
+
+ }
+
   
    .titulo2 {
-      text-align: center;
-      color: #003536;
-      font-size: 32px;
-      font-family: 'poppins', sans-serif;
-      padding-top: 630px;
+    margin-top: 100px;
+    text-align: center;
+    color: #003536;
+    font-size: 32px;
+    font-family: 'poppins', sans-serif;
+    padding-top: auto 0;
   }
   
   
