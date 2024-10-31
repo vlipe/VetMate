@@ -567,15 +567,33 @@ header {
   
   
   .texto2 {
-  text-align: center;
-  padding-left: 290px;
-  padding-right: 290px;
-  font-size: 18px;
-  color: #969696;
-  font-family: 'montserrat', sans-serif;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 18px;
+   color: #969696;
+   padding-left: 280px;
+   padding-right: 280px;
+   font-family: 'montserrat', sans-serif;
   
   }
   
+
+  @media(max-width:1100px) {
+    .texto2 {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+  }
+  
+
+  @media(max-width:900px) {
+    .texto2 {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+  }
+
+
   
   @media (max-width:1500px){
   
