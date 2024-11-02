@@ -424,83 +424,38 @@ header {
   }
   
   
-  .container-texto {
-  width: 553px;
-  height: 505px;
-  position: absolute;
-  right: 230px;
-  margin-top: 200px;
+  .cachorro-texto {
+    background-color: rgb(255, 255, 255);
+  width: 1281px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
   }
+  
   
   
   .texto{
-
+  background-color: #ffffff;
+  width: 553px;
+  height: 455px;
   text-align: right;
-   font-size: 32px;
+  font-size: 28px;
   color: #969696;
   font-family: 'montserrat', sans-serif;
-  
+  padding-top: 145px;
   }
   
-  
-  @media  (max-width: 1500px){
-  
-      .container-texto {
-        padding-top: 100px;
-        position: static;
-         margin: auto;
-      }
-  
-  
-      .texto {
-          align-items: center;
-          text-align: center;
-          position: static;
-  
-          
-      }
-  }
-
-  
-  @media (max-width:700px) {
-
-
-    .container-texto {
-        width: 500px;
-    }
-    
-
-    .texto {
-        align-items: center;
-        text-align: center;
-        position: static;
-        font-size: 28px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-  }
-
-
-  @media (max-width:580px) {
-    .texto {
-        align-items: center;
-        text-align: center;
-        position: static;
-        font-size: 20px;
-        padding-right: 20px;
-        padding-left: 20px;
-        width: 80%;
-    }
-  }  
-
+ 
   
   .cachorro {
-  position: relative;
-  width: 524px;
-  height: 721px;
-  padding-top: 130px;
-  left: 230px;
-  display: flex;
+  width: 437px;
+  height: 600px;
+background-color: #ffffff;
+  
   }
   
   
@@ -514,46 +469,39 @@ header {
   }
   
   
-  @media  (max-width: 1500px){
-    .cachorro{
-    margin: auto;
-    display: flex;
-    left: 0px;
+  @media (max-width:1360px) {
+    .cachorro-texto {
+      width: 1080px;
     }
-  
-      .imgcachorro {
-          position: static;
+  }
+
+
+  @media (max-width:1150px) {
+      .cachorro-texto {
+        align-items: center;
+        flex-direction: column;
+        width: 553px;
+        height: 1100px;
       }
-    
+
+
+      .texto {
+        text-align: center;
+      }
   }
-  
 
-  @media (max-width:700px) {
-     .cachorro {
-        margin-bottom: auto;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 70px;
-     }
 
-     
-
-  }
-  
-
-  @media (max-width: 580px) {
-    .cachorro {
-       margin-bottom: auto;
-       margin-left: auto;
-       margin-right: auto;
-       padding-top: 0px;
-       max-width: 90%;
-       min-width: 80%;
+  @media (max-width:600px) {
+    .imgcachorro {
+      width: 80%;
     }
 
-    
 
- }
+    .texto {
+      width: 80%;
+      font-size: 24px;
+    }
+  }
 
   
    .titulo2 {
