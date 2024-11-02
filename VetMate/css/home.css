@@ -851,13 +851,138 @@ background-color: #ffffff;
   }
   
 
-  .botao {
-    width: 305px;
-    height: 63px;
-    margin-top: 80px;
-    background-color: #003536;
-    align-items: center;
-    border-radius: 9%;
-    display: flex;
-  margin: auto;
+
+  footer {
+    margin-top: 5rem;
+    width: 100%;
+    color: white;
   }
+
+  .footer-link {
+    text-decoration: none;
+  }
+
+  #container-footer {
+    background-color: #003536;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 5%;
+  }
+
+  #container-footer p {
+    color: white;
+  }
+
+  #footer_contacts img {
+    margin-bottom: 0.75rem;
+    width: 100px;
+  }
+
+  #footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  #footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.4s;
+  }
+
+  #footer_social_media .footer-link i {
+    font-size: 1.25rem;
+  }
+
+  #footer_social_media .footer-link:hover {
+    opacity: 0.8;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+  .footer-list .footer-link {
+    color: #dfdfdf;
+    transition: all 0.4s;
+  }
+
+  .footer-list .footer-link:hover {
+    color: #00c2a2;
+  }
+
+  #footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #footer_subscribe p {
+    text-align: left;
+    color: #dfdfdf;
+  }
+
+  #input_group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+
+  #input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  #input_group button {
+    background-color: #ffffff;
+    border: none;
+    color: #003536;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+
+  #input_group button:hover {
+    opacity: 0.8;
+  }
+
+  #footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #003536a8;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @media screen and (max-width: 768px) {
+    #container-footer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 426px) {
+    #container-footer {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+    }
+  }
+  
