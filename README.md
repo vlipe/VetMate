@@ -27,9 +27,9 @@ A VetMate oferece uma plataforma completa para tutores de animais, com funcional
 
 ### Quais tecnologias foram utilizadas?
 
-![HTML](https://img.shields.io/badge/HTML-003536?style=for-the-badge&logo=html5&logoColor=white) &nbsp;
-![CSS](https://img.shields.io/badge/CSS-003536?&style=for-the-badge&logo=css3&logoColor=white) &nbsp;
-![JavaScript](https://img.shields.io/badge/JavaScript-003536?style=for-the-badge&logo=javascript&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-00c2a2?style=for-the-badge&logo=html5&logoColor=white) &nbsp;
+![CSS](https://img.shields.io/badge/CSS-00c2a2?&style=for-the-badge&logo=css3&logoColor=white) &nbsp;
+![JavaScript](https://img.shields.io/badge/JavaScript-00c2a2?style=for-the-badge&logo=javascript&logoColor=white)
 
 <br>
 
@@ -63,20 +63,8 @@ O projeto continua em desenvolvimento e o foco nas futuras atualizações será 
           </sub> <br>
         </a>
         <sub>
-          Código, Design, Conteúdo, Documentação, Responsividade.
+          Código, Design, Conteúdo e Responsividade.
         </sub>
-      </td>
-      <td align="center">
-        <a href="https://github.com/Herley777">
-          <img src="https://avatars.githubusercontent.com/u/163788443?v=4" width="100px;" alt="Ícone do Daniel no GitHub"/><br>
-          <sub>
-            <b>Daniel</b>
-          </sub> <br>
-        </a>
-        <sub>
-            Conteúdo, Documentação.
-          </sub>
-      </td>
       </td>
       <td align="center">
         <a href="https://github.com/vlipe">
@@ -86,7 +74,7 @@ O projeto continua em desenvolvimento e o foco nas futuras atualizações será 
           </sub> <br> 
         </a>
         <sub>
-            Código, Conteúdo, Documentação, Responsividade.
+            Código, Conteúdo e Responsividade.
         </sub>
       </td>
       <td align="center">
@@ -97,7 +85,7 @@ O projeto continua em desenvolvimento e o foco nas futuras atualizações será 
             </sub> <br>
         </a>
         <sub>
-            Código, Conteúdo, Documentação.
+            Código, Conteúdo e Responsividade.
           </sub>
       </td>
       </td>
@@ -109,7 +97,7 @@ O projeto continua em desenvolvimento e o foco nas futuras atualizações será 
           </sub> <br>
         </a>
         <sub>
-            Código, Conteúdo, Documentação, Responsividade.
+            Código, Conteúdo e Responsividade.
           </sub>
       </td>
     </tr>
