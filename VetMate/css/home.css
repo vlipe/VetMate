@@ -425,7 +425,7 @@ header {
   
   
   .cachorro-texto {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(129, 121, 4);
   width: 1281px;
   height: 600px;
   margin-left: auto;
@@ -439,7 +439,7 @@ header {
   
   
   .texto{
-  background-color: #ffffff;
+  background-color: #082d72;
   width: 553px;
   height: 455px;
   text-align: right;
@@ -454,7 +454,7 @@ header {
   .cachorro {
   width: 437px;
   height: 600px;
-background-color: #ffffff;
+background-color: #d81111;
   
   }
   
@@ -492,14 +492,73 @@ background-color: #ffffff;
 
 
   @media (max-width:600px) {
+
+
+    .cachorro-texto {
+      width: 80%;
+      height: 800px ;
+    }
+
+
+
+
     .imgcachorro {
       width: 80%;
     }
 
 
     .texto {
+      padding-top: 0px;
       width: 80%;
-      font-size: 24px;
+      font-size: 20px;
+    }
+  }
+
+
+  @media (max-width:500px) {
+
+
+    .imgcachorro {
+      width: 60%;
+    }
+
+
+    .cachorro{
+      width: 400px;
+    }
+
+    .texto {
+      font-size: 18px;
+    }
+  }
+
+
+  @media (max-width:430px) {
+
+
+    .texto {
+      font-size: 15px;
+    }
+
+    
+  }
+
+
+  @media (max-width:380px) {
+
+
+    .cachorro {
+      width: 300px;
+    }
+
+    
+    .imgcachorro {
+      width: 85%;
+    }
+
+
+    .texto {
+      font-size: 14px;
     }
   }
 
