@@ -145,7 +145,7 @@ hr {
 /* Notificações do usuário e conta. */
 
 header {
-    position: fixed;
+    position: absolute;
     top: 2rem;
     right: 1rem;
     padding: 0.8rem 1.3rem;
@@ -158,8 +158,8 @@ header {
 }
 
 .noti-icon {
-    width: 5.5rem;
-    height: 4.8rem;
+    width: 90px;
+    height: 75px;
     padding: 1rem;
     background-color: white;
     border-radius: 15px;
@@ -250,6 +250,9 @@ header {
 
 .notificacao-popup {
     position: absolute;
+    width: 450px;
+    margin-top: 3rem;
+    margin-right: 1rem;
     top: 100%;
     right: 0;
     background-color: white;
@@ -338,7 +341,7 @@ header {
 }
 
 .h-2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
@@ -418,7 +421,7 @@ main a button:hover {
     box-shadow: none;
 }
 
-/* Seção 1*/
+/* Seção 1. */
 
 #nova-secao {
     display: none;
@@ -426,6 +429,13 @@ main a button:hover {
     align-items: center;
     justify-content: center;
     margin: 0rem auto;
+}
+
+#nova-secao.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInRight 0.5s ease forwards;
 }
 
 #nova-secao h1 {
@@ -525,6 +535,13 @@ main a button:hover {
     margin: 0rem auto;
 }
 
+#nova-secao2.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInRight 1.3s ease forwards;
+}
+
 #nova-secao2 h1 {
     text-align: center;
     font-size: 2rem;
@@ -573,13 +590,13 @@ input:focus {
     border: 1px solid #00C2A2;
 }
 
-.form-group select{
+.form-group select {
     width: 280px;
     padding: 1rem;
     color: #4f4f4f;
     border: none;
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 10px;
 }
 
@@ -596,9 +613,9 @@ select:focus {
 .custom-select {
     appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none; 
+    -moz-appearance: none;
     padding: 10px;
-    padding-right: 30px; 
+    padding-right: 30px;
     border: none;
     border-radius: 10px;
     background-color: #fff;
@@ -622,9 +639,93 @@ select:focus {
     transition: transform 0.3s ease;
 }
 
-.custom-select:focus + .arrow,
-.custom-select:active + .arrow {
+.custom-select:focus+.arrow,
+.custom-select:active+.arrow {
     transform: translateY(-50%) rotate(180deg);
+}
+
+.container-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0rem 0rem -10rem;
+}
+
+.input-container {
+    place-items: center;
+    position: relative;
+    font-weight: 350;
+}
+
+.input-container input,
+.form button {
+    outline: none;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+}
+
+.input-container input {
+    background-color: #fff;
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    width: 500px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.custum-file-upload {
+    margin: 10px 0px;
+    height: 180px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1rem 3rem 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
+}
+
+.custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+    margin-left: 1rem;
+    height: 60px;
+    fill: #003536;
+}
+
+.custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.custum-file-upload .text span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgba(75, 85, 99, 1);
+    width: 70%;
+    margin-left: 1rem;
+    margin-bottom: -2rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.custum-file-upload input {
+    display: none;
 }
 
 .botoes-alinhados2 {
@@ -688,4 +789,31 @@ select:focus {
     transition: 0.6s ease;
     border: 1px solid #969696;
     box-shadow: none;
+}
+
+main,
+#nova-secao,
+#nova-secao2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+}
+
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

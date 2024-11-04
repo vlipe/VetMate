@@ -145,7 +145,7 @@ hr {
 /* Notificações do usuário e conta. */
 
 header {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 1rem;
   padding: 0.8rem 1.3rem;
@@ -158,8 +158,8 @@ header {
 }
 
 .noti-icon {
-  width: 5.5rem;
-  height: 4.8rem;
+  width: 90px;
+  height: 75px;
   padding: 1rem;
   background-color: white;
   border-radius: 15px;
@@ -250,6 +250,9 @@ header {
 
 .notificacao-popup {
   position: absolute;
+  width: 450px;
+  margin-top: 3rem;
+  margin-right: 1rem;
   top: 100%;
   right: 0;
   background-color: white;
@@ -267,7 +270,7 @@ header {
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
 
@@ -338,7 +341,7 @@ header {
 }
 
 .h-2 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
@@ -356,7 +359,7 @@ main img {
 }
 
 .h-4 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -415,10 +418,20 @@ main a button:hover {
 }
 
 #nova-secao p {
+  text-align: center;
   margin: 3rem 10rem 3rem 0rem;
   font-weight: 300;
   font-size: 1.2rem;
   color: #969696;
+}
+
+.container-img {
+  margin: 0rem 8rem 0rem 0rem;
+  text-align: center;
+}
+
+.container-img img {
+  width: 50%;
 }
 
 .botoes-alinhados {
@@ -501,8 +514,9 @@ main a button:hover {
   margin: 3rem 10rem 3rem 0rem;
 }
 
-.p {
-  margin: 3rem 0rem 3rem 1rem;
+#nova-secao2 .p {
+  text-align: center;
+  margin: 3rem 10rem 3rem 0rem;
   font-weight: 300;
   font-size: 1.2rem;
   color: #969696;
@@ -511,22 +525,22 @@ main a button:hover {
 .buscador-container {
   background-color: white;
   width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding: 50px 60px 50px 60px;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  box-shadow: 0px 0px 30px rgba(0, 33, 33, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 33, 33, 0.4);
   border-radius: 20px;
   margin-bottom: 8%;
 }
 
+.container-buscador button:active {
+  scale: 0.95;
+}
+
 h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 500;
   color: #003536;
   text-align: left;
-  font-size: 20px;
+  font-size: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -555,7 +569,7 @@ h3 {
 
 .grupo-input-nome input:focus {
   outline: none;
-  border-color: #1778f2;
+  border-color: #00C2A2;
 }
 
 .escolhas-buscador {
@@ -634,8 +648,8 @@ h3 {
 }
 
 .slider-distancia::-webkit-slider-thumb:hover {
-  box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.16);
-  background-color: #003536;
+  background-color: #00C2A2;
+  border: 1px solid #00C2A2;
   transition: 0.3s ease-in-out;
 }
 
@@ -669,8 +683,7 @@ h3 {
   font-size: 14px;
   align-items: center;
   text-align: center;
-  max-width: 40px;
-  min-width: 40px;
+  width: 50;
   background-color: #003536;
   padding: 10px 15px;
   border-radius: 10px;
@@ -725,7 +738,7 @@ h3 {
   display: block;
   color: #003536;
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .input-custo .slider {
@@ -768,7 +781,7 @@ h3 {
   width: 15px;
   margin-top: -7px;
   background: #fff;
-  border: 1px solid #003536;
+  border: 1px solid #00C2A2;
   transition: 0.2s ease-in-out;
   border-radius: 25px;
   cursor: pointer;
@@ -781,7 +794,7 @@ h3 {
 }
 
 .input-ranges[type='range']::-webkit-slider-thumb:hover {
-  background: #003536;
+  background: #00C2A2;
 }
 
 .input-ranges[type='range']::-webkit-slider-thumb:active {
@@ -836,16 +849,16 @@ h3 {
 }
 
 .radio-input:checked+.radio-tile {
-  border-color: #003536;
+  border-color: #00C2A2;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #003536;
+  color: #00C2A2;
 }
 
 .radio-input:checked+.radio-tile:before {
   transform: scale(1);
   opacity: 1;
-  background-color: #003536;
-  border-color: #003536;
+  background-color: #00C2A2;
+  border-color: #00C2A2;
 }
 
 .radio-input:checked+.radio-tile .radio-icon svg {
@@ -857,7 +870,7 @@ h3 {
 }
 
 .radio-input:focus+.radio-tile {
-  border-color: #003536;
+  border-color: #00C2A2;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5d9cb;
 }
 
@@ -871,8 +884,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 185px;
-  height: 185px;
+  width: 150px;
+  height: 150px;
   border-radius: 0.5rem;
   border: 2px solid #b5bfd9;
   background-color: #fff;
@@ -908,7 +921,7 @@ h3 {
 }
 
 .icon-animal img {
-  height: 5.5rem;
+  height: 4rem;
   margin-bottom: 1rem;
 }
 
@@ -917,7 +930,7 @@ h3 {
   transition: 0.375s ease;
   text-align: center;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .radio-input {
@@ -973,6 +986,11 @@ h3 {
   transform: scale(1.05);
   background-color: #c2e3df;
   border-radius: 10px;
+}
+
+.select input:focus {
+  outline: #00C2A2;
+  border: #00C2A2;
 }
 
 .botoes-alinhados2 {
@@ -1040,4 +1058,31 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+main,
+#nova-secao,
+#nova-secao2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+}
+
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

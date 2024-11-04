@@ -69,6 +69,38 @@ document.getElementById('botao2').addEventListener('click', function(event) {
   document.getElementById('nova-secao2').style.display = 'block';
 });
 
+document.getElementById('buscar-clinicas-btn').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  const mainContent = document.getElementById('main-content');
+  const novaSecao = document.getElementById('nova-secao');
+
+  mainContent.classList.add('hidden');
+
+  setTimeout(() => {
+      mainContent.style.display = 'none';
+      novaSecao.style.display = 'block';
+      novaSecao.classList.add('active');
+  }, 700);
+});
+
+document.getElementById('botao2').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  const novaSecao = document.getElementById('nova-secao');
+  const novaSecao2 = document.getElementById('nova-secao2');
+
+  novaSecao.classList.add('hidden');
+
+  setTimeout(() => {
+      novaSecao.style.display = 'none';
+      novaSecao2.style.display = 'block';
+      novaSecao2.classList.add('active');
+      novaSecao2.classList.remove('hidden');
+  }, 400);
+});
+
+
 const searchInput = document.getElementById('searchInput');
 const resultList = document.getElementById('resultList');
 

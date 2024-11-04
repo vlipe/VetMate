@@ -1,62 +1,155 @@
-// Funções para manipular os modais
-function abrirModal() {
-    document.getElementById('feedback-modal').style.display = 'block';
-}
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const logoText = document.getElementById('logo-texto');
+    
+    sidebar.classList.toggle('expandido');
 
-function fecharModal() {
-    document.getElementById('feedback-modal').style.display = 'none';
-}
-
-function abrirModalAgradecimento() {
-    document.getElementById('feedback-agradecimento').style.display = 'block';
-}
-
-function fecharModalAgradecimento() {
-    document.getElementById('feedback-agradecimento').style.display = 'none';
-}
-
-// Função para criar as estrelas de avaliação
-function criarEstrelas() {
-    const estrelasContainer = document.getElementById('feedback-estrelas');
-    for (let i = 1; i <= 5; i++) {
-        const estrela = document.createElement('i');
-        estrela.classList.add('far', 'fa-star'); // Ícone de estrela vazia inicialmente
-        estrela.addEventListener('click', () => {
-            selecionarEstrelas(i);
-        });
-        estrelasContainer.appendChild(estrela);
+    if (sidebar.classList.contains('expandido')) {
+        logoText.textContent = 'vetmate';
+    } else {
+        logoText.textContent = 'v';
     }
 }
 
-// Função para selecionar as estrelas
-function selecionarEstrelas(nota) {
-    const estrelas = document.querySelectorAll('#feedback-estrelas i');
-    estrelas.forEach((estrela, index) => {
-        estrela.classList.remove('fas', 'far'); // Remove as classes existentes
-        if (index < nota) {
-            estrela.classList.add('fas', 'fa-star'); // Ícone de estrela preenchida
-        } else {
-            estrela.classList.add('far', 'fa-star'); // Ícone de estrela vazia
-        }
-    });
+const sidebar = document.getElementById('sidebar');
+sidebar.addEventListener('click', toggleSidebar);
+
+function toggleNotificacoes() {
+    const popup = document.getElementById('notificacaoPopup');
+    const botaoNotificacao = document.querySelector('.noti-icon');
+    
+    if (popup.classList.contains('active')) {
+        popup.classList.remove('active');
+        popup.classList.add('hide');
+        botaoNotificacao.classList.remove('noti-icon-active'); 
+        
+        setTimeout(() => {
+            popup.classList.remove('hide');
+        }, 300); 
+    } else {
+        popup.classList.add('active');
+        botaoNotificacao.classList.add('noti-icon-active'); 
+    }
+
+    botaoNotificacao.classList.add('swing');
+    
+    setTimeout(() => {
+        botaoNotificacao.classList.remove('swing');
+    }, 600);
 }
 
-// Adiciona um ouvinte de evento ao formulário de feedback
-document.getElementById('feedback-form').addEventListener('submit', (event) => {
-    event.preventDefault();
+const botaoNotificacao = document.querySelector('.noti-icon');
+botaoNotificacao.addEventListener('click', toggleNotificacoes);
 
-    // Lógica para coletar os dados do formulário (foto, nome, estrelas, depoimento)
-    // ...
+document.addEventListener('click', (event) => {
 
-    // Lógica para armazenar os dados do feedback (pode ser no LocalStorage ou em um banco de dados externo)
-    // ...
+    if (!popup.contains(event.target) && !icon.contains(event.target)) {
+        popup.classList.remove('active');
+        popup.classList.add('hide');
 
-    fecharModal(); // Fecha o modal de avaliação
-    abrirModalAgradecimento(); // Abre o modal de agradecimento
+        setTimeout(() => {
+            popup.classList.remove('hide');
+        }, 300);
+    }
 });
 
-// Adiciona um ouvinte de evento ao botão "Avaliar" para abrir o modal
-document.getElementById('feedback-botao-avaliar').addEventListener('click', abrirModal);
+const daysContainer = document.querySelector(".dias"),
+  nextBtn = document.querySelector(".next-btn"),
+  prevBtn = document.querySelector(".prev-btn"),
+  mes = document.querySelector(".mes"),
+  hojeBtn = document.querySelector(".hoje-btn");
 
-// Cria as estrelas de avaliação ao carregar a página
-criarEstrelas();
+const meses = [
+  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+];
+
+const data = new Date();
+
+let mesAtual = data.getMonth();
+let anoAtual = data.getFullYear();
+
+function renderizarCalendario() {
+  data.setDate(1);
+  const primeiroDia = new Date(anoAtual, mesAtual, 1);
+  const ultimoDia = new Date(anoAtual, mesAtual + 1, 0);
+  const indiceUltimoDia = ultimoDia.getDay();
+  const dataUltimoDia = ultimoDia.getDate();
+  const ultimoDiaAnterior = new Date(anoAtual, mesAtual, 0);
+  const dataUltimoDiaAnterior = ultimoDiaAnterior.getDate();
+  const diasProximos = 7 - indiceUltimoDia - 1;
+
+  mes.innerHTML = `${meses[mesAtual]} ${anoAtual}`;
+
+  let dias = "";
+
+  for (let x = primeiroDia.getDay(); x > 0; x--) {
+    dias += `<div class="dia anterior">${dataUltimoDiaAnterior - x + 1}</div>`;
+  }
+
+  for (let i = 1; i <= dataUltimoDia; i++) {
+    if (
+      i === new Date().getDate() &&
+      mesAtual === new Date().getMonth() &&
+      anoAtual === new Date().getFullYear()
+    ) {
+      dias += `<div class="dia hoje">${i}</div>`;
+    } else {
+      dias += `<div class="dia">${i}</div>`;
+    }
+  }
+
+  // Dias do próximo mês
+  for (let j = 1; j <= diasProximos; j++) {
+    dias += `<div class="dia proximo">${j}</div>`;
+  }
+
+  esconderHojeBtn();
+  esconderPrevBtn();
+  daysContainer.innerHTML = dias;
+}
+
+renderizarCalendario();
+
+nextBtn.addEventListener("click", () => {
+  mesAtual++;
+  if (mesAtual > 11) {
+    mesAtual = 0;
+    anoAtual++;
+  }
+  renderizarCalendario();
+});
+
+prevBtn.addEventListener("click", () => {
+  mesAtual--;
+  if (mesAtual < 0) {
+    mesAtual = 11;
+    anoAtual--;
+  }
+  renderizarCalendario();
+});
+
+hojeBtn.addEventListener("click", () => {
+  mesAtual = data.getMonth();
+  anoAtual = data.getFullYear();
+  renderizarCalendario();
+});
+
+function esconderHojeBtn() {
+  if (
+    mesAtual === new Date().getMonth() &&
+    anoAtual === new Date().getFullYear()
+  ) {
+    hojeBtn.style.display = "none";
+  } else {
+    hojeBtn.style.display = "flex";
+  }
+}
+
+function esconderPrevBtn() {
+  if (mesAtual === new Date().getMonth() && anoAtual === new Date().getFullYear()) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "flex"; 
+  }
+}
