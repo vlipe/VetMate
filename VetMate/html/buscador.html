@@ -159,7 +159,7 @@
                 <li class="side-item">
 
                     <div id="logout">
-                        <a href="../html/home.html">
+                        <a href="../html/area-restrita.html">
 
                             <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em"
                                 height="1.5em" viewBox="0 0 24 24">
@@ -193,7 +193,7 @@
 
         <h5 class="h-5">Você ainda não favoritou nenhuma clínica!</h5>
 
-        <a href=""><button id="buscar-clinicas-btn">Avançar
+        <a href=""><button id="buscar-clinicas-btn">Buscar clínicas
                 <i class="fa-solid fa-angle-right"></i>
             </button></a>
 
@@ -204,7 +204,10 @@
 
         <p>Encontre as melhores clínicas veterinárias de forma totalmente personalizada!</p>
 
-        <img src="" alt="">
+        <div class="container-img">
+            <img src="../imagens/image-tablet.png" alt="Tablet ilustrativo">
+        </div>
+
         <div class="botoes-alinhados">
 
             <div class="botao1">
@@ -213,7 +216,7 @@
             </div>
 
             <div class="botao2">
-                <a href=""><button id="botao2">Buscar clínicas
+                <a href=""><button id="botao2">Avançar
                         <i class="fa-solid fa-angle-right"></i>
                     </button></a>
             </div>
@@ -227,14 +230,20 @@
 
         <p class="p">Insira as informações abaixo e pesquise!</p>
         <div class="buscador-container">
-            <h3>Insira o nome da clínica palavras-chave:</h3>
+            
             <div class="grupo-input-nome">
+                <h3>Insira o nome da clínica palavras-chave:</h3>
                 <input type="text" id="nome" name="nome" placeholder="Insira o nome da clínica ou palavras-chave">
             </div>
-            <h3>Selecione a área de atuação:</h3>
+
+           <h3>Selecione a área de atuação:</h3>
+           
             <div class="escolhas-buscador">
+                
                 <div>
-                    <label class="grupo-checkbox-label">
+                    
+                    <label class="grupo-checkbox-label"> 
+                        
                         <input type="checkbox" class="checkbox-buscador">
                         Consultas</label>
                 </div>
@@ -250,15 +259,17 @@
                 </div>
             </div>
             <div class="grupo-inputs-1">
-                <h3>Selecione o raio de distância:</h3>
+                
                 <div class="input-distancia">
+                    <h3>Selecione o raio de distância:</h3>
                     <div class="container-slider-distancia">
                         <input type="range" min="0" max="100" value="25" class="slider-distancia" id="myRange">
                         <p class="slider-distancia-valores">25km</p>
                     </div>
                 </div>
-                <h3>Selecione o custo estimado:</h3>
+                
                 <div class="input-custo">
+                    <h3>Selecione o custo estimado:</h3>
                     <div class="input-custo-valores">
                         <div>R$ <span id="first">500</span></div> -
                         <div>R$ <span id="second">5 000</span></div>
@@ -279,8 +290,9 @@
                     </div>
                 </div>
             </div>
-            <h3>Selecione uma espécie:</h3>
+            
             <div class="escolhas-especie">
+                <h3>Selecione uma espécie:</h3>
                 <div class="radio-inputs">
                     <label>
                         <input class="radio-input" type="radio" name="engine">
@@ -305,8 +317,9 @@
                     </label>
                 </div>
             </div>
-            <h3>Selecione uma especialidade:</h3>
+            
             <div class="select-especialidade">
+                <h3>Selecione uma especialidade:</h3>
                 <div class="select">
                     <input type="text" id="searchInput" placeholder="Pesquise uma especialidade">
                     <ul id="resultList"></ul>
