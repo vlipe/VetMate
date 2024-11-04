@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Restrita</title>
-    <link rel="stylesheet" href="../css/meus-pets.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>Dados do Pet</title>
+    <link rel="stylesheet" href="../css/registro-dos-pets.css">
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
     <header>
+
         <div class="container-noti">
             <div class="noti-icon" onclick="mostrarNotificacoes()">
 
@@ -178,43 +174,69 @@
             </ul>
     </nav>
 
-    <main id="main-content">
+    <section>
+        <h1>Meus pets</h1>
+
+        <h3>Seus animais de estimação:</h3>
+
+ <!-- barra de pesquuisa -->
+
+     <div class="search-container">
+         <input type="text" id="searchBar" placeholder="Pesquisar seus animais" onkeyup="filtrarItens()">
+     </div>
+     
+     <ul id="listaDeItens">
+         <div class="tds-img">
+             <div class="I-A" onclick="buscarPorItem('Cao')">
+                 <img src="../imagens/cachorro.png" alt="Imagem de cachorro">
+                 <li class="item">Cao</li>
+             </div>
+ 
+             <div class="I-A" onclick="buscarPorItem('Gato')">
+                 <img src="../imagens/gatos.png" alt="Imagem de gato">
+                 <li class="item">Gato</li>
+             </div>
+ 
+             <div class="I-A" onclick="buscarPorItem('Ave')">
+                 <img src="../imagens/aves.png" alt="Imagem de ave">
+                 <li class="item">Ave</li>
+             </div>
+ 
+             <div class="I-A" onclick="buscarPorItem('Silvestre')">
+                 <img src="../imagens/silvestre.png" alt="Imagem de animal silvestre">
+                 <li class="item">Silvestre</li>
+             </div>
+         </div>
+     </ul>
+ 
+    <script src="../js/registro-dos-pets.js"></script>
 
 
-        <h1 class="h-1">Meus pets</h1>
+        
 
-        <h2 class="h-2">Você ainda não tem animais cadastrados</h2>
+        <div class="all-aling">
+            <div class="aling-n-g">
+                <p class="p-n"><span id="exibirNome"></span></p> 
+                <p><span id="exibirGenero"></span></p>
+             </div>
 
-        <h3 class="h-3">Clique no botão abaixo e cadastre seu melhor amigo!</h3>
+            <p><span id="exibirEspecie"></span></p>
+            <p><span id="exibirPorte"></span></p>  
+            <p><span id="exibirPeso"></span> Kg</p>
+            <p><span id="exibirIdade"></span> Anos</p>
+          
+           
 
-        <div class="conteudo">
-
-            <div class="container">
-
-                <h4 class="h-4">Tenha todas as informações de seu pet em um único lugar!</h4>
-
-                <h5 class="h-5">Utilize nosso prontuário para pets e organize tudo do seu parceiro.</h5>
-
-                <img src="../imagens/image-card-pets-2.png" alt="Veterinária cuidando de um cachorro">
-
-            </div>
-
-            <div class="container">
-
-                <h4 class="h-4">Gerencie e administre a saúde de seu pet e busque a clínica que desejar!</h4>
-
-                <h5 class="h-5">Agende consultas, vacinas ou exame após o cadastro de seu animal.</h5>
-
-                <img src="../imagens/image-card-pets-1.png" alt="Veterinária com uma agulha na mão">
-            </div>
+            <button id="mais-info">Mais informações</button>
         </div>
 
-        <a href=""><button id="btn-cadastrar">Cadastrar pets
-                <i class="fa-solid fa-angle-right"></i>
-            </button></a>
+    </section>
 
-    </main>
-
+    <main id="main-content">
+    <a href=""><button id="btn-cadastrar">Cadastrar pets
+        <i class="fa-solid fa-angle-right"></i>
+    </button></a>
+</main>
     <section id="nova-secao">
         <h1>Cadastrar Pet</h1>
 
@@ -315,12 +337,12 @@
             </div>
 
         </div>
+        <script src="../js/meus-pets.js"></script>
     </section>
 
 
-    
-    <script src="../js/meus-pets.js"></script>
     <script src="../js/registro-dos-pets.js"></script>
+    
 </body>
 
 </html>
