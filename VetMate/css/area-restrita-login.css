@@ -614,7 +614,7 @@ header {
     transition: all 0.3s;
 }
 
-.calendario i{
+.calendario i {
     color: #003536;
 }
 
@@ -623,7 +623,7 @@ header {
     transform: scale(1.05);
 }
 
-.calendario .header .btns .btn:hover i{
+.calendario .header .btns .btn:hover i {
     color: white;
 }
 
@@ -659,4 +659,565 @@ header {
 .dias .dia.proximo,
 .dias .dia.anterior {
     color: #ccc;
+}
+
+/* Responsividade - 1400px. */
+
+@media (min-width: 1400px) {
+
+    header {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        padding: 0.8rem 1.3rem;
+        z-index: 10;
+    }
+
+    .container-noti {
+        display: flex;
+        align-items: center;
+    }
+
+    .noti-icon {
+        width: 70px;
+        height: 70px;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.9s ease;
+    }
+
+    .conta {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: white;
+        border-radius: 13px;
+        width: 100%;
+    }
+
+    .conta img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+
+    .user-nome {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .user-email {
+        color: #969696;
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+    }
+
+    .notificacao-popup {
+        position: absolute;
+        width: 400px;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        display: none;
+    }
+
+    .texto-e-svg span {
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .notificacao-popup p {
+        font-size: 0.7rem;
+        color: #969696;
+    }
+
+    .navegacao {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3.5px 3.5px #96969618;
+        padding: 0.7rem;
+        gap: 2rem;
+        place-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .estatisticas {
+        max-width: 1000px;
+    }
+
+    .eventos {
+        width: 670px;
+    }
+}
+
+.estatisticas {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 25px;
+    padding: 2rem;
+    max-width: 1000px;
+}
+
+/* Smartphones (320px - 480px) */
+@media (min-width: 480px) and (max-width: 767px) {
+
+    header {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        padding: 0.8rem 1.3rem;
+        z-index: 10;
+    }
+
+    .noti-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    .conta {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .conta img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+
+    .user-nome {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .user-email {
+        font-size: 0.7rem;
+        margin-top: 0.2rem;
+    }
+
+    .notificacao-popup {
+        position: absolute;
+        width: 355px;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        display: none;
+    }
+
+    .texto-e-svg span {
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .notificacao-popup p {
+        font-size: 0.75rem;
+        color: #969696;
+    }
+
+    .navegacao {
+        padding: 0.5rem;
+        gap: 1.1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .navegacao span {
+        font-size: 0.7rem;
+    }
+
+    .h-1 {
+        font-size: 1rem;
+    }
+
+    .h-1 span {
+        font-size: 1rem;
+    }
+
+    .estatisticas {
+        padding: 1rem;
+        max-width: 550px;
+    }
+
+    .total {
+        margin-bottom: 2rem;
+        width: 150px;
+    }
+
+    .p-1,
+    .p-2 {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .total span {
+        padding: 1rem;
+        color: #00C2A2;
+        font-size: 3rem;
+    }
+
+    .numeros {
+        padding: 0.1rem;
+        margin-right: 1rem;
+        width: 50px;
+        height: 20px;
+    }
+
+    .all-total {
+        margin-right: -3rem;
+    }
+
+    .eventos {
+        max-width: 335px;
+    }
+
+    .calendario {
+        max-width: 300px;
+        padding: 9px 7px;
+    }
+
+    .all-svg {
+        margin-left: 2%;
+    }
+
+    .all-svg svg {
+        height: 35px;
+        width: 35px;
+    }
+
+    .all-svg p {
+        font-size: 0.75rem;
+    }
+
+    .dias .dia {
+        width: calc(100% / 7 - 8px);
+        height: 30px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Telas de até 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    #sidebar.expandido~main {
+        padding-left: calc(10px + 0px);
+    }
+
+    #sidebar {
+        margin: 2.5rem 2rem 0rem 2rem;
+        height: 90vh;
+        width: 5rem;
+        z-index: 2;
+    }
+
+    #sidebar svg {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    #sidebar_content {
+        padding: 0.4rem;
+    }
+
+    #logo p {
+        margin-top: 0.5rem;
+        font-family: "Cocon", sans-serif;
+        font-size: 1.9rem;
+        letter-spacing: 1.7px;
+        font-weight: bold;
+        color: #00C2A2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: width 0.3s ease;
+    }
+
+    #side_items {
+        place-items: left;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+    }
+
+    .side-item {
+        border-radius: 8px;
+        padding: 14px 1rem;
+        cursor: pointer;
+    }
+
+    .side-item a {
+        text-decoration: none;
+        color: #969696;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .side-item1 {
+        background-color: #00c2a22d;
+        border-radius: 10px;
+        cursor: default;
+    }
+
+    .side-item a svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.5rem;
+    }
+
+    .item-description {
+        margin-left: 0.7rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 0.7rem;
+        color: #969696;
+        transition: width .6s;
+    }
+
+    #sidebar.open-sidebar .item-description {
+        width: 9.3rem;
+        height: auto;
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    #sidebar.expandido {
+        width: 200px;
+    }
+
+    hr {
+        align-items: center;
+        height: 1.5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #58585899;
+        margin: 1rem;
+    }
+
+    header {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        padding: 0.8rem 1.3rem;
+        z-index: 10;
+    }
+
+    .container-noti {
+        display: flex;
+        align-items: center;
+    }
+
+    .noti-icon {
+        width: 85px;
+        height: 65px;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    .conta {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .conta img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+
+    .user-nome {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .user-email {
+        font-size: 0.7rem;
+        margin-top: 0.2rem;
+    }
+
+    .notificacao-popup {
+        position: absolute;
+        width: 355px;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border-radius: 20px;
+        padding: 1.5rem 2rem;
+        display: none;
+    }
+
+    .texto-e-svg span {
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .notificacao-popup p {
+        font-size: 0.75rem;
+        color: #969696;
+    }
+
+    .navegacao {
+        padding: 0.5rem;
+        gap: 1.1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .navegacao span {
+        font-size: 0.7rem;
+    }
+
+    .h-1 {
+        font-size: 1rem;
+    }
+
+    .h-1 span {
+        font-size: 1rem;
+    }
+
+    .estatisticas {
+        padding: 1rem;
+        max-width: 530px;
+    }
+
+    .total {
+        margin-bottom: 2rem;
+        width: 150px;
+    }
+
+    .p-1,
+    .p-2 {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .total span {
+        padding: 1rem;
+        color: #00C2A2;
+        font-size: 3rem;
+    }
+
+    .numeros {
+        padding: 0.1rem;
+        margin-right: 1rem;
+        width: 50px;
+        height: 20px;
+    }
+
+    .all-total {
+        margin-right: -3rem;
+    }
+
+    .eventos {
+        max-width: 305px;
+    }
+
+    .calendario {
+        max-width: 300px;
+        padding: 9px 7px;
+    }
+
+    .all-svg {
+        margin-left: 5%;
+    }
+
+    .all-svg svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .all-svg p {
+        font-size: 0.7rem;
+    }
+
+    .dias .dia {
+        width: calc(100% / 7 - 8px);
+        height: 30px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Telas de até 1400px */
+@media (max-width: 1400px) {
+    .estatisticas {
+        width: 780px;
+    }
+
+    .calendario-icon {
+        width: 230px;
+    }
+
+    .calendario {
+        width: 300px;
+        padding: 12px 8px;
+    }
+
+    .calendario .header .mes {
+        font-size: 0.75rem;
+    }
+
+    .calendario .header .btns .btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.55rem;
+    }
+
+    .dias .dia {
+        width: calc(100% / 7 - 6px);
+        height: 30px;
+        font-size: 0.65rem;
+    }
+
+    .eventos {
+        width: 90%;
+    }
+
+    .info-span {
+        font-size: 0.85rem;
+    }
+
+    .container-infos p {
+        font-size: 0.7rem;
+    }
+
+    .container-infos a button {
+        width: 150px;
+        font-size: 0.7rem;
+    }
 }

@@ -99,7 +99,6 @@ function renderizarCalendario() {
     }
   }
 
-  // Dias do próximo mês
   for (let j = 1; j <= diasProximos; j++) {
     dias += `<div class="dia proximo">${j}</div>`;
   }
