@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Restrita</title>
-    <link rel="stylesheet" href="../css/meus-pets.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>Dados do Pet</title>
+    <link rel="stylesheet" href="../css/registro-dos-pets.css">
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
     <header>
+
         <div class="container-noti">
             <div class="noti-icon" onclick="mostrarNotificacoes()">
 
@@ -177,168 +173,196 @@
                 </li>
             </ul>
     </nav>
+  <main class="main-content">
+    <section id="sec-p">
+        <h1>Meus pets</h1>
 
-    <main id="main-content">
+        <h3>Seus animais de estimação:</h3>
 
+ <!-- barra de pesquuisa -->
 
-        <h1 class="h-1">Meus pets</h1>
-
-        <h2 class="h-2">Você ainda não tem animais cadastrados</h2>
-
-        <h3 class="h-3">Clique no botão abaixo e cadastre seu melhor amigo!</h3>
-
-        <div class="conteudo">
-
-            <div class="container">
-
-                <h4 class="h-4">Tenha todas as informações de seu pet em um único lugar!</h4>
-
-                <h5 class="h-5">Utilize nosso prontuário para pets e organize tudo do seu parceiro.</h5>
-
-                <img src="../imagens/image-card-pets-2.png" alt="Veterinária cuidando de um cachorro">
-
-            </div>
-
-            <div class="container">
-
-                <h4 class="h-4">Gerencie e administre a saúde de seu pet e busque a clínica que desejar!</h4>
-
-                <h5 class="h-5">Agende consultas, vacinas ou exame após o cadastro de seu animal.</h5>
-
-                <img src="../imagens/image-card-pets-1.png" alt="Veterinária com uma agulha na mão">
-            </div>
-        </div>
-
-        <a href=""><button id="btn-cadastrar">Cadastrar pets
-                <i class="fa-solid fa-angle-right"></i>
-            </button></a>
-
-    </main>
-
-    <section id="nova-secao">
-        <h1>Cadastrar Pet</h1>
-
-        <p>Prossiga e preencha algumas informações para cadastrar!</p>
-
-        <div class="container-img">
-            <img src="../imagens/icone-pets.png" alt="3 pessoas cuidando de seus pets">
-        </div>
-        <div class="botoes-alinhados">
-
-            <div class="botao1">
-                <a href=""><button><i class="fa-solid fa-angle-left"></i>Retornar
-                    </button></a>
-            </div>
-
-            <div class="botao2">
-                <a href=""><button id="botao2">Avançar
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button></a>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="nova-secao2">
-        <h1>Cadastrar Pet</h1>
-
-        <p>Vamos lá! Insire as informações abaixo e confirme o cadastro.</p>
-
-        <form>
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Informe o nome do seu pet" required>
-            </div>
-
-            <div class="form-group">
-                <label for="dataNascimento">Idade</label>
-                <input type="number" id="idade" placeholder="Informe a idade do seu pet" min="0" max="100" required>
-            </div>
-
-            <div class="form-group">
-                <label for="peso">Peso (kg)</label>
-                <input type="number" id="peso" placeholder="Informe o peso do seu pet" pattern="^\d+(\.\d{1,2})?$"
-                    step="0.01" min="0" required>
-            </div>
-
-            <div class="form-group">
-                <label for="genero">Gênero</label>
-                <div class="select-container">
-                    <select id="genero" class="custom-select" required>
-                        <option value="" disabled selected>Informe o gênero do seu pet</option>
-                        <option value="macho">Macho</option>
-                        <option value="femea">Fêmea</option>
-                    </select>
-                    <span class="arrow"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="especie">Espécie</label>
-                <div class="select-container">
-                    <select id="especie" class="custom-select" required>
-                        <option value="" disabled selected>Informe a espécie do seu pet</option>
-                        <option value="cao">Cão</option>
-                        <option value="gato">Gato</option>
-                        <option value="silvestre">Silvestre</option>
-                    </select>
-                    <span class="arrow"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="porte">Porte</label>
-                <div class="select-container">
-                    <select id="porte" class="custom-select" required>
-                        <option value="" disabled selected>Informe o porte do seu pet</option>
-                        <option value="pequeno">Pequeno</option>
-                        <option value="medio">Médio</option>
-                        <option value="grande">Grande</option>
-                    </select>
-                    <span class="arrow"></span>
-                </div>
-            </div>
-</form>
-            <div class="container-imagem">
-                <div class="input-container">
-                    <label id="label-imagem" for="imagem">Imagem</label>
-                    <label class="custum-file-upload" for="file">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 16 16">
-                                <path fill="#969696"
-                                    d="M11.498 5.501a1.002 1.002 0 1 1-2.003 0a1.002 1.002 0 0 1 2.003 0M2 4.5A2.5 2.5 0 0 1 4.5 2h6.998a2.5 2.5 0 0 1 2.5 2.5v1.558a2.6 2.6 0 0 0-1-.023V4.5a1.5 1.5 0 0 0-1.5-1.5H4.5A1.5 1.5 0 0 0 3 4.5v6.998c0 .232.052.451.146.647l3.651-3.651a1.7 1.7 0 0 1 2.404 0l.34.34l-.706.707l-.341-.34a.7.7 0 0 0-.99 0l-3.651 3.65c.196.094.415.147.647.147h1.796l-.25 1H4.5a2.5 2.5 0 0 1-2.5-2.5zm11.263 2.507a1.56 1.56 0 0 0-.927.447L8.05 11.742a2.8 2.8 0 0 0-.722 1.256l-.009.033l-.303 1.211a.61.61 0 0 0 .74.74l1.21-.303a2.8 2.8 0 0 0 1.29-.73l4.288-4.288a1.56 1.56 0 0 0-1.28-2.654" />
-                            </svg>
-                        </div>
-                        <div class="text">
-                            <span>Clique para inserir uma imagem de seu pet</span>
-                        </div>
-                        <input type="file" id="file">
-                    </label>
-                </div>
-            </div>
-        
-
-
-        <div class="botoes-alinhados2">
-
-            <div class="botao3">
-                <a href=""><button onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i>Retornar
-                    </button></a>
-            </div>
-
-            <a><div class="botao4">
-                <button id="botao4" onclick="salvarDados()">Cadastrar pet
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button></a>
-            </div>
-
-        </div>
-    </section>
-
-
+     <div class="search-container">
+         <input type="text" id="searchBar" placeholder="Pesquisar seus animais" onkeyup="filtrarItens()">
+     </div>
+     
+     <ul id="listaDeItens">
+         <div class="tds-img">
+             <div class="I-A" onclick="buscarPorItem('Cao')">
+                 <img src="../imagens/cachorro.png" alt="Imagem de cachorro">
+                 <li class="item">Cao</li>
+             </div>
+ 
+             <div class="I-A" onclick="buscarPorItem('Gato')">
+                 <img src="../imagens/gatos.png" alt="Imagem de gato">
+                 <li class="item">Gato</li>
+             </div>
+ 
+             <div class="I-A" onclick="buscarPorItem('Silvestre')">
+                 <img src="../imagens/silvestre.png" alt="Imagem de animal silvestre">
+                 <li class="item">Silvestre</li>
+             </div>
+         </div>
+     </ul>
+ 
     
+
+
+        
+<div class="aling">
+        <div class="all-aling">
+             
+            <div class="aling-n-g">
+                <div class="foto"><div></div>
+                <p class="p-n"><span id="exibirNome"></span></p> 
+                <p><span id="exibirGenero"></span></p>
+             </div>
+              
+            <p><span id="exibirEspecie"></span></p>
+            <p><span id="exibirPorte"></span></p>  
+            <p><span id="exibirPeso"></span> Kg</p>
+            <p><span id="exibirIdade"></span> Anos</p>
+          
+           
+
+            <button id="mais-info">Mais informações</button>
+            
+        </div>
+
+   </div>
+ </section>
+  
+        <a href=""><button id="btn-cadastrar">Cadastrar pets
+            <i class="fa-solid fa-angle-right"></i>
+       </button></a>
+    </main>
+   
+
+   
+<section id="nova-secao">
+    <h1>Cadastrar Pet</h1>
+
+    <p>Prossiga e preencha algumas informações para cadastrar!</p>
+
+    <div class="container-img">
+        <img src="../imagens/icone-pets.png" alt="3 pessoas cuidando de seus pets">
+    </div>
+    <div class="botoes-alinhados">
+
+        <div class="botao1">
+            <a href=""><button><i class="fa-solid fa-angle-left"></i>Retornar
+                </button></a>
+        </div>
+
+        <div class="botao2">
+            <a href=""><button id="botao2">Avançar
+                    <i class="fa-solid fa-angle-right"></i>
+                </button></a>
+        </div>
+
+    </div>
+</section>
+
+<section id="nova-secao2">
+    <h1>Cadastrar Pet</h1>
+
+    <p>Vamos lá! Insire as informações abaixo e confirme o cadastro.</p>
+
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Informe o nome do seu pet" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dataNascimento">Idade</label>
+            <input type="number" id="idade" placeholder="Informe a idade do seu pet" min="0" max="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" placeholder="Informe o peso do seu pet" pattern="^\d+(\.\d{1,2})?$"
+                step="0.01" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="genero">Gênero</label>
+            <div class="select-container">
+                <select id="genero" class="custom-select" required>
+                    <option value="" disabled selected>Informe o gênero do seu pet</option>
+                    <option value="macho">Macho</option>
+                    <option value="femea">Fêmea</option>
+                </select>
+                <span class="arrow"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="especie">Espécie</label>
+            <div class="select-container">
+                <select id="especie" class="custom-select" required>
+                    <option value="" disabled selected>Informe a espécie do seu pet</option>
+                    <option value="cao">Cão</option>
+                    <option value="gato">Gato</option>
+                    <option value="silvestre">Silvestre</option>
+                </select>
+                <span class="arrow"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="porte">Porte</label>
+            <div class="select-container">
+                <select id="porte" class="custom-select" required>
+                    <option value="" disabled selected>Informe o porte do seu pet</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+                <span class="arrow"></span>
+            </div>
+        </div>
+</form>
+        <div class="container-imagem">
+            <div class="input-container">
+                <label id="label-imagem" for="imagem">Imagem</label>
+                <label class="custum-file-upload" for="file">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 16 16">
+                            <path fill="#969696"
+                                d="M11.498 5.501a1.002 1.002 0 1 1-2.003 0a1.002 1.002 0 0 1 2.003 0M2 4.5A2.5 2.5 0 0 1 4.5 2h6.998a2.5 2.5 0 0 1 2.5 2.5v1.558a2.6 2.6 0 0 0-1-.023V4.5a1.5 1.5 0 0 0-1.5-1.5H4.5A1.5 1.5 0 0 0 3 4.5v6.998c0 .232.052.451.146.647l3.651-3.651a1.7 1.7 0 0 1 2.404 0l.34.34l-.706.707l-.341-.34a.7.7 0 0 0-.99 0l-3.651 3.65c.196.094.415.147.647.147h1.796l-.25 1H4.5a2.5 2.5 0 0 1-2.5-2.5zm11.263 2.507a1.56 1.56 0 0 0-.927.447L8.05 11.742a2.8 2.8 0 0 0-.722 1.256l-.009.033l-.303 1.211a.61.61 0 0 0 .74.74l1.21-.303a2.8 2.8 0 0 0 1.29-.73l4.288-4.288a1.56 1.56 0 0 0-1.28-2.654" />
+                        </svg>
+                    </div>
+                    <div class="text">
+                        <span>Clique para inserir uma imagem de seu pet</span>
+                    </div>
+                    <input type="file" id="file">
+                </label>
+            </div>
+        </div>
+    
+
+
+    <div class="botoes-alinhados2">
+
+        <div class="botao3">
+            <a href=""><button onclick="window.history.back();"><i class="fa-solid fa-angle-left"></i>Retornar
+                </button></a>
+        </div>
+
+        <a><div class="botao4">
+            <button id="botao4" onclick="salvarDados()">Cadastrar pet
+                    <i class="fa-solid fa-angle-right"></i>
+                </button></a>
+        </div>
+
+    </div>
+
+</section>
+
+
     <script src="../js/meus-pets.js"></script>
     <script src="../js/registro-dos-pets.js"></script>
+    
 </body>
 
 </html>
