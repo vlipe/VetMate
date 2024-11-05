@@ -157,8 +157,8 @@ header {
 }
 
 .noti-icon {
-    width: 90px;
-    height: 75px;
+    width: 70px;
+    height: 45px;
     padding: 1rem;
     background-color: white;
     border-radius: 15px;
@@ -549,8 +549,8 @@ header {
 }
 
 .svg-container svg {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     padding: 0.4rem;
     border-radius: 5px;
     margin-right: 0.6rem;
@@ -658,139 +658,125 @@ header {
     color: #ccc;
 }
 
-/* Responsividade - 1400px. */
-
-@media (min-width: 1400px) {
-
-    header {
-        position: absolute;
-        top: 2rem;
-        right: 1rem;
-        padding: 0.8rem 1.3rem;
-        z-index: 10;
-    }
-
-    .container-noti {
-        display: flex;
-        align-items: center;
-    }
-
-    .noti-icon {
-        width: 70px;
-        height: 70px;
-        padding: 1rem;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.9s ease;
-    }
-
-    .conta {
-        display: flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        background-color: white;
-        border-radius: 13px;
-        width: 100%;
-    }
-
-    .conta img {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        margin-right: 1rem;
-    }
-
-    .user-nome {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .user-email {
-        color: #969696;
-        font-size: 0.8rem;
-        margin-top: 0.2rem;
-    }
-
-    .notificacao-popup {
-        position: absolute;
-        width: 400px;
-        margin-top: 3rem;
-        margin-right: 1rem;
-        top: 100%;
-        right: 0;
-        background-color: white;
-        border-radius: 20px;
-        padding: 1.5rem 2rem;
-        display: none;
-    }
-
-    .texto-e-svg span {
-        text-align: left;
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
-    .notificacao-popup p {
-        font-size: 0.7rem;
-        color: #969696;
-    }
-
-    .navegacao {
-        background-color: #f8f8f8;
-        border-radius: 10px;
-        box-shadow: 0px 0px 3.5px 3.5px #96969618;
-        padding: 0.7rem;
-        gap: 2rem;
-        place-content: center;
-        display: flex;
-        align-items: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        font-size: 0.8rem;
-    }
-
-    .estatisticas {
-        max-width: 1000px;
-    }
-
-    .eventos {
-        width: 670px;
-    }
-}
-
-.estatisticas {
-    display: flex;
-    flex-direction: row;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    background-color: white;
-    border-radius: 25px;
-    padding: 2rem;
-    max-width: 1000px;
-}
 
 /* Smartphones (320px - 480px) */
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 768px) {
+
+    #sidebar.expandido~main {
+        padding-left: calc(10px + 0px);
+    }
+
+    #sidebar {
+        margin: 2.5rem 1.5rem 0rem 1.5rem;
+        height: 90vh;
+        width: 5rem;
+        z-index: 2;
+    }
+
+    #sidebar svg {
+        width: 1em;
+        height: 1em;
+    }
+
+    #sidebar_content {
+        padding: 0.5rem;
+    }
+
+    #logo p {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        letter-spacing: 1.7px;
+    }
+
+    .side-item {
+        border-radius: 8px;
+        padding: 14px 1rem;
+        cursor: pointer;
+    }
+
+    .side-item a {
+        text-decoration: none;
+        color: #969696;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .side-item a svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.5rem;
+    }
+
+    .item-description {
+        margin-left: 0.7rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 0.6rem;
+        color: #969696;
+        transition: width .6s;
+    }
+
+    #sidebar.open-sidebar .item-description {
+        width: 9.3rem;
+        height: auto;
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    #sidebar.expandido {
+        width: 180px;
+    }
+
+    hr {
+        align-items: center;
+        height: 1.5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #58585899;
+        margin: 1rem;
+    }
+
+    .align-info{
+        margin-right: -7rem;
+    }
+
+    .h-2{
+        font-size: 0.9rem;
+    }
+
+    .info span{
+        font-size: 0.75rem;
+    }   
+
+    .container-infos a button {
+        width: 100px;
+    }
+
+    .h-3{
+        font-size: 0.9rem;
+    }
 
     header {
         position: absolute;
         top: 1.5rem;
-        right: 1rem;
+        right: 0.7rem;
         padding: 0.8rem 1.3rem;
         z-index: 10;
     }
 
     .noti-icon {
-        width: 55px;
-        height: 55px;
+        width: 30px;
+        height: 25px;
         border-radius: 10px;
         padding: 1rem;
         margin-right: 1.5rem;
+    }
+
+    .noti-icon svg{
+        height: 1.5em;
+        width: 1.5em;
     }
 
     .conta {
@@ -799,19 +785,19 @@ header {
     }
 
     .conta img {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         border-radius: 10px;
         margin-right: 1rem;
     }
 
     .user-nome {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         margin-bottom: 0.5rem;
     }
 
     .user-email {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         margin-top: 0.2rem;
     }
 
@@ -859,58 +845,71 @@ header {
     }
 
     .estatisticas {
-        padding: 1rem;
-        max-width: 550px;
+        display: block;
+        padding: 2rem;
+        max-width: 300px;
+    }
+
+    .all-total {
+        display: flex;
+        margin-right: 4rem;
     }
 
     .total {
         margin-bottom: 2rem;
-        width: 150px;
+        width: 130px;
     }
 
     .p-1,
     .p-2 {
         padding: 1rem;
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .total span {
         padding: 1rem;
         color: #00C2A2;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .numeros {
         padding: 0.1rem;
         margin-right: 1rem;
-        width: 50px;
-        height: 20px;
+        width: 40px;
+        height: 15px;
     }
 
-    .all-total {
-        margin-right: -3rem;
+    .numeros p{
+        font-size: 0.6rem;
+    }
+
+    .evento-flex{
+        display: block;
     }
 
     .eventos {
-        max-width: 335px;
+        margin-top: -1rem;
+        max-width: 280px;
     }
 
     .calendario {
-        max-width: 300px;
+        max-width: 250px;
         padding: 9px 7px;
     }
 
     .all-svg {
-        margin-left: 2%;
+        margin-left: 5%;
     }
 
     .all-svg svg {
-        height: 35px;
-        width: 35px;
+        height: 20px;
+        width: 20px;
     }
 
     .all-svg p {
-        font-size: 0.75rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.7rem;
     }
 
     .dias .dia {
@@ -918,6 +917,7 @@ header {
         height: 30px;
         font-size: 0.7rem;
     }
+    
 }
 
 /* Telas de até 1024px */
@@ -1022,6 +1022,10 @@ header {
         margin: 1rem;
     }
 
+    .align-info{
+        margin-right: -7rem;
+    }
+
     header {
         position: absolute;
         top: 1.5rem;
@@ -1036,11 +1040,16 @@ header {
     }
 
     .noti-icon {
-        width: 85px;
-        height: 65px;
+        width: 55px;
+        height: 35px;
         border-radius: 10px;
         padding: 1rem;
         margin-right: 1.5rem;
+    }
+
+    .noti-icon svg{
+        height: 1.8em;
+        width: 1.8em;
     }
 
     .conta {
@@ -1109,7 +1118,7 @@ header {
     }
 
     .estatisticas {
-        padding: 1rem;
+        padding: 2rem;
         max-width: 530px;
     }
 
@@ -1145,6 +1154,19 @@ header {
         max-width: 305px;
     }
 
+    .calendario-icon {
+        width: 100px;
+    }
+
+    .calendario-icon span{
+        font-size: 0.7rem;
+    }
+
+    .calendario-icon svg{
+        height: 1.5em;
+        width: 1.5em;
+    }
+
     .calendario {
         max-width: 300px;
         padding: 9px 7px;
@@ -1172,12 +1194,25 @@ header {
 
 /* Telas de até 1400px */
 @media (max-width: 1400px) {
+    .noti-icon {
+        width: 55px;
+        height: 45px;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    .noti-icon svg{
+        height: 1.9em;
+        width: 1.9em;
+    }
+
     .estatisticas {
         width: 780px;
     }
 
     .calendario-icon {
-        width: 230px;
+        width: 220px;
     }
 
     .calendario {
@@ -1215,7 +1250,7 @@ header {
 
     .container-infos a button {
         width: 150px;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 }
 
