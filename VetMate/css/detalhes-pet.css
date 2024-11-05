@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+/* Formatação para o conteúdo (main) não ficar escondido atrás do sidebar. */
+
+main {
+    flex: 1;
+    margin-top: 2.5rem;
+    padding-left: calc(0px + 10px);
+    transition: padding-left 0.5s ease;
+}
+
+/* Sidebar (minimizado e expandido). */
+
+#sidebar.expandido~main {
+    padding-left: calc(10px + 0px);
+}
+
+#sidebar {
+    margin: 2.5rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    height: 95vh;
+    border-radius: 20px;
+    position: relative;
+    transition: width 0.5s ease-in-out;
+    width: 6.5rem;
+    z-index: 2;
+}
+
+#sidebar_content {
+    padding: 0.9rem;
+}
+
+#logo p {
+    font-family: "Cocon", sans-serif;
+    font-size: 2.3rem;
+    letter-spacing: 1.7px;
+    font-weight: bold;
+    color: #00C2A2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: width 0.3s ease;
+}
+
+#side_items {
+    place-items: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px 1rem;
+    cursor: pointer;
+}
+
+.side-item:hover:not(.active) {
+    background-color: #e3f7f4;
+}
+
+.side-item a {
+    text-decoration: none;
+    color: #969696;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.side-item2 {
+    background-color: #00c2a22d;
+    border-radius: 10px;
+}
+
+.side-item2 span {
+    color: #003536;
+}
+
+.side-item a svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.item-description {
+    margin-left: 0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    color: #969696;
+    transition: width .6s;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 9.3rem;
+    height: auto;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#sidebar.expandido {
+    width: 250px;
+}
+
+#sidebar_content {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#side_items .item-description {
+    display: none;
+}
+
+#sidebar.expandido #side_items .item-description {
+    display: flex;
+}
+
+hr {
+    align-items: center;
+    height: 1.5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #58585899;
+    margin: 1rem;
+}
+
+/* Notificações do usuário e conta. */
+
+header {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    padding: 0.8rem 1.3rem;
+    z-index: 10;
+}
+
+.container-noti {
+    display: flex;
+    align-items: center;
+}
+
+.noti-icon {
+    width: 5.5rem;
+    height: 4.8rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.noti-icon-active {
+    transition: background-color 2s ease;
+    background-color: #00c2a22d;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.noti-icon.swing {
+    animation: swing 0.6s ease;
+}
+
+.conta {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 13px;
+    width: 100%;
+}
+
+.conta img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container i {
+    justify-content: space-between;
+    color: #969696;
+    cursor: pointer;
+}
+
+.user-nome {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-email {
+    color: #969696;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.notificacao-popup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    display: none;
+}
+
+.notificacao-popup.active {
+    display: block;
+    animation: slideInRight 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.texto-e-svg span {
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.texto-e-svg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notificacao-popup p {
+    font-size: 0.8rem;
+    color: #969696;
+}
+
+.navegacao {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3.5px 3.5px #96969618;
+    padding: 0.5rem;
+    gap: 5rem;
+    place-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.navegacao a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #00c2a2;
+}
+
+.navegacao a:active {
+    color: #003536;
+}
+
+
+.container-acompanhamento {
+    display: flex;
+}
+
+.conteudo-acompanhamento {
+    flex: 1;
+    padding: 20px;
+}
+
+.container-abas-acompanhamento {
+    border-radius: 15px;
+    border: 2px solid #ECECEC;
+    padding: 2px;
+    position: relative;
+}
+
+.container-abas-acompanhamento ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.aba-link-acompanhamento {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.aba-link-acompanhamento.ativo {
+    color: white;
+    background-color: #00c2a2;
+    border-radius: 0px;
+    margin: -2px;
+    padding: 12px 20px;
+}
+
+.indicador-acompanhamento {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    height: calc(100% - 4px);
+    background-color: #800080;
+    width: 0;
+    transition: width 0.3s ease;
+    z-index: 3;
+    border-radius: 15px;
+}
+
+.aba-link-acompanhamento.ativo+.indicador-acompanhamento {
+    width: 100%;
+}
+
+.conteudo-abas-acompanhamento {
+    border-radius: 15px;
+    background: white;
+    border: 2px solid #ECECEC;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.secao-acompanhamento {
+    display: none;
+}
+
+#medicamentos-acompanhamento {
+    display: block;
+}
