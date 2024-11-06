@@ -668,6 +668,7 @@ header {
 #sidebarToggle {
     display: none;
 }
+
 #sidebar2 {
     width: 0;
     overflow: hidden;
@@ -679,44 +680,65 @@ header {
 #sidebar.open-sidebar {
     width: 250px;
 }
- 
+
 
 #sidebar.open-sidebar #side_items .item-description {
     display: inline;
 }
- 
+
 
 /* Media query for smaller screens */
 @media (max-width: 480px) {
 
-    main{
+    .conta {
+        width: 50%;
+    }
+
+    .conta img {
+        width: 40%;
+    }
+
+    .user-nome {
+        width: 60%;
+        font-size: 0.5rem;
+    }
+
+    .user-email {
+        font-size: 0.6rem;
+        width: 53%;
+        word-wrap: break-word;
+
+    }
+
+
+    main {
         position: absolute;
-        z-index:1 ;
+        z-index: 1;
         margin-left: 10%;
     }
 
-    #sidebar{
+    #sidebar {
         opacity: 0;
     }
 
     #sidebar.open-sidebar {
         opacity: 1;
-    z-index: 999;
+        z-index: 999;
     }
-    
+
     header {
         position: absolute;
-        left: 180px;
-        width: 100%;
+        left: 100px;
+        width: 75%;
         z-index: 2;
     }
 
     .container-noti {
         flex-direction: row-reverse;
-        gap: 7%;
+        gap: 5%;
     }
 
-    #sidebarToggle button{
+    #sidebarToggle button {
         z-index: 55;
     }
 
@@ -737,32 +759,80 @@ header {
     }
 
     .estatisticas {
-       display: flex;
-       flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        margin-left: -5%;
     }
 
-    .caixas{
-   display: flex;
-   flex-direction: row; 
-   gap: 10%;
-   width: 112%;    
+    .caixas {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        width: 112%;
     }
 
-    .evento-flex{
-        width: 85%;
+    .calendario{
+        width: 150%;
     }
 
-.estatisticas{
-    display: flex;
-    max-width: 55%;
-}
+    .eventos{
+        width: 80%;
+    }
+
+    .evento-flex {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .p-4{
+        word-wrap: break-word;
+        width: 100%;
+    }
+
+    .svg-e-texto2{
+        word-wrap: break-word;
+        width: 60%;
+    }
+
+    .estatisticas {
+        display: flex;
+        max-width: 50%;
+    }
+
+    .info span{
+        font-size: 0.5rem;
+    }
+
+    .info{
+        width: 50%;
+    }
+    .container-infos {
+        width: 68%;
+    }
+    .align-info{
+        width: 95%;
+    }
+
+    .container-infos p {
+        width: 45%;
+        font-size: 0.5rem;
+        word-wrap: break-word;
+    }
+
+    #cadastro-P, #buscador-B {
+        font-size: 0.4rem;
+        width: 49%;
+    }
 
     
 }
 
 
 /* Smartphones (320px - 480px) */
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 
     #sidebar.expandido~main {
         padding-left: calc(10px + 0px);
@@ -840,23 +910,23 @@ header {
         margin: 1rem;
     }
 
-    .align-info{
+    .align-info {
         margin-right: -7rem;
     }
 
-    .h-2{
+    .h-2 {
         font-size: 0.9rem;
     }
 
-    .info span{
+    .info span {
         font-size: 0.75rem;
-    }   
+    }
 
     .container-infos a button {
         width: 100px;
     }
 
-    .h-3{
+    .h-3 {
         font-size: 0.9rem;
     }
 
@@ -876,7 +946,7 @@ header {
         margin-right: 1.5rem;
     }
 
-    .noti-icon svg{
+    .noti-icon svg {
         height: 1.5em;
         width: 1.5em;
     }
@@ -981,11 +1051,11 @@ header {
         height: 15px;
     }
 
-    .numeros p{
+    .numeros p {
         font-size: 0.6rem;
     }
 
-    .evento-flex{
+    .evento-flex {
         display: block;
     }
 
@@ -1019,7 +1089,7 @@ header {
         height: 30px;
         font-size: 0.7rem;
     }
-    
+
 }
 
 /* Telas de até 1024px */
@@ -1124,7 +1194,7 @@ header {
         margin: 1rem;
     }
 
-    .align-info{
+    .align-info {
         margin-right: -7rem;
     }
 
@@ -1149,7 +1219,7 @@ header {
         margin-right: 1.5rem;
     }
 
-    .noti-icon svg{
+    .noti-icon svg {
         height: 1.8em;
         width: 1.8em;
     }
@@ -1260,11 +1330,11 @@ header {
         width: 100px;
     }
 
-    .calendario-icon span{
+    .calendario-icon span {
         font-size: 0.7rem;
     }
 
-    .calendario-icon svg{
+    .calendario-icon svg {
         height: 1.5em;
         width: 1.5em;
     }
@@ -1295,7 +1365,7 @@ header {
 }
 
 /* Telas de até 1400px */
-@media (max-width: 1400px) {
+@media(min-width:600px) and (max-width: 1400px) {
     #sidebar.expandido~main {
         padding-left: calc(10px + 0px);
     }
@@ -1403,7 +1473,7 @@ header {
         margin-right: 1.5rem;
     }
 
-    .noti-icon svg{
+    .noti-icon svg {
         height: 1.9em;
         width: 1.9em;
     }
@@ -1446,7 +1516,7 @@ header {
     }
 
     .container-infos p {
-        font-size: 0.7rem;
+        font-size: 1em;
     }
 
     .container-infos a button {
