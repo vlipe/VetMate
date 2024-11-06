@@ -12,7 +12,7 @@ body {
 
 main {
     flex: 1;
-    margin-top: 2.5rem;
+    margin-top: 13.5rem;
     padding-left: calc(0px + 10px);
     transition: padding-left 0.5s ease;
 }
@@ -659,6 +659,108 @@ header {
 }
 
 
+/* Mobile */
+
+
+
+/* Hide the sidebar and toggle button by default */
+
+#sidebarToggle {
+    display: none;
+}
+#sidebar2 {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+
+
+#sidebar.open-sidebar {
+    width: 250px;
+}
+ 
+
+#sidebar.open-sidebar #side_items .item-description {
+    display: inline;
+}
+ 
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+
+    main{
+        position: absolute;
+        z-index:1 ;
+        margin-left: 10%;
+    }
+
+    #sidebar{
+        opacity: 0;
+    }
+
+    #sidebar.open-sidebar {
+        opacity: 1;
+    z-index: 999;
+    }
+    
+    header {
+        position: absolute;
+        left: 180px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .container-noti {
+        flex-direction: row-reverse;
+        gap: 7%;
+    }
+
+    #sidebarToggle button{
+        z-index: 55;
+    }
+
+    #sidebarToggle {
+        display: block;
+        position: fixed;
+        top: 3.5rem;
+        left: 1rem;
+        z-index: 55;
+        background: #ffffff;
+        color: #969696;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 20px 10px 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 4%;
+    }
+
+    .estatisticas {
+       display: flex;
+       flex-direction: column;
+    }
+
+    .caixas{
+   display: flex;
+   flex-direction: row; 
+   gap: 10%;
+   width: 112%;    
+    }
+
+    .evento-flex{
+        width: 85%;
+    }
+
+.estatisticas{
+    display: flex;
+    max-width: 55%;
+}
+
+    
+}
+
+
 /* Smartphones (320px - 480px) */
 @media (min-width: 480px) and (max-width: 768px) {
 
@@ -921,7 +1023,7 @@ header {
 }
 
 /* Telas de até 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1024px) {
 
     #sidebar.expandido~main {
         padding-left: calc(10px + 0px);
@@ -1194,6 +1296,105 @@ header {
 
 /* Telas de até 1400px */
 @media (max-width: 1400px) {
+    #sidebar.expandido~main {
+        padding-left: calc(10px + 0px);
+    }
+
+    #sidebar {
+        margin: 2.5rem 2rem 0rem 2rem;
+        height: 90vh;
+        width: 5rem;
+        z-index: 2;
+    }
+
+    #sidebar svg {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    #sidebar_content {
+        padding: 0.4rem;
+    }
+
+    #logo p {
+        margin-top: 0.5rem;
+        font-family: "Cocon", sans-serif;
+        font-size: 1.9rem;
+        letter-spacing: 1.7px;
+        font-weight: bold;
+        color: #00C2A2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: width 0.3s ease;
+    }
+
+    #side_items {
+        place-items: left;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+    }
+
+    .side-item {
+        border-radius: 8px;
+        padding: 14px 1rem;
+        cursor: pointer;
+    }
+
+    .side-item a {
+        text-decoration: none;
+        color: #969696;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .side-item1 {
+        background-color: #00c2a22d;
+        border-radius: 10px;
+        cursor: default;
+    }
+
+    .side-item a svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.5rem;
+    }
+
+    .item-description {
+        margin-left: 0.7rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 0.7rem;
+        color: #969696;
+        transition: width .6s;
+    }
+
+    #sidebar.open-sidebar .item-description {
+        width: 9.3rem;
+        height: auto;
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    #sidebar.expandido {
+        width: 200px;
+    }
+
+    hr {
+        align-items: center;
+        height: 1.5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #58585899;
+        margin: 1rem;
+    }
+
     .noti-icon {
         width: 55px;
         height: 45px;

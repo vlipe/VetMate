@@ -1,57 +1,54 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const logoText = document.getElementById('logo-texto');
-    
-    sidebar.classList.toggle('expandido');
 
-    if (sidebar.classList.contains('expandido')) {
-        logoText.textContent = 'vetmate';
-    } else {
-        logoText.textContent = 'v';
-    }
-}
 
 const sidebar = document.getElementById('sidebar');
 sidebar.addEventListener('click', toggleSidebar);
 
-function toggleNotificacoes() {
-    const popup = document.getElementById('notificacaoPopup');
-    const botaoNotificacao = document.querySelector('.noti-icon');
-    
-    if (popup.classList.contains('active')) {
-        popup.classList.remove('active');
-        popup.classList.add('hide');
-        botaoNotificacao.classList.remove('noti-icon-active'); 
-        
-        setTimeout(() => {
-            popup.classList.remove('hide');
-        }, 300); 
-    } else {
-        popup.classList.add('active');
-        botaoNotificacao.classList.add('noti-icon-active'); 
-    }
 
-    botaoNotificacao.classList.add('swing');
-    
-    setTimeout(() => {
-        botaoNotificacao.classList.remove('swing');
-    }, 600);
+function toggleNotificacoes() {
+  const popup = document.getElementById('notificacaoPopup');
+  const botaoNotificacao = document.querySelector('.noti-icon');
+  
+  if (popup.classList.contains('active')) {
+      popup.classList.remove('active');
+      popup.classList.add('hide');
+      botaoNotificacao.classList.remove('noti-icon-active');
+      
+      setTimeout(() => {
+          popup.classList.remove('hide');
+      }, 300);
+  } else {
+      popup.classList.add('active');
+      botaoNotificacao.classList.add('noti-icon-active');
+  }
+
+  botaoNotificacao.classList.add('swing');
+  
+  setTimeout(() => {
+      botaoNotificacao.classList.remove('swing');
+  }, 600);
 }
 
 const botaoNotificacao = document.querySelector('.noti-icon');
 botaoNotificacao.addEventListener('click', toggleNotificacoes);
 
 document.addEventListener('click', (event) => {
+  const popup = document.getElementById('notificacaoPopup');
+  const icon = document.querySelector('.noti-icon');
 
-    if (!popup.contains(event.target) && !icon.contains(event.target)) {
-        popup.classList.remove('active');
-        popup.classList.add('hide');
+  // Verifica se o clique foi fora do popup e do ícone
+  if (!popup.contains(event.target) && !icon.contains(event.target)) {
+      popup.classList.remove('active');
+      popup.classList.add('hide');
 
-        setTimeout(() => {
-            popup.classList.remove('hide');
-        }, 300);
-    }
+      setTimeout(() => {
+          popup.classList.remove('hide');
+      }, 300);
+  }
 });
+
+  
+
+
 
 const daysContainer = document.querySelector(".dias"),
   nextBtn = document.querySelector(".next-btn"),
@@ -364,3 +361,52 @@ function iniciarChat() {
   }
   contentChatbot.remove();
 }
+
+
+
+
+function toggleSidebar() {
+  const openSidebarBtn = document.getElementById("sidebarToggle");
+  
+    const sidebar = document.getElementById('sidebar');
+    
+  // Alterna a classe para abrir/fechar o sidebar
+  sidebar.classList.toggle("open-sidebar");
+  
+  // Esconde ou mostra o botão
+  openSidebarBtn.classList.toggle("hidden");
+  
+  // Adiciona um listener para fechar ao clicar fora
+  if (sidebar.classList.contains("open-sidebar")) {
+    document.addEventListener("click", closeSidebarOnClickOutside);
+  } else {
+    document.removeEventListener("click", closeSidebarOnClickOutside);
+  }
+}
+
+// Função que fecha o sidebar ao clicar fora dele
+function closeSidebarOnClickOutside(event) {
+  const sidebar = document.getElementById("sidebar");
+  const openSidebarBtn = document.getElementById("sidebarToggle");
+  
+  // Verifica se o clique foi fora do sidebar
+  if (!sidebar.contains(event.target) && !openSidebarBtn.contains(event.target)) {
+    sidebar.classList.remove("open-sidebar");
+    openSidebarBtn.classList.remove("hidden");
+    document.removeEventListener("click", closeSidebarOnClickOutside);
+  }
+
+   const logoText = document.getElementById('logo-texto');
+    
+    sidebar.classList.toggle('expandido');
+
+    if (sidebar.classList.contains('expandido')) {
+        logoText.textContent = 'vetmate';
+    } else {
+        logoText.textContent = 'v';
+    }
+  
+}
+
+
+

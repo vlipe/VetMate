@@ -179,6 +179,29 @@
 
     </nav>
 
+    <button id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+
+    <nav id="sidebar2">
+        <div id="sidebar_content">
+          
+            <hr>
+            <ul id="side_items">
+                <li class="side-item side-item1">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <!-- SVG content -->
+                        </svg>
+                        <span class="item-description">Home</span>
+                    </a>
+                </li>
+                <!-- Other items go here -->
+            </ul>
+        </div>
+    </nav>
+    
+
+    
+
     <main>
         <h1 class="h-1">Bem-vindo, <span>usuário!</span></h1>
 
@@ -225,7 +248,9 @@
         <h3 class="h-3">Minhas estatísticas:</h3>
 
         <div class="estatisticas">
+           
             <div class="all-total">
+                
                 <div class="calendario-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
                         <path fill="#003536"
@@ -233,7 +258,7 @@
                     </svg>
                     <span>Calendário</span>
                 </div>
-
+ <div class="caixas">
                 <div class="total">
                     <p class="p-1">Total de agendamentos</p>
 
@@ -248,8 +273,8 @@
                                 </svg></p>
                         </div>
                     </div>
-
-                </div>
+</div>
+               
 
                 <div class="total">
                     <p class="p-2">Total de pets</p>
@@ -266,8 +291,8 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
+                </div> </div></div>
+           
 
             <div class="eventos">
 
@@ -331,7 +356,7 @@
         </div>
         </div>
         </div>
-
+ </div>
         <button class="btn-chatbot">
             <h3 class="h3-btn-chatbot">No que posso ajudar?</h3>
             <img src="../imagens/svg-chat.svg" alt="icone-chatbot">
