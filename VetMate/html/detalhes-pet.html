@@ -176,7 +176,6 @@
     </nav>
 
     <div class="container-acompanhamento">
-
         <section class="conteudo-acompanhamento">
             <nav class="abas-acompanhamento">
                 <div class="container-abas-acompanhamento">
@@ -185,21 +184,75 @@
                                 class="aba-link-acompanhamento ativo">Medicamentos</a></li>
                         <li><a href="#vacinas-acompanhamento" class="aba-link-acompanhamento">Vacinas</a></li>
                     </ul>
-                    <div class="indicador-acompanhamento"></div>
                 </div>
             </nav>
 
             <div class="conteudo-abas-acompanhamento">
                 <div class="secoes-acompanhamento">
                     <div class="secao-acompanhamento" id="medicamentos-acompanhamento">
+                        <div id="medicamentos-conteudo"></div>
                     </div>
-
                     <div class="secao-acompanhamento" id="vacinas-acompanhamento">
+                        <div id="vacinas-conteudo"></div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
+    <div class="modal" id="modal-vacina">
+        <div class="modal-conteudo">
+            <h2 id="modal-titulo-vacina">Cadastrar Vacina</h2>
+            <form id="form-vacina">
+                <input type="hidden" id="indice-vacina">
+                <label for="imagem-vacina">Imagem:</label>
+                <input type="file" id="imagem-vacina" accept="image/*">
+                <label for="nome-vacina">Nome da Vacina:</label>
+                <input type="text" id="nome-vacina" required placeholder="Informe o nome da vacina">
+                <label for="dosagem-vacina">Dosagem:</label>
+                <input type="text" id="dosagem-vacina" required placeholder="Informe a dosagem">
+                <label for="data-vacina">Data de Aplicação:</label>
+                <input type="date" id="data-vacina" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-medicamento">
+        <div class="modal-conteudo">
+            <h2 id="modal-titulo-medicamento">Cadastrar Medicamento</h2>
+            <form id="form-medicamento">
+                <input type="hidden" id="indice-medicamento">
+                <label for="imagem-medicamento">Imagem:</label>
+                <input type="file" id="imagem-medicamento" accept="image/*">
+                <label for="nome-medicamento">Nome do Medicamento:</label>
+                <input type="text" id="nome-medicamento" required placeholder="Informe o nome do medicamento">
+                <label for="dosagem-medicamento">Dosagem:</label>
+                <input type="text" id="dosagem-medicamento" required placeholder="Informe a dosagem">
+                <label for="data-medicamento">Data de Aplicação:</label>
+                <input type="date" id="data-medicamento" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-sucesso-vacina">
+        <div class="modal-conteudo-sucesso">
+            <div class="fechar-modal" id="fechar-modal-sucesso-vacina">&times;</div>
+            <h1>Vacina Cadastrada!</h1>
+            <p>Vamos notificar a reaplicação da vacina uma semana antes do período de um ano!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-sucesso-medicamento">
+        <div class="modal-conteudo-sucesso">
+            <div class="fechar-modal" id="fechar-modal-sucesso-medicamento">&times;</div>
+            <h1>Medicamento Cadastrado!</h1>
+            <p>Vamos notificar a reaplicação do medicamento uma semana antes do período de um ano!</p>
+        </div>
+    </div>
+
+    <script src="detalhes-pet.js"></script>
 
 </body>
 
