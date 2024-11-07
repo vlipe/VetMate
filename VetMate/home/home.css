@@ -110,10 +110,12 @@ header {
   @media screen and (max-width: 730px) {
     .nav-bar {
         padding: 1.5rem 4rem;
+        background-color: #003536;
     }
   
     .nav-item {
         display: none;
+        background-color: #003536;
     }
   
     .login-button {
@@ -135,7 +137,7 @@ header {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 1rem;
+        background-color: #003536;
     }
   
     .mobile-menu .nav-item {
@@ -216,6 +218,15 @@ header {
     transform: translateX(-50%);
   }
   
+  @media (max-width:394px) {
+
+    .carousel .list .item:nth-child(1) .content .title {
+      font-size: 2.8rem;
+
+    }
+    
+  }
+
   .carousel .list .item .buttons button:nth-child(1) {
     background-color: #ffffff;
     color: #003536;
