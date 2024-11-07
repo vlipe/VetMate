@@ -211,9 +211,9 @@ header {
   width: 100%;
 }
 
-.conta img {
-  width: 60px;
-  height: 60px;
+.conta svg {
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   margin-right: 1rem;
 }
