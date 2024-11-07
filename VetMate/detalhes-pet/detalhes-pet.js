@@ -40,7 +40,7 @@ function exibirVacinas(vacinas) {
   if (vacinas.length === 0) {
     cardsContainer.innerHTML = `
       <p class="p-mensagem">Cadastre as vacinas do seu pet para manter o histórico de vacinação sempre atualizado e garantir a saúde do seu amigo.</p> 
-      <img src="ilustration-vacina.png" alt="Ilustração-vacina" class="img-vacinas"> 
+      <img src="../imagens/ilustration-vacina.png" alt="Ilustração-vacina" class="img-vacinas"> 
     `;
   } else {
     vacinas.forEach((vacina, indice) => {
@@ -146,7 +146,7 @@ function exibirMedicamentos(medicamentos) {
   if (medicamentos.length === 0) {
     cardsContainer.innerHTML = `
       <p class="p-mensagem">Cadastre os medicamentos do seu pet para manter o histórico de medicamentos sempre atualizado e garantir a saúde do seu amigo.</p> 
-      <img src="ilustration-remedio.png" alt="Ilustração-medicamento" class="img-vacinas"> 
+      <img src="../imagens/ilustration-remedio.png" alt="Ilustração-medicamento" class="img-vacinas"> 
     `;
   } else {
     medicamentos.forEach((medicamento, indice) => {
