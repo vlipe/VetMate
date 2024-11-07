@@ -110,10 +110,12 @@ header {
   @media screen and (max-width: 730px) {
     .nav-bar {
         padding: 1.5rem 4rem;
+        background-color: #003536;
     }
   
     .nav-item {
         display: none;
+        background-color: #003536;
     }
   
     .login-button {
@@ -135,7 +137,7 @@ header {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 1rem;
+        background-color: #003536;
     }
   
     .mobile-menu .nav-item {
