@@ -18,7 +18,6 @@ abas.forEach(aba => {
   });
 });
 
-// ---  Código para a aba "Vacinas" ---
 const vacinasConteudo = document.getElementById('vacinas-conteudo');
 const modalVacina = document.getElementById('modal-vacina');
 const formVacina = document.getElementById('form-vacina');
@@ -47,13 +46,13 @@ function exibirVacinas(vacinas) {
     vacinas.forEach((vacina, indice) => {
       const card = `
         <div class="card-vacina">
-          <img src="${vacina.imagem}" alt\="</span>{vacina.nome}">
+           <img src="${vacina.imagem}" alt="${vacina.nome}">
           <div class="card-vacina-info">
             <h3>${vacina.nome}</h3>
             <p>Dosagem: ${vacina.dosagem}</p>
             <p>Data de Aplicação: <span class="math-inline">\{vacina\.data\}</p\>
 <div class\="card\-vacina\-botoes"\>
-<button class\="editar\-vacina" data\-indice\="</span>{indice}">Editar</button>
+<button class\="editar-vacina" data-indice="${indice}">Editar</button>
               <button class="excluir-vacina" data-indice="${indice}">Excluir</button>
             </div>
           </div>
@@ -125,7 +124,6 @@ formVacina.addEventListener('submit', (event) => {
   }
 });
 
-// ---  Código para a aba "Medicamentos" ---
 const medicamentosConteudo = document.getElementById('medicamentos-conteudo');
 const modalMedicamento = document.getElementById('modal-medicamento');
 const formMedicamento = document.getElementById('form-medicamento');
@@ -154,13 +152,13 @@ function exibirMedicamentos(medicamentos) {
     medicamentos.forEach((medicamento, indice) => {
       const card = `
         <div class="card-vacina">
-          <img src="${medicamento.imagem}" alt="${medicamento.nome}"> 
+           <img src="${medicamento.imagem}" alt="${medicamento.nome}">
           <div class="card-vacina-info">
             <h3>${medicamento.nome}</h3>
             <p>Dosagem: ${medicamento.dosagem}</p>
             <p>Data de Aplicação: ${medicamento.data}</p>
-            <div class="card-vacina-botoes">
-              <button class="editar-medicamento" data-indice="${indice}">Editar</button>
+<div class\="card\-vacina\-botoes"\>
+<button class="editar-medicamento" data-indice="${indice}">Editar</button>
               <button class="excluir-medicamento" data-indice="${indice}">Excluir</button>
             </div>
           </div>
@@ -267,7 +265,6 @@ function salvarMedicamento(indice, imagem, nome, dosagem, data) {
   carregarMedicamentos();
 }
 
-// Função genérica para salvar vacina ou medicamento
 function salvarVacina(indice, imagem, nome, dosagem, data, tipo) {
   const dados = JSON.parse(localStorage.getItem(tipo + 's')) || [];
   const novoItem = {
@@ -290,23 +287,20 @@ function salvarVacina(indice, imagem, nome, dosagem, data, tipo) {
 
   localStorage.setItem(tipo + 's', JSON.stringify(dados));
 
-  // Exibe o modal de sucesso correspondente ao tipo
   const modalSucesso = document.getElementById('modal-sucesso-' + tipo);
   modalSucesso.style.display = 'block';
 
-  // Adiciona evento de clique para fechar o modal de sucesso
   const fecharModalSucesso = document.getElementById('fechar-modal-sucesso-' + tipo);
   fecharModalSucesso.addEventListener('click', () => {
     modalSucesso.style.display = 'none';
   });
 
-  // Fecha o modal de cadastro/edição e limpa o formulário correspondente ao tipo
   const modal = document.getElementById('modal-' + tipo);
   const form = document.getElementById('form-' + tipo);
   modal.style.display = 'none';
   form.reset();
 
-  // Recarrega os dados correspondentes ao tipo
+
   if (tipo === 'vacina') {
     carregarVacinas();
   } else if (tipo === 'medicamento') {
@@ -323,3 +317,4 @@ window.onclick = function (event) {
 
 carregarVacinas();
 carregarMedicamentos();
+

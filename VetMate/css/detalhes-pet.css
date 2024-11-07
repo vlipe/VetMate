@@ -301,6 +301,8 @@ header {
   color: #969696;
 }
 
+/* aqui */
+
 .container-acompanhamento {
   margin-top: 2rem;
   display: flex;
@@ -611,4 +613,115 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px; 
+  }
+
+  .aba-link-acompanhamento {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .secao-acompanhamento {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .card-vacina,
+  .card-medicamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .card-vacina img,
+  .card-medicamento img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .card-vacina-info,
+  .card-medicamento-info {
+    text-align: center;
+  }
+
+  .modal {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h1, h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .p-mensagem {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .img-vacinas {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #cards-container-vacinas,
+  #cards-container-medicamentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #adicionar-vacina,
+  #adicionar-medicamento {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .aba-link-acompanhamento {
+    font-size: 14px;
+  }
+
+  .form-vacina,
+  .form-medicamento {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 14px;
+  }
+
+  .fechar-modal {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+  }
 }
