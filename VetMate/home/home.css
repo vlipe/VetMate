@@ -218,6 +218,15 @@ header {
     transform: translateX(-50%);
   }
   
+  @media (max-width:394px) {
+
+    .carousel .list .item:nth-child(1) .content .title {
+      font-size: 2.8rem;
+
+    }
+    
+  }
+
   .carousel .list .item .buttons button:nth-child(1) {
     background-color: #ffffff;
     color: #003536;
