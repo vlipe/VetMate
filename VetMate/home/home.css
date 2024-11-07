@@ -850,21 +850,32 @@ background-color: #ffffff;
       padding-right: 50px;
     }
   }
-.botao {
-  margin-top: 4rem;
-  background-color: #00C2A2;
-  color: white;
-  width: 20vw;
-  height: 3.5vw;
-  border: none;
-  border-radius: 100px;
-  font-size: 1.2rem;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  margin-left: 3.6%;
-}
 
+
+  .botao button{
+    margin-top: 4rem;
+    background-color: #00C2A2;
+    color: white;
+    width: 14vw;
+    height: 3.5vw;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin-left: 42.6%;
+  }
+
+  .botao button:hover {
+    color: #969696;
+    background-color: #ffffff;
+    border-color: #969696;
+    border: 1px solid;
+  }
+
+
+ 
 
   footer {
     margin-top: 5rem;
