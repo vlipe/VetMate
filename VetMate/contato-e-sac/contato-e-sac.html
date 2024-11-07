@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e SAC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="contato-e-sac.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="area-restrita.html"><img src="../imagens/logo-vetmate.png" alt="logo-vetmate"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="../institucional/institucional.html"
+                            class="nav-link">Institucional</a></li>
+                    <li class="nav-item"><a href="../contato-e-sac/contato-e-sac.html" class="nav-link">Contato e
+                            SAC</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="area-restrita.html">Área Restrita</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../imagens/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="../institucional/institucional.html" class="nav-link">Institucional</a>
+                </li>
+                <li class="nav-item"><a href="../contato-e-sac/contato-e-sac.html" class="nav-link">Contato e SAC</a>
+                </li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="../area-restrita/area-restrita.html">Área Restrita</a></button>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="container-form">
+
+            <form>
+                <h1 class="titulo_sac">Tire todas as suas dúvidas conosco!</h1>
+                <label for="nome" id="nome-label">Nome completo</label>
+                <input type="text" id="nome" placeholder="Insira seu nome completo" required>
+                <label for="email" id="email-label">Email</label>
+                <input type="text" id="email" name="email" placeholder="Insira seu email" required>
+                <label for="duvida" id="duvida-label">Dúvida</label>
+                <textarea type="text" id="duvida" name="duvida" placeholder="Escreva sua dúvida" required></textarea>
+                <button class="submit" type="submit">Enviar</button>
+
+                <div class="blur1">
+                    <dialog id="modal-envio">
+                        <div class="container-form-modal" id="container-form-modal-id">
+                            <p>Pronto! Nossa equipe tentará responder sua dúvida o mais rápido possível.</p>
+                            <br>
+                            <button class="btn-voltar" id="btn-voltar-modal" onclick="ocultarModal('modal-envio')">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <a href="../html/contato.html">Voltar</a>
+                            </button>
+
+                        </div>
+                    </dialog>
+                </div>
+
+            </form>
+            </div>
+
+            <div class="image-container">
+                <img src="../imagens/retângulo-cachorro.svg" alt="Cachorro">
+            </div>
+
+            </div>
+        </section>
+
+
+        <div class="questions">
+            <h2>Principais Dúvidas</h2>
+            <div class="interacao-prompt">
+
+                <p class="texto"><img src="../imagens/Ads click.svg" alt="Ícone de clique"> Clique nas perguntas para
+                    interagir.</p>
+            </div>
+            <section class="faq">
+                <article class="faq-item" onclick="openModal('modal-1'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">O que é a VetMate?</p>
+                </article>
+                <article class="faq-item" onclick="openModal('modal-2'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">Como faço para me cadastrar?</p>
+                </article>
+                <article class="faq-item" onclick="openModal('modal-3'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">Como faço para encontrar uma clínica veterinária próxima de mim?</p>
+                </article>
+                <article class="faq-item" onclick="openModal('modal-4'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">Posso reagendar ou cancelar uma consulta agendada pela VetMate?</p>
+                </article>
+                <article class="faq-item" onclick="openModal('modal-5'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">A VetMate oferece algum tipo de plano de assinatura?</p>
+                </article>
+                <article class="faq-item" onclick="openModal('modal-6'); toggle()">
+                    <div class="faq-icone">
+                        <img src="../imagens/icon.svg" alt="Ícone de pergunta">
+                    </div>
+                    <p class="faq-texto">Como funciona o suporte ou ajuda para dúvidas e problemas da VetMate?</p>
+                </article>
+            </section>
+        </div>
+
+        <div id="blur">
+            <dialog id="modal-1" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-1"> <i class="fa-solid fa-square-xmark"></i> </button>
+
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>O
+                            que é a VetMate?</span></p>
+                    <p><span>R:</span> A VetMate é uma solução tecnológica inovadora que visa conectar tutores de
+                        animais a
+                        clínicas
+                        veterinárias, facilitando o agendamento de consultas, exames e outros serviços relacionados à
+                        saúde
+                        de
+                        seu pet.</p>
+                </div>
+            </dialog>
+
+            <dialog id="modal-2" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-2"> <i class="fa-solid fa-square-xmark"></i> </button>
+
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>Como
+                            faço para me cadastrar?</span></p>
+                    <p><span>R:</span> O cadastro na VetMate é simples e rápido: basta acessar nosso site, clicar em
+                        <span>Área
+                            Restrita</span> e
+                        preencher as informações solicitadas. Em poucos minutos, você estará pronto para utilizar todos
+                        os
+                        benefícios da nossa plataforma.
+                    </p>
+                </div>
+            </dialog>
+
+            <dialog id="modal-3" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-3"> <i class="fa-solid fa-square-xmark"></i> </button>
+
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>Como
+                            faço para encontrar uma clínica veterinária próxima de mim?</span></p>
+                    <p><span>R:</span> A VetMate possui um sistema de busca inteligente que permite encontrar clínicas
+                        veterinárias próximas
+                        de você. Basta inserir seu endereço ou ativar a localização do seu dispositivo para visualizar
+                        as
+                        opções
+                        disponíveis em sua região.</p>
+                </div>
+            </dialog>
+
+            <dialog id="modal-4" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-4"> <i class="fa-solid fa-square-xmark"></i> </button>
+
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>Posso reagendar ou cancelar uma consulta agendada
+                            pela
+                            VetMate?</span></p>
+                    <p><span>R:</span> Sim, você pode reagendar ou cancelar uma consulta agendada pela VetMate. Basta
+                        acessar a
+                        seção <span>Área
+                            Restrita</span> em nosso site e seguir as instruções para realizar a alteração desejada.</p>
+                </div>
+            </dialog>
+
+            <dialog id="modal-5" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-5"> <i class="fa-solid fa-square-xmark"></i> </button>
+
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>A
+                            VetMate oferece algum tipo de plano de assinatura?</span></p>
+                    <p><span>R:</span> No momento, a VetMate não oferece planos de assinatura. Nosso foco é facilitar o
+                        agendamento de
+                        consultas e serviços veterinários, conectando tutores de animais a clínicas de forma gratuita e
+                        descomplicada.</p>
+                </div>
+            </dialog>
+
+            <dialog id="modal-6" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal" data-modal="modal-6"> <i class="fa-solid fa-square-xmark"></i> </button>
+                    <p class="titulo-pergunta"><img src="../imagens/iconverde.svg"
+                            alt="Ícone de pergunta respondida"><span>Como
+                            funciona o suporte ou ajuda para dúvidas e problemas da VetMate?</span></p>
+
+                    <p><span>R:</span> Você pode entrar em contato conosco preenchendo o formulário nesta mesma seção do
+                        nosso site. Basta
+                        fornecer algumas informações e descrever sua dúvida ou problema, e nossa equipe estará
+                        pronta para te ajudar o mais breve possível.</p>
+                </div>
+            </dialog>
+        </div>
+    </main>
+
+    <footer>
+
+        <div id="container-footer">
+            <div id="footer_contacts">
+                <img src="../imagens/logo-vetmate.png" alt="logo-vetmate">
+                <p>Sua parceira ideal.</p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/pjvetmate/" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://x.com/pjvetmate" class="footer-link" id="x">
+                        <i class="fa-brands fa-x-twitter"></i></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="linkedin">
+                        <i class="fa-brands fa-linkedin"></i></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Navegue</h3>
+                </li>
+                <li>
+                    <a href="../home/home.html" class="footer-link">Home</a>
+                </li>
+                <li>
+                    <a href="../institucional/institucional.html" class="footer-link">Institucional</a>
+                </li>
+                <li>
+                    <a href="../contato-e-sac/contato-e-sac.html" class="footer-link">Contato e SAC</a>
+                </li>
+                <li>
+                    <a href="../area-restrita/area-restrita.html" class="footer-link">Área Restrita</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Contato</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Email</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">WhatsApp</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Telefone</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Subscribe</h3>
+
+                <p>
+                    Se inscreva em nossa newsletter para <br> receber todas as atualizações!
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2024 | Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script src="contato-e-sac.js"></script>
+
+</body>
+
+</html>
