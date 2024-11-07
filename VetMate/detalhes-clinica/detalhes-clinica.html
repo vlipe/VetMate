@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="../detalhes-clinica/detalhes-clinica.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container-noti">
+            <div class="noti-icon" onclick="mostrarNotificacoes()">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.1em" height="2.1em" viewBox="0 0 24 24">
+                    <path fill="#003536" fill-rule="evenodd"
+                        d="M13 3a1 1 0 1 0-2 0v.75h-.557A4.214 4.214 0 0 0 6.237 7.7l-.221 3.534a7.4 7.4 0 0 1-1.308 3.754a1.617 1.617 0 0 0 1.135 2.529l3.407.408V19a2.75 2.75 0 1 0 5.5 0v-1.075l3.407-.409a1.617 1.617 0 0 0 1.135-2.528a7.4 7.4 0 0 1-1.308-3.754l-.221-3.533a4.214 4.214 0 0 0-4.206-3.951H13zm-2.557 2.25a2.714 2.714 0 0 0-2.709 2.544l-.22 3.534a8.9 8.9 0 0 1-1.574 4.516a.117.117 0 0 0 .082.183l3.737.449c1.489.178 2.993.178 4.482 0l3.737-.449a.117.117 0 0 0 .082-.183a8.9 8.9 0 0 1-1.573-4.516l-.221-3.534a2.714 2.714 0 0 0-2.709-2.544zm1.557 15c-.69 0-1.25-.56-1.25-1.25v-.75h2.5V19c0 .69-.56 1.25-1.25 1.25"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+
+            <div class="notificacao-popup" id="notificacaoPopup">
+
+                <div class="texto-e-svg">
+                    <span>Notificações</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                        <path fill="#00c2a2"
+                            d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2" />
+                        <path fill="#00c2a2" fill-rule="evenodd"
+                            d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.945c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75M5.71 4.89c-1.005.135-1.585.389-2.008.812S3.025 6.705 2.89 7.71q-.034.255-.058.539h18.336q-.024-.284-.058-.54c-.135-1.005-.389-1.585-.812-2.008s-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14M2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008s-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812s-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+
+                <div class="navegacao">
+
+                    <div class="detalhe-1">
+                        <a href="#" id="meusPetsLink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
+                                <path fill="none" stroke="#969696" stroke-miterlimit="10" stroke-width="32"
+                                    d="M457.74 170.1a30.3 30.3 0 0 0-11.16-2.1h-.4c-20.17.3-42.79 19.19-54.66 47.76c-14.23 34.18-7.68 69.15 14.74 78.14a30.2 30.2 0 0 0 11.15 2.1c20.27 0 43.2-19 55.17-47.76c14.13-34.18 7.48-69.15-14.84-78.14ZM327.6 303.48C299.8 257.35 287.8 240 256 240s-43.9 17.46-71.7 63.48c-23.8 39.36-71.9 42.64-83.9 76.07a50.9 50.9 0 0 0-3.6 19.25c0 27.19 20.8 49.2 46.4 49.2c31.8 0 75.1-25.39 112.9-25.39S337 448 368.8 448c25.6 0 46.3-22 46.3-49.2a51 51 0 0 0-3.7-19.25c-12-33.55-60-36.71-83.8-76.07ZM192.51 196a26.5 26.5 0 0 0 4-.3c23.21-3.37 37.7-35.53 32.44-71.85C224 89.61 203.22 64 181.49 64a26.5 26.5 0 0 0-4 .3c-23.21 3.37-37.7 35.53-32.44 71.85C150 170.29 170.78 196 192.51 196Zm174.41-59.85c5.26-36.32-9.23-68.48-32.44-71.85a26.5 26.5 0 0 0-4-.3c-21.73 0-42.47 25.61-47.43 59.85c-5.26 36.32 9.23 68.48 32.44 71.85a26.5 26.5 0 0 0 4 .3c21.73 0 42.51-25.71 47.43-59.85ZM105.77 293.9c22.39-9 28.93-44 14.72-78.14C108.53 187 85.62 168 65.38 168a30.2 30.2 0 0 0-11.15 2.1c-22.39 9-28.93 44-14.72 78.14C51.47 277 74.38 296 94.62 296a30.2 30.2 0 0 0 11.15-2.1Z" />
+                            </svg>
+                            <span class="item-description">
+                                Meus Pets
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div class="detalhe-2">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                                <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    d="M2.351 13.214c-.353-2.298-.53-3.446-.095-4.465c.434-1.018 1.398-1.715 3.325-3.108L7.021 4.6C9.418 2.867 10.617 2 12 2s2.582.867 4.979 2.6l1.44 1.041c1.927 1.393 2.89 2.09 3.325 3.108c.434 1.019.258 2.167-.095 4.464l-.301 1.96c-.5 3.256-.751 4.884-1.919 5.856s-2.875.971-6.29.971H10.86c-3.415 0-5.122 0-6.29-.971c-1.168-.972-1.418-2.6-1.919-5.857zM12 10v6m-3-3h6"
+                                    color="#969696" />
+                            </svg>
+                            <span class="item-description">
+                                Clínicas Veterinárias
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <p>Por enquanto é só! Ative as opções de notificações acima para receber futuras atualizações.</p>
+            </div>
+
+            <div class="conta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                    <g fill="none" stroke="#003536" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2" />
+                        <path
+                            d="M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6" />
+                    </g>
+                </svg>
+                <div class="user-info">
+                    <div class="user-nome">João Vivêncio</div>
+                    <div class="user-email">carneirinhodeutsch@email.com</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="logo">
+                <p id="logo-texto" alt="Logo da VetMate (minimizado)">v</p>
+            </div>
+
+
+            <hr>
+
+            <ul id="side_items">
+                <li class="side-item">
+                    <a href="../html/area-restrita-login.html">
+                        <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                            viewBox="0 0 24 24">
+                            <g fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5">
+                                <path
+                                    d="M6.133 21C4.955 21 4 20.02 4 18.81v-8.802c0-.665.295-1.295.8-1.71l5.867-4.818a2.09 2.09 0 0 1 2.666 0l5.866 4.818c.506.415.801 1.045.801 1.71v8.802c0 1.21-.955 2.19-2.133 2.19z" />
+                                <path d="M9.5 21v-5.5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2V21" />
+                            </g>
+                        </svg>
+                        <span class="item-description">
+                            Home
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a href="../html/meus-pets.html">
+                        <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                            viewBox="0 0 512 512">
+                            <path fill="none" stroke="#969696" stroke-miterlimit="10" stroke-width="32"
+                                d="M457.74 170.1a30.3 30.3 0 0 0-11.16-2.1h-.4c-20.17.3-42.79 19.19-54.66 47.76c-14.23 34.18-7.68 69.15 14.74 78.14a30.2 30.2 0 0 0 11.15 2.1c20.27 0 43.2-19 55.17-47.76c14.13-34.18 7.48-69.15-14.84-78.14ZM327.6 303.48C299.8 257.35 287.8 240 256 240s-43.9 17.46-71.7 63.48c-23.8 39.36-71.9 42.64-83.9 76.07a50.9 50.9 0 0 0-3.6 19.25c0 27.19 20.8 49.2 46.4 49.2c31.8 0 75.1-25.39 112.9-25.39S337 448 368.8 448c25.6 0 46.3-22 46.3-49.2a51 51 0 0 0-3.7-19.25c-12-33.55-60-36.71-83.8-76.07ZM192.51 196a26.5 26.5 0 0 0 4-.3c23.21-3.37 37.7-35.53 32.44-71.85C224 89.61 203.22 64 181.49 64a26.5 26.5 0 0 0-4 .3c-23.21 3.37-37.7 35.53-32.44 71.85C150 170.29 170.78 196 192.51 196Zm174.41-59.85c5.26-36.32-9.23-68.48-32.44-71.85a26.5 26.5 0 0 0-4-.3c-21.73 0-42.47 25.61-47.43 59.85c-5.26 36.32 9.23 68.48 32.44 71.85a26.5 26.5 0 0 0 4 .3c21.73 0 42.51-25.71 47.43-59.85ZM105.77 293.9c22.39-9 28.93-44 14.72-78.14C108.53 187 85.62 168 65.38 168a30.2 30.2 0 0 0-11.15 2.1c-22.39 9-28.93 44-14.72 78.14C51.47 277 74.38 296 94.62 296a30.2 30.2 0 0 0 11.15-2.1Z" />
+                        </svg>
+                        <span class="item-description">
+                            Meus Pets
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item side-item3">
+                    <a href="../html/buscador.html">
+                        <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                            viewBox="0 0 24 24">
+                            <path fill="none" stroke="#003536" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M2.351 13.214c-.353-2.298-.53-3.446-.095-4.465c.434-1.018 1.398-1.715 3.325-3.108L7.021 4.6C9.418 2.867 10.617 2 12 2s2.582.867 4.979 2.6l1.44 1.041c1.927 1.393 2.89 2.09 3.325 3.108c.434 1.019.258 2.167-.095 4.464l-.301 1.96c-.5 3.256-.751 4.884-1.919 5.856s-2.875.971-6.29.971H10.86c-3.415 0-5.122 0-6.29-.971c-1.168-.972-1.418-2.6-1.919-5.857zM12 10v6m-3-3h6"
+                                color="#003536" />
+                        </svg>
+                        <span class="item-description">
+                            Clínicas Veterinárias
+                        </span>
+                    </a>
+                </li>
+
+                <hr>
+
+                <li class="side-item">
+                    <a href="../html/perfil.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M14.44 5.78L4.198 16.02a2 2 0 0 0-.565 1.125l-.553 3.774l3.775-.553A2 2 0 0 0 7.98 19.8L18.22 9.56m-3.78-3.78l2.229-2.23a1.6 1.6 0 0 1 2.263 0l1.518 1.518a1.6 1.6 0 0 1 0 2.263l-2.23 2.23M14.44 5.78l3.78 3.78" />
+                        </svg>
+                        <span class="item-description">
+                            Editar Perfil
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+
+                    <div id="logout">
+                        <a href="../html/area-restrita.html">
+
+                            <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1.5em" viewBox="0 0 24 24">
+                                <path fill="#969696"
+                                    d="M12 18.25a.75.75 0 0 0 0 1.5h6A1.75 1.75 0 0 0 19.75 18V6A1.75 1.75 0 0 0 18 4.25h-6a.75.75 0 0 0 0 1.5h6a.25.25 0 0 1 .25.25v12a.25.25 0 0 1-.25.25z" />
+                                <path fill="#969696" fill-rule="evenodd"
+                                    d="M14.503 14.365c.69 0 1.25-.56 1.25-1.25v-2.24c0-.69-.56-1.25-1.25-1.25H9.89l-.02-.22l-.054-.556a1.227 1.227 0 0 0-1.751-.988a15 15 0 0 0-4.368 3.164l-.099.103a1.253 1.253 0 0 0 0 1.734l.1.103a15 15 0 0 0 4.367 3.164a1.227 1.227 0 0 0 1.751-.988l.054-.556l.02-.22zm-5.308-1.5a.75.75 0 0 0-.748.704q-.028.435-.07.871l-.016.162a13.6 13.6 0 0 1-3.516-2.607a13.6 13.6 0 0 1 3.516-2.607l.016.162q.042.435.07.871a.75.75 0 0 0 .748.704h5.058v1.74z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="item-description">
+                                Sair
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+    </nav>
+
+    <main>
+
+
+        <div class="botao-e-h1">
+            <a href="../resultados/resultados.html"><button class="voltar-button"><i
+                        class="fa-solid fa-angle-left"></i>Retornar
+                </button></a>
+
+            <h1>Detalhes da Clínica</h1>
+        </div>
+
+        <div class="main-container">
+            <div class="coluna-esquerda">
+
+                <div class="imagem-clinica">
+                    <img src="../imagens/foto-backgroud.png" alt="Imagem de uma clínica">
+
+                    <div class="clinica-texto">
+
+                        <div class="clinica-coracao">
+                            <h3>Hospvet Clínica Veterinária</h3>
+                            <img src="../detalhes-clinica/coracao-favorito.svg">
+                        </div>
+
+                        <div class="avaliacao">
+                            <div class="rating">
+                                <input value="5" name="rating" id="star5" type="radio">
+                                <label for="star5"></label>
+                                <input value="4" name="rating" id="star4" type="radio">
+                                <label for="star4"></label>
+                                <input value="3" name="rating" id="star3" type="radio">
+                                <label for="star3"></label>
+                                <input value="2" name="rating" id="star2" type="radio">
+                                <label for="star2"></label>
+                                <input value="1" name="rating" id="star1" type="radio">
+                                <label for="star1"></label>
+                            </div>
+
+                            <p>172 avaliações</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Principais Avaliações</h2>
+
+                <div class="user-rating">
+
+                    <div class="user-name">
+                        <img src="../imagens/pessoa2.png" alt="Foto de uma mulher">
+
+                        <div class="nome-e-des">
+                            <h4>Joana Carneiro da Silva</h4>
+                            <h5>Tutora do Simba, um gato.</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="rating2">
+                        <input value="5" name="rating" id="star5" type="radio">
+                        <label for="star5"></label>
+                        <input value="4" name="rating" id="star4" type="radio">
+                        <label for="star4"></label>
+                        <input value="3" name="rating" id="star3" type="radio">
+                        <label for="star3"></label>
+                        <input value="2" name="rating" id="star2" type="radio">
+                        <label for="star2"></label>
+                        <input value="1" name="rating" id="star1" type="radio">
+                        <label for="star1"></label>
+                    </div>
+
+                    <p>Levei meu gatinho Simba para uma consulta de rotina e fiquei impressionada com o atendimento! A
+                        Dra.
+                        Ana
+                        foi super atenciosa e carinhosa com ele, explicando tudo com muita clareza e paciência.</p>
+                </div>
+
+                <div class="user-rating">
+
+                    <div class="user-name">
+                        <img src="../imagens/pessoa1.png" alt="Foto de uma mulher">
+
+                        <div class="nome-e-des">
+                            <h4>Guilherme Rodrigues</h4>
+                            <h5>Tutor de dois cachorros.</h5>
+                        </div>
+                    </div>
+
+                    <div class="rating2">
+                        <input value="5" name="rating" id="star5" type="radio">
+                        <label for="star5"></label>
+                        <input value="4" name="rating" id="star4" type="radio">
+                        <label for="star4"></label>
+                        <input value="3" name="rating" id="star3" type="radio">
+                        <label for="star3"></label>
+                        <input value="2" name="rating" id="star2" type="radio">
+                        <label for="star2"></label>
+                        <input value="1" name="rating" id="star1" type="radio">
+                        <label for="star1"></label>
+                    </div>
+
+                    <p>Meus cachorros são pacientes da Hospvet há anos e sempre fomos muito bem atendidos. Os
+                        veterinários
+                        são
+                        excelentes, a equipe é atenciosa e o ambiente é acolhedor!</p>
+                </div>
+
+                <span class="s-1">Ver todas as avaliações</span>
+
+                <h3 class="h-3">Descrição</h3>
+
+                <p class="p-1">A Hospvet é uma clínica veterinária que prioriza o bem-estar do seu pet, oferecendo um
+                    atendimento completo e
+                    personalizado para cães e gatos. Contamos com uma equipe de veterinários experientes e apaixonados
+                    por
+                    animais, que oferecem serviços como consultas, diagnósticos, vacinação, cirurgias, internação,
+                    exames
+                    laboratoriais, ultrassonografia, radiografia, odontologia veterinária, fisioterapia, acupuntura e
+                    banho
+                    e
+                    tosa. Nosso diferencial...</p>
+
+                <span class="s-1">Continuar lendo</span>
+
+            </div>
+
+            <div class="coluna-direita">
+                <div class="servicos">
+                    <h4>Serviços</h4>
+
+                    <div class="servicos-itens">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 24 24">
+                            <path fill="#00c2a2"
+                                d="M10 3L8 5v2H5C3.85 7 3.12 8 3 9L2 19c-.12 1 .54 2 2 2h16c1.46 0 2.12-1 2-2L21 9c-.12-1-.94-2-2-2h-3V5l-2-2zm0 2h4v2h-4zm1 5h2v3h3v2h-3v3h-2v-3H8v-2h3z" />
+                        </svg>
+
+                        <div class="especialidade">
+                            <h5>Consultas</h5>
+                            <p>Entre em contato para as especialidades.</p>
+                        </div>
+                    </div>
+
+                    <div class="servicos-itens">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 24 24">
+                            <path fill="#00c2a2" fill-rule="evenodd"
+                                d="M4.172 3.172C3 4.343 3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2h-2C7.229 2 5.343 2 4.172 3.172M12.75 6a.75.75 0 0 0-1.5 0v1.25H10a.75.75 0 1 0 0 1.5h1.25V10a.75.75 0 0 0 1.5 0V8.75H14a.75.75 0 0 0 0-1.5h-1.25zM8 13.25a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm1 4a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        <div class="especialidade">
+                            <h5>Exames</h5>
+                            <p>Entre em contato para as especialidades.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="servicos-itens">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 24 24">
+                            <path fill="#00c2a2"
+                                d="M8 22.5L6 21v-4H5q-.825 0-1.412-.587T3 15V7.5q-.425 0-.712-.288T2 6.5t.288-.712T3 5.5h3V4h-.5q-.425 0-.712-.288T4.5 3t.288-.712T5.5 2h3q.425 0 .713.288T9.5 3t-.288.713T8.5 4H8v1.5h3q.425 0 .713.288T12 6.5t-.288.713T11 7.5V15q0 .825-.587 1.413T9 17H8zM5 15h4v-1.5H7.25q-.3 0-.525-.225T6.5 12.75t.225-.525T7.25 12H9v-1.5H7.25q-.3 0-.525-.225T6.5 9.75t.225-.525T7.25 9H9V7.5H5zm10 7q-.825 0-1.412-.587T13 20v-6.5q0-.725.25-1.2t.525-.825t.5-.562t.225-.413V10q-.425 0-.712-.287T13.5 9t.288-.712T14.5 8h5q.425 0 .713.288T20.5 9t-.288.713T19.5 10v.5q0 .2.25.45t.55.6q.275.35.488.825T21 13.5V20q0 .825-.587 1.413T19 22zm0-8h4v-.5q0-.375-.225-.65t-.5-.6t-.525-.725t-.25-1.025V10h-1v.5q0 .6-.238 1t-.512.725t-.513.613T15 13.5zm0 6h4v-1.5h-4z" />
+                        </svg>
+
+                        <div class="especialidade">
+                            <h5>Vacinas</h5>
+                            <p>Entre em contato para as campanhas.</p>
+                        </div>
+
+                    </div>
+
+                    <a href="#"><button>Entrar em contato
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button></a>
+
+                </div>
+
+                <h4 class="h4-info">Informações e Contato</h4>
+
+                <div class="informacoes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                        <path fill="#00c2a2"
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z" />
+                    </svg>
+                    <p>hopsvet@gmail.com</p>
+                </div>
+
+                <div class="informacoes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                        <path fill="#00c2a2"
+                            d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98" />
+                    </svg>
+                    <p>11 99999-9999</p>
+                </div>
+
+                <h4 class="h4-loc">Localização</h4>
+
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2417.9012575383736!2d-46.47764827108456!3d-23.52259551662847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce61270808f47f%3A0xddc2deca4778eb69!2sFATEC%20Zona%20Leste!5e0!3m2!1spt-BR!2sbr!4v1730942734708!5m2!1spt-BR!2sbr"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../detalhes-clinica/detalhes-clinica.js"></script>
+</body>
+
+</html>
