@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Restrita</title>
-    <link rel="stylesheet" href="buscador.css">
+    <link rel="stylesheet" href="assets/css/area-restrita-login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container-noti">
             <div class="noti-icon" onclick="mostrarNotificacoes()">
@@ -102,11 +101,11 @@
             <hr>
 
             <ul id="side_items">
-                <li class="side-item">
-                    <a href="../area-restrita-login/area-restrita-login.html">
+                <li class="side-item side-item1">
+                    <a href="#">
                         <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
                             viewBox="0 0 24 24">
-                            <g fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                            <g fill="none" stroke="#003536" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="1.5">
                                 <path
                                     d="M6.133 21C4.955 21 4 20.02 4 18.81v-8.802c0-.665.295-1.295.8-1.71l5.867-4.818a2.09 2.09 0 0 1 2.666 0l5.866 4.818c.506.415.801 1.045.801 1.71v8.802c0 1.21-.955 2.19-2.133 2.19z" />
@@ -132,14 +131,14 @@
                     </a>
                 </li>
 
-                <li class="side-item side-item3">
+                <li class="side-item">
                     <a href="../buscador/buscador.html">
                         <svg onclick="toggleSidebar()" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
                             viewBox="0 0 24 24">
-                            <path fill="none" stroke="#003536" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="1.5"
                                 d="M2.351 13.214c-.353-2.298-.53-3.446-.095-4.465c.434-1.018 1.398-1.715 3.325-3.108L7.021 4.6C9.418 2.867 10.617 2 12 2s2.582.867 4.979 2.6l1.44 1.041c1.927 1.393 2.89 2.09 3.325 3.108c.434 1.019.258 2.167-.095 4.464l-.301 1.96c-.5 3.256-.751 4.884-1.919 5.856s-2.875.971-6.29.971H10.86c-3.415 0-5.122 0-6.29-.971c-1.168-.972-1.418-2.6-1.919-5.857zM12 10v6m-3-3h6"
-                                color="#003536" />
+                                color="#969696" />
                         </svg>
                         <span class="item-description">
                             Clínicas Veterinárias
@@ -155,6 +154,7 @@
                             <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="1.5"
                                 d="M14.44 5.78L4.198 16.02a2 2 0 0 0-.565 1.125l-.553 3.774l3.775-.553A2 2 0 0 0 7.98 19.8L18.22 9.56m-3.78-3.78l2.229-2.23a1.6 1.6 0 0 1 2.263 0l1.518 1.518a1.6 1.6 0 0 1 0 2.263l-2.23 2.23M14.44 5.78l3.78 3.78" />
+                        </svg>
                         </svg>
                         <span class="item-description">
                             Editar Perfil
@@ -182,175 +182,263 @@
                     </div>
                 </li>
             </ul>
+
     </nav>
 
-    <main id="main-content">
+    <button id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+
+    <nav id="sidebar2">
+        <div id="sidebar_content">
+          
+            <hr>
+            <ul id="side_items">
+                <li class="side-item side-item1">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <!-- SVG content -->
+                        </svg>
+                        <span class="item-description">Home</span>
+                    </a>
+                </li>
+                <!-- Other items go here -->
+            </ul>
+        </div>
+    </nav>
+    
+
+    
+
+    <main>
+        <h1 class="h-1">Bem-vindo, <span>usuário!</span></h1>
+
+        <div class="all-infos">
+            <h2 class="h-2">Minhas informações:</h2>
+
+            <div class="container-infos">
+                <div class="align-info">
+                    <div class="info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                            <path fill="#003536" fill-rule="evenodd"
+                                d="M17.17 3.268a1.77 1.77 0 0 0-2.502 0c-.568.568-.858 1.59-.656 2.322c.09.325.152.715.117 1.109c-.035.397-.174.844-.53 1.2l-5.7 5.7c-.356.356-.803.495-1.2.53a3.2 3.2 0 0 1-1.11-.117c-.732-.202-1.753.088-2.32.656a1.769 1.769 0 1 0 2.5 2.502a.75.75 0 1 1 1.062 1.06a1.769 1.769 0 1 0 2.501 2.502c.568-.568.858-1.59.656-2.322a3.2 3.2 0 0 1-.117-1.109c.035-.397.174-.844.53-1.2l5.7-5.7c.356-.356.803-.495 1.2-.53a3.2 3.2 0 0 1 1.11.117c.732.202 1.753-.088 2.32-.656a1.77 1.77 0 0 0-2.5-2.501a.75.75 0 0 1-1.062-1.061a1.77 1.77 0 0 0 0-2.502m2.003 1.559a3.27 3.27 0 0 0-5.566-2.62c-.919.92-1.398 2.489-1.04 3.783c.058.21.083.414.068.577c-.014.16-.06.234-.097.272l-5.7 5.7c-.037.037-.111.082-.271.096a1.7 1.7 0 0 1-.577-.068c-1.294-.358-2.864.121-3.783 1.04a3.27 3.27 0 0 0 2.62 5.566a3.269 3.269 0 0 0 5.566 2.62c.919-.92 1.398-2.489 1.04-3.783a1.7 1.7 0 0 1-.068-.577c.014-.16.06-.234.097-.272l5.7-5.7c.037-.037.111-.082.271-.096c.163-.015.366.01.577.068c1.294.358 2.864-.121 3.782-1.04a3.269 3.269 0 0 0-2.619-5.566"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        <span class="infos">Pets</span>
+                    </div>
+                    <p class="p-f">Você não tem nenhum animal de estimação cadastrado ainda.</p>
+
+                    <a href="../meus-pets/meus-pets.html"><button id="cadastro-P">Cadastrar pets
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button></a>
+                </div>
+
+                <div class="align-info">
+                    <div class="info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 32 32">
+                            <path fill="#003536"
+                                d="M19 28h-6a2 2 0 0 1-2-2v-5H6a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h5V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5h5a2 2 0 0 1 2 2v6a2.003 2.003 0 0 1-2 2h-5v5a2.003 2.003 0 0 1-2 2M6 13v6h7v7h6v-7h7v-6h-7V6h-6v7Z" />
+                        </svg>
+                        </svg>
+
+                        <span class="infos">Clínicas Veterinárias</span>
+                    </div>
+                    <p class="p-f">Você não salvou ou visitou nenhuma clínica veterinária ainda.</p>
+
+                    <a href="../buscador/buscador.html"><button id="buscador-B">Acessar buscador <i class="fa-solid fa-angle-right"></i>
+                        </button></a>
+                </div>
 
 
-        <h1 class="h-1">Clínicas Veterinárias</h1>
+            </div>
+        </div>
+        <h3 class="h-3">Minhas estatísticas:</h3>
 
-        <h2 class="h-2">Buscador de Clínicas</h2>
+        <div class="estatisticas">
+           
+            <div class="all-total">
+                
+                <div class="calendario-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 0 24 24">
+                        <path fill="#003536"
+                            d="M18.438 4.954H16.5V3.546c0-.262-.23-.512-.5-.5a.51.51 0 0 0-.5.5v1.408h-7V3.546c0-.262-.23-.512-.5-.5a.51.51 0 0 0-.5.5v1.408H5.562a2.503 2.503 0 0 0-2.5 2.5v11c0 1.379 1.122 2.5 2.5 2.5h12.875c1.379 0 2.5-1.121 2.5-2.5v-11a2.5 2.5 0 0 0-2.499-2.5m-12.876 1H7.5v.592c0 .262.23.512.5.5c.271-.012.5-.22.5-.5v-.592h7v.592c0 .262.23.512.5.5c.271-.012.5-.22.5-.5v-.592h1.937c.827 0 1.5.673 1.5 1.5v1.584H4.062V7.454c0-.827.673-1.5 1.5-1.5m12.876 14H5.562c-.827 0-1.5-.673-1.5-1.5v-8.416h15.875v8.416a1.5 1.5 0 0 1-1.499 1.5" />
+                    </svg>
+                    <span>Calendário</span>
+                </div>
+ <div class="caixas">
+                <div class="total">
+                    <p class="p-1">Total de agendamentos</p>
 
-        <h3 class="h-3">Encontre as melhores clínicas de acordo com o seu perfil!</h3>
+                    <div class="numero-e-porcentagem">
+                        <span>0</span>
 
-        <img src="../imagens/image-card-pets-3.png" alt="Globo com pessoas ao redor">
+                        <div class="numeros">
+                            <p>0%<svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 9h14M5 15h14" />
+                                </svg></p>
+                        </div>
+                    </div>
+</div>
+               
 
-        <h2 class="h-4">Clínicas Favoritadas</h2>
+                <div class="total">
+                    <p class="p-2">Total de pets</p>
 
-        <h5 class="h-5">Você ainda não favoritou nenhuma clínica!</h5>
+                    <div class="numero-e-porcentagem">
+                        <span>0</span>
 
-        <a href=""><button id="buscar-clinicas-btn">Buscar clínicas
-                <i class="fa-solid fa-angle-right"></i>
-            </button></a>
+                        <div class="numeros">
+                            <p>0%<svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#969696" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 9h14M5 15h14" />
+                                </svg></p>
+                        </div>
+                    </div>
+
+                </div> </div></div>
+           
+
+            <div class="eventos">
+
+                <p class="p-3">Próximos eventos</p>
+
+                <div class="evento-flex">
+
+                    <div class="calendario">
+                        <div class="header">
+                            <div class="mes"></div>
+                            <div class="btns">
+
+                                <div class="btn prev-btn">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+
+                                <div class="btn hoje-btn">
+                                    <i class="fas fa-calendar-day"></i>
+                                </div>
+
+                                <div class="btn next-btn">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dias">
+                        </div>
+                    </div>
+
+                    <div class="all-svg">
+
+                        <p class="p-4">Nenhum evento marcado.</p>
+
+                        <div class="svg-e-texto">
+                            <div class="svg-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                    viewBox="0 0 256 256">
+                                    <path fill="white"
+                                        d="M212 82a26 26 0 1 0 26 26a26 26 0 0 0-26-26m0 40a14 14 0 1 1 14-14a14 14 0 0 1-14 14M70 108a26 26 0 1 0-26 26a26 26 0 0 0 26-26m-26 14a14 14 0 1 1 14-14a14 14 0 0 1-14 14m48-36a26 26 0 1 0-26-26a26 26 0 0 0 26 26m0-40a14 14 0 1 1-14 14a14 14 0 0 1 14-14m72 40a26 26 0 1 0-26-26a26 26 0 0 0 26 26m0-40a14 14 0 1 1-14 14a14 14 0 0 1 14-14m22.15 104.61a37.32 37.32 0 0 1-17.82-22.33a42 42 0 0 0-80.66 0a37.26 37.26 0 0 1-17.77 22.3A38 38 0 0 0 88 222a37.6 37.6 0 0 0 14.76-3a66.14 66.14 0 0 1 50.41 0a37.7 37.7 0 0 0 14.83 3a38 38 0 0 0 18.15-71.39M168 210a25.9 25.9 0 0 1-10.21-2.08a78.15 78.15 0 0 0-59.65 0a26 26 0 0 1-22.46-46.82a49.28 49.28 0 0 0 23.51-29.48a30 30 0 0 1 57.62 0a49.27 49.27 0 0 0 23.57 29.5A26 26 0 0 1 168 210" />
+                                </svg>
+                            </div>
+                            <p>Pets</p>
+                        </div>
+
+                        <div class="svg-e-texto2">
+
+                            <div class="svg-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                                    viewBox="0 0 32 32">
+                                    <path fill="white"
+                                        d="M19 28h-6a2 2 0 0 1-2-2v-5H6a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h5V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5h5a2 2 0 0 1 2 2v6a2.003 2.003 0 0 1-2 2h-5v5a2.003 2.003 0 0 1-2 2M6 13v6h7v7h6v-7h7v-6h-7V6h-6v7Z" />
+                                </svg>
+                            </div>
+                            <p>Clínicas Veterinárias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        </div>
+ </div>
+        <button class="btn-chatbot">
+            <h3 class="h3-btn-chatbot">No que posso ajudar?</h3>
+            <img src="../imagens/svg-chat.svg" alt="icone-chatbot">
+        </button>
+
+        <div class="container-chatbot">
+            <div class="header-chatbot">
+                <h1 class="h1-chatbot">Seu assistente IA!</h1>
+                <img class="svg-fechar" src="../imagens/svg-fechar.svg" alt="svg-fechar">
+            </div>
+
+            <p class="p-chatbot">Olá! Sou o seu assistente virtual aqui na VetMate, pronto para te ajudar a cuidar do
+                seu
+                pet com informações
+                e recursos úteis.</p>
+
+            <img class="img-chatbot" src="../imagens/icone-chatbot.png" alt="ilustracao-chatbot">
+
+            <button class="btn-continuar">
+                <h3 class="h3-btn-continuar">Continuar</h3>
+                <img src="../imagens/svg-mini-seta-direita.svg" alt="icone-seta">
+            </button>
+        </div>
+
+        <div class="container-chatbot-chat">
+            <div class="header-chatbot-chat">
+                <div class="chatbot-perfil">
+                    <img class="svg-voltar" src="../imagens/svg-seta-esquerda.svg" alt="">
+                    <img class="avatar-chatbot" src="imagens/avatar.svg" alt="">
+                    <h3 class="h3-avatar-chatbot">Chatbot</h3>
+                </div>
+                <img class="svg-fechar-chat" src="../imagens/svg-fechar.svg" alt="svg-fechar">
+            </div>
+
+            <div class="content-chatbot">
+                <div class="section-chatbot">
+                    <div class="navegacao-sugestion-chatbot">
+                        <img src="../imagens/svg-lupa.svg" alt="">
+                        <h3 class="titulo-sugestion-chatbot">Navegação</h3>
+                    </div>
+
+                    <div class="sugestion-chatbot">
+                        <h3 class="txt-sugestion-chatbot">Aonde cadastro meus animais de estimação?</h3>
+                    </div>
+
+                    <div class="sugestion-chatbot">
+                        <h3 class="txt-sugestion-chatbot">Quero encontrar uma clínica veterinária!</h3>
+                    </div>
+                </div>
+
+                <div class="section-chatbot">
+                    <div class="navegacao-sugestion-chatbot">
+                        <img src="../imagens/svg-clinica-vet.svg" alt="">
+                        <h3 class="titulo-sugestion-chatbot">Dúvidas</h3>
+                    </div>
+
+                    <div class="sugestion-chatbot">
+                        <h3 class="txt-sugestion-chatbot">Realize um pré-diagnóstico do meu pet.</h3>
+                    </div>
+
+                    <div class="sugestion-chatbot">
+                        <h3 class="txt-sugestion-chatbot">Quais doenças crônicas a raça do meu pet tem?</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-mensagem">
+                <input class="input-texto" type="text" placeholder="Escreva...">
+                <button class="btn-enviar"><img src="../imagens/svg-aviao-enviar.svg" alt=""></button>
+            </div>
+        </div>
 
     </main>
 
-    <section id="nova-secao">
-        <h1>Buscador de Clínicas</h1>
 
-        <p>Encontre as melhores clínicas veterinárias de forma totalmente personalizada!</p>
-
-        <div class="container-img">
-            <img src="../imagens/image-tablet.png" alt="Tablet ilustrativo">
-        </div>
-
-        <div class="botoes-alinhados">
-
-            <div class="botao1">
-                <a href=""><button><i class="fa-solid fa-angle-left"></i>Retornar
-                    </button></a>
-            </div>
-
-            <div class="botao2">
-                <a href=""><button id="botao2">Avançar
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button></a>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="nova-secao2">
-
-        <h1 class="h1">Buscador de Clínicas</h1>
-
-        <p class="p">Insira as informações abaixo e pesquise!</p>
-        <div class="buscador-container">
-            
-            <div class="grupo-input-nome">
-                <h3>Insira o nome da clínica palavras-chave:</h3>
-                <input type="text" id="nome" name="nome" placeholder="Insira o nome da clínica ou palavras-chave">
-            </div>
-
-           <h3>Selecione a área de atuação:</h3>
-           
-            <div class="escolhas-buscador">
-                
-                <div>
-                    
-                    <label class="grupo-checkbox-label"> 
-                        
-                        <input type="checkbox" class="checkbox-buscador">
-                        Consultas</label>
-                </div>
-                <div>
-                    <label class="grupo-checkbox-label">
-                        <input type="checkbox" class="checkbox-buscador">
-                        Exames</label>
-                </div>
-                <div>
-                    <label class="grupo-checkbox-label">
-                        <input type="checkbox" class="checkbox-buscador">
-                        Vacinas</label>
-                </div>
-            </div>
-            <div class="grupo-inputs-1">
-                
-                <div class="input-distancia">
-                    <h3>Selecione o raio de distância:</h3>
-                    <div class="container-slider-distancia">
-                        <input type="range" min="0" max="100" value="25" class="slider-distancia" id="myRange">
-                        <p class="slider-distancia-valores">25km</p>
-                    </div>
-                </div>
-                
-                <div class="input-custo">
-                    <h3>Selecione o custo estimado:</h3>
-                    <div class="input-custo-valores">
-                        <div>R$ <span id="first">500</span></div> -
-                        <div>R$ <span id="second">5 000</span></div>
-                    </div>
-                    <small class="input-custo-previa">
-                        Faixa de Preço:
-                        <div>R$ <span id="third">4 500</span></div>
-                    </small>
-                    <div class="container-input-custo">
-                        <div data-range="#third" data-value-1="#second" data-value-0="#first" class="slider">
-                            <label class="label-min-value">1</label>
-                            <label class="label-max-value">10 000</label>
-                        </div>
-                        <div class="rangeslider">
-                            <input class="min input-ranges" name="range_1" type="range" min="1" max="10000" value="500">
-                            <input class="max input-ranges" name="range_1" type="range" min="1" max="10000" value="5000">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="escolhas-especie">
-                <h3>Selecione uma espécie:</h3>
-                <div class="radio-inputs">
-                    <label>
-                        <input class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="icon-animal"> <img src="../imagens/icon-cao.webp" alt=""> </span>
-                            <span class="radio-label">Cão</span>
-                        </span>
-                    </label>
-                    <label>
-                        <input checked="" class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="icon-animal"> <img src="../imagens/icon-gato.webp" alt=""> </span>
-                            <span class="radio-label">Gato</span>
-                        </span>
-                    </label>
-                    <label>
-                        <input class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="icon-animal"> <img src="../imagens/icon-coelho.webp" alt=""> </span>
-                            <span class="radio-label">Silvestre</span>
-                        </span>
-                    </label>
-                </div>
-            </div>
-            
-            <div class="select-especialidade">
-                <h3>Selecione uma especialidade:</h3>
-                <div class="select">
-                    <input type="text" id="searchInput" placeholder="Pesquise uma especialidade">
-                    <ul id="resultList"></ul>
-                </div>
-            </div>
-        </div>
-        
-
-        <div class="botoes-alinhados2">
-            <div class="botao3">
-                <a href=""><button><i class="fa-solid fa-angle-left"></i>Retornar
-                    </button></a>
-            </div>
-
-            <div class="botao4">
-                <a href="../resultados/resultados.html"><button id="botao2">Buscar clínicas
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button></a>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-    <script src="buscador.js"></script>
+    <script src="assets/js/area-restrita-login.js"></script>
 </body>
 
 </html>
