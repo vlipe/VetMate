@@ -478,9 +478,9 @@
       border-color: #ECECEC;
       border-radius: 10px;
       padding: 0.7rem;
-      width: 10vw;
+      width: 20vw;
       color: white;
-      height: 10vw;
+      height: 20vw;
       
     }
 
@@ -494,7 +494,7 @@
     .mvv p{
       white-space: nowwrap;
       width: 110%;
-      font-size: 0.17rem;
+      font-size: 0.4rem;
       
     }
 
@@ -524,20 +524,20 @@
 
     .p-1 {
       text-align: center;
-      font-size: 0.2rem;
+      font-size: 0.55rem;
       color: #969696;
       white-space: nowap;
     }
 
     .mvv-icone img {
-      width: 2vw;
+      width: 4vw;
       height: auto;
     }
 
     .mvv h4 {
       font-weight: 600;
       padding-top: 0.3vh;
-      font-size: 0.3rem;
+      font-size: 0.6rem;
     }
 
 
@@ -711,6 +711,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .depo h1{
@@ -782,9 +783,10 @@
   
     .depo-all{
       display: flex;
+      justify-content: center;
       flex-direction: row;
-      gap: 5%;
-      width: 80%;
+      gap: 1%;
+      width: 100%;
     }
   
     .nome-e-des{
@@ -797,23 +799,28 @@
     .foto-perfil{
       display: flex;
     }
+
+    .depo-1 .p-d{
+    width: 100%;
+    }
   
     .p-d{
-      font-size: 0.1rem;
+      font-size: 0.47rem;
       color: #969696;
-      width: 100%;
+      width: 100.67%;
+      word-break: nowrap;
       
     }
   
     .container-depo h3{
       color: #000000;
-      font-weight: 600;
-      font-size: 0.18rem;
-      width: 100%;
+      font-weight: 600;     
+      font-size: 0.43rem;
+      width: 120%;
     }
   
     .depo h4{
-      font-size: 0.13rem;
+      font-size: 0.32rem;
     }
   
     .depo img {
@@ -822,12 +829,12 @@
     }
   
     .p-p{
-      font-size: 0.1rem;
+      font-size: 0.3rem;
     }
   
   }
 
-@media (min-width:480px)  and (max-width:768px){
+@media (min-width:481px)  and (max-width:768px){
   .depo h1{
     font-size: 2rem;
     color: #003536;
@@ -1020,7 +1027,7 @@
   .movimento-esg {
     display: flex;
     flex-direction: column;
-   margin-left: 9.5%;
+   margin-left: 4.5%;
    margin-top: 10%;
   }
 
@@ -1043,7 +1050,7 @@
     flex-direction: column;
   }
   .sigla p{
-    font-size: 0.3rem;
+    font-size: 0.5rem;
     padding-bottom: 13%;
     width: 100%;
     color: #969696;
@@ -1065,7 +1072,7 @@
   } 
 
   .img-esg1 img{
-    width: 5%;
+    width: 10%;
   }
 
   .s-img{
@@ -1078,8 +1085,8 @@
 
   .img-pl{
     width: 30vw;
-   
     padding-bottom: 10%;
+    margin-right: 10%;
   }
 
   .b-esg{
@@ -1097,7 +1104,7 @@
   } 
 }
 
-@media (min-width:480px) and (max-width:768px){
+@media (min-width:481px) and (max-width:768px){
   .movimento-esg {
     display: flex;
     flex-direction: column;
