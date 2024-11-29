@@ -1,5 +1,8 @@
 <div align="center">
-<img src="https://github.com/vlipe/VetMate/blob/main/VetMate/imagens/logo-vetmate-alta-resolucaoverde.png" alt="Logo da VetMate" width="200px">
+<img src="https://github.com/vlipe/VetMate/blob/main/VetMate/assets/imagens/vetmate-nova-logo.png" alt="Logo da VetMate" width="200px">
+
+<br>
+<br>
 
 **VetMate** é um site que tem foco em simplificar o cuidado com a saúde de pets, conectando tutores a clínicas veterinárias e oferecendo ferramentas para o gerenciamento da saúde animal. O projeto está sendo desenvolvido no primeiro ano de curso de Análise e Desenvolvimento de Sistemas, em colaboração com o programa P-TECH da IBM.
 </div>
