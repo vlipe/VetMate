@@ -493,12 +493,13 @@ background-color: #ffffff;
         align-items: center;
         flex-direction: column;
         width: 553px;
-        height: 1100px;
+        height: 1300px;
       }
 
 
       .texto {
         text-align: center;
+        margin-top: 120px;
       }
   }
 
@@ -508,7 +509,7 @@ background-color: #ffffff;
 
     .cachorro-texto {
       width: 80%;
-      height: 800px ;
+      height: 965px ;
     }
 
 
@@ -552,6 +553,10 @@ background-color: #ffffff;
       font-size: 15px;
     }
 
+    .cachorro-texto {
+      height: 820px;
+    }
+
     
   }
 
@@ -576,8 +581,12 @@ background-color: #ffffff;
   }
 
   
+  .container-titulo2 {
+    margin-top: 120px;
+  }
+  
+
    .titulo2 {
-    margin-top: 100px;
     text-align: center;
     color: #003536;
     font-size: 32px;
@@ -587,7 +596,7 @@ background-color: #ffffff;
   
   
   .texto2 {
-    padding-top: 80px;
+   margin-top: 120px;
     text-align: center;
     font-size: 18px;
    color: #969696;
@@ -823,12 +832,12 @@ background-color: #ffffff;
     color: #003536;
     font-size: 32px;
     font-family: 'poppins', sans-serif;
-    padding-top: 100px;
+    margin-top: 120px;
   }
   
   
   .texto-3 {
-  margin-top: 80px;
+  margin-top: 120px;
   text-align: center;
   padding-left: 290px;
   padding-right: 290px;
@@ -886,7 +895,89 @@ background-color: #ffffff;
   }
 
 
+  @media (max-width:900px) {
+    .botao button {
+      width: 18vw;
+      height: 5vw;
+    }
+  }
  
+
+  @media (max-width:700px) {
+    .botao button {
+      width: 22vw;
+      height: 6vw;
+    }
+  }
+ 
+
+  @media (max-width:550px) {
+    .botao button {
+      width: 26vw;
+      height: 7vw;
+    }
+  }
+
+
+  
+  @media (max-width:470px) {
+    .botao button {
+      width: 30vw;
+      height: 8vw;
+      margin-right: auto ;
+      margin-left: 37%;
+    }
+  }
+
+
+  @media (max-width:470px) {
+    .botao button {
+      width: 35vw;
+      height: 8.5vw;
+      margin-right: auto ;
+      margin-left: 34%;
+    }
+  }
+
+
+  @media (max-width:470px) {
+    .botao button {
+      width: 38vw;
+      height: 8.5vw;
+      margin-right: auto ;
+      margin-left: 34%;
+    }
+  }
+
+
+  @media (max-width:650px) {
+    .titulo-3 {
+      font-size: 24px;
+    }
+    
+    .titulo {
+      font-size: 24px;
+    }
+
+    .titulo2 {
+      font-size: 24px;
+    }
+  }
+
+
+  @media (max-width:500px) {
+    .titulo-3 {
+      font-size: 20px;
+    }
+    
+    .titulo {
+      font-size: 20px;
+    }
+
+    .titulo2 {
+      font-size: 20px;
+    }
+  }
 
   footer {
     margin-top: 5rem;
