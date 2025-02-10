@@ -1,5 +1,3 @@
-
-
 const sidebar = document.getElementById('sidebar');
 sidebar.addEventListener('click', toggleSidebar);
 
@@ -246,7 +244,7 @@ async function sendMessageToAPI(userMessage) {
   }
 
   try {
-    const apiKey = 'AIzaSyDsiMgrvjrfgQlGlCJKm0K7FJx-UBFSV-w'; 
+    const apiKey = 'AIzaSyCiq8igjazwf5UXx0nAWjdGDxxjqxnqKSw'; 
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiUrl, {

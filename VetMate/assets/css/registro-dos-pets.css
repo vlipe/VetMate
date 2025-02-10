@@ -145,7 +145,7 @@ hr {
 /* Notificações do usuário e conta. */
 
 header {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 1rem;
     padding: 0.8rem 1.3rem;
@@ -158,8 +158,8 @@ header {
 }
 
 .noti-icon {
-    width: 70px;
-    height: 77px;
+    width: 5.5rem;
+    height: 4.8rem;
     padding: 1rem;
     background-color: white;
     border-radius: 15px;
@@ -212,8 +212,8 @@ header {
 }
 
 .conta svg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
     margin-right: 1rem;
 }
@@ -250,9 +250,6 @@ header {
 
 .notificacao-popup {
     position: absolute;
-    width: 450px;
-    margin-top: 3rem;
-    margin-right: 1rem;
     top: 100%;
     right: 0;
     background-color: white;
@@ -270,7 +267,7 @@ header {
 
 @keyframes slideInRight {
     from {
-        transform: translateX(-100%);
+        transform: translateX(100%);
         opacity: 0;
     }
 

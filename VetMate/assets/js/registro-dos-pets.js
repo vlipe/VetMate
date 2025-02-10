@@ -26,7 +26,7 @@ function salvarDados() {
     localStorage.setItem('pets', JSON.stringify(petsCadastrados));
 
     alert('Dados do pet cadastrados com sucesso!');
-    window.location.href = '../html/registro-dos-pets.html';
+    window.location.href = 'registro-dos-pets';
   };
   reader.readAsDataURL(file);
 }
