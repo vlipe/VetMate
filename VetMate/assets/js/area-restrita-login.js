@@ -244,7 +244,7 @@ async function sendMessageToAPI(userMessage) {
   }
 
   try {
-    const apiKey = 'AIzaSyCiq8igjazwf5UXx0nAWjdGDxxjqxnqKSw'; 
+    const apiKey = 'AIzaSyDPxTwQmVkJWQO2gUZ4wrDZvqDbqiFGZLo'; 
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiUrl, {
