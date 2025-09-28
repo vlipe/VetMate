@@ -8,7 +8,7 @@ class Request {
   public array $query;
   public array $params = [];
   public array $body;
-  public ?array $user = null;   // <<< importante para sumir o deprecated
+  public ?array $user = null;   
 
   public function __construct() {
     $this->method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
@@ -25,5 +25,25 @@ class Request {
     $auth = $this->headers['Authorization'] ?? ($_SERVER['HTTP_AUTHORIZATION'] ?? '');
     if (preg_match('/^Bearer\s+(.*)$/i', $auth, $m)) return trim($m[1]);
     return null;
+  }
+
+   public function getBaseUrl(): string {
+    // tenta respeitar proxy/reverso
+    $proto = $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? null;
+    $host  = $_SERVER['HTTP_X_FORWARDED_HOST']  ?? null;
+
+    $scheme = $proto ?: (
+      (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['SERVER_PORT'] ?? null) == 443
+        ? 'https' : 'http'
+    );
+
+    $host = $host ?: ($_SERVER['HTTP_HOST'] ?? ($_SERVER['SERVER_NAME'] ?? 'localhost'));
+
+    // se teu index.php fica em /public, a base é esse diretório
+    $script = $_SERVER['SCRIPT_NAME'] ?? '';
+    $basePath = rtrim(str_replace('\\','/', dirname($script)), '/');
+    if ($basePath === '' || $basePath === '/') $basePath = '';
+
+    return $scheme . '://' . $host . $basePath;
   }
 }

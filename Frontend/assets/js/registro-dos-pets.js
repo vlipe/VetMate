@@ -158,5 +158,89 @@ document.getElementById('botao2').addEventListener('click', function(event) {
   }, 400);
 });
 
+const API_BASE = window.API_BASE || 'http://localhost:8081/api';
+const token = localStorage.getItem('vm_token');
+
+const btnAtualizar = document.querySelector('.submit');
+const inputNome = document.getElementById('nome');
+const inputEmail = document.getElementById('email');
+const inputSenha = document.getElementById('senha');
+const inputConf  = document.getElementById('confirmacaoSenha');
+const inputFile  = document.getElementById('file');
+
+// 1) Carrega dados atuais (inclusive avatar) para exibir
+(async () => {
+  const r = await fetch(`${API_BASE}/me`, { headers: {Authorization:`Bearer ${token}`}});
+  const me = await r.json();
+  document.querySelector('.user-nome')?.textContent  = me.user.name || 'Usuário';
+  document.querySelector('.user-email')?.textContent = me.user.email || '';
+  if (me.user.avatar_url) {
+    const avatarEls = document.querySelectorAll('.avatar, .avatar-chatbot, .foto-perfil'); // ajuste seus seletores
+    avatarEls.forEach(el => el.src = me.user.avatar_url);
+  }
+})();
+
+// 2) Upload de foto sozinho (sem preencher outros campos)
+inputFile.addEventListener('change', async () => {
+  if (!inputFile.files?.length) return;
+  const fd = new FormData();
+  fd.append('avatar', inputFile.files[0]);
+  const resp = await fetch(`${API_BASE}/user/avatar`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}` },
+    body: fd
+  });
+  if (!resp.ok) {
+    const t = await resp.text();
+    alert('Falha no upload: ' + t);
+    return;
+  }
+  const { user } = await resp.json();
+  // atualiza imagem na UI
+  document.querySelectorAll('.avatar, .avatar-chatbot, .foto-perfil')
+    .forEach(el => el.src = user.avatar_url);
+  alert('Foto atualizada!');
+});
+
+// 3) Atualização parcial de texto (nenhum campo é obrigatório)
+btnAtualizar.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const body = {};
+  if (inputNome.value.trim()  !== '') body.name = inputNome.value.trim();
+  if (inputEmail.value.trim() !== '') body.email = inputEmail.value.trim();
+
+  if (inputSenha.value) {
+    if (inputSenha.value !== inputConf.value) {
+      alert('Confirmação de senha não confere.');
+      return;
+    }
+    body.password = inputSenha.value;
+  }
+
+  if (Object.keys(body).length === 0) {
+    alert('Nada para atualizar (a foto é enviada no campo acima).');
+    return;
+  }
+
+  const resp = await fetch(`${API_BASE}/user`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify(body)
+  });
+  if (!resp.ok) {
+    const t = await resp.text();
+    alert('Falha ao atualizar: ' + t);
+    return;
+  }
+  const { user } = await resp.json();
+  document.querySelector('.user-nome')?.textContent  = user.name;
+  document.querySelector('.user-email')?.textContent = user.email;
+  alert('Dados atualizados!');
+});
+
+
  
 

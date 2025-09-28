@@ -56,17 +56,136 @@ $api->post('/clinics/login', function (Request $req) use ($db, $config) {
   // ---------- Grupo protegido (/api) ----------
   $router->group('/api', function ($api) use ($db, $authMw) {
 
+    // ---------- Perfil do usuário (edição parcial) ----------
+// PATCH /api/user  → atualiza parcialmente (nome/email/senha)
+$api->patch('/user', function (Request $req) use ($db) {
+  $repo = new UsersRepository($db);
+  $id   = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
+
+  $data = $req->body ?? [];
+  $updates = [];
+
+  if (isset($data['name']) && $data['name'] !== '')   $updates['name'] = trim($data['name']);
+  if (isset($data['email']) && $data['email'] !== '') $updates['email'] = trim($data['email']);
+  if (isset($data['password']) && $data['password'] !== '') {
+    // armazena já como hash
+    $updates['password_hash'] = password_hash($data['password'], PASSWORD_BCRYPT);
+  }
+
+  if ($updates) {
+    $repo->updateById($id, $updates);
+  }
+
+  $user = $repo->findById($id);
+  Response::json(['user' => $user]);
+}, [ $authMw ]);
+
+// POST /api/user/avatar  → upload do avatar (multipart/form-data)
+$api->post('/user/avatar', function (App\Core\Request $req) use ($db) {
+  $userId = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
+  if (!$userId) {
+    App\Core\Response::json(['error'=>['message'=>'unauthorized']], 401);
+    return;
+  }
+
+  if (!isset($_FILES['avatar']) || $_FILES['avatar']['error'] !== UPLOAD_ERR_OK) {
+    App\Core\Response::json(['error'=>['message'=>'Arquivo não enviado']], 400);
+    return;
+  }
+
+  $file = $_FILES['avatar'];
+
+  // === validações ===
+$maxBytes = 2 * 1024 * 1024; // 2MB
+if ($file['size'] > $maxBytes) {
+  App\Core\Response::json(['error'=>['message'=>'Arquivo até 2MB']], 413);
+  return;
+}
+
+// tenta detectar o MIME com fallback
+$mime = null;
+
+// 1) fileinfo
+if (function_exists('finfo_open')) {
+  $fi = finfo_open(FILEINFO_MIME_TYPE);
+  if ($fi) {
+    $mime = finfo_file($fi, $file['tmp_name']) ?: null;
+    finfo_close($fi);
+  }
+}
+
+// 2) mime_content_type
+if (!$mime && function_exists('mime_content_type')) {
+  $mime = @mime_content_type($file['tmp_name']) ?: null;
+}
+
+// 3) getimagesize (último recurso)
+if (!$mime) {
+  $gi = @getimagesize($file['tmp_name']);
+  if ($gi && isset($gi['mime'])) $mime = $gi['mime'];
+}
+
+$allowed = [
+  'image/jpeg' => 'jpg',
+  'image/png'  => 'png',
+  'image/webp' => 'webp',
+];
+
+if (!$mime || !isset($allowed[$mime])) {
+  App\Core\Response::json(['error'=>['message'=>'Formato inválido (jpg/png/webp)']], 415);
+  return;
+}
+
+$ext = $allowed[$mime];
+
+
+  // garante pasta
+  $dstDir = __DIR__ . '/../../public/uploads/avatars';
+  if (!is_dir($dstDir)) { @mkdir($dstDir, 0775, true); }
+
+  $ext = $allowed[$mime];
+  $fname   = sprintf('%d_%s.%s', $userId, bin2hex(random_bytes(8)), $ext);
+  $dstPath = $dstDir . '/' . $fname;
+
+  if (!move_uploaded_file($file['tmp_name'], $dstPath)) {
+    App\Core\Response::json(['error'=>['message'=>'Falha ao salvar arquivo']], 500);
+    return;
+  }
+
+  // monte a URL pública do backend (ajuste se necessário)
+  $scheme = (!empty($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http');
+  $host   = $_SERVER['HTTP_HOST'] ?? 'localhost:8081'; // ex.: localhost:8081
+  $base   = $scheme . '://' . $host;
+
+  $publicUrl = $base . '/uploads/avatars/' . $fname;
+
+  // grava no banco
+  $repo = new App\Repositories\UsersRepository($db);
+  $repo->updateById($userId, ['avatar_url' => $publicUrl]);
+
+  App\Core\Response::json(['avatar_url' => $publicUrl], 201);
+}, [ $authMw ]);
+
+
+
+
     // /me
-    $api->get('/me', function (Request $req) {
-      Response::json([
-        'user' => [
-          'id'    => intval($req->user['sub'] ?? $req->user['id'] ?? 0),
-          'name'  => $req->user['name']  ?? '',
-          'email' => $req->user['email'] ?? '',
-          'role'  => $req->user['role']  ?? 'user',
-        ]
-      ]);
-    }, [ $authMw ]);
+   $api->get('/me', function (Request $req) use ($db) {
+  $repo = new UsersRepository($db);
+  $id = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
+  $user = $repo->findById($id); // implemente se não tiver
+
+  Response::json([
+    'user' => [
+      'id'         => (int)$user['id'],
+      'name'       => $user['name'],
+      'email'      => $user['email'],
+      'role'       => $user['role'] ?? 'user',
+      'avatar_url' => $user['avatar_url'] ?? null,
+    ]
+  ]);
+}, [ $authMw ]);
+
 
     // ------ Users (tudo protegido) ------
     $api->get('/users', function (Request $req) use ($db) {
@@ -106,6 +225,8 @@ $api->post('/clinics/login', function (Request $req) use ($db, $config) {
       $ctl = new UsersController(new UsersRepository($db));
       Response::json($ctl->delete($actorId, $role, $id));
     }, [ $authMw ]);
+
+    
 
     // ------ Pets ------
     $api->get('/pets', function (Request $req) use ($db) {

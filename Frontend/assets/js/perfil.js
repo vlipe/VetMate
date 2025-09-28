@@ -14,21 +14,14 @@ function verificarSenhas(event) {
   const confirmacaoSenha = confirmacaoSenhaInput.value;
 
   // Expressões regulares para validar os requisitos da senha
-  const regexMinimo8Digitos = /.{8,}/;
-  const regexCaracteresEspeciais = /[@!#]/;
-  const regexLetras = /[a-zA-Z]/;
+  const regexMinimo8Digitos = /.{3,}/;
+
 
   let mensagemErroSenha = "";
   if (!regexMinimo8Digitos.test(senha)) {
-    mensagemErroSenha += "A senha deve ter no mínimo 8 caracteres. ";
+    mensagemErroSenha += "A senha deve ter no mínimo 3 caracteres. ";
   }
-  if (!regexCaracteresEspeciais.test(senha)) {
-    mensagemErroSenha += "A senha deve conter pelo menos um dos caracteres: @, ! ou #. ";
-  }
-  if (!regexLetras.test(senha)) {
-    mensagemErroSenha += "A senha deve conter pelo menos uma letra. ";
-  }
-
+  
   if (mensagemErroSenha !== "") {
     alert(mensagemErroSenha);
     senhaInput.value = ''; // Limpa o input de senha
@@ -58,3 +51,115 @@ confirmacaoSenhaInput.addEventListener('blur', () => {
     verificarSenhas(event); 
   }
 });
+
+
+const API_BASE = window.API_BASE || 'http://localhost:8081/api';
+const token = localStorage.getItem('vm_token');
+if (!token) {
+  alert('Faça login novamente');
+  window.location.href = 'area-restrita.html';
+}
+
+
+// Carrega dados do /me para mostrar avatar/nome/email atuais
+async function carregarPerfil() {
+  try {
+    const resp = await fetch(`${API_BASE}/me`, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    const data = await resp.json();
+    const user = data.user || {};
+
+    // exibir avatar (se houver) em algum img#avatarPreview
+    const img = document.getElementById('avatarPreview');
+    if (img && user.avatar_url) img.src = user.avatar_url;
+
+    // opcional: preencher placeholders
+    document.getElementById('nome').placeholder  = user.name  || 'Insira seu nome';
+    document.getElementById('email').placeholder = user.email || 'Insira seu email';
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+// Atualizar (parcial): envia só o que for preenchido
+document.querySelector('.submit').addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const name  = document.getElementById('nome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const senha = document.getElementById('senha').value.trim();
+  const conf  = document.getElementById('confirmacaoSenha').value.trim();
+
+  const body = {};
+  if (name)  body.name  = name;
+  if (email) body.email = email;
+  if (senha) {
+    if (senha !== conf) {
+      alert('Confirmação de senha incorreta');
+      return;
+    }
+    body.password = senha;
+  }
+
+  if (Object.keys(body).length === 0) {
+    alert('Nada para atualizar.');
+    return;
+  }
+
+  try {
+    const resp = await fetch(`${API_BASE}/user`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(body)
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    const data = await resp.json();
+    alert('Dados atualizados!');
+    // se quiser, atualize UI/localStorage
+  } catch (err) {
+    console.error(err);
+    alert('Falha ao atualizar: ' + err.message);
+  }
+});
+
+// Upload do avatar sem precisar preencher mais nada
+document.getElementById('file').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const fd = new FormData();
+  fd.append('avatar', file);
+
+  try {
+    const resp = await fetch(`${API_BASE}/user/avatar`, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${token}` }, // NÃO defina Content-Type manualmente
+      body: fd
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    const data = await resp.json();
+    const url  = data.avatar_url;
+
+    // Mostra na tela
+    const img = document.getElementById('avatarPreview');
+    if (img) img.src = url;
+
+    // Se a Área Restrita usa localStorage para montar header, salve:
+    const vmUser = JSON.parse(localStorage.getItem('vm_user') || '{}');
+    vmUser.avatar_url = url;
+    localStorage.setItem('vm_user', JSON.stringify(vmUser));
+
+    alert('Foto atualizada!');
+  } catch (err) {
+    console.error(err);
+    alert('Falha no upload: ' + err.message);
+  }
+});
+
+carregarPerfil();
+

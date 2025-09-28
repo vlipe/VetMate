@@ -189,6 +189,9 @@ document.getElementById('btn-login')?.addEventListener('click', async () => {
     const data = await resp.json();
     localStorage.setItem('vm_token', data.token);
     localStorage.setItem('vm_user', JSON.stringify(data.user));
+    const u = JSON.parse(localStorage.getItem('vm_user') || '{}');
+  const avatarImg = document.querySelector('.avatar-header'); // seu seletor
+  if (avatarImg && u.avatar_url) avatarImg.src = u.avatar_url;
     window.location.href = 'area-restrita-login.html';
   } catch (err) {
     console.error(err);
