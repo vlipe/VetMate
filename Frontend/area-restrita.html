@@ -109,43 +109,35 @@
         <p id="p-2">Faça login ou cadastre-se e tenha acesso <br> à todas as funções completas da VetMate!</p>
 
         <div class="container-form">
-            <form class="form">
-                <div class="grupo-form">
-                   <input type="text" id="loginEmail" name="email" placeholder="Insira seu email" required>
-<input type="password" id="loginSenha" name="senha" placeholder="Insira sua senha" required>
-
-                </div>
-
-                <button type="button" class="btn-login" id="btn-login">Login</button>
-
-
-                <dialog id="modal-1">
-
-                    <div class="container-form-modal" id="container-form-modal-id">
-
-                        <form class="form-modal">
-
-                            <div class="grupo-form-modal">
-
-                                <button class="close-modal" data-modal="modal-1"> <i
-                                        class="fa-solid fa-square-xmark"></i> </button>
-
-                                <input type="text" id="regNome" placeholder="Insira seu nome completo" required>
-                                <input type="date" id="regData"> <!-- opcional para o back -->
-                                <input type="text" id="regEmail" placeholder="Insira seu email" required>
-                                <input type="password" id="regSenha" placeholder="Insira sua senha" required>
+           <form id="login-form" class="form" novalidate>
+  <div class="grupo-form">
+    <input type="email"    id="loginEmail" name="email" placeholder="Insira seu email" required>
+    <input type="password" id="loginSenha" name="password" placeholder="Insira sua senha" required>
+  </div>
+  <button type="submit" class="btn-login" id="btn-login">Login</button>
+</form>
 
 
-                            </div>
 
-                            <button class="btn-cadastre-se" id="cadastro-link-link">Cadastrar-se</button>
+               <dialog id="modal-1">
+  <div class="container-form-modal" id="container-form-modal-id">
+    <form id="register-form" class="form-modal" novalidate>
+      <div class="grupo-form-modal">
+        <button type="button" class="close-modal" data-modal="modal-1">
+          <i class="fa-solid fa-square-xmark"></i>
+        </button>
 
+        <input type="text"     id="regNome"  name="name"     placeholder="Insira seu nome completo" required>
+        <input type="date"     id="regData"  name="birth"    placeholder="Data de nascimento (opcional)">
+        <input type="email"    id="regEmail" name="email"    placeholder="Insira seu email" required>
+        <input type="password" id="regSenha" name="password" placeholder="Insira sua senha" required>
+      </div>
 
-                        </form>
+      <button type="submit" class="btn-cadastre-se" id="btn-register">Cadastrar-se</button>
+    </form>
+  </div>
+</dialog>
 
-                    </div>
-
-                </dialog>
 
                 <dialog id="modal-2">
 
@@ -162,7 +154,7 @@
                 </dialog>
 
 
-            </form>
+            
 
             <div class="grupo-texto-cadastro">
                 <p class="cadastro-link"> Não tem login? <a data-modal="modal-1" id="cadastro-link-link"

@@ -224,6 +224,83 @@ document.querySelector('.btn-cadastre-se')?.addEventListener('click', async (e) 
 });
 
 
+// === LOGIN ===
+document.getElementById('login-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginSenha').value.trim();
+  if (!email || !password) return;
+
+  try {
+    const resp = await fetch(`${API_BASE}/auth/login`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ email, password })
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(()=>({error:{message:'Login falhou'}}));
+      alert(err?.error?.message || 'Falha no login');
+      return;
+    }
+    const data = await resp.json();
+    localStorage.setItem('vm_token', data.token);
+    localStorage.setItem('vm_user', JSON.stringify(data.user));
+    window.location.href = 'area-restrita-login.html';
+  } catch (err) {
+    alert('Falha no login: ' + (err?.message || 'erro de rede'));
+  }
+});
+
+
+// === CADASTRO (MODAL) ===
+const dlg1 = document.getElementById('modal-1');
+document.getElementById('register-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name     = document.getElementById('regNome').value.trim();
+  const email    = document.getElementById('regEmail').value.trim();
+  const password = document.getElementById('regSenha').value.trim();
+
+  if (!name || !email || !password) {
+    alert('Preencha nome, email e senha.');
+    return;
+  }
+
+  try {
+    const resp = await fetch(`${API_BASE}/auth/register`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ name, email, password })
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(()=>({error:{message:'Cadastro falhou'}}));
+      alert(err?.error?.message || 'Falha no cadastro');
+      return;
+    }
+
+    // sucesso → fecha modal-1 e abre modal-2
+    dlg1.close?.();
+    document.getElementById('modal-2').showModal?.();
+
+  } catch (err) {
+    alert('Falha no cadastro: ' + (err?.message || 'erro de rede'));
+  }
+});
+
+// Abrir/fechar modal (garanta que o botão "Cadastre-se" de fora abre o diálogo)
+document.querySelectorAll('.cadastro-link-link').forEach(btn => {
+  btn.addEventListener('click', () => document.getElementById('modal-1').showModal());
+});
+document.querySelectorAll('.close-modal').forEach(btn => {
+  btn.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    const id = btn.getAttribute('data-modal');
+    document.getElementById(id).close();
+  });
+});
+
+
 
 
 
