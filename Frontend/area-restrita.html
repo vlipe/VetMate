@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
 </head>
 
 <body>
@@ -26,16 +26,16 @@
 
         <nav class="nav-bar">
             <div class="logo">
-                <a href="home"><img src="assets/imagens/logo-vetmate.png" alt="logo-vetmate"></a>
+                <a href="home.html"><img src="assets/imagens/logo-vetmate.png" alt="logo-vetmate"></a>
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="institucional" class="nav-link">Institucional</a></li>
-                    <li class="nav-item"><a href="contato-e-sac" class="nav-link">Contato e SAC</a></li>
+                    <li class="nav-item"><a href="institucional.html" class="nav-link">Institucional</a></li>
+                    <li class="nav-item"><a href="contato-e-sac.html" class="nav-link">Contato e SAC</a></li>
                 </ul>
             </div>
             <div class="login-button">
-                <button><a href="area-restrita">Área Restrita</a></button>
+                <button><a href="area-restrita.html">Área Restrita</a></button>
             </div>
 
             <div class="mobile-menu-icon">
@@ -44,12 +44,12 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="institucional" class="nav-link">Institucional</a></li>
-                <li class="nav-item"><a href="contato-e-sac" class="nav-link">Contato e SAC</a></li>
+                <li class="nav-item"><a href="institucional.html" class="nav-link">Institucional</a></li>
+                <li class="nav-item"><a href="contato-e-sac.html" class="nav-link">Contato e SAC</a></li>
             </ul>
 
             <div class="login-button">
-                <button><a href="area-restrita">Área Restrita</a></button>
+                <button><a href="area-restrita.html">Área Restrita</a></button>
             </div>
         </div>
 
@@ -70,7 +70,8 @@
             <ul class="chatbox">
                 <li class="chat incoming">
                     <span class="material-symbols-outlined">smart_toy</span>
-                    <p>Olá! 👋<br>Como posso te ajudar?<br>Posso responder sobre dúvidas, pré-diagnósticos ou curiosidades relacionadas a veterinária!</p>
+                    <p>Olá! 👋<br>Como posso te ajudar?<br>Posso responder sobre dúvidas, pré-diagnósticos ou
+                        curiosidades relacionadas a veterinária!</p>
                 </li>
             </ul>
             <div class="chat-input">
@@ -110,19 +111,13 @@
         <div class="container-form">
             <form class="form">
                 <div class="grupo-form">
-                    <div class="email">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Insira seu email" required="">
-                    </div>
-                    <br>
-                    <div class="senha">
-                        <label for="email">Senha</label>
-                        <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required="">
-                    </div>
+                   <input type="text" id="loginEmail" name="email" placeholder="Insira seu email" required>
+<input type="password" id="loginSenha" name="senha" placeholder="Insira sua senha" required>
+
                 </div>
 
-                <button class="btn-login"><a id="link-area-restrita-login"
-                        href="area-restrita-login">Login</a></button>
+                <button type="button" class="btn-login" id="btn-login">Login</button>
+
 
                 <dialog id="modal-1">
 
@@ -135,29 +130,11 @@
                                 <button class="close-modal" data-modal="modal-1"> <i
                                         class="fa-solid fa-square-xmark"></i> </button>
 
-                                <div class="nome-modal">
-                                    <label for="email">Nome Completo</label>
-                                    <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo"
-                                        required="">
-                                </div>
-                                <br>
-                                <div class="data-modal">
-                                    <label for="email">Data de Nascimento</label>
-                                    <input type="date" id="data" name="data" placeholder="Insira sua data de nascimento"
-                                        required="">
-                                </div>
-                                <br>
-                                <div class="email-modal">
-                                    <label for="email">Email</label>
-                                    <input type="text" id="email" name="email" placeholder="Insira seu email"
-                                        required="">
-                                </div>
-                                <br>
-                                <div class="senha-modal">
-                                    <label for="email">Senha</label>
-                                    <input type="password" id="senha" name="senha" placeholder="Insira sua senha"
-                                        required="">
-                                </div>
+                                <input type="text" id="regNome" placeholder="Insira seu nome completo" required>
+                                <input type="date" id="regData"> <!-- opcional para o back -->
+                                <input type="text" id="regEmail" placeholder="Insira seu email" required>
+                                <input type="password" id="regSenha" placeholder="Insira sua senha" required>
+
 
                             </div>
 
@@ -228,16 +205,16 @@
                     <h3>Navegue</h3>
                 </li>
                 <li>
-                    <a href="home" class="footer-link">Home</a>
+                    <a href="home.html" class="footer-link">Home</a>
                 </li>
                 <li>
-                    <a href="institucional" class="footer-link">Institucional</a>
+                    <a href="institucional.html" class="footer-link">Institucional</a>
                 </li>
                 <li>
-                    <a href="contato-e-sac" class="footer-link">Contato e SAC</a>
+                    <a href="contato-e-sac.html" class="footer-link">Contato e SAC</a>
                 </li>
                 <li>
-                    <a href="area-restrita" class="footer-link">Área Restrita</a>
+                    <a href="area-restrita.html" class="footer-link">Área Restrita</a>
                 </li>
             </ul>
 
@@ -280,7 +257,7 @@
     </footer>
 
 </body>
-
+<script src="assets/js/config.js"></script>
 <script src="assets/js/script-area-restrita.js"></script>
 
 </html>

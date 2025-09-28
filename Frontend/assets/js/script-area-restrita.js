@@ -36,7 +36,6 @@ closeButtons.forEach(button => {
 
 const modal1 = document.getElementById('modal-1');
 const modal2 = document.getElementById('modal-2');
-const btnCadastrar = document.getElementById('cadastro-link-link');
 const btnFecharModal2 = document.querySelector('.btn-login-2');
 
 function mostrarModal(modalId) {
@@ -48,10 +47,7 @@ function ocultarModal(modalId) {
 }
 
 
-btnCadastrar.addEventListener('click', () => {
-    ocultarModal('modal-1'); 
-    mostrarModal('modal-2'); 
-});
+
 
 
 btnFecharModal2.addEventListener('click', () => {
@@ -169,5 +165,65 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+const API_BASE = window.API_BASE || 'http://localhost:8081/api';
+
+document.getElementById('btn-login')?.addEventListener('click', async () => {
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginSenha').value.trim();
+  if (!email || !password) return alert('Preencha email e senha');
+
+  try {
+    const resp = await fetch(`${API_BASE}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      // se precisar mandar token ou algo, acrescente no Authorization
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!resp.ok) {
+      const txt = await resp.text();
+      throw new Error(`Erro ${resp.status}: ${txt || resp.statusText}`);
+    }
+
+    const data = await resp.json();
+    localStorage.setItem('vm_token', data.token);
+    localStorage.setItem('vm_user', JSON.stringify(data.user));
+    window.location.href = 'area-restrita-login.html';
+  } catch (err) {
+    console.error(err);
+    alert(`Falha no login: ${err.message}`);
+  }
+});
+document.querySelector('.btn-cadastre-se')?.addEventListener('click', async (e) => {
+  e.preventDefault(); // não deixa o form recarregar a página
+  const name = document.getElementById('regNome').value.trim();
+  const email = document.getElementById('regEmail').value.trim();
+  const password = document.getElementById('regSenha').value.trim();
+  if (!name || !email || !password) return alert('Preencha nome, email e senha');
+
+  try {
+    const resp = await fetch(`${API_BASE}/auth/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, password }),
+    });
+
+    if (!resp.ok) {
+      const txt = await resp.text();
+      throw new Error(`Erro ${resp.status}: ${txt || resp.statusText}`);
+    }
+
+    // sucesso → fecha modal 1 e abre modal 2
+    document.getElementById('modal-1').close();
+    document.getElementById('modal-2').showModal();
+  } catch (err) {
+    console.error(err);
+    alert(`Falha no cadastro: ${err.message}`);
+  }
+});
+
+
+
 
 

@@ -363,6 +363,7 @@ function iniciarChat() {
 
 
 
+
 function toggleSidebar() {
   const openSidebarBtn = document.getElementById("sidebarToggle");
   
@@ -405,6 +406,50 @@ function closeSidebarOnClickOutside(event) {
     }
   
 }
+
+
+// === BOOT DA PÁGINA LOGADA ===
+document.addEventListener('DOMContentLoaded', async () => {
+  const token = localStorage.getItem('vm_token');
+  const rawUser = localStorage.getItem('vm_user');
+
+  if (!token || !rawUser) {
+    // não logado → volta pro login
+    window.location.href = 'area-restrita.html';
+    return;
+  }
+
+  try {
+    // opcional: validar token no /api/me
+    const meResp = await fetch(`${API_BASE}/me`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+
+    if (!meResp.ok) throw new Error('Sessão expirada');
+    const me = await meResp.json();
+
+    // Atualiza UI
+    const userNomeEl  = document.querySelector('.user-nome');
+    const userEmailEl = document.querySelector('.user-email');
+
+    if (userNomeEl)  userNomeEl.textContent  = me?.user?.name  || JSON.parse(rawUser).name || 'Usuário';
+    if (userEmailEl) userEmailEl.textContent = me?.user?.email || JSON.parse(rawUser).email || '';
+
+  } catch (err) {
+    // token inválido/expirado → limpa e volta
+    localStorage.removeItem('vm_token');
+    localStorage.removeItem('vm_user');
+    window.location.href = 'area-restrita.html';
+  }
+});
+
+// === LOGOUT ===
+document.querySelector('#logout a')?.addEventListener('click', (e) => {
+  // deixa o link funcionar, mas limpa sessão antes
+  localStorage.removeItem('vm_token');
+  localStorage.removeItem('vm_user');
+});
+
 
 
 

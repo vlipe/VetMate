@@ -8,6 +8,7 @@ return [
     'password' => getenv('DB_PASSWORD') ?: 'YourStrong!Passw0rd',
     'encrypt' => true,
     'trust_server_certificate' => true
+    
   ],
   'jwt' => [
     'secret' => getenv('JWT_SECRET') ?: 'change-this-secret',
@@ -16,8 +17,16 @@ return [
     'expires_in' => 60*60*24*7
   ],
   'cors' => [
-    'allowed_origins' => ['http://localhost:5173','http://127.0.0.1:5173','http://localhost:3000'],
-    'allowed_headers' => ['Content-Type','Authorization'],
-    'allowed_methods' => ['GET','POST','PUT','PATCH','DELETE','OPTIONS']
-  ]
+  'allowed_origins' => [
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+    'http://localhost:8080',
+    'http://localhost:8081'
+    
+  ],
+  'allowed_headers' => ['Content-Type','Authorization'],
+  'allowed_methods' => ['GET','POST','PUT','PATCH','DELETE','OPTIONS']
+]
+
 ];
+
