@@ -13,11 +13,9 @@ $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin && in_array($origin, $allowedOrigins, true)) {
     header("Access-Control-Allow-Origin: $origin");
     header('Vary: Origin');
-    // se for usar cookies/sessão: descomente as 2 linhas abaixo e NÃO use '*'
-//  header('Access-Control-Allow-Credentials: true');
-//  header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Accept, Origin');
+    
 } else {
-    // DEV: libera tudo (troque em PROD)
+  
     header('Access-Control-Allow-Origin: *');
 }
 
@@ -32,6 +30,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
     exit;
 }
 // ==================== FIM CORS ====================
+
+// === Request logger (útil para depuração local) ===
+// registra method, uri, headers e corpo em ../logs/requests.log
+try {
+    $logDir = __DIR__ . '/../logs';
+    if (!is_dir($logDir)) @mkdir($logDir, 0775, true);
+    $logFile = $logDir . '/requests.log';
+    $body = file_get_contents('php://input') ?: '';
+    $entry = [
+        'time' => date(DATE_ATOM),
+        'method' => $_SERVER['REQUEST_METHOD'] ?? '',
+        'uri' => $_SERVER['REQUEST_URI'] ?? '',
+        'script' => $_SERVER['SCRIPT_NAME'] ?? '',
+        'headers' => function_exists('getallheaders') ? (getallheaders() ?: []) : [],
+        'body' => $body,
+        'remote' => $_SERVER['REMOTE_ADDR'] ?? null,
+    ];
+    @file_put_contents($logFile, json_encode($entry, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) . PHP_EOL, FILE_APPEND | LOCK_EX);
+} catch (Throwable $e) {
+    // não atrapalha execução se falhar
+}
+
 
 require __DIR__.'/../src/Core/Autoload.php';
 

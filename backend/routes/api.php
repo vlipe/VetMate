@@ -18,6 +18,18 @@ return function (Router $router, array $config) {
   // ---------- Grupo público (/api) ----------
   $router->group('/api', function ($api) use ($db, $config) {
 
+    // root do /api — ajuda mínima para quem abre no navegador
+    $api->get('/', function (Request $req) {
+      Response::json([
+        'message' => 'VetMate API - use ferramentas HTTP (POST/GET) apropriadas. Ex: POST /api/auth/register',
+        'routes' => [
+          'GET /api/health',
+          'POST /api/auth/register',
+          'POST /api/auth/login'
+        ]
+      ]);
+    });
+
     // health
     $api->get('/health', function (Request $req) {
       Response::json(['ok' => true, 'time' => date(DATE_ATOM)]);
@@ -25,8 +37,20 @@ return function (Router $router, array $config) {
 
     // auth
     $api->post('/auth/register', function (Request $req) use ($db, $config) {
+      // validação preliminar: erro claro para JSON inválido
+      $body = $req->body ?? [];
+      if (!empty($req->raw) && empty($body)) {
+        Response::json(['error'=>['message'=>'Invalid JSON payload']], 400);
+        return;
+      }
+
+      // aceitar 'nome' em português como alias de 'name' (clientes BR)
+      if (isset($body['nome']) && !isset($body['name'])) {
+        $body['name'] = $body['nome'];
+      }
+
       $ctl = new AuthController(new UsersRepository($db), $config['jwt']);
-      Response::json($ctl->register($req->body), 201);
+      Response::json($ctl->register($body), 201);
     });
 
     $api->post('/auth/login', function (Request $req) use ($db, $config) {
