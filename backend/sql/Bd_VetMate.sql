@@ -60,12 +60,12 @@ ALTER LOGIN sa ENABLE;
 -- 3.2 definir uma senha forte para o sa
 ALTER LOGIN sa WITH PASSWORD = 'SuaSenhaForte!123';
 
--- 3.3 (opcional, mas recomendado) for√ßar que o sa n√£o expire
+-- 3.3 (opcional, mas recomendado) forÁar que o sa n„o expire
 ALTER LOGIN sa WITH CHECK_POLICY = OFF, CHECK_EXPIRATION = OFF;
 
 
 
--- 4.1 criar o banco (se n√£o existir)
+-- 4.1 criar o banco (se n„o existir)
 IF DB_ID('VetMate') IS NULL
 BEGIN
   CREATE DATABASE VetMate;
@@ -75,21 +75,21 @@ GO
 USE VetMate;
 GO
 
--- 4.2 criar um login dedicado (evita usar sa em produ√ß√£o)
+-- 4.2 criar um login dedicado (evita usar sa em produÁ„o)
 IF NOT EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'vetmate_user')
 BEGIN
   CREATE LOGIN vetmate_user WITH PASSWORD = 'SenhaFort3!'; -- defina a sua
 END
 GO
 
--- 4.3 criar usu√°rio no banco e dar permiss√µes
+-- 4.3 criar usu·rio no banco e dar permissıes
 IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'vetmate_user')
 BEGIN
   CREATE USER vetmate_user FOR LOGIN vetmate_user;
 END
 GO
 
-ALTER ROLE db_owner ADD MEMBER vetmate_user; -- simplifica; em prod, d√™ s√≥ o necess√°rio
+ALTER ROLE db_owner ADD MEMBER vetmate_user; -- simplifica; em prod, dÍ sÛ o necess·rio
 GO
 
 
@@ -118,13 +118,13 @@ GO
 IF OBJECT_ID('Clinics','U') IS NULL
 CREATE TABLE Clinics (
   id               INT IDENTITY(1,1) PRIMARY KEY,
-  cnpj             VARCHAR(14) NOT NULL UNIQUE,    -- s√≥ d√≠gitos (sem m√°scara)
-  corporate_name   NVARCHAR(200) NOT NULL,         -- raz√£o social
+  cnpj             VARCHAR(14) NOT NULL UNIQUE,    -- sÛ dÌgitos (sem m·scara)
+  corporate_name   NVARCHAR(200) NOT NULL,         -- raz„o social
   trade_name       NVARCHAR(200) NULL,             -- nome fantasia
   email            NVARCHAR(255) NOT NULL UNIQUE,
   phone            NVARCHAR(60)  NULL,
   password_hash    NVARCHAR(255) NOT NULL,
-  -- endere√ßo
+  -- endereÁo
   address_line1    NVARCHAR(200) NULL,
   address_line2    NVARCHAR(200) NULL,
   district         NVARCHAR(120) NULL,

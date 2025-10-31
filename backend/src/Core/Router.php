@@ -26,19 +26,33 @@ class Router {
   }
 
   public function dispatch(Request $req) {
+    $allowedMethodsForPath = [];
     foreach ($this->routes as [$method, $route, $handler, $mws]) {
-      if ($method !== $req->method) continue;
       if (preg_match($route['regex'], $req->path, $m)) {
-        $req->params = [];
-        foreach ($route['keys'] as $i=>$key) $req->params[$key] = $m[$i+1] ?? null;
-        $stack = array_merge($this->middlewares, $mws);
-        $next = function() use (&$next, &$stack, $handler, $req) {
-          if ($mw = array_shift($stack)) return $mw($req, $next);
-          return $handler($req);
-        };
-        return $next();
+        // registro que esse path existe para esse método
+        $allowedMethodsForPath[] = $method;
+
+        // método bateu → executa handler com middlewares
+        if ($method === $req->method) {
+          $req->params = [];
+          foreach ($route['keys'] as $i=>$key) $req->params[$key] = $m[$i+1] ?? null;
+          $stack = array_merge($this->middlewares, $mws);
+          $next = function() use (&$next, &$stack, $handler, $req) {
+            if ($mw = array_shift($stack)) return $mw($req, $next);
+            return $handler($req);
+          };
+          return $next();
+        }
       }
     }
+
+    if (!empty($allowedMethodsForPath)) {
+      // caminho existe, mas método não permitido
+      header('Allow: ' . implode(', ', array_unique($allowedMethodsForPath)));
+      Response::json(['error'=>['message'=>'Method Not Allowed']], 405);
+      return;
+    }
+
     Response::json(['error'=>['message'=>'Not Found']], 404);
   }
 

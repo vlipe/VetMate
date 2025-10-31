@@ -8,6 +8,7 @@ class Request {
   public array $query;
   public array $params = [];
   public array $body;
+  public string $raw;
   public ?array $user = null;   
 
   public function __construct() {
@@ -17,6 +18,7 @@ class Request {
     $this->headers = function_exists('getallheaders') ? (getallheaders() ?: []) : [];
     $this->query = $_GET ?? [];
     $raw = file_get_contents('php://input') ?: '';
+    $this->raw = $raw;
     $data = json_decode($raw, true);
     $this->body = is_array($data) ? $data : [];
   }
