@@ -11,6 +11,34 @@ body {
     background-color: #f8f8f8;
 }
 
+::-webkit-scrollbar {
+  width: 15px; 
+  height: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00C2A2; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f8f8f8; 
+}
+
+html {
+  scrollbar-color: #00C2A2 #f8f8f8; 
+  scrollbar-width: thin;
+}
+
 /* Formatação para o conteúdo (main) não ficar escondido atrás do sidebar. */
 
 main {
@@ -145,7 +173,7 @@ hr {
 /* Notificações do usuário e conta. */
 
 header {
-    position: fixed;
+    position: absolute;
     top: 2rem;
     right: 1rem;
     padding: 0.8rem 1.3rem;
@@ -158,8 +186,8 @@ header {
 }
 
 .noti-icon {
-    width: 5.5rem;
-    height: 4.8rem;
+    width: 90px;
+    height: 75px;
     padding: 1rem;
     background-color: white;
     border-radius: 15px;
@@ -212,8 +240,8 @@ header {
 }
 
 .conta svg {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     margin-right: 1rem;
 }
@@ -330,16 +358,6 @@ header {
 }
 
 
-section{
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: 2%;
-    margin-top: 2%;
-}
-
 /* Barra de pesquisa */
 /* Estilo da barra de pesquisa */
 /* Estilo da barra de pesquisa */
@@ -390,7 +408,7 @@ section{
     align-items: center;
     justify-content: center;
     margin-right: 10%;
-    width: 70%;
+    width: 20%;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -414,10 +432,9 @@ section{
 
 /* Registro do animal */
 h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 6%;
+    margin-bottom: 4.2rem;
 }
 
 p{
@@ -427,7 +444,7 @@ p{
     color: #969696;
 
 }
-
+    
 .p-n{
     font-size: 1.2rem;
     color: black;
@@ -439,10 +456,10 @@ p{
     margin-top: 2%;
 }
 
-h3{
-    font-size: 1.5rem;
+h2 {
+    font-size: 1.1rem;
     font-weight: 400;
-    margin-bottom: 2%;
+    margin-bottom: 1.5rem;
 }
 
 h5{
@@ -452,7 +469,6 @@ h5{
 h4{
     margin-bottom: 30%;
 }
-
 
 
 #mais-info {
@@ -699,6 +715,25 @@ input:focus {
     outline: none;
     border: 1px solid #00C2A2;
 }
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  padding-left: 30px;
+}
+
 
 .form-group select{
     width: 280px;

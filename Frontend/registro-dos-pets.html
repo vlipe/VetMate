@@ -7,7 +7,7 @@
     <title>Dados do Pet</title>
     <link rel="stylesheet" href="assets/css/registro-dos-pets.css">
     <link rel="shortcut icon" href="assets/imagens/favicon.ico" type="image/x-icon">
-
+    <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -182,30 +182,32 @@
     </nav>
     <main class="main-content">
         <section id="sec-p">
-            <h1>Meus pets</h1>
+            <h1>Meus Pets</h1>
 
-            <h3>Seus animais de estimação:</h3>
+            <h2 class="h-2">Seus animais de estimação:</h2>
 
             <!-- barra de pesquuisa -->
 
-            <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Pesquisar seus animais" onkeyup="filtrarItens()">
-            </div>
+<div class="input-wrapper">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" id="searchBar" placeholder="Pesquise seus animais" onkeyup="filtrarItens()">
+</div>
+
 
             <ul id="listaDeItens">
                 <div class="tds-img">
-                    <div class="I-A" onclick="buscarPorItem('Cao')">
-                        <img src="assets/imagens/cachorro.png" alt="Imagem de cachorro">
-                        <li class="item">Cao</li>
+                    <div class="I-A" onclick="buscarPorItem('Cão')">
+                        <img src="assets/imagens/cachorro.svg" alt="Imagem de cachorro">
+                        <li class="item">Cachorro</li>
                     </div>
 
                     <div class="I-A" onclick="buscarPorItem('Gato')">
-                        <img src="assets/imagens/gatos.png" alt="Imagem de gato">
+                        <img src="assets/imagens/gato.svg" alt="Imagem de gato">
                         <li class="item">Gato</li>
                     </div>
 
                     <div class="I-A" onclick="buscarPorItem('Silvestre')">
-                        <img src="assets/imagens/silvestre.png" alt="Imagem de animal silvestre">
+                        <img src="assets/imagens/silvestre.svg" alt="Imagem de animal silvestre">
                         <li class="item">Silvestre</li>
                     </div>
                 </div>

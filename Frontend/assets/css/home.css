@@ -1,10 +1,35 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
   }
 
+  ::-webkit-scrollbar {
+  width: 15px; 
+  height: 5px; 
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: #00C2A2; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f8f8f8; 
+}
+
+html {
+  scrollbar-color: #00C2A2 #ffffff; 
+  scrollbar-width: thin;
+}
 
 header {
     background-color: #00353600;
@@ -18,6 +43,7 @@ header {
   }
   
   .nav-bar {
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: space-between;
     padding: 2% 5%;
@@ -76,6 +102,7 @@ header {
   
   .login-button button {
     border: none;
+    font-family: "Poppins", sans-serif;
     padding: 10px 15px;
     border-radius: 8px;
     background-color: #ffffff;
@@ -419,31 +446,26 @@ header {
     padding-bottom: 15%;
   }
   
-  .poppins-semibold {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
   
   .titulo {
   margin-top: 100px;
   text-align: center;
   color: #003536;
-  font-size: 32px;
+  font-size: 46px;
+  font-weight: 600;
   font-family: 'poppins', sans-serif;
   padding-top: auto 0;
   }
   
   
   .cachorro-texto {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   width: 1281px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 120px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   }
@@ -455,29 +477,25 @@ header {
   width: 553px;
   height: 455px;
   text-align: right;
-  font-size: 28px;
+  font-size: 20px;
   color: #969696;
-  font-family: 'montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding-top: 145px;
   }
-  
+
+  .texto span {
+    font-weight: 600;
+  }
  
   
   .cachorro {
-  width: 437px;
-  height: 600px;
-background-color: #ffffff;
-  
+  width: 350px;
+  height: 400px;
+  background-color: #ffffff;
   }
-  
-  
-  
-
 
   .imgcachorro {
   margin: auto;
-  
-  
   }
   
   
@@ -589,16 +607,17 @@ background-color: #ffffff;
    .titulo2 {
     text-align: center;
     color: #003536;
-    font-size: 32px;
-    font-family: 'poppins', sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     padding-top: auto 0;
   }
   
   
   .texto2 {
-   margin-top: 120px;
-    text-align: center;
-    font-size: 18px;
+   margin-top: 70px;
+   text-align: center;
+   font-size: 18px;
    color: #969696;
    padding-left: 280px;
    padding-right: 280px;
@@ -652,7 +671,8 @@ background-color: #ffffff;
   margin-bottom: auto;
   margin-top: 120px;
   display: flex;
-  justify-content: space-between;
+  gap: 6rem;
+  justify-content: center;
   
   }
   
@@ -691,7 +711,7 @@ background-color: #ffffff;
   
   .cont-buscador {
   width: 352px;
-  height: 260px;
+  height: 240px;
   
   border-radius: 9%;
   border: #ECECEC 1px solid;
@@ -709,8 +729,9 @@ background-color: #ffffff;
   
   .buscador {
   color: #003536;
-  font-size: 13px;
-  font-family: 'poppins', sans-serif;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   margin: auto;
   width: 333px;
   height: 40px;
@@ -723,8 +744,10 @@ background-color: #ffffff;
   
   .texto-buscador {
   font-size: 16px;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
   text-align: center;
+  line-height: 17px;
   display: flex;
   color: #969696;
   margin-top: 10px;
@@ -734,7 +757,7 @@ background-color: #ffffff;
   
   .prontuario {
     width: 352px;
-    height: 260px;
+    height: 240px;
   
     border-radius: 9%;
     border: #ECECEC 1px solid;
@@ -751,8 +774,9 @@ background-color: #ffffff;
   
   .titulo-prontuario {
     color: #003536;
-    font-size: 13px;
-    font-family: 'poppins', sans-serif;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     display: flex;
     width: 333px;
     height: 40px;
@@ -768,8 +792,10 @@ background-color: #ffffff;
   .texto-prontuario {
     font-size: 16px;
     font-family: 'poppins', sans-serif;
+    font-weight: lighter;
+    line-height: 17px;
     text-align: center;
-  margin-top: 10px;
+    margin-top: 10px;
     color: #969696;
     padding-left: 25px;
     padding-right: 25px;
@@ -830,20 +856,20 @@ background-color: #ffffff;
   .titulo-3 {
     text-align: center;
     color: #003536;
-    font-size: 32px;
-    font-family: 'poppins', sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     margin-top: 120px;
   }
   
-  
   .texto-3 {
-  margin-top: 120px;
+  margin-top: 60px;
   text-align: center;
-  padding-left: 290px;
-  padding-right: 290px;
   font-size: 18px;
+  padding-left: 250px;
+  padding-right: 250px;
   color: #969696;
-  font-family: 'montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   }
   
 
@@ -872,28 +898,36 @@ background-color: #ffffff;
   }
 
 
-  .botao button{
-    margin-top: 4rem;
-    background-color: #00C2A2;
-    color: white;
-    width: 14vw;
-    height: 3.5vw;
-    border: none;
-    border-radius: 100px;
-    font-size: 1.2rem;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.2s linear;
-    margin-left: 42.6%;
-  }
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .botao button:hover {
-    color: #969696;
-    background-color: #ffffff;
-    border-color: #969696;
-    border: 1px solid;
-  }
+.botao button {
+  margin-top: 4rem;
+  background-color: #00C2A2;
+  color: white;
+  width: 16vw;
+  height: 3.5vw;
+  border: none;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
 
+.botao button:hover {
+  color: #969696;
+  background-color: #ffffff;
+  border: 1px solid #969696;
+}
+
+.botao i {
+  margin-left: 10px;
+}
 
   @media (max-width:900px) {
     .botao button {
@@ -980,9 +1014,14 @@ background-color: #ffffff;
   }
 
   footer {
+    font-family: "Poppins", sans-serif;
     margin-top: 5rem;
     width: 100%;
     color: white;
+  }
+
+  .footer-h3 {
+    font-weight: 500;
   }
 
   .footer-link {

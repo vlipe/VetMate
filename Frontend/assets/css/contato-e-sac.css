@@ -12,6 +12,34 @@ header {
     background-color: #003536;
 }
 
+::-webkit-scrollbar {
+  width: 15px; 
+  height: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00C2A2; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f8f8f8; 
+}
+
+html {
+  scrollbar-color: #00C2A2 #ffffff; 
+  scrollbar-width: thin;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -192,11 +220,9 @@ h1 {
 }
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display: block;
 }
-
-
 
 input,
 textarea {
@@ -207,11 +233,6 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     width: 55%;
-}
-
-input:focus,
-textarea:focus {
-    box-shadow: 0px 0px 30px rgba(0, 97, 99, 0.50);
 }
 
 #nome-label,
@@ -468,17 +489,16 @@ a:visited{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 5%;
 }
 
-h2 {
-    font-family: "Cocon", sans-serif;
+.p-2 {
+    font-family: "Poppins", sans-serif;
     margin-top: 5%;
     text-align: center;
     color: #003536;
-    font-size: 5rem;
-    width: 80%;
+    font-size: 46px;
     word-wrap: break-word;
     font-weight: 700;
     margin-bottom: 2%;
@@ -498,8 +518,8 @@ h2 {
     background: linear-gradient(49deg, #003536, #006C6F);
     border-radius: 15px;
     padding: 3vh;
-    width: 35vw;
-    height: 5vw;
+    width: 30vw;
+    height: 4vw;
     color: white;
     cursor: pointer;
     transition: transform 0.4s;
@@ -525,7 +545,7 @@ h2 {
 }
 
 .faq-texto {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 3vh;
 }
 
@@ -543,13 +563,13 @@ h2 {
 }
 
 .interacao-prompt img {
-    width: 3rem;
+    width: 2.1rem;
     right: 5px;
     vertical-align: middle;
 }
 
 .interacao-prompt p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 410;
 }
 
@@ -726,6 +746,10 @@ footer {
     width: 100%;
     color: white;
 }
+
+  .footer-h3 {
+    font-weight: 500;
+  }
 
 .footer-link {
     text-decoration: none;

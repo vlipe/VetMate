@@ -11,6 +11,34 @@ body {
     background-color: #f8f8f8;
 }
 
+::-webkit-scrollbar {
+  width: 15px; 
+  height: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00C2A2; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f8f8f8; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f8f8f8; 
+}
+
+html {
+  scrollbar-color: #00C2A2 #f8f8f8; 
+  scrollbar-width: thin;
+}
+
 /* Formatação para o conteúdo (main) não ficar escondido atrás do sidebar. */
 
 main {
@@ -400,7 +428,7 @@ main a button {
     padding: 0.7rem;
     text-decoration: none;
     color: white;
-    border: #00C2A2;
+    border: 1px solid #00C2A2;
     border-radius: 20px;
     background-color: #00C2A2;
     box-shadow: 0px 0px 1.3px 1.3px #00c2a23b;
@@ -435,7 +463,6 @@ main a button:hover {
     display: block;
     opacity: 1;
     transform: translateX(0);
-    animation: slideInRight 0.5s ease forwards;
 }
 
 #nova-secao h1 {
@@ -476,7 +503,7 @@ main a button:hover {
     padding: 0.7rem;
     text-decoration: none;
     color: #454545;
-    border: white;
+    border: 1px solid white;
     border-radius: 20px;
     background-color: white;
     cursor: pointer;
@@ -504,7 +531,7 @@ main a button:hover {
     padding: 0.7rem;
     text-decoration: none;
     color: white;
-    border: #00C2A2;
+    border: 1px solid #00C2A2;
     border-radius: 20px;
     background-color: #00C2A2;
     box-shadow: 0px 0px 1.3px 1.3px #00c2a23b;
@@ -539,7 +566,6 @@ main a button:hover {
     display: block;
     opacity: 1;
     transform: translateX(0);
-    animation: slideInRight 1.3s ease forwards;
 }
 
 #nova-secao2 h1 {
@@ -579,7 +605,7 @@ form {
 .form-group input {
     width: 280px;
     padding: 0.8rem;
-    border: none;
+    border: 1px solid white;
     border-radius: 10px;
     font-size: 0.8rem;
     font-weight: 300;
@@ -594,7 +620,7 @@ input:focus {
     width: 280px;
     padding: 1rem;
     color: #4f4f4f;
-    border: none;
+    border: 1px solid white;
     font-size: 0.8rem;
     font-weight: 400;
     border-radius: 10px;
@@ -741,7 +767,7 @@ select:focus {
     font-size: 0.8rem;
     padding: 0.7rem;
     text-decoration: none;
-    color: #454545;
+    color: 1px solid #454545;
     border: white;
     border-radius: 20px;
     background-color: white;
@@ -770,7 +796,7 @@ select:focus {
     padding: 0.7rem;
     text-decoration: none;
     color: white;
-    border: #00C2A2;
+    border: 1px solid #00C2A2;
     border-radius: 20px;
     background-color: #00C2A2;
     box-shadow: 0px 0px 1.3px 1.3px #00c2a23b;
@@ -796,24 +822,10 @@ main,
 #nova-secao2 {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hidden {
     opacity: 0;
     transform: translateX(-20px);
     pointer-events: none;
-}
-
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
