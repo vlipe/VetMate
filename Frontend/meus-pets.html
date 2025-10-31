@@ -84,8 +84,8 @@
                         </g>
                     </svg>
                     <div class="user-info">
-                        <div class="user-nome">João Vivêncio</div>
-                        <div class="user-email">pjvetmate@email.com.br</div>
+                        <div class="user-nome"></div>
+                            <div class="user-email"></div>
                     </div>
                 </div>
             </div>
@@ -345,8 +345,11 @@
 
 
         
-        <script src="assets/js/meus-pets.js"></script>
-        <script src="assets/js/registro-dos-pets.js"></script> 
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/user.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function(){ if(window.VetMateUser && typeof window.VetMateUser.hydrate === 'function') window.VetMateUser.hydrate(); if(window.VetMateUser && typeof window.VetMateUser.refresh === 'function') window.VetMateUser.refresh(); });</script>
+    <script src="assets/js/meus-pets.js"></script>
+    <script src="assets/js/registro-dos-pets.js"></script> 
     </body>
 
     </html>

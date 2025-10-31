@@ -14,6 +14,14 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+  crossorigin="anonymous"
+/>
+
+
+   
 </head>
 
 <body>
@@ -88,10 +96,28 @@
                             <div class="text">
                                 <span>Clique para inserir uma imagem</span>
                             </div>
-                            <input type="file" id="file" name="avatar">
-                            <img id="avatarPreview" alt="Seu avatar" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+                            <input type="file" id="file" name="avatar" accept="image/*">
+                            <img id="avatarPreview" src=""  style="width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:10px auto;">
                             
                         </label>
+
+                        <!-- Modal de Edição de Imagem -->
+                        <div id="imageModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2 style="text-align: center; margin-bottom: 20px;">Ajuste sua foto de perfil</h2>
+                                <div class="image-container">
+                                    <img id="imagePreview" src="" alt="Preview">
+                                </div>
+                                <div class="crop-controls">
+                                    <button id="rotateLeft"><i class="fas fa-undo"></i> Girar Esquerda</button>
+                                    <button id="rotateRight"><i class="fas fa-redo"></i> Girar Direita</button>
+                                    <button id="zoomIn"><i class="fas fa-search-plus"></i> Zoom +</button>
+                                    <button id="zoomOut"><i class="fas fa-search-minus"></i> Zoom -</button>
+                                    <button id="cropImage" style="background-color: #00C2A2;">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>  
                     <div class="input-container">
                         <label for="nome">Nome</label>
@@ -99,7 +125,7 @@
                     </div>
                     <div class="input-container">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Insira seu email">
+                        <input type="text" id="email" name="email" placeholder="Insira seu email" readonly disabled style="background-color: #f5f5f5; cursor: not-allowed;">
                     </div>
                     <div class="input-container">
                         <label for="senha">Senha</label>
@@ -198,7 +224,20 @@
 
     </footer>
 
-    <script src="assets/js/perfil.js"></script>
+  <script>window.API_BASE='http://localhost:8081/api';</script>
+<script src="assets/js/user.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+
+<script src="assets/js/perfil.js"></script>
+
+
+
+
+
 
 </body>
 

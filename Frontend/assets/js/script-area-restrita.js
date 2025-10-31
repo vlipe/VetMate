@@ -190,8 +190,20 @@ document.getElementById('btn-login')?.addEventListener('click', async () => {
     localStorage.setItem('vm_token', data.token);
     localStorage.setItem('vm_user', JSON.stringify(data.user));
     const u = JSON.parse(localStorage.getItem('vm_user') || '{}');
-  const avatarImg = document.querySelector('.avatar-header'); // seu seletor
-  if (avatarImg && u.avatar_url) avatarImg.src = u.avatar_url;
+    const avatarImg = document.querySelector('.avatar-header'); // seu seletor
+    if (avatarImg) {
+      try {
+        if (u.avatar_url) {
+          avatarImg.onerror = () => { avatarImg.onerror = null; avatarImg.src = 'assets/imagens/avatar-default.svg'; };
+          avatarImg.src = u.avatar_url;
+        } else {
+      avatarImg.src = 'assets/imagens/avatar-default.svg';
+        }
+      } catch (e) {
+        console.warn('script-area-restrita: erro ao setar avatar', e);
+        avatarImg.src = 'assets/imagens/avatar.svg';
+      }
+    }
     window.location.href = 'area-restrita-login.html';
   } catch (err) {
     console.error(err);
