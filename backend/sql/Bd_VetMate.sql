@@ -60,12 +60,12 @@ ALTER LOGIN sa ENABLE;
 -- 3.2 definir uma senha forte para o sa
 ALTER LOGIN sa WITH PASSWORD = 'SuaSenhaForte!123';
 
--- 3.3 (opcional, mas recomendado) forçar que o sa não expire
+-- 3.3 (opcional, mas recomendado) forï¿½ar que o sa nï¿½o expire
 ALTER LOGIN sa WITH CHECK_POLICY = OFF, CHECK_EXPIRATION = OFF;
 
 
 
--- 4.1 criar o banco (se não existir)
+-- 4.1 criar o banco (se nï¿½o existir)
 IF DB_ID('VetMate') IS NULL
 BEGIN
   CREATE DATABASE VetMate;
@@ -75,21 +75,21 @@ GO
 USE VetMate;
 GO
 
--- 4.2 criar um login dedicado (evita usar sa em produção)
+-- 4.2 criar um login dedicado (evita usar sa em produï¿½ï¿½o)
 IF NOT EXISTS (SELECT 1 FROM sys.server_principals WHERE name = 'vetmate_user')
 BEGIN
   CREATE LOGIN vetmate_user WITH PASSWORD = 'SenhaFort3!'; -- defina a sua
 END
 GO
 
--- 4.3 criar usuário no banco e dar permissões
+-- 4.3 criar usuï¿½rio no banco e dar permissï¿½es
 IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'vetmate_user')
 BEGIN
   CREATE USER vetmate_user FOR LOGIN vetmate_user;
 END
 GO
 
-ALTER ROLE db_owner ADD MEMBER vetmate_user; -- simplifica; em prod, dê só o necessário
+ALTER ROLE db_owner ADD MEMBER vetmate_user; -- simplifica; em prod, dï¿½ sï¿½ o necessï¿½rio
 GO
 
 
@@ -118,13 +118,13 @@ GO
 IF OBJECT_ID('Clinics','U') IS NULL
 CREATE TABLE Clinics (
   id               INT IDENTITY(1,1) PRIMARY KEY,
-  cnpj             VARCHAR(14) NOT NULL UNIQUE,    -- só dígitos (sem máscara)
-  corporate_name   NVARCHAR(200) NOT NULL,         -- razão social
+  cnpj             VARCHAR(14) NOT NULL UNIQUE,    -- sï¿½ dï¿½gitos (sem mï¿½scara)
+  corporate_name   NVARCHAR(200) NOT NULL,         -- razï¿½o social
   trade_name       NVARCHAR(200) NULL,             -- nome fantasia
   email            NVARCHAR(255) NOT NULL UNIQUE,
   phone            NVARCHAR(60)  NULL,
   password_hash    NVARCHAR(255) NOT NULL,
-  -- endereço
+  -- endereï¿½o
   address_line1    NVARCHAR(200) NULL,
   address_line2    NVARCHAR(200) NULL,
   district         NVARCHAR(120) NULL,
@@ -157,5 +157,10 @@ ALTER TABLE Users
 ADD avatar_url NVARCHAR(255) NULL;
 
 GO
+
+ALTER TABLE Pets ADD photo_url NVARCHAR(255) NULL;
+ALTER TABLE Pets ADD photo_filename NVARCHAR(255) NULL;
+
+
 
 

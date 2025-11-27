@@ -51,3 +51,55 @@
     if (e.key === 'vm_user') window.VetMateUser.hydrate();
   });
 })();
+
+
+(function(){
+  window.API_BASE = window.API_BASE || 'http://localhost:8081';
+
+  function findMeusPetsLink(){
+    const links = document.querySelectorAll('#sidebar a');
+    for (const a of links){
+      const span = a.querySelector('.item-description');
+      if (span && span.textContent.trim().toLowerCase() === 'meus pets'){
+        return a;
+      }
+    }
+    return null;
+  }
+
+  async function ajustarSidebarPets(){
+    const link = findMeusPetsLink();
+    if (!link) return; 
+
+    const token = localStorage.getItem('vm_token');
+
+    
+    if (!token){
+      link.href = 'meus-pets.html';
+      return;
+    }
+
+    try {
+      const resp = await fetch(`${window.API_BASE}/pets`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (!resp.ok) throw new Error('Falha ao buscar pets');
+
+      const pets = await resp.json();
+      link.href = (Array.isArray(pets) && pets.length > 0)
+        ? 'registro-dos-pets.html#form-pet'
+        : 'meus-pets.html';
+    } catch (e) {
+      
+      link.href = 'meus-pets.html';
+    }
+  }
+
+ 
+  document.addEventListener('DOMContentLoaded', ajustarSidebarPets);
+
+  
+  window.ajustarSidebarPets = ajustarSidebarPets;
+})();
+
+

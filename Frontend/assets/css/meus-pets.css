@@ -392,7 +392,7 @@ header {
     margin-bottom: 1rem;
 }
 
-main a button {
+main button {
     width: 180px;
     margin-top: 1.3rem;
     margin-bottom: 4rem;
@@ -413,7 +413,7 @@ main i {
     margin-left: 0.8rem;
 }
 
-main a button:hover {
+main button:hover {
     background-color: #f9f9f9;
     color: #969696;
     transition: 0.6s ease;
@@ -469,7 +469,7 @@ main a button:hover {
     justify-content: center;
 }
 
-.botao1 a button {
+.botao1 button {
     width: 180px;
     margin-top: 1.3rem;
     font-size: 0.8rem;
@@ -488,7 +488,7 @@ main a button:hover {
     margin-right: 0.8rem;
 }
 
-.botao1 a button:hover {
+.botao1 button:hover {
     background-color: #f9f9f9;
     color: #969696;
     transition: 0.6s ease;
@@ -497,7 +497,7 @@ main a button:hover {
 }
 
 
-.botao2 a button {
+.botao2 button {
     width: 180px;
     margin-top: 1.3rem;
     font-size: 0.8rem;
@@ -517,7 +517,7 @@ main a button:hover {
     margin-left: 0.8rem;
 }
 
-.botao2 a button:hover {
+.botao2 button:hover {
     background-color: #f9f9f9;
     color: #969696;
     transition: 0.6s ease;
@@ -735,7 +735,7 @@ select:focus {
     justify-content: center;
 }
 
-.botao3 a button {
+.botao3 button {
     width: 180px;
     margin-top: 1.3rem;
     font-size: 0.8rem;
@@ -754,7 +754,7 @@ select:focus {
     margin-right: 0.8rem;
 }
 
-.botao3 a button:hover {
+.botao3 button:hover {
     background-color: #f9f9f9;
     color: #969696;
     transition: 0.6s ease;
@@ -763,7 +763,7 @@ select:focus {
 }
 
 
-.botao4 a button {
+.botao4 button {
     width: 180px;
     margin-top: 1.3rem;
     font-size: 0.8rem;
@@ -783,7 +783,7 @@ select:focus {
     margin-left: 0.8rem;
 }
 
-.botao4 a button:hover {
+.botao4 button:hover {
     background-color: #f9f9f9;
     color: #969696;
     transition: 0.6s ease;

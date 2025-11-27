@@ -12,9 +12,9 @@ class PetsRepository {
 
   public function create(array $d, int $ownerId): int {
     $st = $this->db->query(
-      "INSERT INTO Pets(owner_id,name,species,breed,birthdate,notes,sex,weight_kg,age_years,size)
+      "INSERT INTO Pets(owner_id,name,species,breed,birthdate,notes,sex,weight_kg,age_years,size,photo_url)
        OUTPUT INSERTED.id
-       VALUES (?,?,?,?,?,?,?,?,?,?)",
+       VALUES (?,?,?,?,?,?,?,?,?,?,?)",
       [
         $ownerId,
         $d['name'],
@@ -25,7 +25,8 @@ class PetsRepository {
         $d['sex']        ?? null,
         isset($d['weight_kg']) ? (float)$d['weight_kg'] : null,
         isset($d['age_years']) ? (int)$d['age_years']   : null,
-        $d['size']       ?? null
+        $d['size'] ?? null,
+        $d['photo_url'] ?? null
       ]
     );
     $rows = $this->db->fetchAll($st);
@@ -100,4 +101,12 @@ class PetsRepository {
   public function delete(int $id, int $ownerId): void {
     $this->db->query("DELETE FROM Pets WHERE id=? AND owner_id=?", [$id,$ownerId]);
   }
+
+  public function updatePhoto(int $id, int $ownerId, string $url, string $filename): void {
+  $this->db->query(
+    "UPDATE Pets SET photo_url = ?, photo_filename = ? WHERE id = ? AND owner_id = ?",
+    [$url, $filename, $id, $ownerId]
+  );
+}
+
 }
