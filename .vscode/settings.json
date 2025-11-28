@@ -6,5 +6,6 @@
     "**/*.log",
     "**/node_modules/**"
   ],
-  "CodeGPT.apiKey": "Gemini CLI"
+  "CodeGPT.apiKey": "Gemini CLI",
+  "liveServer.settings.port": 5501
 }
