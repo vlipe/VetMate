@@ -91,6 +91,12 @@
 
 // === CRIAR PET + (opcional) UPLOAD DE FOTO ===
 async function salvarDados() {
+  if (window.__vm_meus_pets_init) { 
+  console.warn('meus-pets.js já inicializado — abortando segundo load');
+  return;
+}
+window.__vm_meus_pets_init = true;
+
   const token = localStorage.getItem('vm_token');
   if (!token) {
     alert('Você precisa estar logado para cadastrar um pet.');
@@ -173,19 +179,11 @@ async function salvarDados() {
 
     alert('Pet cadastrado com sucesso!');
 
-    // volta para a listagem/cartões e atualiza
-    const secP = document.getElementById('sec-p') || document.getElementById('main-content');
-    const s1   = document.getElementById('nova-secao');
-    const s2   = document.getElementById('nova-secao2');
+window.location.href = `registro-dos-pets.html?petId=${encodeURIComponent(novoId)}`;
+return; 
 
-    if (secP && s1 && s2) {
-      s1.style.display = 'none';
-      s2.style.display = 'none';
-      secP.style.display = 'block';
-      secP.classList.remove('hidden');
-    }
 
-    await carregarEExibirPets();
+    
 
   } catch (err) {
     alert(`Ocorreu um erro: ${err.message}`);

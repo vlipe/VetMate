@@ -8,6 +8,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+main{
+    margin-top: 2%;
+}
+
 header {
     background-color: #003536;
     box-shadow: 0px 2px 10px #003536;
@@ -464,8 +468,9 @@ a {
 .container-form {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin: 3rem 0rem 10rem 0rem;
+    margin: 3rem 0rem 0rem 0rem;
 }
 
 .form {
@@ -475,6 +480,7 @@ a {
     border-radius: 1.5rem;
     box-shadow: 0px 0px 30px rgba(0, 33, 33, 0.4);
     transition: 0.5s;
+    margin-bottom: 10%;
 }
 
 .form-title {

@@ -36,7 +36,7 @@ function verificarSenhas(event) {
       confirmacaoSenhaInput.focus();
       verificarConfirmacao = false;
     } else {
-      alert("Formulário enviado com sucesso! Suas informações serão atualizadas em até 24 horas.");
+      alert("Formulário enviado com sucesso! Suas informações serão atualizadas.");
       // Aqui você pode adicionar outras ações, como enviar o formulário manualmente, se necessário
     }
   }
