@@ -14,6 +14,14 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/cocon" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+  crossorigin="anonymous"
+/>
+
+
+   
 </head>
 
 <body>
@@ -88,79 +96,120 @@
                             <div class="text">
                                 <span>Clique para inserir uma imagem</span>
                             </div>
-                            <input type="file" id="file" name="avatar">
-                            <img id="avatarPreview" alt="Seu avatar" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+                            <input type="file" id="file" name="avatar" accept="image/*">
+                            <img id="avatarPreview" src=""  style="width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:10px auto;">
                             
                         </label>
-                    </div>  
-                    <div class="input-container">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome">
-                    </div>
-                    <div class="input-container">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Insira seu email">
-                    </div>
-                    <div class="input-container">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="senha" placeholder="Insira sua nova senha">
-                    </div>
-                    <div class="input-container">
-                        <label for="confirmacaoSenha">Confirme sua senha</label>
-                        <input type="password" id="confirmacaoSenha" name="confirmacaoSenha"
-                            placeholder="Insira sua senha novamente">
-                    </div>
-                </form>
 
-                <button type="submit" class="submit">Atualizar</button>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <footer>
-
-        <div id="container-footer">
-            <div id="footer_contacts">
-                <img src="assets/imagens/logo-vetmate.png" alt="logo-vetmate">
-                <p>Sua parceira ideal.</p>
-
-                <div id="footer_social_media">
-                    <a href="https://www.instagram.com/pjvetmate/" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="https://x.com/pjvetmate" class="footer-link" id="x">
-                        <i class="fa-brands fa-x-twitter"></i></i>
-                    </a>
-
-                    <a href="#" class="footer-link" id="linkedin">
-                        <i class="fa-brands fa-linkedin"></i></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Navegue</h3>
-                </li>
-                <li>
-                    <a href="home.html" class="footer-link">Home</a>
-                </li>
-                <li>
-                    <a href="institucional.html" class="footer-link">Institucional</a>
-                </li>
-                <li>
-                    <a href="contato-e-sac.html" class="footer-link">Contato e SAC</a>
-                </li>
-                <li>
-                    <a href="area-restrita.html" class="footer-link">Área Restrita</a>
-                </li>
-            </ul>
-
-            <ul class="footer-list">
+                        <!-- Modal de Edição de Imagem -->
+                        <div id="imageModal" class="modal">
+                            <div class="modal-content">
+                                <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const API_BASE = (window.API_BASE || 'http://localhost:8081/api').replace(/\/$/, '');
+                                const modal = document.getElementById('imageModal');
+                                const fileInput = document.getElementById('file');
+                                const imagePreview = document.getElementById('imagePreview');
+                                const avatarPreview = document.getElementById('avatarPreview');
+                                const closeBtn = document.querySelector('.close');
+                                const btnAtualizar = document.querySelector('.submit');
+                                let cropper = null;
+                                fileInput.addEventListener('change', function(e) {
+                                    if (e.target.files && e.target.files[0]) {
+                                        const reader = new FileReader();
+                                        reader.onload = function(ev) {
+                                            imagePreview.src = ev.target.result;
+                                            modal.style.display = 'block';
+                                            if (cropper) { cropper.destroy(); }
+                                            cropper = new Cropper(imagePreview, {
+                                                aspectRatio: 1,
+                                                viewMode: 1,
+                                                dragMode: 'move',
+                                                autoCropArea: 1,
+                                                cropBoxMovable: false,
+                                                cropBoxResizable: false,
+                                                guides: true,
+                                                center: true,
+                                                highlight: false
+                                            });
+                                        };
+                                        reader.readAsDataURL(e.target.files[0]);
+                                    }
+                                });
+                                document.getElementById('rotateLeft').addEventListener('click', function() { if(cropper) cropper.rotate(-90); });
+                                document.getElementById('rotateRight').addEventListener('click', function() { if(cropper) cropper.rotate(90); });
+                                document.getElementById('zoomIn').addEventListener('click', function() { if(cropper) cropper.zoom(0.1); });
+                                document.getElementById('zoomOut').addEventListener('click', function() { if(cropper) cropper.zoom(-0.1); });
+                                document.getElementById('cropImage').addEventListener('click', function() {
+                                    if (!cropper) return;
+                                    const canvas = cropper.getCroppedCanvas({ width: 300, height: 300 });
+                                    if (!canvas) return;
+                                    avatarPreview.src = canvas.toDataURL('image/jpeg');
+                                    modal.style.display = 'none';
+                                    fileInput.value = '';
+                                    canvas.toBlob(function(blob) {
+                                        const tok = localStorage.getItem('vm_token');
+                                        if (!tok) return;
+                                        const fd = new FormData();
+                                        fd.append('avatar', blob, 'avatar.jpg');
+                                        fetch(API_BASE + '/user/avatar', {
+                                            method: 'POST',
+                                            headers: { 'Authorization': 'Bearer ' + tok },
+                                            body: fd
+                                        }).then(async (res) => {
+                                            const j = await res.json().catch(()=>({}));
+                                            if (res.ok && j.avatar_url) {
+                                                if (window.VetMateUser && typeof window.VetMateUser.saveAndHydrate === 'function') {
+                                                    window.VetMateUser.saveAndHydrate({ avatar_url: j.avatar_url, avatar_updated_at: Date.now() });
+                                                }
+                                                avatarPreview.src = j.avatar_url;
+                                            } else {
+                                                alert((j.error && j.error.message) || 'Erro ao enviar avatar');
+                                            }
+                                        }).catch(()=>{ alert('Erro network ao enviar avatar'); });
+                                    }, 'image/jpeg');
+                                });
+                                closeBtn.addEventListener('click', function() {
+                                    modal.style.display = 'none';
+                                    if (cropper) { cropper.destroy(); cropper = null; }
+                                });
+                                window.addEventListener('click', function(e) {
+                                    if (e.target == modal) {
+                                        modal.style.display = 'none';
+                                        if (cropper) { cropper.destroy(); cropper = null; }
+                                    }
+                                });
+                                if (btnAtualizar) {
+                                    btnAtualizar.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        const nome = document.getElementById('nome').value;
+                                        const senha = document.getElementById('senha').value;
+                                        const confirmacaoSenha = document.getElementById('confirmacaoSenha').value;
+                                        if (senha && senha !== confirmacaoSenha) { alert('As senhas não conferem'); return; }
+                                        const tok = localStorage.getItem('vm_token');
+                                        if (!tok) { alert('Usuário não autenticado'); return; }
+                                        const payload = {};
+                                        if (nome !== undefined) payload.name = nome;
+                                        if (senha) payload.password = senha;
+                                        fetch(API_BASE + '/user', {
+                                            method: 'PATCH',
+                                            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + tok },
+                                            body: JSON.stringify(payload)
+                                        }).then(async (res) => {
+                                            const j = await res.json().catch(()=>({}));
+                                            if (res.ok && j.user) {
+                                                if (window.VetMateUser && typeof window.VetMateUser.saveAndHydrate === 'function') {
+                                                    window.VetMateUser.saveAndHydrate(j.user);
+                                                }
+                                                alert('Perfil atualizado');
+                                            } else {
+                                                alert((j.error && j.error.message) || 'Erro ao atualizar perfil');
+                                            }
+                                        }).catch(()=>{ alert('Erro network ao atualizar perfil'); });
+                                    });
+                                }
+                            });
+                            </script>
                 <li>
                     <h3>Contato</h3>
                 </li>
@@ -198,7 +247,20 @@
 
     </footer>
 
-    <script src="assets/js/perfil.js"></script>
+  <script>window.API_BASE='http://localhost:8081/api';</script>
+<script src="assets/js/user.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+
+<script src="assets/js/perfil.js"></script>
+
+
+
+
+
 
 </body>
 

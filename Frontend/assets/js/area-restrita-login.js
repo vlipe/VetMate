@@ -244,8 +244,9 @@ async function sendMessageToAPI(userMessage) {
   }
 
   try {
-    const apiKey = 'AIzaSyDPxTwQmVkJWQO2gUZ4wrDZvqDbqiFGZLo'; 
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+    const apiKey = 'AIzaSyCWFK_FXMqQ_RMvWPWjVG8oHzpHL1pamug'; 
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
 
     const response = await fetch(apiUrl, {
       method: 'POST',
@@ -410,37 +411,75 @@ function closeSidebarOnClickOutside(event) {
 
 // === BOOT DA PÁGINA LOGADA ===
 document.addEventListener('DOMContentLoaded', async () => {
-  const token = localStorage.getItem('vm_token');
+  if (window.__vm_area_restrita_boot) return;
+  window.__vm_area_restrita_boot = true;
+
+  // (diagnóstico de storage permanece como estava)
+
+  const token   = localStorage.getItem('vm_token');
   const rawUser = localStorage.getItem('vm_user');
 
   if (!token || !rawUser) {
-    // não logado → volta pro login
-    window.location.href = 'area-restrita.html';
+    try { alert('Você não está logado. Faça login em Área Restrita para acessar.'); } catch {}
     return;
   }
 
-  try {
-    // opcional: validar token no /api/me
-    const meResp = await fetch(`${API_BASE}/me`, {
-      headers: { Authorization: `Bearer ${token}` }
-    });
-
-    if (!meResp.ok) throw new Error('Sessão expirada');
-    const me = await meResp.json();
-
-    // Atualiza UI
-    const userNomeEl  = document.querySelector('.user-nome');
-    const userEmailEl = document.querySelector('.user-email');
-
-    if (userNomeEl)  userNomeEl.textContent  = me?.user?.name  || JSON.parse(rawUser).name || 'Usuário';
-    if (userEmailEl) userEmailEl.textContent = me?.user?.email || JSON.parse(rawUser).email || '';
-
-  } catch (err) {
-    // token inválido/expirado → limpa e volta
-    localStorage.removeItem('vm_token');
-    localStorage.removeItem('vm_user');
-    window.location.href = 'area-restrita.html';
+  async function fetchMeWithStatus(tok) {
+    const resp = await fetch(`${API_BASE}/me`, { headers: { Authorization: `Bearer ${tok}` } });
+    if (resp.status === 401 || resp.status === 403) {
+      const txt = await resp.text().catch(() => '');
+      throw { type: 'unauthorized', status: resp.status, text: txt };
+    }
+    if (!resp.ok) {
+      const txt = await resp.text().catch(() => '');
+      throw { type: 'network', status: resp.status, text: txt };
+    }
+    return resp.json();
   }
+
+  let me = null;
+  const maxRetries = 3;
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      me = await fetchMeWithStatus(token);
+      break;
+    } catch (e) {
+      if (e && e.type === 'unauthorized') {
+        localStorage.removeItem('vm_token');
+        localStorage.removeItem('vm_user');
+        try { alert('Sua sessão expirou. Faça login novamente.'); } catch {}
+        return;
+      }
+      if (attempt < maxRetries - 1) {
+        await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
+      } else {
+        try { alert('Não foi possível validar a sessão por problemas de rede. Alguns dados podem estar desatualizados.'); } catch {}
+      }
+    }
+  }
+
+ // dentro do DOMContentLoaded de area-restrita-login.js, depois de pegar token/rawUser e (opcionalmente) me
+let storedUser = {};
+try { storedUser = JSON.parse(rawUser || '{}'); } catch { storedUser = {}; }
+
+const apiUser = me?.user || {};
+const merged = {
+  ...storedUser,
+  ...apiUser,
+  // preserva avatar_updated_at se a API não enviar
+  avatar_updated_at: (apiUser.avatar_updated_at ?? storedUser.avatar_updated_at ?? null)
+};
+
+localStorage.setItem('vm_user', JSON.stringify(merged));
+// Deixa o user.js aplicar no header
+window.VetMateUser?.hydrate?.();
+
+// (Se quiser, pintar nome/email localmente também é ok)
+const userNomeEl  = document.querySelector('.user-nome');
+const userEmailEl = document.querySelector('.user-email');
+if (userNomeEl)  userNomeEl.textContent  = merged.name  || 'Usuário';
+if (userEmailEl) userEmailEl.textContent = merged.email || '';
+
 });
 
 // === LOGOUT ===

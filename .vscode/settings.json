@@ -1,0 +1,11 @@
+{
+  "liveServer.settings.ignoreFiles": [
+    "**/.vscode/**",
+    "**/.git/**",
+    "**/backend/logs/**",
+    "**/*.log",
+    "**/node_modules/**"
+  ],
+  "CodeGPT.apiKey": "Gemini CLI",
+  "liveServer.settings.port": 5501
+}

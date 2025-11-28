@@ -176,14 +176,14 @@ $ext = $allowed[$mime];
     return;
   }
 
-  // monte a URL pública do backend (ajuste se necessário)
+  
   $scheme = (!empty($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http');
-  $host   = $_SERVER['HTTP_HOST'] ?? 'localhost:8081'; // ex.: localhost:8081
+  $host   = $_SERVER['HTTP_HOST'] ?? 'localhost:8081'; 
   $base   = $scheme . '://' . $host;
 
   $publicUrl = $base . '/uploads/avatars/' . $fname;
 
-  // grava no banco
+
   $repo = new App\Repositories\UsersRepository($db);
   $repo->updateById($userId, ['avatar_url' => $publicUrl]);
 
@@ -265,6 +265,74 @@ $ext = $allowed[$mime];
       Response::json($ctl->create($req->body, $ownerId), 201);
     }, [ $authMw ]);
 
+    // POST /api/pets/{id}/photo  -> upload da foto do pet
+$api->post('/pets/{id}/photo', function (Request $req, array $args) use ($db) {
+  $ownerId = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
+  $petId   = intval($args['id'] ?? 0);
+
+  $ctl = new PetsController(new PetsRepository($db));
+  Response::json($ctl->uploadPhoto($petId, $ownerId, $_FILES['photo'] ?? null), 200);
+}, [ $authMw ]);
+
+// POST /api/pets/{id}/photo
+$api->post('/pets/{id}/photo', function (Request $req, array $args) use ($db) {
+  $ownerId = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
+  $petId   = intval($args['id'] ?? 0);
+
+  if ($petId <= 0) {
+    return Response::json(['error' => ['message' => 'Invalid pet id']], 400);
+  }
+
+  // valida ownership (opcional, mas recomendado)
+  $exists = $db->fetchAll(
+    $db->query("SELECT 1 FROM Pets WHERE id=? AND owner_id=?", [$petId, $ownerId])
+  );
+  if (!$exists) {
+    return Response::json(['error' => ['message' => 'Pet not found']], 404);
+  }
+
+  // arquivo veio como 'photo'
+  if (!isset($_FILES['photo']) || $_FILES['photo']['error'] !== UPLOAD_ERR_OK) {
+    return Response::json(['error' => ['message' => 'Upload file not found']], 400);
+  }
+
+  $f = $_FILES['photo'];
+  // valida MIME
+  $finfo = finfo_open(FILEINFO_MIME_TYPE);
+  $mime  = finfo_file($finfo, $f['tmp_name']) ?: '';
+  finfo_close($finfo);
+
+  $allowed = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
+  if (!isset($allowed[$mime])) {
+    return Response::json(['error' => ['message' => 'Unsupported image type']], 415);
+  }
+
+  $ext = $allowed[$mime];
+  // caminho físico onde salvar (ajuste conforme seu projeto)
+  $uploadDir = __DIR__ . '/../../public/uploads/pets';
+  if (!is_dir($uploadDir)) {
+    @mkdir($uploadDir, 0775, true);
+  }
+
+  $filename = $petId . '-' . bin2hex(random_bytes(6)) . '.' . $ext;
+  $destPath = $uploadDir . '/' . $filename;
+
+  if (!move_uploaded_file($f['tmp_name'], $destPath)) {
+    return Response::json(['error' => ['message' => 'Failed to save file']], 500);
+  }
+
+  // URL pública (ajuste a base conforme seu servidor)
+  $publicUrl = '/uploads/pets/' . $filename;
+
+  // persiste no banco
+  $db->query("UPDATE Pets SET photo_url=? WHERE id=? AND owner_id=?", [$publicUrl, $petId, $ownerId]);
+
+  // devolve JSON com a URL
+  return Response::json(['id' => $petId, 'photo_url' => $publicUrl], 200);
+}, [ $authMw ]);
+
+
+
     $api->put('/pets/:id', function (Request $req) use ($db) {
       $ownerId = intval($req->user['sub'] ?? $req->user['id'] ?? 0);
       $id = (int)$req->params['id'];
@@ -285,6 +353,7 @@ $ext = $allowed[$mime];
       $ctl = new PetsController(new PetsRepository($db));
       Response::json($ctl->delete($id, $ownerId));
     }, [ $authMw ]);
+    
 
 
    $api->get('/clinics', function (Request $req) use ($db) {

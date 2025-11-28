@@ -212,7 +212,7 @@ header {
     width: 100%;
 }
 
-.conta svg {
+.conta img {
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -964,6 +964,7 @@ header {
         border-radius: 10px;
         margin-right: 1rem;
     }
+    
 
     .user-nome {
         font-size: 0.7rem;
@@ -1525,6 +1526,8 @@ header {
         width: 150px;
         font-size: 0.65rem;
     }
+
+  
 }
 
 .btn-chatbot {
