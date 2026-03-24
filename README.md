@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/vlipe/VetMate/blob/main/VetMate/assets/imagens/vetmate-nova-logo.png" alt="Logo da VetMate" width="200px">
+<img src="https://github.com/vlipe/VetMate/blob/60724e6bca319435f3807c1dc426e782910e03f8/Frontend/assets/imagens/vetmate-nova-logo.png" alt="Logo da VetMate" width="200px">
 
 <br>
 <br>
