@@ -4,7 +4,7 @@
 <br>
 <br>
 
-**VetMate** é um site que tem foco em simplificar o cuidado com a saúde de pets, conectando tutores a clínicas veterinárias e oferecendo ferramentas para o gerenciamento da saúde animal. O projeto está sendo desenvolvido no primeiro ano de curso de Análise e Desenvolvimento de Sistemas, em colaboração com o programa P-TECH da IBM.
+**VetMate** é um site que tem foco em simplificar o cuidado com a saúde de pets, conectando tutores a clínicas veterinárias e oferecendo ferramentas para o gerenciamento da saúde animal. O projeto foi desenvolvido no primeiro e segundo ano de curso de Análise e Desenvolvimento de Sistemas, em colaboração com o programa P-TECH da IBM.
 </div>
 
 ---
@@ -17,7 +17,7 @@ A VetMate oferece uma plataforma completa para tutores de animais, com funcional
 
 <br>
 
-### Quais as funcionalidades oferecidas?
+### Funcionalidades
 
 * **Buscador de Clínicas:** Encontre clínicas veterinárias próximas com filtros por especialidade, área de atuação, distância e custo. Além da possibilidade de realizar avaliações.
 * **Cadastro de Pets:** Crie perfis para seus pets com informações como nome, espécie, raça, gênero, idade e histórico médico.
@@ -25,28 +25,13 @@ A VetMate oferece uma plataforma completa para tutores de animais, com funcional
 * **Prontuário:** Acesse o histórico de consultas, exames e medicamentos dos seus pets de forma organizada.
 * **Controle de Medicamentos:** Registre os medicamentos dos seus pets e receba notificações para a administração correta.
 * **Chatbot:** Tenha um pré-diagnóstico rapidamente de seu animal com nosso chatbot.
+* **Cadastro de Clínicas:** Cadastre sua clínica para tutores encontrá-la através do buscador.
 
 <br>
-
-### Quais tecnologias foram utilizadas?
 
 ![HTML](https://img.shields.io/badge/HTML-00c2a2?style=for-the-badge&logo=html5&logoColor=white) &nbsp;
 ![CSS](https://img.shields.io/badge/CSS-00c2a2?&style=for-the-badge&logo=css3&logoColor=white) &nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-00c2a2?style=for-the-badge&logo=javascript&logoColor=white)
-
-<br>
-
-### Quais as próximas metas para o projeto?
-
-O projeto continua em desenvolvimento e o foco nas futuras atualizações será em:
-
-- *Renomear e organizar pastas e imagens;*
-- *Padronizar todos os códigos;*
-- *Melhorias na responsividade;*
-- *Adição de novas funcionalidades;*
-- *Back-end.*
-
-<br>
 
 ---
 
